@@ -22,7 +22,7 @@
       "require": "./dist/ui.common.js"
     }
   },
-  "types": "./types/index.d.ts",
+  "types": "./dist/index.d.ts",
   "dependencies": {
     "core-js": "^3.22.2",
     "vue": "^3.2.33"
