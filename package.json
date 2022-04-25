@@ -10,8 +10,8 @@
     "test:unit": "vue-cli-service test:unit --mode production",
     "test:e2e": "vue-cli-service test:e2e --mode production",
     "lint": "vue-cli-service lint",
-    "release": "standard-version && git push --follow-tags origin master",
-    "release-minor": "standard-version --release-as minor && git push --follow-tags origin master"
+    "release": "standard-version && git push --follow-tags origin",
+    "release-minor": "standard-version --release-as minor && git push --follow-tags origin"
   },
   "files": [
     "dist",
