@@ -1,3 +1,5 @@
+docs/.vuepress/styles
+
 .vscode/*
 !.vscode/settings.json
 !.vscode/tasks.json
