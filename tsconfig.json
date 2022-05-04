@@ -16,7 +16,7 @@
       "esnext",
       "dom"
     ],
-    "baseUrl": ".",
+    "baseUrl": "src",
     "paths": {
       "@/*": [
         "./*"
