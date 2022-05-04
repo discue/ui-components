@@ -15,7 +15,7 @@ import { computed, defineProps, ref } from 'vue';
 const props = defineProps({
     show: {
         type: Boolean,
-        default: false
+        default: true
     }
 })
 
