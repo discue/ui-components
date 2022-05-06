@@ -45,7 +45,6 @@
 </template>
 
 <script setup>
-// import Text from '@/src/components/text.vue';
 import { computed, getCurrentInstance, reactive, useAttrs } from 'vue';
 
 const attrs = useAttrs()
