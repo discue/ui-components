@@ -9,6 +9,10 @@
   @apply font-bold;
 }
 
+h2 {
+  @apply mb-4 !important;
+}
+
 .sidebar-items>li>.sidebar-item-children>li>a.router-link-active.router-link-exact-active.sidebar-item {
   @apply text-lg;
 }
