@@ -1,5 +1,5 @@
 <template>
-    <div class="component-preview shadow-inner rounded-lg h-80 my-4 flex justify-center items-center w-full">
+    <div class="component-preview shadow-inner rounded-lg my-4 py-4 flex justify-center items-center w-full">
         <Component :is="type" v-bind="componentProps">
             <slot />
         </Component>
