@@ -45,10 +45,7 @@
 </template>
 
 <script setup>
-import { computed, getCurrentInstance, reactive, useAttrs } from 'vue';
-
-const attrs = useAttrs()
-console.log({ attrs })
+import { computed, getCurrentInstance, reactive } from 'vue';
 
 const props = defineProps({
     type: {
