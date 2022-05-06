@@ -9,34 +9,36 @@
         <h3 class="text-xl font-medium inline-block">
             Properties
         </h3>
-        <div class="grid grid-cols-4 mb-4">
-            <div>
-                <Text :highlight="true" :small="true" class="uppercase">Name</Text>
+        <div class="space-y-4">
+            <div class="grid grid-cols-4">
+                <div>
+                    <Text :highlight="true" :small="true" class="uppercase">Name</Text>
+                </div>
+                <div>
+                    <Text :highlight="true" :small="true" class="uppercase">Type</Text>
+                </div>
+                <div>
+                    <Text :highlight="true" :small="true" class="uppercase">Default</Text>
+                </div>
+                <div>
+                    <Text :highlight="true" :small="true" class="uppercase">Value</Text>
+                </div>
             </div>
-            <div>
-                <Text :highlight="true" :small="true" class="uppercase">Type</Text>
-            </div>
-            <div>
-                <Text :highlight="true" :small="true" class="uppercase">Default</Text>
-            </div>
-            <div>
-                <Text :highlight="true" :small="true" class="uppercase">Value</Text>
-            </div>
-        </div>
 
-        <div class="grid grid-cols-4" v-for="prop in targetPropsForTable" :key="prop.name">
-            <div>
-                <Text :small="false" class="">{{ prop.name }}</Text>
-            </div>
-            <div>
-                <Text :small="false" class="">{{ prop.type }}</Text>
-            </div>
-            <div>
-                <Text :small="false" class="">{{ prop.default }}</Text>
-            </div>
-            <div>
-                <input :value="componentProps[prop.name]" @change="castAndSet(prop, $event)"
-                    class="text-base border-b-2 border-b-solid border-gray-900 w-20">
+            <div class="grid grid-cols-4" v-for="prop in targetPropsForTable" :key="prop.name">
+                <div>
+                    <Text :small="false" class="">{{ prop.name }}</Text>
+                </div>
+                <div>
+                    <Text :small="false" class="">{{ prop.type }}</Text>
+                </div>
+                <div>
+                    <Text :small="false" class="">{{ prop.default }}</Text>
+                </div>
+                <div>
+                    <input :value="componentProps[prop.name]" @change="castAndSet(prop, $event)"
+                        class="text-base border-b-2 border-b-solid border-gray-900 w-20">
+                </div>
             </div>
         </div>
     </div>
