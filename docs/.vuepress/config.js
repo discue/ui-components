@@ -2,8 +2,7 @@ const anchorPlugin = require('markdown-it-anchor')
 const { viteBundler } = require('@vuepress/bundler-vite');
 const defaultTheme = require('./theme')
 const { registerComponentsPlugin } = require('@vuepress/plugin-register-components')
-
-// const { searchPlugin } = require('@vuepress/plugin-search')
+const { searchPlugin } = require('@vuepress/plugin-search')
 const { path } = require('@vuepress/utils')
 
 // eslint-disable-next-line no-control-regex
