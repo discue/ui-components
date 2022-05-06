@@ -7,11 +7,17 @@
     padding-left: inherit;
 }
 
-.component-preview *[class*="border-b"], .component-properties-preview *[class*="border-b"] {
+.component-preview *[class*=" border-b"],
+.component-properties-preview *[class*=" border-b"] {
     border-bottom-style: solid;
     border-top: none;
     border-left: none;
     border-right: none;
+}
+
+.component-preview *[class*="hover:border-b"]:hover,
+.component-properties-preview *[class*="hover:border-b"]:hover {
+    border-bottom-style: solid;
 }
 
 .component-properties-preview input {
@@ -22,3 +28,12 @@
 .component-preview * {
     position: relative !important;
 }
+
+.theme-default-content:not(.custom) a:hover {
+    text-decoration: none !important;
+}
+
+.theme-default-content:not(.custom) p {
+    margin-top: 0 !important;
+}
+
