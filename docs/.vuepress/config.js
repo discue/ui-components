@@ -10,6 +10,10 @@ const rControl = /[\u0000-\u001f]/g
 const rSpecial = /[\s~`!@#$%^&*()\-_+=[\]{}|\\;:"'“”‘’<>,.?/]+/g
 const rCombining = /[\u0300-\u036F]/g
 
+const fs = require('fs')
+const components = fs.readdirSync(path.resolve(__dirname, '../components')) //
+    .map(file => file.toLowerCase().substring(0, file.indexOf('.')))
+
 const slugify = (str) => {
     return str
         .normalize('NFKD')
@@ -50,8 +54,17 @@ module.exports = {
             link: '/introduction/',
         }, {
             text: 'Components',
-            link: '/components/',
-        }]
+            link: `/components/${components[0]}`,
+        }],
+        sidebar: {
+            '/components/': [
+                {
+                    text: 'Components',
+                    collapsible: true,
+                    children: components,
+                }
+            ],
+        },
     }),
     clientAppEnhanceFiles: path.resolve(
         __dirname,
