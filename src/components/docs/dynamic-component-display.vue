@@ -62,11 +62,6 @@ const props = defineProps({
 
 const componentProps = computed(() => {
     const instance = getCurrentInstance()
-    console.log('props', props)
-    console.log('comps', instance.appContext.components)
-    console.log('type', props.type, instance.appContext.components[props.type])
-    console.log('type props', props.type, instance.appContext.components[props.type].props)
-
     const p = Object.entries(instance.appContext.components[props.type].props).reduce((context, [key, value]) => {
         context[key] = value.default
         return context
@@ -77,7 +72,6 @@ const componentProps = computed(() => {
 
 const targetPropsForTable = computed(() => {
     const instance = getCurrentInstance()
-    console.log('comps', instance.appContext.components)
 
     const p = Object.entries(instance.appContext.components[props.type].props).reduce((context, [key, value]) => {
         return Object.assign(context, reactive({
@@ -89,14 +83,11 @@ const targetPropsForTable = computed(() => {
         }))
     }, {})
 
-    console.log('table', p)
-
     return p
 })
 
 function castAndSet(prop, event) {
     const { value } = event.target
-    console.log('before', value, prop.type, componentProps)
 
     if (prop.type === 'Boolean') {
         if (value === 'false') {
