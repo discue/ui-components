@@ -52,7 +52,7 @@ console.log({ attrs })
 
 const props = defineProps({
     type: {
-        type: Object
+        type: String
     },
     name: {
         type: String
