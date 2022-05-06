@@ -14,9 +14,6 @@ const props = defineProps({
     href: {
         type: String,
     },
-    size: {
-        type: String,
-    },
     invert: {
         type: Boolean,
         default: false,
