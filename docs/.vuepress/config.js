@@ -51,14 +51,7 @@ module.exports = {
         }, {
             text: 'Components',
             link: '/components/',
-        }],
-        sidebar: [{
-            text: 'Introduction',
-            link: '/introduction/',
-        }, {
-            text: 'Components',
-            link: '/components/'
-        }],
+        }]
     }),
     clientAppEnhanceFiles: path.resolve(
         __dirname,
