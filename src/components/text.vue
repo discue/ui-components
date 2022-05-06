@@ -10,6 +10,7 @@ import { computed } from 'vue';
 const props = defineProps({
     highlight: {
         type: Boolean,
+        default: false,
     },
     light: {
         type: Boolean,
