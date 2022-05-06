@@ -67,9 +67,7 @@ module.exports = {
     ),
     plugins: [
         registerComponentsPlugin({
-            components: {
-                DropDownMenuExample: path.resolve(__dirname, './examples/DropDownMenuExample.vue'),
-            },
+            componentsDir: path.resolve(__dirname, 'examples')
         }),
     ],
     markdown: {
