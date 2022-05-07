@@ -45,7 +45,9 @@
 </template>
 
 <script setup>
-import { computed, getCurrentInstance, reactive } from 'vue';
+import { computed, getCurrentInstance, reactive, useAttrs } from 'vue';
+
+const attrs = useAttrs()
 
 const props = defineProps({
     type: {
@@ -59,7 +61,11 @@ const props = defineProps({
 const componentProps = computed(() => {
     const instance = getCurrentInstance()
     const p = Object.entries(instance.appContext.components[props.type].props).reduce((context, [key, value]) => {
-        context[key] = value.default
+        if (attrs[key]) {
+            context[key] = attrs[key]
+        } else {
+            context[key] = value.default
+        }
         return context
     }, {})
     return reactive(p)
