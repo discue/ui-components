@@ -46,8 +46,8 @@ module.exports = {
         logoDark: '/icons-fire-all-gray/web/icon-96.png',
         editLinkText: 'Improve this page',
         docsDir: 'docs',
-        docsBranch: 'master',
-        repo: 'discue/discue-io-ui-docs',
+        docsBranch: 'main',
+        repo: 'discue/ui-components',
         repoLabel: 'GitHub',
         sidebarDepth: 3,
         navbar: [{
