@@ -13,6 +13,7 @@ const rCombining = /[\u0300-\u036F]/g
 const fs = require('fs')
 const components = fs.readdirSync(path.resolve(__dirname, '../components')) //
     .map(file => file.toLowerCase().substring(0, file.indexOf('.')))
+    .sort()
 
 const slugify = (str) => {
     return str
