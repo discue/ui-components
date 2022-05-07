@@ -62,7 +62,6 @@ const componentProps = computed(() => {
         context[key] = value.default
         return context
     }, {})
-
     return reactive(p)
 })
 
@@ -92,7 +91,7 @@ function castAndSet(prop, event) {
             componentProps.value[prop.name] = Boolean(value)
         }
     } else {
-        componentProps[prop.name] = value
+        componentProps.value[prop.name] = value
     }
 }
 
