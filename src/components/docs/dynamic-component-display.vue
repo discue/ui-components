@@ -36,7 +36,7 @@
                     <Text :small="false" class="">{{ prop.default }}</Text>
                 </div>
                 <div>
-                    <input :value="componentProps[prop.name]" @change="castAndSet(prop, $event)"
+                    <input :value="componentProps[prop.name]" @input="castAndSet(prop, $event)"
                         class="text-base border-b-2 border-b-solid border-gray-900 w-20">
                 </div>
             </div>
