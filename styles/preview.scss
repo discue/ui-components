@@ -25,8 +25,14 @@
     outline: none;
 }
 
-.component-preview * {
-    position: relative !important;
+.component-preview {
+    * {
+        position: relative !important;
+    }
+
+    li {
+        @apply list-none bg-gray-50 rounded shadow;
+    }
 }
 
 .theme-default-content:not(.custom) a:hover {
@@ -36,4 +42,3 @@
 .theme-default-content:not(.custom) p {
     margin-top: 0 !important;
 }
-
