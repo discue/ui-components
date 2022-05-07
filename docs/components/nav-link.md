@@ -5,10 +5,10 @@ browser scroll to the target component on the same page, or use vue router to na
 
 It can be visualized as a button, if necessary. 
 
-### Preview [#navlink-preview]
+### Preview
 <DynamicComponentDisplay type="NavLink">
   <NavLinkPreview/>
 </DynamicComponentDisplay>
 
-### Example [#navlink-example]
+### Example
 @[code](@examples/NavLinkExample.vue)
