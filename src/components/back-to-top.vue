@@ -1,3 +1,16 @@
+<template>
+    <Transition name="back-to-top">
+        <button v-if="show" @click="scrollToTop" class="back-to-top">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 49.484 28.284">
+                <g transform="translate(-229 -126.358)" fill="currentColor">
+                    <rect width="35" height="5" rx="2" transform="rotate(-45 296.902 -200.874)" />
+                    <rect width="35" height="5" rx="2" transform="rotate(-135 169.502 20.377)" />
+                </g>
+            </svg>
+        </button>
+    </Transition>
+</template>
+
 <script setup>
 import { debounce } from "ts-debounce";
 import { computed, onMounted, ref } from "vue";
