@@ -96,6 +96,8 @@ function castAndSet(prop, event) {
         } else {
             componentProps.value[prop.name] = Boolean(value)
         }
+    } else if (prop.type === 'Number') {
+        componentProps.value[prop.name] = Number(value)
     } else {
         componentProps.value[prop.name] = value
     }
