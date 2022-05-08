@@ -1,4 +1,4 @@
-<h3>Text</h3>
+<h3>Text <Badge type="tip" text="since v0.4.0" vertical="top" /></h3>
 
 A simple text element that that renders a sequence of strings. The sequence can optionally be highlighted or have a smaller than default font size.
 
