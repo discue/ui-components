@@ -38,7 +38,7 @@ module.exports = {
     // site config
     lang: 'en-US',
     title: 'discue',
-    description: 'UI library docs for the secure and reliable messaging and queueing service.',
+    description: 'Vue.js UI components for the secure and reliable messaging and queueing service.',
     bundler: viteBundler({}),
     theme: defaultTheme({
         darkMode: false,
