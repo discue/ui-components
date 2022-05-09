@@ -6,5 +6,5 @@
 </template>
 
 <script setup>
-import { DropDownMenuBannerItem } from '../../../../discue-io-ui/src/index'
+import { DropDownMenuBannerItem } from '../../../src/index'
 </script>

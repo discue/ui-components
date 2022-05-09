@@ -3,5 +3,5 @@
 </template>
 
 <script setup>
-import { Text } from '../../../../discue-io-ui/src/index'
+import { Text } from '../../../src/index'
 </script>
