@@ -3,12 +3,9 @@ home: true
 title: Home
 heroImage: /icons-fire-light/web/icon-512.png
 actions:
-  - text: Introduction
-    link: /introduction/#components
-    type: primary
   - text: Get Started
-    link: /components
-    type: secondary
+    link: /components/back-to-top.html
+    type: primary
 features:
   - title: Simple
     details: Polished and easy to integrated Vue components.
