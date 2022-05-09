@@ -111,22 +111,7 @@ a.header-anchor {
   @apply rounded-lg font-bold text-xl !important;
 }
 
-footer {
-  @apply absolute w-full left-0 right-0 p-0;
-}
 
-footer ul {
-  @apply list-none;
-}
-
-.home .footer {
-  border: none !important;
-}
-
-.page footer {
-  border-top: 1px solid var(--c-border);
-  background-color: var(--c-bg-navbar);
-}
 
 .page-nav .inner {
   border-top: 0 !important;
@@ -207,7 +192,6 @@ footer ul {
   --search-item-text-color: var(--c-text-lighter);
   --search-item-focus-bg-color: var(--c-bg-light);
 }
-
 
 html.dark .DocSearch {
   --docsearch-logo-color: var(--c-text);
