@@ -75,8 +75,6 @@ a.header-anchor {
   @apply rounded-lg font-bold text-xl !important;
 }
 
-
-
 .page-nav .inner {
   border-top: 0 !important;
   padding-top: 0 !important;
@@ -100,12 +98,6 @@ a.header-anchor {
     font-size: 0.9rem;
     align-items: center;
   }
-}
-
-
-.back-to-top {
-  --back-to-top-color: var(--c-brand);
-  --back-to-top-color-hover: var(--c-brand-light);
 }
 
 .DocSearch {
