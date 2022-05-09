@@ -51,9 +51,6 @@ module.exports = {
         repoLabel: 'GitHub',
         sidebarDepth: 3,
         navbar: [{
-            text: 'Introduction',
-            link: '/introduction/',
-        }, {
             text: 'Components',
             link: `/components/${components[0]}`,
         }],
