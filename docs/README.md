@@ -1,6 +1,6 @@
 ---
 home: true
-title: Home
+title: Vue.js component library of discue.io
 heroImage: /icons-fire-light/web/icon-512.png
 actions:
   - text: Get Started
