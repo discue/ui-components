@@ -9,7 +9,7 @@
     "build-lib": "vue-cli-service build --target lib --name ui src/index.ts && rm dist/demo.html",
     "docs:serve": "nodemon --ext md,vue,js,scss --ignore docs/.vuepress/.cache --ignore docs/.vuepress/.temp --watch docs/* --watch styles --watch src/* --exec npm run docs:dev",
     "docs:dev": "npm run docs:styles && npx vuepress dev docs",
-    "docs:build": "vuepress build docs",
+    "docs:build": "npm run docs:styles && vuepress build docs",
     "docs:styles": "postcss styles/styles.scss -o docs/.vuepress/styles/index.scss",
     "test:unit": "vue-cli-service test:unit --mode production",
     "test:e2e": "vue-cli-service test:e2e --mode production",
