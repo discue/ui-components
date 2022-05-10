@@ -5,6 +5,7 @@ export { default as DynamicComponentDisplay } from './components/docs/dynamic-co
 export { default as DropDownMenuBannerItem } from './components/drop-down-menu-banner-item.vue';
 export { default as DropDownMenuItem } from './components/drop-down-menu-item.vue';
 export { default as DropDownMenu } from './components/drop-down-menu.vue';
+export { default as Headlines } from './components/headlines.vue';
 export { default as NavLink } from './components/nav-link.vue';
 export { default as Text } from './components/text.vue';
 
