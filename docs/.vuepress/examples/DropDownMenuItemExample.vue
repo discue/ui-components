@@ -9,5 +9,5 @@
 </template>
 
 <script setup>
-import { DropDownMenuItem } from '../../../src/index'
+import { DropDownMenuItem } from '@discue/ui-components'
 </script>

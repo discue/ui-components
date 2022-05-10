@@ -5,5 +5,5 @@
 </template>
 
 <script setup>
-import { Text } from '../../../src/index'
+import { Text } from '@discue/ui-components'
 </script>

@@ -3,5 +3,5 @@
 </template>
 
 <script setup>
-import { NavLink } from '../../../src/index'
+import { NavLink } from '@discue/ui-components'
 </script>

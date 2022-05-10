@@ -27,5 +27,5 @@
 </template>
 
 <script setup>
-import { DropDownMenu, DropDownMenuBannerItem, DropDownMenuItem } from '../../../src/index'
+import { DropDownMenu, DropDownMenuBannerItem, DropDownMenuItem } from '@discue/ui-components'
 </script>

@@ -10,5 +10,5 @@
 </template>
 
 <script setup>
-import { Headlines } from '../../../src/index'
+import { Headlines } from '@discue/ui-components'
 </script>

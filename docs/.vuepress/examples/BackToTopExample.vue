@@ -3,5 +3,5 @@
 </template>
 
 <script setup>
-import { BackToTop } from '../../../src/index'
+import { BackToTop } from '@discue/ui-components'
 </script>
