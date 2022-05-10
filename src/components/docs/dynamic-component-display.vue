@@ -1,7 +1,9 @@
 <template>
     <div class="component-preview shadow-inner rounded-lg my-4 py-4 flex justify-center items-center w-full">
         <Component :is="type" v-bind="componentProps">
-            <slot />
+            <template v-for="(index, name) in $slots" v-slot:[name]>
+                <slot :name="name" />
+            </template>
         </Component>
     </div>
 
