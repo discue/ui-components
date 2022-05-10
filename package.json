@@ -44,6 +44,7 @@
     "@vue/cli-service": "~5.0.0",
     "@vuepress/plugin-register-components": "^2.0.0-beta.43",
     "@vuepress/plugin-search": "^2.0.0-beta.43",
+    "@vuepress/plugin-shiki": "^2.0.0-beta.43",
     "core-js": "^3.22.2",
     "eslint": "^8.14.0",
     "eslint-plugin-vue": "^8.0.3",

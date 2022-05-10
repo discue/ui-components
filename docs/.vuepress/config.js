@@ -3,6 +3,7 @@ const { viteBundler } = require('@vuepress/bundler-vite');
 const defaultTheme = require('./theme')
 const { registerComponentsPlugin } = require('@vuepress/plugin-register-components')
 const { searchPlugin } = require('@vuepress/plugin-search')
+const { shikiPlugin } = require('@vuepress/plugin-shiki')
 const { path } = require('@vuepress/utils')
 
 // eslint-disable-next-line no-control-regex
@@ -72,6 +73,7 @@ module.exports = {
         registerComponentsPlugin({
             componentsDir: path.resolve(__dirname, 'examples')
         }),
+        shikiPlugin({ theme: 'dark-plus' }),
     ],
     markdown: {
         importCode: {
