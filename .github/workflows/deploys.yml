@@ -22,7 +22,9 @@ jobs:
       run: npm ci
 
     - name: Build
-      run: npm run docs:build
+      run: ./build.sh
+      env:
+        NODE_ENV: production
 
     - name: Add version file
       run: npm pkg get --json version name > docs/.vuepress/dist/_version.json

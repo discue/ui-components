@@ -8,7 +8,9 @@
     "build-types": "vue-tsc --declaration --emitDeclarationOnly",
     "build-lib": "npm run build-lib-external && npm run build-lib-internal && rm dist/demo.html && rm dist/*/demo.html",
     "build-lib-external": "vue-cli-service build --target lib --name ui src/index.ts",
+    "build-lib-external-for-ssr": "vue-cli-service build --target lib --name ui --dest dist/ssr src/index.ts",
     "build-lib-internal": "vue-cli-service build --target lib --name internal --dest dist/internal src/internal/index.ts",
+    "build-lib-internal-for-ssr": "vue-cli-service build --target lib --name internal --dest dist/ssr/internal src/internal/index.ts",
     "docs:serve": "nodemon --ext md,vue,js,scss --ignore docs/.vuepress/.cache --ignore docs/.vuepress/.temp --watch docs/* --watch styles --watch src/* --exec npm run docs:dev",
     "docs:dev": "npm run docs:styles && npx vuepress dev docs",
     "docs:build": "npm run docs:styles && vuepress build docs",
@@ -29,9 +31,17 @@
       "import": "./dist/ui.common.js",
       "require": "./dist/ui.common.js"
     },
+    "./ssr": {
+      "import": "./dist/ssr/ui.common.js",
+      "require": "./dist/ssr/ui.common.js"
+    },
     "./internal": {
       "import": "./dist/internal/internal.common.js",
       "require": "./dist/internal/internal.common.js"
+    },
+    "./ssr/internal": {
+      "import": "./dist/ssr/internal/internal.common.js",
+      "require": "./dist/ssr/internal/internal.common.js"
     }
   },
   "types": "./dist/index.d.ts",
