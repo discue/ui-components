@@ -2,6 +2,18 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [0.8.0](https://github.com/discue/ui-components/compare/v0.7.0...v0.8.0) (2022-05-11)
+
+
+### Features
+
+* create and export ssr friendly components ([33fd8dd](https://github.com/discue/ui-components/commit/33fd8dd5e4d2f693c3551ba042305c0cff213b97))
+
+
+### Chores
+
+* trigger publish after release ([87d462d](https://github.com/discue/ui-components/commit/87d462d7e505d154089467bc89bda592e25e60fd))
+
 ## [0.7.0](https://github.com/discue/ui-components/compare/v0.6.0...v0.7.0) (2022-05-11)
 
 
