@@ -18,8 +18,8 @@
     "test:unit": "vue-cli-service test:unit --mode production",
     "test:e2e": "vue-cli-service test:e2e --mode production",
     "lint": "vue-cli-service lint",
-    "release": "standard-version && git push --follow-tags origin && ./deploy.sh && npm publish",
-    "release-minor": "standard-version --release-as minor && git push --follow-tags origin && ./deploy.sh && npm publish"
+    "release": "standard-version && git push --follow-tags origin && npm publish",
+    "release-minor": "standard-version --release-as minor && git push --follow-tags origin && npm publish"
   },
   "files": [
     "dist",
