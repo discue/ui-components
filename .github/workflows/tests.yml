@@ -26,6 +26,11 @@ jobs:
     - run: npm ci
 
     - name: Build
+      run: ./build.sh
+      env:
+        NODE_ENV: production
+
+    - name: Build docs
       run: npm run docs:build
       env:
         NODE_ENV: production
