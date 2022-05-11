@@ -2,6 +2,18 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [0.7.0](https://github.com/discue/ui-components/compare/v0.6.0...v0.7.0) (2022-05-11)
+
+
+### Bug Fixes
+
+* **pkg:** fix path of package exports ([ed34e34](https://github.com/discue/ui-components/commit/ed34e3495dea30efecd8614ef981d3208365dc1a))
+
+
+### Chores
+
+* **deps:** update dependencies ([eecb256](https://github.com/discue/ui-components/commit/eecb256bf569a44f73f56f386517ee6472f3b173))
+
 ## [0.6.0](https://github.com/discue/ui-components/compare/v0.5.0...v0.6.0) (2022-05-10)
 
 
