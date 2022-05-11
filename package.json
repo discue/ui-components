@@ -30,8 +30,8 @@
       "require": "./dist/ui.common.js"
     },
     "./internal": {
-      "import": "./dist/internal/ui.common.js",
-      "require": "./dist/internal/ui.common.js"
+      "import": "./dist/internal/internal.common.js",
+      "require": "./dist/internal/internal.common.js"
     }
   },
   "types": "./dist/index.d.ts",
