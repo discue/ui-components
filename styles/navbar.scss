@@ -15,8 +15,22 @@
     @apply space-x-12;
 }
 
-.navbar-item>a {
-    @apply text-gray-900 text-xl font-bold transition-transform transform;
+.navbar-item {
+    a, .navbar-dropdown-title {
+        @apply text-gray-900 text-xl font-bold transition-transform transform;
+    }
+
+    .navbar-dropdown {
+        @apply shadow-md p-0 !important;
+
+        .navbar-dropdown-item {
+            @apply p-1.5;
+        }
+
+        .navbar-dropdown-item:hover {
+            @apply bg-gray-200;
+        }
+    }
 }
 
 .navbar-item>a:hover,
