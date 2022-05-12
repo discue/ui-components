@@ -5,6 +5,7 @@ const { registerComponentsPlugin } = require('@vuepress/plugin-register-componen
 const { searchPlugin } = require('@vuepress/plugin-search')
 const { shikiPlugin } = require('@vuepress/plugin-shiki')
 const { path } = require('@vuepress/utils')
+const { version } = require('../../package.json')
 
 // eslint-disable-next-line no-control-regex
 const rControl = /[\u0000-\u001f]/g
@@ -54,7 +55,17 @@ module.exports = {
         navbar: [{
             text: 'Components',
             link: `/components/${components[0]}`,
-        }],
+        },
+        {
+            text: `v${version}`,
+            children: [
+                {
+                    text: 'Changelog',
+                    link: 'https://github.com/discue/ui-components/blob/main/CHANGELOG.md',
+                },
+            ],
+        },
+        ],
         sidebar: {
             '/components/': [
                 {
