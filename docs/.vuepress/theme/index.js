@@ -10,7 +10,7 @@ module.exports = options => {
         },
         alias: {
             '@discue/ui-components': path.resolve(__dirname, '../../../src/index'),
-            '@theme/HomeFooter.vue': path.resolve(__dirname, './layouts/HomeFooter.vue'),
+            '@theme/HomeFooter.vue': path.resolve(__dirname, './components/HomeFooter.vue'),
             '@theme/PageMeta.vue': path.resolve(__dirname, './components/PageMeta.vue'),
         },
         darkMode: false
