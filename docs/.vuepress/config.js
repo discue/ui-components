@@ -1,40 +1,12 @@
-const anchorPlugin = require('markdown-it-anchor')
 const { viteBundler } = require('@vuepress/bundler-vite');
 const defaultTheme = require('./theme')
-const { registerComponentsPlugin } = require('@vuepress/plugin-register-components')
-const { searchPlugin } = require('@vuepress/plugin-search')
-const { shikiPlugin } = require('@vuepress/plugin-shiki')
-const { path } = require('@vuepress/utils')
-const { version } = require('../../package.json')
 
-// eslint-disable-next-line no-control-regex
-const rControl = /[\u0000-\u001f]/g
-const rSpecial = /[\s~`!@#$%^&*()\-_+=[\]{}|\\;:"'“”‘’<>,.?/]+/g
-const rCombining = /[\u0300-\u036F]/g
-
-const fs = require('fs')
-const components = fs.readdirSync(path.resolve(__dirname, '../components')) //
-    .map(file => file.toLowerCase().substring(0, file.indexOf('.')))
-    .sort()
-
-const slugify = (str) => {
-    return str
-        .normalize('NFKD')
-        // Remove accents
-        .replace(rCombining, '')
-        // Remove control characters
-        .replace(rControl, '')
-        // Replace special characters
-        .replace(rSpecial, '-')
-        // Remove continuos separators
-        .replace(/-{2,}/g, '-')
-        // Remove prefixing and trailing separators
-        .replace(/^-+|-+$/g, '')
-        // ensure it doesn't start with a number (#121)
-        .replace(/^(\d)/, '_$1')
-        // lowercase
-        .toLowerCase()
-}
+const extendsMarkdown = require('./configs/extends-markdown')
+const head = require('./configs/head')
+const markdown = require('./configs/markdown')
+const navbar = require('./configs/navbar')
+const plugins = require('./configs/plugins')
+const sidebar = require('./configs/sidebar')
 
 module.exports = {
     // site config
@@ -52,69 +24,11 @@ module.exports = {
         repo: 'discue/ui-components',
         repoLabel: 'GitHub',
         sidebarDepth: 3,
-        navbar: [{
-            text: 'Components',
-            link: `/components/${components[0]}`,
-        },
-        {
-            text: `v${version}`,
-            children: [
-                {
-                    text: 'Changelog',
-                    link: 'https://github.com/discue/ui-components/blob/main/CHANGELOG.md',
-                },
-            ],
-        },
-        ],
-        sidebar: {
-            '/components/': [
-                {
-                    text: 'Components',
-                    collapsible: true,
-                    children: components,
-                }
-            ],
-        },
+        navbar,
+        sidebar
     }),
-    clientAppEnhanceFiles: path.resolve(
-        __dirname,
-        './enhance/clientAppEnhance.js'
-    ),
-    plugins: [
-        registerComponentsPlugin({
-            componentsDir: path.resolve(__dirname, 'examples')
-        }),
-        shikiPlugin({ theme: 'dark-plus' }),
-    ],
-    markdown: {
-        importCode: {
-            handleImportPath: (str) =>
-                str.replace(/^@examples/, path.resolve(__dirname, 'examples')),
-        },
-    },
-    extendsMarkdown: (md) => {
-        md.use(require('markdown-it-attrs'), {
-            allowedAttributes: ['id'],
-            leftDelimiter: '[',
-            rightDelimiter: ']',
-            allowedAttributes: []  // empty array = all attributes are allowed
-        })
-        md.use(anchorPlugin, {
-            level: [1, 2, 3, 4, 5, 6],
-            slugify,
-            permalink: anchorPlugin.permalink.ariaHidden({
-                class: 'header-anchor',
-                symbol: '#',
-                space: true,
-                placement: 'before',
-            }),
-        })
-    },
-    head: [
-        ['link', { rel: 'icon', type: "image/png", sizes: "16x16", href: "/icons-fire-all-black/web/favicon.ico" }],
-        ['link', { rel: 'icon', type: "image/png", sizes: "32x32", href: "/icons-fire-all-black/web/favicon.ico" }],
-        ['link', { rel: "apple-touch-icon", sizes: "152x152", href: "/icons-fire-all-black/web/apple-touch-icon-152x152.png" }],
-        ['viewport', { content: "width=device-width,initial-scale=1.0" }
-        ]
-    ],
+    plugins,
+    markdown,
+    extendsMarkdown,
+    head
 }
