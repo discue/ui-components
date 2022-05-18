@@ -10,8 +10,6 @@ module.exports = [
     shikiPlugin({ theme: 'dark-plus' }),
     sitemapPlugin({
         hostname: 'https://ui.discue.io',
-        excludeUrls: [
-            'https://docs.discue.io/api-reference/'
-        ]
+        excludeUrls: []
     }),
 ]
