@@ -128,7 +128,7 @@ const navigateOrScroll = (event) => {
             router.push({ path: targetPath })
         }
     } else {
-        window.location = target
+        window.open(target, '_self', 'noopener,noreferrer')
     }
 }
 </script>
