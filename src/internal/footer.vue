@@ -1,6 +1,6 @@
 <template>
     <footer class="h-40">
-        <div class="grid grid-cols-5 gap-4 p-8">
+        <div class="grid grid-cols-6 gap-4 p-8">
             <div class="col-span-2 w-32 self-center justify-self-center fill-current text-gray-900">
                 <div v-if="showLogo" class="flex flex-row">
                     <a @click.prevent="navigateOrScroll" href="https://www.discue.io/"
@@ -60,6 +60,21 @@
                     <a @click.prevent="navigateOrScroll" href="https://docs.discue.io/api-reference"
                         class="animate font-bold hover:border-b-4 hover:cursor-pointer text-gray-500 hover:border-gray-500 text-md">API
                         Reference</a>
+                </li>
+            </ul>
+            <ul class="space-y-2">
+                <li class="font-bold text-lg text-gray-800">UI Components</li>
+                <li class="text-md text-gray-800">
+                    <a @click.prevent="navigateOrScroll" href="https://ui.discue.io/components"
+                        class="animate font-bold hover:border-b-4 hover:cursor-pointer text-gray-500 hover:border-gray-500 text-md">Documentation</a>
+                </li>
+                <li class="text-md text-gray-800">
+                    <a @click.prevent="navigateOrScroll" href="https://ui.discue.io/components/back-to-top.html"
+                        class="animate font-bold hover:border-b-4 hover:cursor-pointer text-gray-500 hover:border-gray-500 text-md">Repository</a>
+                </li>
+                <li class="text-md text-gray-800">
+                    <a @click.prevent="navigateOrScroll" href="https://www.npmjs.com/package/@discue/ui-components"
+                        class="animate font-bold hover:border-b-4 hover:cursor-pointer text-gray-500 hover:border-gray-500 text-md">npm</a>
                 </li>
             </ul>
             <ul class="space-y-2">
