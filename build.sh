@@ -2,9 +2,11 @@
 
 set -e
 
-npm run build-lib-external
-VUE_CLI_SERVICE_CONFIG_PATH=ssr-safe-vue.config.js npm run build-lib-external-for-ssr
-npm run build-lib-internal
+rm -rf dist/
+
+npm run build-lib-public-no-ssr
+VUE_CLI_SERVICE_CONFIG_PATH=ssr-safe-vue.config.js npm run build-lib-public-for-ssr
+npm run build-lib-internal-no-ssr
 VUE_CLI_SERVICE_CONFIG_PATH=ssr-safe-vue.config.js npm run build-lib-internal-for-ssr
 npm run build-types
 
