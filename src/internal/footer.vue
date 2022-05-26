@@ -65,16 +65,16 @@
             <ul class="space-y-2">
                 <li class="font-bold text-lg text-gray-800">UI Components</li>
                 <li class="text-md text-gray-800">
-                    <a @click.prevent="navigateOrScroll" href="https://ui.discue.io/components"
+                    <a @click.prevent="navigateOrScroll" href="https://ui.discue.io/"
                         class="animate font-bold hover:border-b-4 hover:cursor-pointer text-gray-500 hover:border-gray-500 text-md">Documentation</a>
                 </li>
                 <li class="text-md text-gray-800">
-                    <a @click.prevent="navigateOrScroll" href="https://ui.discue.io/components/back-to-top.html"
-                        class="animate font-bold hover:border-b-4 hover:cursor-pointer text-gray-500 hover:border-gray-500 text-md">Repository</a>
+                    <a @click.prevent="navigateOrScroll" href="https://github.com/discue/ui-components"
+                        class="animate font-bold hover:border-b-4 hover:cursor-pointer text-gray-500 hover:border-gray-500 text-md">GitHub Repository</a>
                 </li>
                 <li class="text-md text-gray-800">
                     <a @click.prevent="navigateOrScroll" href="https://www.npmjs.com/package/@discue/ui-components"
-                        class="animate font-bold hover:border-b-4 hover:cursor-pointer text-gray-500 hover:border-gray-500 text-md">npm</a>
+                        class="animate font-bold hover:border-b-4 hover:cursor-pointer text-gray-500 hover:border-gray-500 text-md">npm Package</a>
                 </li>
             </ul>
             <ul class="space-y-2">
