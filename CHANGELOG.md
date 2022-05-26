@@ -2,6 +2,48 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [0.9.0](https://github.com/discue/ui-components/compare/v0.8.0...v0.9.0) (2022-05-26)
+
+
+### Features
+
+* **docs:** add version and link to changelog to navbar ([cfd3483](https://github.com/discue/ui-components/commit/cfd34835a508feaf347bb11ba28adf7a9138479a))
+* **docs:** use sitemap plugin ([b09016c](https://github.com/discue/ui-components/commit/b09016c7956f472094f94cb32a8f8918e158c1bf))
+* **footer:** add ui component links too ([f4bb958](https://github.com/discue/ui-components/commit/f4bb9582f9352c37644c7b0d507d0af3a59b15e8))
+* **footer:** prevent opener and referrer being set ([61f0073](https://github.com/discue/ui-components/commit/61f007305b70e810f2af446b850f91ea04a09e34))
+
+
+### Refactorings
+
+* **docs:** move config to config files ([5463dd5](https://github.com/discue/ui-components/commit/5463dd5a40307374aa43d5e143b058d0148d73cb))
+
+
+### Chores
+
+* add deployment script ([4ad46c5](https://github.com/discue/ui-components/commit/4ad46c53921081bb42d309cb4ce510435fc95899))
+* add license to pkg json ([83c7655](https://github.com/discue/ui-components/commit/83c76556c22915e440436f1cc4fb9fdda2296abe))
+* **ci:** build and deploy docs too ([21998d4](https://github.com/discue/ui-components/commit/21998d4fb36840d66a69eaeed2dec8adcfb810dd))
+* **ci:** build css during docs build ([d82982f](https://github.com/discue/ui-components/commit/d82982f63adfe4f8eef76804c8f20e127370f32d))
+* **ci:** create version file in vuepress dist folder ([3ec168c](https://github.com/discue/ui-components/commit/3ec168c9b6b159b53f848ed00fe4e0f69e5f0bc4))
+* **ci:** update service account secret name ([e7c32f9](https://github.com/discue/ui-components/commit/e7c32f98cf14782cc5f498424a457e8f4065e06f))
+* **deps:** update dependencies ([29293da](https://github.com/discue/ui-components/commit/29293da40369bc12fb2f1893a2b41ce82a2cb16f))
+* **deps:** update dependencies ([4b6d7b5](https://github.com/discue/ui-components/commit/4b6d7b521b0c6b44291201f0abadc3034428d163))
+* **deps:** update vuepress and fix breaking change ([7d68fe8](https://github.com/discue/ui-components/commit/7d68fe868e546fca203bdf6c469349e5aa273134))
+* do not trigger deploy after release ([0448cca](https://github.com/discue/ui-components/commit/0448cca12ff45001a2014cf8412494bf8df2dff4))
+* **docs:** add index page ([9054f00](https://github.com/discue/ui-components/commit/9054f0099bed792e276b820efa6f7150b95eac2d))
+* **docs:** add viewport meta tag ([2e2cd16](https://github.com/discue/ui-components/commit/2e2cd169193fd316ec5400e6a3bce9d0ab4c86b0))
+* **docs:** import all css files into mail file ([f1cacc6](https://github.com/discue/ui-components/commit/f1cacc67a3933ce4b921253a1125cd86813708f7))
+* **docs:** move footer override to components foolder ([fe73d5e](https://github.com/discue/ui-components/commit/fe73d5e7cd4fad0a32bf10f3ce4b5ef2ffc78349))
+* **docs:** override navbar dropdown styles ([4c6d9b9](https://github.com/discue/ui-components/commit/4c6d9b9ac2ea967d002cd8554e85b149f2039913))
+* **docs:** remove introduction navbar link ([a62062a](https://github.com/discue/ui-components/commit/a62062ad54831b1a19e1a67a1a0493a3c49b6ec2))
+* **docs:** update description ([0138bdb](https://github.com/discue/ui-components/commit/0138bdb1ab7539ddd429795e7916e04190de9aa6))
+* **docs:** update headline structure ([633271c](https://github.com/discue/ui-components/commit/633271c4fb67e87da32028a4365d32efb36c21ce))
+* **docs:** update links to legal pages ([333466b](https://github.com/discue/ui-components/commit/333466bdaaaf6bda97b22929b68f804bf7a0bbbd))
+* **docs:** update title ([92fe854](https://github.com/discue/ui-components/commit/92fe854754e8fb89a790534b46bdb3a8dbfc4fc1))
+* **docs:** use only one primary action ([37597c2](https://github.com/discue/ui-components/commit/37597c22300a2556fd12e15e3d6667eac86444a2))
+* make build script executable ([8f00d63](https://github.com/discue/ui-components/commit/8f00d637e59ab3b3926541a5e4458c69e3282304))
+* **sitemap:** no need to exclude api docs page ([04f6fc1](https://github.com/discue/ui-components/commit/04f6fc19a2b6b1a2a97bdba38ac5181afb24973f))
+
 ## [0.8.0](https://github.com/discue/ui-components/compare/v0.7.0...v0.8.0) (2022-05-11)
 
 
