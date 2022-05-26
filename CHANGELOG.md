@@ -2,6 +2,18 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.9.1](https://github.com/discue/ui-components/compare/v0.9.0...v0.9.1) (2022-05-26)
+
+
+### Bug Fixes
+
+* **build:** does not contain ssr safe components ([48dc70d](https://github.com/discue/ui-components/commit/48dc70d5a09d037deff1accce92f37ba5cf31c55))
+
+
+### Chores
+
+* build before each release ([69bdb4d](https://github.com/discue/ui-components/commit/69bdb4d54586b968dd242bacf5c9d10c1a22aad9))
+
 ## [0.9.0](https://github.com/discue/ui-components/compare/v0.8.0...v0.9.0) (2022-05-26)
 
 
