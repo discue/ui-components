@@ -2,6 +2,24 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [0.10.0](https://github.com/discue/ui-components/compare/v0.9.1...v0.10.0) (2022-05-28)
+
+
+### Features
+
+* **nav-button:** add nav button component ([57cfc4a](https://github.com/discue/ui-components/commit/57cfc4a6972e76ce7db1327e1933805388f4a28a))
+
+
+### Bug Fixes
+
+* **footer:** fix ui components links and labels ([8267e44](https://github.com/discue/ui-components/commit/8267e44acf232d608c64cd971aee5bfe45297131))
+
+
+### Chores
+
+* **build:** use build script also in pkg.json ([aee5b6a](https://github.com/discue/ui-components/commit/aee5b6a3c33467a4c7a204ad63f2f7cc7bc3e0da))
+* **dynamic-component:** no input allowed for function props ([dc19a1d](https://github.com/discue/ui-components/commit/dc19a1dbfbdef9f864a2f3f6ec63c2deac29fa9c))
+
 ### [0.9.1](https://github.com/discue/ui-components/compare/v0.9.0...v0.9.1) (2022-05-26)
 
 
