@@ -38,7 +38,7 @@
                     <Text :small="false" class="">{{ prop.default }}</Text>
                 </div>
                 <div>
-                    <input :value="componentProps[prop.name]" @input="castAndSet(prop, $event)"
+                    <input :value="componentProps[prop.name]" @input="castAndSet(prop, $event)" v-if="prop.allowInput"
                         class="text-base border-b-2 border-b-solid border-gray-900 w-20">
                 </div>
             </div>
@@ -81,6 +81,7 @@ const targetPropsForTable = computed(() => {
             [key]: {
                 name: key,
                 type: value.type.prototype.constructor.name,
+                allowInput: value.type.prototype.constructor.name !== 'Function',
                 'default': value.default
             }
         }))
