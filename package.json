@@ -70,7 +70,7 @@
     "ts-debounce": "^4.0.0",
     "vue-router": "^4.0.15",
     "vue-tsc": "^0.35.2",
-    "vuepress": "2.0.0-beta.45",
+    "vuepress": "2.0.0-beta.46",
     "vuepress-plugin-sitemap2": "^2.0.0-beta.24"
   },
   "eslintConfig": {
