@@ -2,6 +2,24 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [0.12.0](https://github.com/discue/ui-components/compare/v0.11.0...v0.12.0) (2022-06-05)
+
+
+### Features
+
+* **banner:** emit open and close events ([68cce15](https://github.com/discue/ui-components/commit/68cce15da0bc85cd0aa45c12d73c625ae7640f14))
+* **dynamic-component:** show emitted events if any ([956947d](https://github.com/discue/ui-components/commit/956947dd0e4e93d06a6f1cfb7945e356e13d5bc7))
+
+
+### Bug Fixes
+
+* **drop-down-item:** icon and text not centered ([886a669](https://github.com/discue/ui-components/commit/886a6691d52b5a94c64d3f47624926db003b8921))
+
+
+### Chores
+
+* **dynamic-component:** set fallback for empty props object ([99c644b](https://github.com/discue/ui-components/commit/99c644b1e6ae78cd231bdcd2c53ab4915c3667d3))
+
 ## [0.11.0](https://github.com/discue/ui-components/compare/v0.10.0...v0.11.0) (2022-06-05)
 
 
