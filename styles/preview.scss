@@ -25,6 +25,12 @@
         position: relative !important;
     }
 
+    .absolute {
+        .absolute {
+            position: absolute !important;
+        }
+    }
+
     ul {
         @apply list-none my-0;
         padding-left: inherit;
