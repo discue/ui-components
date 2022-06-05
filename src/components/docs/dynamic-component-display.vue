@@ -1,5 +1,6 @@
 <template>
-    <div :id="id" class="component-preview shadow-inner rounded-lg my-4 py-4 flex justify-center items-center w-full">
+    <div :id="id"
+        class="component-preview bg-stone-300 shadow-inner rounded-lg my-4 py-4 flex justify-center items-center w-full">
         <Component :is="type" v-bind="componentProps">
             <template v-for="(index, name) in $slots" v-slot:[name]>
                 <slot :name="name" />
