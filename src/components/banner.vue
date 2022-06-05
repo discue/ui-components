@@ -1,7 +1,6 @@
 <template>
     <Teleport :disabled="!parent" :to="parent" class="w-full relative">
-        <div v-if="showBanner"
-            class="absolute top-0 h-10 z-50 w-full bg-lime-300 flex items-center justify-center font-medium shadow">
+        <div v-if="showBanner" :class="clazz">
             <slot />
 
             <div class="absolute right-4">
@@ -42,9 +41,18 @@ const forceCloseBanner = ref(false)
 const showBanner = computed(() => {
     // hide banner if force close is true
     if (!props.show) {
-        return false 
+        return false
     }
     return !forceCloseBanner.value && props.show
+})
+
+const clazz = computed(() => {
+    const clazz = 'top-0 h-10 w-full bg-lime-300 flex items-center justify-center font-medium shadow' + ' '
+    if (props.parent) {
+        return clazz + 'fixed z-50'
+    } else {
+        return clazz + 'absolute z-10'
+    }
 })
 
 const closeBanner = () => {
