@@ -38,7 +38,13 @@
                     <Text :small="false" class="">{{ prop.default }}</Text>
                 </div>
                 <div>
-                    <input :value="componentProps[prop.name]" @input="castAndSet(prop, $event)" v-if="prop.allowInput"
+                    <select v-if="prop.allowInput && prop.type === 'Boolean'" :value="componentProps[prop.name]"
+                        @input="castAndSet(prop, $event)" class="w-24 text-lg">
+                        <option class="w-24 text-lg">true</option>
+                        <option class="w-24 text-lg">false</option>
+                    </select>
+                    <input v-else-if="prop.allowInput" :value="componentProps[prop.name]"
+                        @input="castAndSet(prop, $event)"
                         class="text-base border-b-2 border-b-solid border-gray-900 w-20">
                 </div>
             </div>
