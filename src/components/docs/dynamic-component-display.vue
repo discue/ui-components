@@ -109,7 +109,12 @@ const componentProps = computed(() => {
 const targetPropsForTable = computed(() => {
     const instance = getCurrentInstance()
 
-    const p = Object.entries(instance.appContext.components[props.type].props).reduce((context, [key, value], index) => {
+    let componentProps = instance.appContext.components[props.type].props
+    if (!componentProps) {
+        componentProps = {}
+    }
+
+    return Object.entries(componentProps).reduce((context, [key, value], index) => {
         return Object.assign(context, reactive({
             [key]: {
                 name: key,
@@ -120,8 +125,6 @@ const targetPropsForTable = computed(() => {
             }
         }))
     }, {})
-
-    return p
 })
 
 const targetEmitsForTable = computed(() => {
