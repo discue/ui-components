@@ -1,5 +1,6 @@
 .component-preview *[class*=" border-b"],
-.component-properties-preview *[class*=" border-b"] {
+.component-properties-preview *[class*=" border-b"],
+.component-emits-preview *[class*=" border-b"] {
     border-bottom-style: solid;
     border-top: none;
     border-left: none;
@@ -7,7 +8,8 @@
 }
 
 .component-preview *[class*="hover:border-b"]:hover,
-.component-properties-preview *[class*="hover:border-b"]:hover {
+.component-properties-preview *[class*="hover:border-b"]:hover,
+.component-emits-preview *[class*="hover:border-b"]:hover {
     border-bottom-style: solid;
 }
 
@@ -35,7 +37,7 @@
     }
 
     li {
-        @apply list-none bg-gray-50 rounded shadow;
+        @apply list-none bg-gray-50 shadow;
     }
 
     .back-to-top {
