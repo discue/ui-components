@@ -11,8 +11,8 @@
         <h3 class="text-xl font-medium inline-block">
             Properties
         </h3>
-        <div class="space-y-4">
-            <div class="grid grid-cols-4">
+        <div class="">
+            <div class="grid grid-cols-4 py-4 pl-4 rounded-t-lg border-b-2 border-stone-300">
                 <div>
                     <Text :highlight="true" :small="true" class="uppercase">Name</Text>
                 </div>
@@ -27,7 +27,8 @@
                 </div>
             </div>
 
-            <div class="grid grid-cols-4" v-for="prop in targetPropsForTable" :key="prop.name">
+            <div class="grid grid-cols-4 border-b-2 border-stone-300 border-solid py-4 pl-4" v-for="(prop) in targetPropsForTable"
+                :key="prop.name">
                 <div>
                     <Text :small="false" class="">{{ prop.name }}</Text>
                 </div>
@@ -86,13 +87,14 @@ const componentProps = computed(() => {
 const targetPropsForTable = computed(() => {
     const instance = getCurrentInstance()
 
-    const p = Object.entries(instance.appContext.components[props.type].props).reduce((context, [key, value]) => {
+    const p = Object.entries(instance.appContext.components[props.type].props).reduce((context, [key, value], index) => {
         return Object.assign(context, reactive({
             [key]: {
                 name: key,
                 type: value.type.prototype.constructor.name,
                 allowInput: value.type.prototype.constructor.name !== 'Function',
-                'default': value.default
+                'default': value.default,
+                index
             }
         }))
     }, {})
