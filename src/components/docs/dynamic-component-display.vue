@@ -12,8 +12,9 @@
         <h3 class="text-xl font-medium inline-block">
             Properties
         </h3>
+
         <div class="">
-            <div class="grid grid-cols-4 py-4 pl-4 rounded-t-lg border-b-2 border-stone-300">
+            <div class="grid grid-cols-4 pb-4 pl-4 rounded-t-lg border-b-2 border-stone-300">
                 <div>
                     <Text :highlight="true" :small="true" class="uppercase">Name</Text>
                 </div>
@@ -28,8 +29,8 @@
                 </div>
             </div>
 
-            <div class="grid grid-cols-4 border-b-2 border-stone-300 border-solid py-4 pl-4" v-for="(prop) in targetPropsForTable"
-                :key="prop.name">
+            <div class="grid grid-cols-4 border-b-2 border-stone-300 border-solid py-4 pl-4"
+                v-for="(prop) in targetPropsForTable" :key="prop.name">
                 <div>
                     <Text :small="false" class="">{{ prop.name }}</Text>
                 </div>
@@ -48,6 +49,26 @@
                     <input v-else-if="prop.allowInput" :value="componentProps[prop.name]"
                         @input="castAndSet(prop, $event)"
                         class="text-base border-b-2 border-b-solid border-gray-900 w-20">
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div v-if="emitsEvents" class="component-emits-preview">
+        <h3 class="text-xl font-medium inline-block">
+            Emits
+        </h3>
+        <div class="">
+            <div class="grid grid-cols-4 pb-4 pl-4 rounded-t-lg border-b-2 border-stone-300">
+                <div>
+                    <Text :highlight="true" :small="true" class="uppercase">Event</Text>
+                </div>
+            </div>
+
+            <div class="grid grid-cols-4 border-b-2 border-stone-300 border-solid py-4 pl-4"
+                v-for="(prop) in targetEmitsForTable" :key="prop">
+                <div>
+                    <Text :small="false" class="">{{ prop }}</Text>
                 </div>
             </div>
         </div>
@@ -101,6 +122,15 @@ const targetPropsForTable = computed(() => {
     }, {})
 
     return p
+})
+
+const targetEmitsForTable = computed(() => {
+    const instance = getCurrentInstance()
+    return instance.appContext.components[props.type].emits
+})
+
+const emitsEvents = computed(() => {
+    return targetEmitsForTable.value?.length > 0
 })
 
 function castAndSet(prop, event) {
