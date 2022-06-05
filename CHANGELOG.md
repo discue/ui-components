@@ -2,6 +2,33 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [0.11.0](https://github.com/discue/ui-components/compare/v0.10.0...v0.11.0) (2022-06-05)
+
+
+### Features
+
+* **Banner:** add banner element ([616ddc2](https://github.com/discue/ui-components/commit/616ddc2a8bf9eba446ce7a0ad1fbc4547b8de9ee))
+* **drop-down-item:** align text center ([14f3349](https://github.com/discue/ui-components/commit/14f33498b14673bee6a988b54704321e36c9cbec))
+* **dynamic-component:** set id on parent element ([a50b6bb](https://github.com/discue/ui-components/commit/a50b6bbb00abeeb145d3ad0ac32e6a72d71fb8f5))
+* **dynamic-component:** show borders in props table ([895c0b3](https://github.com/discue/ui-components/commit/895c0b3510dc1c37b7f1f0d546b393df35df41dc))
+* **dynamic-component:** show select if prop type is boolean ([ba4fac5](https://github.com/discue/ui-components/commit/ba4fac5131dfe4c5cc3700a45bd867c282216268))
+
+
+### Chores
+
+* **deps-dev:** bump @babel/core from 7.17.10 to 7.18.2 ([2807577](https://github.com/discue/ui-components/commit/28075773727d4ff33b39443ed275c2905de247b1))
+* **deps-dev:** bump @babel/eslint-parser from 7.17.0 to 7.18.2 ([edde663](https://github.com/discue/ui-components/commit/edde6631ae06a4142cfc55aed6eb46cbe45d3ae2))
+* **deps-dev:** bump @vuepress/plugin-register-components ([2159909](https://github.com/discue/ui-components/commit/2159909ee4aa15dc062cd3f9319a29c3bcc523b7))
+* **deps-dev:** bump @vuepress/plugin-search ([6776f76](https://github.com/discue/ui-components/commit/6776f760e37ce3fef1b828766520a8ff2e32584d))
+* **deps-dev:** bump @vuepress/plugin-shiki ([32ae805](https://github.com/discue/ui-components/commit/32ae805e5f8eb1604803410c7d6e07ab775878df))
+* **deps-dev:** bump eslint-plugin-vue from 9.0.1 to 9.1.0 ([a0e6cbf](https://github.com/discue/ui-components/commit/a0e6cbf0ebf5b6a39537fbb8699afdd98cd8fe52))
+* **deps-dev:** bump vue-tsc from 0.34.16 to 0.35.2 ([a8b8bff](https://github.com/discue/ui-components/commit/a8b8bffc8dd58018d66aad8a807f844c6bc1e773))
+* **deps-dev:** bump vuepress from 2.0.0-beta.45 to 2.0.0-beta.46 ([6887e3e](https://github.com/discue/ui-components/commit/6887e3efd26de31561ce7cca87c7719e5802e2f3))
+* **deps:** update deps ([96067f6](https://github.com/discue/ui-components/commit/96067f6f31799147c0f173739454b10e9e684437))
+* **dynamic-component:** use stone-300 as bg color ([91c9749](https://github.com/discue/ui-components/commit/91c9749d745f48e1ec315c42df289195415fd05b))
+* **markdown:** add src alias for code imports ([d31e824](https://github.com/discue/ui-components/commit/d31e824c70697686dd4e421917df8a44f68ef0da))
+* **styles:** allow nested absolute elements positioned absolute ([9204561](https://github.com/discue/ui-components/commit/92045612f6b796b00ce09ca4d614f8d9e50d5e18))
+
 ## [0.10.0](https://github.com/discue/ui-components/compare/v0.9.1...v0.10.0) (2022-05-28)
 
 
