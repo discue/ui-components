@@ -20,8 +20,9 @@
 </template>
 
 <script setup>
-import { computed, ref } from 'vue';
+import { computed, ref, watchEffect } from 'vue';
 
+const emit = defineEmits(['open', 'close'])
 const props = defineProps({
     show: {
         type: Boolean,
@@ -49,4 +50,13 @@ const showBanner = computed(() => {
 const closeBanner = () => {
     forceCloseBanner.value = true
 }
+
+watchEffect(() => {
+    if (showBanner.value) {
+        emit('open')
+    } else {
+        emit('close')
+    }
+})
+
 </script>
