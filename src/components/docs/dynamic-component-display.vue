@@ -46,6 +46,9 @@
                         <option class="w-24 text-lg">true</option>
                         <option class="w-24 text-lg">false</option>
                     </select>
+                    <input v-else-if="prop.allowInput && prop.type === 'Array'" :value="JSON.stringify(componentProps[prop.name])"
+                        @input="castAndSet(prop, $event)"
+                        class="text-base border-b-2 border-b-solid border-gray-900 w-20">
                     <input v-else-if="prop.allowInput" :value="componentProps[prop.name]"
                         @input="castAndSet(prop, $event)"
                         class="text-base border-b-2 border-b-solid border-gray-900 w-20">
@@ -145,6 +148,8 @@ function castAndSet(prop, event) {
         } else {
             componentProps.value[prop.name] = Boolean(value)
         }
+    } else if (prop.type === 'Array') {
+        componentProps.value[prop.name] = JSON.parse(value)
     } else if (prop.type === 'Number') {
         componentProps.value[prop.name] = Number(value)
     } else {
