@@ -2,6 +2,18 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.13.1](https://github.com/discue/ui-components/compare/v0.13.0...v0.13.1) (2022-06-29)
+
+
+### Bug Fixes
+
+* **form-el-container:** remove uninitialized variable ([5dc9866](https://github.com/discue/ui-components/commit/5dc986688b7a0d863f670b4cae324d781c123208))
+
+
+### Chores
+
+* **docs:** add correct form input select example ([c9b870c](https://github.com/discue/ui-components/commit/c9b870c5801dc41a71b46b3eabe7c0b6048167a5))
+
 ## [0.13.0](https://github.com/discue/ui-components/compare/v0.12.0...v0.13.0) (2022-06-29)
 
 
