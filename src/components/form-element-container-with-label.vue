@@ -118,7 +118,7 @@ const hasFocus = ref(false)
 const hasLostFocusAtLeastOnce = ref(false)
 
 const isInvalid = computed(() => {
-    return (postMessage.forceShowErrorMessage && props.inputInvalid) || (hasLostFocusAtLeastOnce.value && props.inputInvalid)
+    return (props.forceShowErrorMessage && props.inputInvalid) || (hasLostFocusAtLeastOnce.value && props.inputInvalid)
 })
 const parentId = computed(() => {
     return `${props.id}ElementContainer`
