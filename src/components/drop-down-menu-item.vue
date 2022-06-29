@@ -24,10 +24,12 @@ const props = defineProps({
     },
     href: {
         type: String
-    }
+    },
 })
 
 function onClick() {
-    router.push({ path: props.href })
+    if (props.href) {
+        router.push({ path: props.href })
+    }
 }
 </script>
