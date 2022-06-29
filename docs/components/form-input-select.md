@@ -10,4 +10,4 @@ Similar to [v-for](https://vuejs.org/guide/essentials/list.html#maintaining-stat
 <DynamicComponentDisplay type="FormInputSelect" :attach-v-model="true" id="demoSelect" description="Showcases the select element" label="Label" :elements="[{id: '1', name:'First Element'}, {id: '2', name: 'Second Element'}]"></DynamicComponentDisplay>
 
 ## Example
-@[code](@examples/BackToTopExample.vue)
+@[code](@examples/FormInputSelect.vue)
