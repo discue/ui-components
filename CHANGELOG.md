@@ -2,6 +2,34 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [0.13.0](https://github.com/discue/ui-components/compare/v0.12.0...v0.13.0) (2022-06-29)
+
+
+### Features
+
+* add form element error message component ([c3505eb](https://github.com/discue/ui-components/commit/c3505ebc8340c1bdd9d723d5432f93fb638db5b5))
+* **banner:** if no parent use higher z index and position fixed ([9c83ea2](https://github.com/discue/ui-components/commit/9c83ea271e553e1d9d1eab2d1e51b1a8028f3fc2))
+* **dynamic-component:** stringify and parse array props ([6c99f94](https://github.com/discue/ui-components/commit/6c99f94f4dbed171a62aee7f355cfc96dc0f049f))
+* **form-input-select:** add component ([497cec2](https://github.com/discue/ui-components/commit/497cec2189d2beecee706a3d10058a8e2018d430))
+* **text:** allow component to inherit color from parent ([a44f121](https://github.com/discue/ui-components/commit/a44f121e1e7023357ed0d09db5703388ce728667))
+
+
+### Bug Fixes
+
+* dark mode switch not hidden ([60842a7](https://github.com/discue/ui-components/commit/60842a7e6bd9ef7374a352d86a9c8ae591891a0c))
+
+
+### Chores
+
+* **deps:** update dependencies ([8803c83](https://github.com/discue/ui-components/commit/8803c835817c133ad96c3e95c2e6d88e50dae266))
+* **deps:** update dependencies ([bd9bde8](https://github.com/discue/ui-components/commit/bd9bde8cf5433dc9af064b2141a665df97774457))
+* **deps:** update dependencies ([c6a65fe](https://github.com/discue/ui-components/commit/c6a65fe0813178aecd5e690ac90854696a3b53de))
+* **deps:** update package-lock file ([b8d2e75](https://github.com/discue/ui-components/commit/b8d2e7567044f6e88d503f317566149c20df237f))
+* **docs:** add styles for select and options tags ([dddc024](https://github.com/discue/ui-components/commit/dddc024180ce31be841a3c632b3f2f5d8d9b958d))
+* **drop-down-item:** if href is not set do nothing on click ([907c1a6](https://github.com/discue/ui-components/commit/907c1a6452f8dab333a3e7b35cd4c0c61a741bf4))
+* **drop-down-menu:** use fixed position ([367feb6](https://github.com/discue/ui-components/commit/367feb6c687216f47a4762317e9b7f202a30e2ef))
+* **form-el-container:** add component ([da1fde1](https://github.com/discue/ui-components/commit/da1fde10ab3892cb066831f5de50ba1b2252f736))
+
 ## [0.12.0](https://github.com/discue/ui-components/compare/v0.11.0...v0.12.0) (2022-06-05)
 
 
