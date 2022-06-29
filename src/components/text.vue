@@ -19,6 +19,10 @@ const props = defineProps({
     small: {
         type: Boolean,
         default: false
+    },
+    inheritColor: {
+        type: Boolean,
+        default: false
     }
 })
 
@@ -35,6 +39,8 @@ const fontColor = computed(() => {
         return 'text-gray-100'
     } else if (props.highlight) {
         return 'text-gray-900'
+    } else if (props.inheritColor) {
+        return 'text-inherit'
     } else {
         return 'text-gray-600'
     }
