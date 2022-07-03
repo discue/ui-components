@@ -6,9 +6,11 @@ browser scroll to the target component on the same page, or use vue router to na
 It can be visualized as a button, if necessary. 
 
 ## Preview
-<DynamicComponentDisplay type="NavLink">
-  <NavLinkPreview/>
-</DynamicComponentDisplay>
+<ClientOnly>
+  <DynamicComponentDisplay type="NavLink" href="https://www.discue.io">
+    <NavLinkPreview/>
+  </DynamicComponentDisplay>
+</ClientOnly>
 
 ## Example
 @[code](@examples/NavLinkExample.vue)
