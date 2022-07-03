@@ -71,9 +71,20 @@ const clazz = computed(() => {
     }
 })
 
+const hasExternalLink = computed(() => {
+    const { href } = props
+    const { hostname } = window.location
+    return href.startsWith('http') && !href.includes(hostname)
+})
+
+const hasAnchor = computed(() => {
+    const { href } = props
+    return !hasExternalLink.value && href.includes('#')
+})
+
 function click(event) {
-    if (props.href.includes('#') && !props.href.includes('/')) {
-        // let the browser do the scrolling
+    if (hasExternalLink.value || hasAnchor.value) {
+        // let the browser do the work
     } else {
         event.preventDefault()
         event.stopImmediatePropagation()
