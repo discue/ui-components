@@ -2,6 +2,24 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [0.14.0](https://github.com/discue/ui-components/compare/v0.13.1...v0.14.0) (2022-07-03)
+
+
+### Features
+
+* **nav-link:** add icon to external links ([7d13425](https://github.com/discue/ui-components/commit/7d134253e5b7fbd3dffd796820e2aafcd611fe58))
+* **nav-link:** handle external links too ([51196b9](https://github.com/discue/ui-components/commit/51196b9d7ce335da8ba099ec47b89d0ad3793f61))
+* **nav-link:** set rel attribute if link is external ([80b3842](https://github.com/discue/ui-components/commit/80b3842a7caec727050b95982b3fe8136a84e273))
+* **nav-link:** set target attribute too according to href ([eb52a19](https://github.com/discue/ui-components/commit/eb52a19757ddb9e2066b813a22edb160dc175ee4))
+
+
+### Chores
+
+* **deps-dev:** bump firebase-tools from 11.1.0 to 11.2.0 ([251aeb9](https://github.com/discue/ui-components/commit/251aeb9ac078db82d5bc2bb692a1150332172087))
+* **deps-dev:** bump postcss-cli from 9.1.0 to 10.0.0 ([344793f](https://github.com/discue/ui-components/commit/344793fe48d37021d8f717ef5fb07003ea053d1a))
+* **docs:** add href property to nav link documentation ([4a177a5](https://github.com/discue/ui-components/commit/4a177a57d5b37cf68de9f8eb326eb8b79bd86570))
+* **nav-link:** update doc text ([6749aa7](https://github.com/discue/ui-components/commit/6749aa72638ccf238b5c9699d618d20fbc7d0c5f))
+
 ### [0.13.1](https://github.com/discue/ui-components/compare/v0.13.0...v0.13.1) (2022-06-29)
 
 
