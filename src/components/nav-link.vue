@@ -1,5 +1,5 @@
 <template>
-    <a :href="href" :class="clazz" :rel="rel" @click="click($event)">
+    <a :href="href" :class="clazz" :rel="rel" :target="target" @click="click($event)">
         <slot />
     </a>
 </template>
@@ -29,6 +29,9 @@ const props = defineProps({
     attention: {
         type: Boolean,
         default: false
+    },
+    target: {
+        type: String,
     }
 })
 
@@ -87,6 +90,16 @@ const rel = computed(() => {
         return 'noopener noreferrer'
     } else {
         return ''
+    }
+})
+
+const target = computed(() => {
+    if (props.target) {
+        return props.target
+    } else if (hasExternalLink.value) {
+        return '_blank'
+    } else {
+        return '_self'
     }
 })
 
