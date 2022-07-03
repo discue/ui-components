@@ -1,5 +1,5 @@
 <template>
-    <a :href="href" :class="clazz" @click="click($event)">
+    <a :href="href" :class="clazz" :rel="rel" @click="click($event)">
         <slot />
     </a>
 </template>
@@ -80,6 +80,14 @@ const hasExternalLink = computed(() => {
 const hasAnchor = computed(() => {
     const { href } = props
     return !hasExternalLink.value && href.includes('#')
+})
+
+const rel = computed(() => {
+    if (hasExternalLink.value) {
+        return 'noopener noreferrer'
+    } else {
+        return ''
+    }
 })
 
 function click(event) {
