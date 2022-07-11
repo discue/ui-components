@@ -50,7 +50,7 @@ const isInvalid = ref(false)
 const isFocussed = ref(false)
 
 const inputValue = computed(() => {
-    if (!props.modelValue) {
+    if (props.modelValue === undefined || props.modelValue === null) {
         return null
     }
     return props.elements.findIndex(element => props.modelValue[props.trackBy] === element[props.trackBy])
