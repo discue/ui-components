@@ -53,7 +53,10 @@ const inputValue = computed(() => {
     if (props.modelValue === undefined || props.modelValue === null) {
         return null
     }
-    return props.elements.findIndex(element => props.modelValue[props.trackBy] === element[props.trackBy])
+    const selectIndex = props.elements.findIndex(element => {
+        return props.modelValue === element[props.trackBy]
+    })
+    return selectIndex
 })
 
 function onFocus() {
