@@ -2,6 +2,21 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [0.15.0](https://github.com/discue/ui-components/compare/v0.14.0...v0.15.0) (2022-07-12)
+
+
+### Bug Fixes
+
+* **select:** fix setting default value does not work ([4752110](https://github.com/discue/ui-components/commit/4752110c5756a5bf021e9ff3ea125e3d8ead4d82))
+
+
+### Chores
+
+* **ci:** add test script and config ([93bb409](https://github.com/discue/ui-components/commit/93bb40965f20a7f3fb837a70ffaf1afdb1569f46))
+* **ci:** run tests in tests workflow ([4930bd7](https://github.com/discue/ui-components/commit/4930bd77bba1732427458d96d80992dc780a5230))
+* **deps:** install deps for unit tests ([2525bde](https://github.com/discue/ui-components/commit/2525bde67d9baa6c46a9f9d68060c2c1b5896dfe))
+* **select:** explicitly check for undefined and null values ([ea590cb](https://github.com/discue/ui-components/commit/ea590cb5e41cb790ad55295ef402ba1f8ce0c487))
+
 ## [0.14.0](https://github.com/discue/ui-components/compare/v0.13.1...v0.14.0) (2022-07-03)
 
 
