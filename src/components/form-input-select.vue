@@ -53,10 +53,15 @@ const inputValue = computed(() => {
     if (props.modelValue === undefined || props.modelValue === null) {
         return null
     }
-    const selectIndex = props.elements.findIndex(element => {
-        return props.modelValue === element[props.trackBy]
-    })
-    return selectIndex
+
+    if (Number.isInteger(props.modelValue)) {
+        return props.modelValue
+    } else if (typeof props.modelValue === 'string') {
+        return props.elements.findIndex(element => {
+            return props.modelValue === element[props.trackBy]
+        })
+    }
+    return null
 })
 
 function onFocus() {
@@ -70,7 +75,7 @@ function focusSelect(e) {
 }
 function onInput() {
     const value = select.value.value
-    emits('update:modelValue', props.elements[parseInt(value)])
+    emits('update:modelValue', parseInt(value))
 }
 
 </script>
