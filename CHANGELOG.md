@@ -2,6 +2,21 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [0.16.0](https://github.com/discue/ui-components/compare/v0.15.0...v0.16.0) (2022-07-14)
+
+
+### Bug Fixes
+
+* navbar hidden on firefox ([e039f60](https://github.com/discue/ui-components/commit/e039f60a7ad89911bcb636ee365ab7ef7c9c7d45))
+* **select:** does not inherit bg from parent ([b89b55c](https://github.com/discue/ui-components/commit/b89b55cead8153ebf01670bdbdb5b4881dab2ce4))
+* **select:** value not updated correctly on input ([aa007bd](https://github.com/discue/ui-components/commit/aa007bd38281aeb122022fa1066ab7150e745536))
+
+
+### Chores
+
+* **ci:** explicitly set vue cli service config ([c5da502](https://github.com/discue/ui-components/commit/c5da50251e74845f78e297f3fd5545551618aab5))
+* **deps:** update vuepress ([0e2268d](https://github.com/discue/ui-components/commit/0e2268d26a3ebf689d541af76f4a9f153099df09))
+
 ## [0.15.0](https://github.com/discue/ui-components/compare/v0.14.0...v0.15.0) (2022-07-12)
 
 
