@@ -2,6 +2,26 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [0.17.0](https://github.com/discue/ui-components/compare/v0.16.0...v0.17.0) (2022-07-24)
+
+
+### Features
+
+* **dynamic-component:** display v-model under preview ([b0e1f20](https://github.com/discue/ui-components/commit/b0e1f200d4890e68c07d7e545500a03b6c916362))
+* **radio:** add radio component ([28d4966](https://github.com/discue/ui-components/commit/28d49668478bfe25d1ddb7adf1779bd6be81a966))
+
+
+### Bug Fixes
+
+* **form-element-container:** incorrect watch syntax ([a4f8c62](https://github.com/discue/ui-components/commit/a4f8c62953c42fa1b9cc14debfc3bc6d17fc8026))
+* **select:** foccused attribute not passed correctly ([57f6646](https://github.com/discue/ui-components/commit/57f6646a189b89cef46bd267d78dcf061712f467))
+* **select:** v-model type should be a number ([a25aae2](https://github.com/discue/ui-components/commit/a25aae2e20f62e29b53ced3309c3a94f368eb476))
+
+
+### Chores
+
+* **deps:** update dependencies ([8f908d9](https://github.com/discue/ui-components/commit/8f908d965e200f25d351926b6a4e848386681199))
+
 ## [0.16.0](https://github.com/discue/ui-components/compare/v0.15.0...v0.16.0) (2022-07-14)
 
 
