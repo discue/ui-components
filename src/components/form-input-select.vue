@@ -1,6 +1,6 @@
 <template>
     <FormElementContainerWithLabel :id="id" :input-invalid="isInvalid" :force-show-error-message="forceShowErrorMessage"
-        :label="label" :focussed="inputFocussed" :focus-input-callback="focusSelect" :show-pattern-hint="false"
+        :label="label" :focussed="isFocussed" :focus-input-callback="focusSelect" :show-pattern-hint="false"
         :show-format-hint="false" :description="description">
 
         <select class="px-2 pb-1 pt-4 border-none w-full text-lg bg-inherit focus:outline-none" :value="inputValue"
