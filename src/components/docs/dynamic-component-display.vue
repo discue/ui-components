@@ -1,11 +1,16 @@
 <template>
     <div :id="id"
-        class="component-preview bg-stone-300 shadow-inner rounded-lg my-4 py-4 flex justify-center items-center w-full">
-        <Component :is="type" v-bind="componentProps">
+        class="component-preview bg-stone-300 shadow-inner rounded-lg my-4 py-4 flex flex-col justify-center items-center w-full">
+        <Component :is="type" v-bind="componentProps" v-model="modelValue">
             <template v-for="(index, name) in $slots" v-slot:[name]>
                 <slot :name="name" />
             </template>
         </Component>
+
+    </div>
+
+    <div v-if="attachVModel" class="component-properties-model-value">
+        <Text>Component Value: <Text :highlight="true">{{ modelValue }}</Text></Text>
     </div>
 
     <div class="component-properties-preview">
@@ -46,8 +51,8 @@
                         <option class="w-24 text-lg">true</option>
                         <option class="w-24 text-lg">false</option>
                     </select>
-                    <input v-else-if="prop.allowInput && prop.type === 'Array'" :value="JSON.stringify(componentProps[prop.name])"
-                        @input="castAndSet(prop, $event)"
+                    <input v-else-if="prop.allowInput && prop.type === 'Array'"
+                        :value="JSON.stringify(componentProps[prop.name])" @input="castAndSet(prop, $event)"
                         class="text-base border-b-2 border-b-solid border-gray-900 w-20">
                     <input v-else-if="prop.allowInput" :value="componentProps[prop.name]"
                         @input="castAndSet(prop, $event)"
@@ -79,7 +84,8 @@
 </template>
 
 <script setup>
-import { computed, getCurrentInstance, reactive, useAttrs } from 'vue';
+import { computed, getCurrentInstance, reactive, ref, useAttrs } from 'vue';
+import Text from '../text.vue';
 
 const attrs = useAttrs()
 
@@ -89,8 +95,15 @@ const props = defineProps({
     },
     name: {
         type: String
+    },
+    initialValue: {},
+    attachVModel: {
+        type: Boolean,
+        default: false
     }
 })
+
+const modelValue = ref(props.initialValue)
 
 const id = computed(() => {
     return props.type.toLocaleLowerCase() + '-preview'
