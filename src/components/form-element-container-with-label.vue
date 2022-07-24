@@ -73,7 +73,7 @@
 </style>
 
 <script setup>
-import { computed, ref, watch } from 'vue';
+import { computed, ref, watchEffect } from 'vue';
 import FormError from './form-element-error-message.vue';
 
 const props = defineProps({
@@ -132,11 +132,11 @@ const showPattern = computed(() => {
 const showFormat = computed(() => {
     return props.format && props.showFormatHint && hasFocus
 })
-watch(props.focussed, (current, previous) => {
-    if (current === true && previous === false) {
+watchEffect(() => {
+    if (hasFocus.value === false && props.focussed === true) {
         hasLostFocusAtLeastOnce.value = true
     }
-    hasFocus.value = current
+    hasFocus.value = props.focussed
 })
 function onFocusRequest(e) {
     if (props.focusInputCallback) {
