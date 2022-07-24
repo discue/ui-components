@@ -48,11 +48,19 @@
         @apply border-none;
     }
 
-    label[for=demoSelect], select {
+    label[for=demoSelect],
+    label[for=demoRadio],
+    select {
         @apply bg-stone-300;
     }
 
     option {
         @apply bg-gray-50;
+    }
+
+    div {
+        div.relative {
+            height: 1rem;
+        }
     }
 }

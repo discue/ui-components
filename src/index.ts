@@ -7,6 +7,7 @@ export { default as DropDownMenuBannerItem } from './components/drop-down-menu-b
 export { default as DropDownMenuItem } from './components/drop-down-menu-item.vue';
 export { default as DropDownMenu } from './components/drop-down-menu.vue';
 export { default as FormElementErrorMessage } from './components/form-element-error-message.vue';
+export { default as FormInputRadio } from './components/form-input-radio.vue';
 export { default as FormInputSelect } from './components/form-input-select.vue';
 export { default as Headlines } from './components/headlines.vue';
 export { default as NavButton } from './components/nav-button.vue';
