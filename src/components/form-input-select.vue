@@ -32,7 +32,7 @@ const props = defineProps({
         default: false
     },
     modelValue: {
-        type: String,
+        type: Number,
     },
     elements: {
         type: Array
