@@ -7,7 +7,7 @@ The element supports the Vue.js [v-model directive](https://vuejs.org/api/built-
 Similar to [v-for](https://vuejs.org/guide/essentials/list.html#maintaining-state-with-key) it depends on knowing the unique attribute of each element. Thus, the prop `track-by` can be set to the key that can be used to track and identify distinct elements. By default the value of the `id` attribute is tracked.
 
 ## Preview
-<DynamicComponentDisplay type="FormInputSelect" :attach-v-model="true" id="demoSelect" description="Showcases the select element" label="Label" :elements="[{id: '1', name:'First Element'}, {id: '2', name: 'Second Element'}]"></DynamicComponentDisplay>
+<DynamicComponentDisplay type="FormInputSelect" :attach-v-model="true" :initial-value="1" id="demoSelect" description="Showcases the select element" label="Label" :elements="[{id: '1', name:'First Element'}, {id: '2', name: 'Second Element'}]"></DynamicComponentDisplay>
 
 ## Example
 @[code](@examples/FormInputSelect.vue)
