@@ -1,9 +1,11 @@
 name: lints
 on:
+  pull_request:
+    branches-ignore:
+      - dependabot/**
   push:
     branches-ignore:
       - deploy
-      - dependabot/*
     tags-ignore:
       - "*"
 
