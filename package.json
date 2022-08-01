@@ -58,7 +58,7 @@
     "@vuepress/plugin-search": "^2.0.0-beta.49",
     "@vuepress/plugin-shiki": "^2.0.0-beta.49",
     "chai": "^4.3.6",
-    "core-js": "^3.23.5",
+    "core-js": "^3.24.1",
     "eslint": "^8.21.0",
     "eslint-plugin-vue": "^9.1.1",
     "firebase-tools": "^11.4.0",
