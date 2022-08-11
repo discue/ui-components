@@ -2,6 +2,22 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [0.18.0](https://github.com/discue/ui-components/compare/v0.17.0...v0.18.0) (2022-08-11)
+
+
+### Chores
+
+* **build:** use vite instead of webpack ([268eba0](https://github.com/discue/ui-components/commit/268eba0570cf73d41a69e611d73ac010d79b5269))
+* **ci:** do not lint dependabot prs ([062ed3f](https://github.com/discue/ui-components/commit/062ed3fce9538bbe76585fac7052e6cd92140043))
+* **deps-dev:** bump core-js from 3.23.5 to 3.24.1 ([a871f67](https://github.com/discue/ui-components/commit/a871f67eb2b0132d6faecc4e691377b204b31b4c))
+* **deps-dev:** bump eslint from 8.20.0 to 8.21.0 ([559d416](https://github.com/discue/ui-components/commit/559d416fa2be89d0389551c906f6c4cd45fa6533))
+* **deps-dev:** bump eslint-plugin-vue from 9.2.0 to 9.3.0 ([5bb24ff](https://github.com/discue/ui-components/commit/5bb24ff45f297511a4ca831f50fcf9cb5c62c67c))
+* **deps-dev:** bump firebase-tools from 11.3.0 to 11.4.0 ([4f989ea](https://github.com/discue/ui-components/commit/4f989ea564a9af5df567dcf4c71eefa8f8bad87c))
+* **deps-dev:** bump tailwindcss from 3.1.6 to 3.1.7 ([790cd91](https://github.com/discue/ui-components/commit/790cd91ee9ad6d9780c5e2182a28ca9bab5080d7))
+* **deps-dev:** bump vue-router from 4.1.2 to 4.1.3 ([4a4e7a7](https://github.com/discue/ui-components/commit/4a4e7a72529b983f5467c195d270bed7f407f50b))
+* **deps-dev:** bump vue-tsc from 0.39.0 to 0.39.4 ([c7bd63b](https://github.com/discue/ui-components/commit/c7bd63b13b37992c4af5ceb8afaee7830be152cf))
+* downgrad plugin-vue in favor of vuepress ([48c9592](https://github.com/discue/ui-components/commit/48c95921f7140b4bb6bb2bcc6d75c8fbe97b25b3))
+
 ## [0.17.0](https://github.com/discue/ui-components/compare/v0.16.0...v0.17.0) (2022-07-24)
 
 
