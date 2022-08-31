@@ -46,9 +46,6 @@ import { NavLink } from '@discue/ui-components'
 
 The list of currently available components can be found at [ui.discue.io](https://ui.discue.io/components/back-to-top.html).
 
-## Service-side Rendering (SSR)
-The default export can not be used for SSR apps. That is because some components might carry also inline stlyes. We do however provide the SSR-friendly export `@discue/ui-components`
-
 ## Run Tests
 
 To run tests, run the following command
