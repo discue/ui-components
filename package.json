@@ -99,8 +99,5 @@
     "last 2 versions",
     "not dead",
     "not ie 11"
-  ],
-  "dependencies": {
-    "@rollup/plugin-dynamic-import-vars": "^1.4.4"
-  }
+  ]
 }
