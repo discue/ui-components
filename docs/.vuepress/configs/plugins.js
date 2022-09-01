@@ -1,9 +1,9 @@
-const { registerComponentsPlugin } = require('@vuepress/plugin-register-components')
-const { shikiPlugin } = require('@vuepress/plugin-shiki')
-const { sitemapPlugin } = require('vuepress-plugin-sitemap2')
-const { path } = require('@vuepress/utils')
+import { registerComponentsPlugin } from '@vuepress/plugin-register-components';
+import { shikiPlugin } from '@vuepress/plugin-shiki';
+import { path } from '@vuepress/utils';
+import { sitemapPlugin } from 'vuepress-plugin-sitemap2';
 
-module.exports = [
+export default [
     registerComponentsPlugin({
         componentsDir: path.resolve(__dirname, '../examples')
     }),

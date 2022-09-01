@@ -1,6 +1,6 @@
-const { path } = require('@vuepress/utils')
+import { path } from '@vuepress/utils'
 
-module.exports = {
+export default {
     importCode: {
         handleImportPath: (str) =>
             str
