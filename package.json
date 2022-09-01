@@ -16,8 +16,7 @@
     "docs:dev": "npm run docs:styles && npx vuepress dev docs",
     "docs:build": "npm run docs:styles && vuepress build docs",
     "docs:styles": "postcss styles/styles.scss -o docs/.vuepress/styles/index.scss",
-    "test:unit": "vue-cli-service test:unit --mode production",
-    "test:e2e": "vue-cli-service test:e2e --mode production",
+    "test:unit": "jest tests",
     "lint": "vue-cli-service lint",
     "release": "npm run build && standard-version && git push --follow-tags origin && npm publish",
     "release-minor": "npm run build && standard-version --release-as minor && git push --follow-tags origin && npm publish"
@@ -71,6 +70,8 @@
     "standard-version": "^9.5.0",
     "tailwindcss": "^3.1.8",
     "ts-debounce": "^4.0.0",
+    "ts-jest": "^26.5.6",
+    "vue-jest": "^5.0.0-alpha.10",
     "vue-router": "^4.1.5",
     "vue-tsc": "^0.40.5",
     "vuepress": "2.0.0-beta.50",
