@@ -1,9 +1,9 @@
 // vite.config.ts
-const path = require("path");
-const { defineConfig } = require("vite");
 import vue from '@vitejs/plugin-vue';
+import path from "node:path";
+import { defineConfig } from "vite";
 
-module.exports = defineConfig({
+export default defineConfig({
   plugins: [vue(
   )], // to process SFC
   build: {
