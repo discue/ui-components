@@ -1,6 +1,6 @@
 # FormInputSelect <Badge type="tip" text="since v0.13.0" vertical="top" />
 
-A select element wrapped inside a labelled form element. The select element at the moment is a plain HTML element. The options elements will be generated at runtime based on the `elements` prop, which is expected to be an array. The expected format of the array items is `{ id: 'uniqueIdString', 'name': 'label'}`.
+A select element wrapped inside a labelled form element. The select element at the moment is a plain HTML element. The options elements will be generated at runtime based on the `elements` prop, which is expected to be an array. The expected format of the array items is `{ id: 'uniqueIdString', name: 'label'}`.
 
 The element supports the Vue.js [v-model directive](https://vuejs.org/api/built-in-directives.html#v-model). On input the directive will be updated with the index of selected element.
 
