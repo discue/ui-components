@@ -47,7 +47,7 @@ const showBanner = computed(() => {
 })
 
 const clazz = computed(() => {
-    const clazz = 'top-0 h-10 w-full bg-lime-300 flex items-center justify-center font-medium shadow' + ' '
+    const clazz = 'top-0 h-10 pl-2 pr-12 w-full bg-lime-300 flex items-center justify-center font-medium shadow' + ' '
     if (props.parent) {
         return clazz + 'fixed z-50'
     } else {
