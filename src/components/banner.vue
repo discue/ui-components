@@ -30,6 +30,10 @@ const props = defineProps({
     parent: {
         type: String
     },
+    bottom: {
+        type: Boolean,
+        default: false
+    },
     closeButtonTitle: {
         type: String,
         default: 'Close'
@@ -47,12 +51,19 @@ const showBanner = computed(() => {
 })
 
 const clazz = computed(() => {
-    const clazz = 'top-0 h-14 pl-2 pr-12 w-full bg-lime-300 flex items-center justify-center font-medium shadow' + ' '
-    if (props.parent) {
-        return clazz + 'fixed z-50'
+    let clazz = 'h-14 pl-2 pr-12 w-full bg-lime-300 flex items-center justify-center font-medium shadow' + ' '
+    if (props.bottom) {
+        clazz += 'bottom-0 '
     } else {
-        return clazz + 'absolute z-10'
+        clazz += 'top-0 '
     }
+    if (props.parent) {
+        clazz += 'fixed z-50'
+    } else {
+        clazz += 'absolute z-10'
+    }
+
+    return clazz
 })
 
 const closeBanner = () => {
