@@ -2,7 +2,7 @@ name: lints
 on:
   pull_request:
     branches-ignore:
-      - dependabot/**
+      - dependabot/npm_and_yarn/*
   push:
     branches-ignore:
       - deploy
