@@ -2,6 +2,20 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [0.20.0](https://github.com/discue/ui-components/compare/v0.19.0...v0.20.0) (2022-09-18)
+
+
+### Features
+
+* **banner:** add left and right padding ([335d27f](https://github.com/discue/ui-components/commit/335d27f6416cba1a33e3e61c8702f05da93e3a86))
+* **banner:** allow also placement at bottom of page ([801d1d1](https://github.com/discue/ui-components/commit/801d1d160a17e0da04e76b7b03bb31edee87ec33))
+* **banner:** increase height ([6164c7b](https://github.com/discue/ui-components/commit/6164c7beb2a153cd064ab2214551e844e9004dbf))
+
+
+### Chores
+
+* **styles:** disable padding for banner in preview ([4e06c78](https://github.com/discue/ui-components/commit/4e06c7884450cb6e58bef5de394666949d2a6722))
+
 ## [0.19.0](https://github.com/discue/ui-components/compare/v0.18.0...v0.19.0) (2022-09-18)
 
 
