@@ -2,6 +2,39 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [0.19.0](https://github.com/discue/ui-components/compare/v0.18.0...v0.19.0) (2022-09-18)
+
+
+### Features
+
+* **form-element:** add ring if element is hovered ([423b88c](https://github.com/discue/ui-components/commit/423b88c085ab9a0a36c26e6ef385ad26d9f939ba))
+
+
+### Chores
+
+* add badges to readme ([877728d](https://github.com/discue/ui-components/commit/877728d0141b3dcfdb400e8fd0bd389d1080c692))
+* **ci:** remove on pr build rule ([6e8933f](https://github.com/discue/ui-components/commit/6e8933f35e6c4581a6383d865bc6138e6c825a5d))
+* **ci:** update pr branch ignore rule ([f6890c4](https://github.com/discue/ui-components/commit/f6890c44f0c3353067a5783caf748cf8d6a9f2c8))
+* **deps-dev:** bump @babel/core from 7.18.10 to 7.19.1 ([8a15c2f](https://github.com/discue/ui-components/commit/8a15c2f5b9fa2691efb1a085e91ba852225c5172))
+* **deps-dev:** bump @babel/eslint-parser from 7.18.9 to 7.19.1 ([b9db34e](https://github.com/discue/ui-components/commit/b9db34ee5a28f0c23f431a1acc1a6f7fca49084f))
+* **deps-dev:** bump @vitejs/plugin-vue from 2.3.3 to 3.1.0 ([2e07383](https://github.com/discue/ui-components/commit/2e073833acdcf9753cabddef910576be865c1e02))
+* **deps-dev:** bump core-js from 3.24.1 to 3.25.1 ([a1842f8](https://github.com/discue/ui-components/commit/a1842f808f6809f3de6a800d69b85a75974af3d9))
+* **deps-dev:** bump core-js from 3.25.1 to 3.25.2 ([96d55e9](https://github.com/discue/ui-components/commit/96d55e941e55e488806eb8c474e1d1c58509685d))
+* **deps-dev:** bump eslint from 8.22.0 to 8.23.1 ([2eb6386](https://github.com/discue/ui-components/commit/2eb6386e76b5b7419d4ff4c15d6fa1e64c9bd4a7))
+* **deps-dev:** bump eslint-plugin-vue from 9.3.0 to 9.5.1 ([7a23756](https://github.com/discue/ui-components/commit/7a23756d0b336773d44752607c3d2e756f851210))
+* **deps-dev:** bump firebase-tools from 11.7.0 to 11.9.0 ([81a2ac3](https://github.com/discue/ui-components/commit/81a2ac349278d83e58193838a59f134f3666a147))
+* **deps-dev:** bump nodemon from 2.0.19 to 2.0.20 ([366d73d](https://github.com/discue/ui-components/commit/366d73d00ae8d55f2bf3c8a4036f7acdf5821b50))
+* **deps-dev:** bump postcss-import from 14.1.0 to 15.0.0 ([6a7214f](https://github.com/discue/ui-components/commit/6a7214f74337dd544cf6b26bbc11ff1341a00cfc))
+* **deps-dev:** bump vue-router from 4.1.3 to 4.1.5 ([3f81feb](https://github.com/discue/ui-components/commit/3f81febe12408bf46eb3c78e8b19de062969dcae))
+* **deps-dev:** bump vue-tsc from 0.40.1 to 0.40.5 ([0b05209](https://github.com/discue/ui-components/commit/0b0520929cb4cf716024e6be0644d3e812d66990))
+* **deps-dev:** bump vue-tsc from 0.40.5 to 0.40.13 ([1524e1c](https://github.com/discue/ui-components/commit/1524e1c2d4e3a9e1b7e9a1e5361430f258c72041))
+* **deps:** downgrade vite plugin-vue ([51f2a91](https://github.com/discue/ui-components/commit/51f2a9106ca55bff32d1e310cb95def82469bdf6))
+* **deps:** remove unused prod dependency ([e90838b](https://github.com/discue/ui-components/commit/e90838b997243fe957899f2a6993ecce9d42152c))
+* **deps:** update dependencies ([578d6f2](https://github.com/discue/ui-components/commit/578d6f2b04303168bce9448b41bb0b349917b9cc))
+* **markdown:** remove duplicated object key ([c573925](https://github.com/discue/ui-components/commit/c5739258ca731e35c01ec8b24e77dba53844fcdc))
+* **readme:** remove notice for ssr apps ([32d32c3](https://github.com/discue/ui-components/commit/32d32c3105fcab76355021011226cd3231e515e7))
+* **select:** update items example ([1a141d5](https://github.com/discue/ui-components/commit/1a141d5be0e69c5c4d8e7ec776f1253bcf02d066))
+
 ## [0.18.0](https://github.com/discue/ui-components/compare/v0.17.0...v0.18.0) (2022-08-11)
 
 
