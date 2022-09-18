@@ -1,5 +1,5 @@
 <template>
-    <div :id="parentId" :class="[isInvalid ? 'border-2 border-attention-800' : 'border-2 border-gray-800 ']"
+    <div :id="parentId" :class="parentClazz" @mouseover="onFocus" @mouseleave="onBlur"
         class="border-solid cursor-text flex flex-col rounded transition-colors ease-in-out duration-500">
         <div class="relative">
             <label :for="id" :class="[isInvalid ? 'text-attention-800' : 'text-gray-800 ']"
@@ -132,12 +132,28 @@ const showPattern = computed(() => {
 const showFormat = computed(() => {
     return props.format && props.showFormatHint && hasFocus
 })
+const parentClazz = computed(() => {
+    const clazz = ['border-2']
+    if (hasFocus.value) {
+        clazz.push('border-gray-800', 'hover:ring-2', 'hover:ring-primary-500')
+    } else if (isInvalid.value) {
+        return clazz.push('border-attention-800')
+    } else {
+        clazz.push('border-gray-800')
+    }
+    return clazz.join(' ')
+})
 watchEffect(() => {
     if (hasFocus.value === false && props.focussed === true) {
         hasLostFocusAtLeastOnce.value = true
     }
-    hasFocus.value = props.focussed
 })
+function onFocus() {
+    hasFocus.value = true
+}
+function onBlur() {
+    hasFocus.value = false
+}
 function onFocusRequest(e) {
     if (props.focusInputCallback) {
         setTimeout(() => {
