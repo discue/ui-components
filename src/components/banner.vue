@@ -51,7 +51,7 @@ const showBanner = computed(() => {
 })
 
 const clazz = computed(() => {
-    let clazz = 'h-14 pl-2 pr-12 w-full bg-lime-300 flex items-center justify-center font-medium shadow' + ' '
+    let clazz = 'pl-3 py-3 pr-12 w-full bg-lime-300 flex items-center justify-center font-medium shadow' + ' '
     if (props.bottom) {
         clazz += 'bottom-0 '
     } else {
