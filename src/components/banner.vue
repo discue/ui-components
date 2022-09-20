@@ -1,6 +1,6 @@
 <template>
     <Teleport :disabled="!parent" :to="parent" class="w-full relative">
-        <div v-if="showBanner" :class="clazz">
+        <div v-if="showBanner" :class="clazz" class="dsq-banner">
             <slot />
 
             <div class="absolute right-4">

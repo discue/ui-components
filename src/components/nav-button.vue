@@ -1,5 +1,5 @@
 <template>
-    <button :type="type" :class="clazz" @click="click($event)">
+    <button :type="type" :class="clazz" class="dsq-nav-button" @click="click($event)">
         <slot />
     </button>
 </template>

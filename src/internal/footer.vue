@@ -1,5 +1,5 @@
 <template>
-    <footer class="h-40">
+    <footer class="dsq-footer h-40">
         <div class="grid grid-cols-6 gap-4 p-8">
             <div class="col-span-2 w-32 self-center justify-self-center fill-current text-gray-900">
                 <div v-if="showLogo" class="flex flex-row">

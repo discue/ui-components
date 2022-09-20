@@ -1,6 +1,6 @@
 <template>
     <div :id="parentId" :class="parentClazz" @mouseover="onFocus" @mouseleave="onBlur"
-        class="border-solid cursor-text flex flex-col rounded transition-colors ease-in-out duration-500">
+        class="dsq-form-element-container-with-label border-solid cursor-text flex flex-col rounded transition-colors ease-in-out duration-500">
         <div class="relative">
             <label :for="id" :class="[isInvalid ? 'text-attention-800' : 'text-gray-800 ']"
                 class="cursor-text -left-3 -top-3.5 bg-white py-1 px-2 absolute leading-7 text-md text-gray-900 font-bold  transition-colors ease-in-out duration-500"

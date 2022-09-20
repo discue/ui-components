@@ -1,5 +1,5 @@
 <template>
-    <a :href="href" :class="clazz" :rel="rel" :target="target" @click="click($event)">
+    <a :href="href" :class="clazz" class="dsq-nav-link" :rel="rel" :target="target" @click="click($event)">
         <slot />
 
         <span v-if="hasExternalLink">

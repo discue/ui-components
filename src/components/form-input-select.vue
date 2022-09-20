@@ -3,7 +3,7 @@
         :label="label" :focussed="isFocussed" :focus-input-callback="focusSelect" :show-pattern-hint="false"
         :show-format-hint="false" :description="description">
 
-        <select class="px-2 pb-1 pt-4 border-none w-full text-lg bg-inherit focus:outline-none" :value="inputValue"
+        <select class="dsq-form-input-select px-2 pb-1 pt-4 border-none w-full text-lg bg-inherit focus:outline-none" :value="inputValue"
             @input="onInput" @focus="onFocus" @blur="onBlur" ref="select">
             <option class="w-24 text-lg" v-for="(element, index) in elements" :key="element.id" :value="index">
                 {{ element.name }}

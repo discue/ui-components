@@ -1,7 +1,7 @@
 <template>
     <FormElementContainerWithLabel :id="id" :input-invalid="invalid" :label="label" :description="error"
         :focussed="isFocussed">
-        <div :class="wrapperClazz">
+        <div :class="wrapperClazz" class="dsq-form-input-radio">
             <div :class="optionClazz" v-for="option in options" :key="option.value">
 
                 <input :id="option.label + '_id'" autocomplete="off" type="radio"

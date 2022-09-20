@@ -1,5 +1,5 @@
 <template>
-    <span :class="clazz">
+    <span :class="clazz" class="dsq-text">
         <slot />
     </span>
 </template>

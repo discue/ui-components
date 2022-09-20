@@ -1,5 +1,5 @@
 <template>
-    <div class="flex flex-col space-y-4 md:space-y-0 justify-between">
+    <div class="dsq-headlines flex flex-col space-y-4 md:space-y-0 justify-between">
         <Component :is="headlineTag" v-if="showHeadline" class="text-3xl font-medium inline-block">
             <slot name="headline" />
         </component>
