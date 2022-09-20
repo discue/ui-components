@@ -1,6 +1,6 @@
 <template>
     <Transition name="back-to-top">
-        <button v-if="show" @click="scrollToTop" class="dsq-back-to-top">
+        <button v-if="show" @click="scrollToTop" class="dsq-back-to-top back-to-top">
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 49.484 28.284">
                 <g transform="translate(-229 -126.358)" fill="currentColor">
                     <rect width="35" height="5" rx="2" transform="rotate(-45 296.902 -200.874)" />
@@ -51,7 +51,7 @@ onMounted(() => {
 </script>
 
 <style>
-.dsq-back-to-top {
+.back-to-top {
     cursor: pointer;
     position: fixed;
     bottom: 2rem;
@@ -63,18 +63,18 @@ onMounted(() => {
 }
 
 @media (max-width: 959px) {
-    .dsq-back-to-top {
+    .back-to-top {
         display: none;
     }
 }
 
-.dsq-back-to-top-enter-active,
-.dsq-back-to-top-leave-active {
+.back-to-top-enter-active,
+.back-to-top-leave-active {
     transition: opacity 0.3s;
 }
 
-.dsq-back-to-top-enter-from,
-.dsq-back-to-top-leave-to {
+.back-to-top-enter-from,
+.back-to-top-leave-to {
     opacity: 0;
 }
 </style>
