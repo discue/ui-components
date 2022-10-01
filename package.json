@@ -45,7 +45,7 @@
   },
   "types": "./dist/index.d.ts",
   "devDependencies": {
-    "@babel/core": "^7.19.1",
+    "@babel/core": "^7.19.3",
     "@babel/eslint-parser": "^7.19.1",
     "@vitejs/plugin-vue": "^2.3.4",
     "@vue/cli-plugin-babel": "~5.0.8",
