@@ -13,7 +13,7 @@
         <Text>Component Value: <Text :highlight="true">{{ modelValue }}</Text></Text>
     </div>
 
-    <div class="component-properties-preview">
+    <div class="component-properties-preview" v-if="showProperties">
         <h3 class="text-xl font-medium inline-block">
             Properties
         </h3>
@@ -62,7 +62,7 @@
         </div>
     </div>
 
-    <div v-if="emitsEvents" class="component-emits-preview">
+    <div v-if="emitsEvents && showEvents" class="component-emits-preview">
         <h3 class="text-xl font-medium inline-block">
             Emits
         </h3>
@@ -95,6 +95,14 @@ const props = defineProps({
     },
     name: {
         type: String
+    },
+    showProperties: {
+        type: Boolean,
+        default: true
+    },
+    showEvents: {
+        type: Boolean,
+        default: true
     },
     initialValue: {},
     attachVModel: {
