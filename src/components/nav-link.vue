@@ -90,7 +90,7 @@ const clazz = computed(() => {
 const hasExternalLink = computed(() => {
     const { href } = props
     const { hostname } = window.location
-    return href.startsWith('http') && !href.includes(hostname)
+    return !href.includes(hostname)
 })
 
 const hasAnchor = computed(() => {
