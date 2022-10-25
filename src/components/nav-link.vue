@@ -98,6 +98,16 @@ const hasAnchor = computed(() => {
     return !hasExternalLink.value && href.includes('#')
 })
 
+const isNonHttpLink = computed(() => {
+    const { href } = props
+    const containsProtocol = href.includes('://')
+    if (containsProtocol) {
+        return href.startsWith('http')
+    } else {
+        return false
+    }
+})
+
 const rel = computed(() => {
     if (hasExternalLink.value) {
         return 'noopener noreferrer'
@@ -117,7 +127,7 @@ const target = computed(() => {
 })
 
 function click(event) {
-    if (hasExternalLink.value || hasAnchor.value) {
+    if (isNonHttpLink.value || hasExternalLink.value || hasAnchor.value) {
         // let the browser do the work
     } else {
         event.preventDefault()
