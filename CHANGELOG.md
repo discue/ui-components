@@ -2,6 +2,35 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [0.21.0](https://github.com/discue/ui-components/compare/v0.20.0...v0.21.0) (2022-10-26)
+
+
+### Features
+
+* add identifying class name to all elements ([f257862](https://github.com/discue/ui-components/commit/f2578627da197c3e1193eeaa1ef47a3593ef69d1))
+* **banner:** set padding instead of fixed height ([f7dca7b](https://github.com/discue/ui-components/commit/f7dca7bcb1c172d53e1f8c4f76f4e8548f8cffc3))
+* **dynamic-component:** allow to hide properties and events ([bf1af3a](https://github.com/discue/ui-components/commit/bf1af3a466d57746351958cdd5a37a492a7a206e))
+* **nav-link:** let browsers also handle non http links ([9c5bec1](https://github.com/discue/ui-components/commit/9c5bec11bb3fd436cef14147fab4d994cc8669d9))
+* **nav-link:** show external link icon also for non http links ([aa2079f](https://github.com/discue/ui-components/commit/aa2079f538dc72cac12017e0ceee04017b4ed859))
+
+
+### Bug Fixes
+
+* **radio:** no padding between label and option ([f12143f](https://github.com/discue/ui-components/commit/f12143f7a5a968fbda9dd1964778ab12208e3eb1))
+
+
+### Chores
+
+* **deps-dev:** bump @babel/core from 7.19.1 to 7.19.3 ([b626526](https://github.com/discue/ui-components/commit/b626526e40fe6a080c1f56b769b40d5aa169f965))
+* **deps-dev:** bump @vue/test-utils from 2.0.2 to 2.1.0 ([5d3833f](https://github.com/discue/ui-components/commit/5d3833f85d9497e452bc49870b2bfca0d7bdc0d1))
+* **deps-dev:** bump core-js from 3.25.2 to 3.25.3 ([966cf8a](https://github.com/discue/ui-components/commit/966cf8acf6c891f8b941adb9f2e428fd5f86f015))
+* **deps-dev:** bump eslint from 8.23.1 to 8.24.0 ([27a6f75](https://github.com/discue/ui-components/commit/27a6f7508c185958aa6b490f4fec8fe951bfacbc))
+* **deps-dev:** bump firebase-tools from 11.9.0 to 11.13.0 ([f436934](https://github.com/discue/ui-components/commit/f436934714bbc445536d8bbac12099ff8cfa99d3))
+* **deps-dev:** bump postcss from 8.4.16 to 8.4.17 ([dedd492](https://github.com/discue/ui-components/commit/dedd4927acb17bf2ddb3d6789abe82ef8e1df3c4))
+* **deps:** bump actions/stale from 5 to 6 ([536fd9c](https://github.com/discue/ui-components/commit/536fd9cf821058a756c10d4a7ed4716c4f25e9e3))
+* **radio:** add classes to wrapper and options ([3ae3f5a](https://github.com/discue/ui-components/commit/3ae3f5a5c519187914ae5faf5a1cf1b8ae79e168))
+* **styles:** keep vertical padding in banner preview ([48194da](https://github.com/discue/ui-components/commit/48194da12755961e1db908b3e2e145f31251b2d8))
+
 ## [0.20.0](https://github.com/discue/ui-components/compare/v0.19.0...v0.20.0) (2022-09-18)
 
 
