@@ -25,6 +25,8 @@
         position: relative !important;
     }
 
+
+
     .absolute {
         .absolute {
             position: absolute !important;
@@ -56,6 +58,10 @@
 
     option {
         @apply bg-gray-50;
+    }
+
+    .dsq-form-input-radio-wrapper.pt-4 {
+        @apply pt-0 !important;
     }
 
     div {

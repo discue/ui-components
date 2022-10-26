@@ -80,7 +80,7 @@ const error = computed(() => {
 })
 
 const wrapperClazz = computed(() => {
-    const clazz = ['dsq-form-input-radio-wrapper flex']
+    const clazz = ['dsq-form-input-radio-wrapper pt-4 flex']
     if (props.vertical) {
         clazz.push('flex-row')
     } else {
