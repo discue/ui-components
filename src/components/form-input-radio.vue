@@ -1,7 +1,7 @@
 <template>
     <FormElementContainerWithLabel :id="id" :input-invalid="invalid" :label="label" :description="error"
         :focussed="isFocussed">
-        <div :class="wrapperClazz" class="dsq-form-input-radio">
+        <div :class="wrapperClazz">
             <div :class="optionClazz" v-for="option in options" :key="option.value">
 
                 <input :id="option.label + '_id'" autocomplete="off" type="radio"
@@ -80,7 +80,7 @@ const error = computed(() => {
 })
 
 const wrapperClazz = computed(() => {
-    const clazz = ['flex']
+    const clazz = ['dsq-form-input-radio-wrapper flex']
     if (props.vertical) {
         clazz.push('flex-row')
     } else {
@@ -90,7 +90,7 @@ const wrapperClazz = computed(() => {
 })
 
 const optionClazz = computed(() => {
-    const clazz = ['text-gray-100 flex flex-row items-center']
+    const clazz = ['dsq-form-input-radio-option text-gray-100 flex flex-row items-center']
     if (props.vertical) {
         clazz.push('w-1/2')
     } else {
