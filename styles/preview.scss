@@ -25,8 +25,6 @@
         position: relative !important;
     }
 
-
-
     .absolute {
         .absolute {
             position: absolute !important;
@@ -42,6 +40,10 @@
         @apply list-none bg-gray-50 shadow;
     }
 
+    input {
+        @apply border-none bg-inherit;
+    }
+
     .back-to-top {
         @apply top-0 bottom-0 right-0 left-0;
     }
@@ -50,10 +52,16 @@
         @apply border-none;
     }
 
-    label[for=demoSelect],
-    label[for=demoRadio],
-    select {
-        @apply bg-stone-300;
+    .dsq-form-element-container-with-label {
+        div {
+            label, select {
+                @apply bg-stone-300;
+            }
+
+            &> span {
+                position: absolute !important;
+            }
+        }
     }
 
     option {
