@@ -2,6 +2,24 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [0.22.0](https://github.com/discue/ui-components/compare/v0.21.0...v0.22.0) (2022-10-28)
+
+
+### Features
+
+* **form-input:** add component ([9df089e](https://github.com/discue/ui-components/commit/9df089ee1fe1fd2fcb4a18aecd2c5277d842f8fe))
+
+
+### Bug Fixes
+
+* **nav-link:** external icon is rendered always ([07c3c1c](https://github.com/discue/ui-components/commit/07c3c1cbb3d6abfc06420286bfd748b290702d66))
+
+
+### Chores
+
+* **element-container:** do not animate labels color change ([407aec4](https://github.com/discue/ui-components/commit/407aec4c5a1dc205d3a68bb26924946e74bd1d9b))
+* **nav-link:** do not destructure href ([26774ab](https://github.com/discue/ui-components/commit/26774ab2fc2d669714001698f5f4335f3119b685))
+
 ## [0.21.0](https://github.com/discue/ui-components/compare/v0.20.0...v0.21.0) (2022-10-26)
 
 
