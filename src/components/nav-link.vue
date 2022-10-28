@@ -87,15 +87,20 @@ const clazz = computed(() => {
     }
 })
 
-const hasExternalLink = computed(() => {
+const isRelativeLink = computed(() => {
+    const { href } = props
+    return props.href[0] === '/' || href.indexOf('.') === -1
+})
+
+const isExternalLink = computed(() => {
     const { href } = props
     const { hostname } = window.location
-    return !href.includes(hostname)
+    return !href.includes(hostname) && !isRelativeLink.value
 })
 
 const hasAnchor = computed(() => {
     const { href } = props
-    return !hasExternalLink.value && href.includes('#')
+    return !isExternalLink.value && href.includes('#')
 })
 
 const isNonHttpLink = computed(() => {
@@ -109,7 +114,7 @@ const isNonHttpLink = computed(() => {
 })
 
 const rel = computed(() => {
-    if (hasExternalLink.value) {
+    if (isExternalLink.value) {
         return 'noopener noreferrer'
     } else {
         return ''
@@ -119,7 +124,7 @@ const rel = computed(() => {
 const target = computed(() => {
     if (props.target) {
         return props.target
-    } else if (hasExternalLink.value) {
+    } else if (isExternalLink.value) {
         return '_blank'
     } else {
         return '_self'
@@ -127,7 +132,7 @@ const target = computed(() => {
 })
 
 function click(event) {
-    if (isNonHttpLink.value || hasExternalLink.value || hasAnchor.value) {
+    if (isNonHttpLink.value || isExternalLink.value || hasAnchor.value) {
         // let the browser do the work
     } else {
         event.preventDefault()
