@@ -2,7 +2,7 @@
     <a :href="href" :class="clazz" class="dsq-nav-link" :rel="rel" :target="target" @click="click($event)">
         <slot />
 
-        <span v-if="hasExternalLink">
+        <span ref="externalLink" v-if="isExternalLink">
             <svg class="external-link-icon inline-block relative align-middle -top-0.5"
                 xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px"
                 viewBox="0 0 100 100" width="15" height="15">
