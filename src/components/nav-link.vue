@@ -88,26 +88,22 @@ const clazz = computed(() => {
 })
 
 const isRelativeLink = computed(() => {
-    const { href } = props
-    return props.href[0] === '/' || href.indexOf('.') === -1
+    return props.href[0] === '/' || props.href.indexOf('.') === -1
 })
 
 const isExternalLink = computed(() => {
-    const { href } = props
     const { hostname } = window.location
-    return !href.includes(hostname) && !isRelativeLink.value
+    return !props.href.includes(hostname) && !isRelativeLink.value
 })
 
 const hasAnchor = computed(() => {
-    const { href } = props
-    return !isExternalLink.value && href.includes('#')
+    return !isExternalLink.value && props.href.includes('#')
 })
 
 const isNonHttpLink = computed(() => {
-    const { href } = props
-    const containsProtocol = href.includes('://')
+    const containsProtocol = props.href.includes('://')
     if (containsProtocol) {
-        return href.startsWith('http')
+        return props.href.startsWith('http')
     } else {
         return false
     }
