@@ -54,7 +54,7 @@
     "@vue/cli-plugin-unit-mocha": "^5.0.8",
     "@vue/cli-service": "~5.0.8",
     "@vue/test-utils": "^2.2.1",
-    "@vuepress/plugin-register-components": "^2.0.0-beta.49",
+    "@vuepress/plugin-register-components": "^2.0.0-beta.53",
     "@vuepress/plugin-search": "^2.0.0-beta.49",
     "@vuepress/plugin-shiki": "^2.0.0-beta.49",
     "chai": "^4.3.7",
