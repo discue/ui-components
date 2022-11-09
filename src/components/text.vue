@@ -42,7 +42,7 @@ const fontColor = computed(() => {
     } else if (props.inheritColor) {
         return 'text-inherit'
     } else {
-        return 'text-gray-600'
+        return 'text-gray-900'
     }
 })
 

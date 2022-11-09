@@ -20,7 +20,7 @@ describe('Text.vue', () => {
         default: msg
       },
     })
-    expect(wrapper.classes()).to.include('text-gray-600')
+    expect(wrapper.classes()).to.include('text-gray-900')
   })
 
   it('uses medium font size by default', () => {
