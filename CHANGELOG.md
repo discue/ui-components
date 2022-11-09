@@ -2,6 +2,20 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [0.23.0](https://github.com/discue/ui-components/compare/v0.22.0...v0.23.0) (2022-11-09)
+
+
+### Features
+
+* **text:** use dark text color by default ([80be57b](https://github.com/discue/ui-components/commit/80be57b0e66e99d786b187374670f30b9ee2fe0f))
+
+
+### Chores
+
+* **deps-dev:** bump eslint-plugin-vue from 9.5.1 to 9.7.0 ([6a08b1d](https://github.com/discue/ui-components/commit/6a08b1dd28c94605b45556885fa666c6dd2aa4d4))
+* **deps-dev:** bump vue-tsc from 0.40.13 to 1.0.9 ([36a8690](https://github.com/discue/ui-components/commit/36a8690cfb0cb3ff8ec9e7eb4d1402dcd67eedb3))
+* **deps:** update dependencies ([96835fc](https://github.com/discue/ui-components/commit/96835fca0046cfcfa7432fa344f0865265506b8f))
+
 ## [0.22.0](https://github.com/discue/ui-components/compare/v0.21.0...v0.22.0) (2022-10-28)
 
 
