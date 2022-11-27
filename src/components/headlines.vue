@@ -3,7 +3,7 @@
         <Component :is="headlineTag" v-if="showHeadline" class="text-3xl font-medium inline-block">
             <slot name="headline" />
         </component>
-        <Component :is="sublineTag" v-if="showSubline" class="text-gray-600">
+        <Component :is="sublineTag" v-if="showSubline" class="text-gray-900">
             <slot name="subline" />
         </Component>
     </div>
