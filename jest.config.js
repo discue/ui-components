@@ -2,7 +2,6 @@ export default {
     moduleFileExtensions: [
       'js',
       'ts',
-      'json',
       'vue'
     ],
     transform: {
