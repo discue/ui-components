@@ -16,7 +16,7 @@
     "docs:dev": "npm run docs:styles && npx vuepress dev docs",
     "docs:build": "npm run docs:styles && vuepress build docs",
     "docs:styles": "postcss styles/styles.scss -o docs/.vuepress/styles/index.scss",
-    "test:unit": "jest tests",
+    "test:unit": "jest -c jest.config.js tests",
     "lint": "vue-cli-service lint",
     "release": "npm run build && standard-version && git push --follow-tags origin && npm publish",
     "release-minor": "npm run build && standard-version --release-as minor && git push --follow-tags origin && npm publish"
