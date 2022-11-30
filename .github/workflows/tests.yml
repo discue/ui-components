@@ -25,10 +25,10 @@ jobs:
 
     - run: npm ci
 
-    # - name: test
-    #   run: ./test.sh
-    #   env:
-    #     NODE_ENV: production
+    - name: test
+      run: ./test.sh
+      env:
+        NODE_ENV: production
 
     - name: Build docs
       run: npm run docs:build
