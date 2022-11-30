@@ -1,6 +1,13 @@
-import { mount, shallowMount } from '@vue/test-utils'
-import { expect } from 'chai'
-import NavLink from '../../src/components/nav-link.vue'
+import { mount, shallowMount } from '@vue/test-utils';
+import { expect } from 'chai';
+import NavLink from '../../src/components/nav-link.vue';
+
+const mockPush = jest.fn();
+jest.mock('vue-router', () => ({
+  useRouter: () => ({
+    push: mockPush,
+  }),
+}));
 
 describe('NavLink.vue', () => {
   it('does not render external icon for relative root links', () => {
