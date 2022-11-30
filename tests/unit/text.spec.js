@@ -1,3 +1,7 @@
+/**
+ * @jest-environment jsdom
+ */
+
 import { shallowMount } from '@vue/test-utils'
 import { expect } from 'chai'
 import Text from '../../src/components/text.vue'

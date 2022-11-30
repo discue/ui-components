@@ -1,3 +1,7 @@
+/**
+ * @jest-environment jsdom
+ */
+
 import { mount, shallowMount } from '@vue/test-utils';
 import { expect } from 'chai';
 import NavLink from '../../src/components/nav-link.vue';

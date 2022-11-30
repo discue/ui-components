@@ -16,7 +16,7 @@
     "docs:dev": "npm run docs:styles && npx vuepress dev docs",
     "docs:build": "npm run docs:styles && vuepress build docs",
     "docs:styles": "postcss styles/styles.scss -o docs/.vuepress/styles/index.scss",
-    "test:unit": "jest -c jest.config.js tests",
+    "test:unit": "jest tests",
     "lint": "vue-cli-service lint",
     "release": "npm run build && standard-version && git push --follow-tags origin && npm publish",
     "release-minor": "npm run build && standard-version --release-as minor && git push --follow-tags origin && npm publish"
@@ -45,22 +45,26 @@
   },
   "types": "./dist/index.d.ts",
   "devDependencies": {
-    "@babel/core": "^7.18.13",
+    "@babel/core": "^7.20.5",
     "@babel/eslint-parser": "^7.18.9",
+    "@babel/preset-env": "^7.20.2",
     "@vue/cli-plugin-babel": "~5.0.8",
     "@vue/cli-plugin-eslint": "~5.0.8",
     "@vue/cli-plugin-typescript": "~5.0.8",
     "@vue/cli-plugin-unit-mocha": "^5.0.8",
     "@vue/cli-service": "~5.0.8",
-    "@vue/test-utils": "^2.0.2",
+    "@vue/test-utils": "^2.2.4",
     "@vuepress/plugin-register-components": "2.0.0-beta.53",
     "@vuepress/plugin-search": "2.0.0-beta.53",
     "@vuepress/plugin-shiki": "2.0.0-beta.53",
+    "babel-core": "^7.0.0-bridge.0",
+    "babel-jest": "^27.5.1",
     "chai": "^4.3.6",
     "core-js": "^3.25.0",
     "eslint": "^8.23.0",
     "eslint-plugin-vue": "^9.8.0",
     "firebase-tools": "^11.16.0",
+    "jest": "^27.5.1",
     "markdown-it-anchor": "^8.6.4",
     "markdown-it-attrs": "^4.1.4",
     "nodemon": "^2.0.20",
@@ -70,11 +74,28 @@
     "standard-version": "^9.5.0",
     "tailwindcss": "^3.2.4",
     "ts-debounce": "^4.0.0",
-    "vue-jest": "^5.0.0-alpha.10",
+    "ts-jest": "^27.1.5",
     "vue-router": "^4.1.5",
     "vue-tsc": "^1.0.10",
+    "vue3-jest": "^27.0.0-alpha.1",
     "vuepress": "2.0.0-beta.53",
     "vuepress-plugin-sitemap2": "^2.0.0-beta.99"
+  },
+  "babel": {
+    "presets": [
+      "@babel/preset-env"
+    ]
+  },
+  "jest": {
+    "moduleFileExtensions": [
+      "js",
+      "json",
+      "vue"
+    ],
+    "transform": {
+      ".*\\.(js)$": "babel-jest",
+      ".*\\.(vue)$": "vue3-jest"
+    }
   },
   "eslintConfig": {
     "root": true,
