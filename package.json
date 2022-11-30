@@ -78,6 +78,9 @@
   },
   "eslintConfig": {
     "root": true,
+    "globals": {
+      "jest": true
+    },
     "env": {
       "node": true,
       "mocha": true,
@@ -87,9 +90,6 @@
       "plugin:vue/vue3-essential",
       "eslint:recommended"
     ],
-    "parserOptions": {
-      "parser": "@babel/eslint-parser"
-    },
     "rules": {
       "vue/multi-word-component-names": "off"
     }
