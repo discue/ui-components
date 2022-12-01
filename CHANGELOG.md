@@ -2,6 +2,21 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [0.24.0](https://github.com/discue/ui-components/compare/v0.23.0...v0.24.0) (2022-12-01)
+
+
+### Features
+
+* **headlines:** use darker text in subline ([20f6c25](https://github.com/discue/ui-components/commit/20f6c256e2072cee43c07d0b67d62d8d6f335a89))
+
+
+### Chores
+
+* **deps:** update all dependencies ([03537ba](https://github.com/discue/ui-components/commit/03537ba09ac9e195d5e173d89a37e1b765f0d49e))
+* **deps:** update deps and convert to esm module ([b47994a](https://github.com/discue/ui-components/commit/b47994a470ff5af983a9b061d6904e68af9ac866))
+* do not use babel parser ([0da2c1e](https://github.com/discue/ui-components/commit/0da2c1e20b45a9ec94238760d8ea8fcb95be6ad1))
+* pass config param to jest ([b727152](https://github.com/discue/ui-components/commit/b727152757606abd2b22d20d5ce3c8c025f4bd04))
+
 ## [0.23.0](https://github.com/discue/ui-components/compare/v0.22.0...v0.23.0) (2022-11-09)
 
 
