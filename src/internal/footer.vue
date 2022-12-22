@@ -94,10 +94,7 @@
 </template>
 
 <script setup>
-import { useRouter } from 'vue-router';
 import NavLink from '../components/nav-link.vue';
-
-const router = useRouter()
 
 defineProps({
     showLogo: {
@@ -105,23 +102,4 @@ defineProps({
         default: true
     }
 })
-
-const navigateOrScroll = (event) => {
-    const location = window.location.hostname
-    const target = event.target.getAttribute('href')
-    const { hostname: targetHostname, hash: targetHash, pathname: targetPath } = new URL(target)
-
-    if (location === targetHostname) {
-        if (targetHash) {
-            const element = window.document.querySelector(targetHash)
-            element.scrollIntoView({
-                behavior: 'smooth'
-            })
-        } else {
-            router.push({ path: targetPath })
-        }
-    } else {
-        window.open(target, '_self', 'noopener,noreferrer')
-    }
-}
 </script>
