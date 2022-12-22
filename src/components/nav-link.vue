@@ -45,7 +45,9 @@ const props = defineProps({
     },
     target: {
         type: String,
-    }
+    },
+    // window injection for testing only
+    window: {}
 })
 
 const textSize = computed(() => {
@@ -92,13 +94,13 @@ const isRelativeLink = computed(() => {
 })
 
 const windowHostname = computed(() => {
-    const { hostname } = window.location
+    const { hostname } = (props.window ?? window).location
     return hostname
 })
 
 const isExternalLink = computed(() => {
     const companyDomain = windowHostname.value.split('.').slice(-2).join('.')
-    return !props.href.includes(companyDomain.value) && !isRelativeLink.value
+    return !props.href.includes(companyDomain) && !isRelativeLink.value
 })
 
 const isSamePageLink = computed(() => {

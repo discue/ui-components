@@ -38,6 +38,24 @@ describe('NavLink.vue', () => {
     })
     expect(wrapper.vm.$refs.externalLink).to.be.undefined
   })
+
+  it('does not render the external icon for subdomains', () => {
+    const msg = 'new message'
+    const wrapper = mount(NavLink, {
+      slots: {
+        default: msg
+      },
+      props: {
+        href: 'https://www.discue.io',
+        window: {
+          location: {
+            hostname: 'docs.discue.io'
+          }
+        }
+      }
+    })
+    expect(wrapper.vm.$refs.externalLink).to.be.undefined
+  })
   it('renders the external icon for external links', () => {
     const msg = 'new message'
     const wrapper = mount(NavLink, {
