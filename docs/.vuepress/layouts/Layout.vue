@@ -5,7 +5,9 @@ import ParentLayout from "@vuepress/theme-default/layouts/Layout.vue";
 <template>
   <ParentLayout>
     <template #page-bottom>
-      <Footer :show-logo="false" />
+      <ClientOnly>
+        <Footer :show-logo="false" />
+      </ClientOnly>
     </template>
   </ParentLayout>
 </template>
