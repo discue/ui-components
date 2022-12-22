@@ -3,7 +3,7 @@
         <div class="grid grid-cols-6 gap-4 p-8">
             <div class="col-span-2 w-32 self-center justify-self-center fill-current text-gray-900">
                 <div v-if="showLogo" class="flex flex-row">
-                    <a @click.prevent="navigateOrScroll" href="https://www.discue.io/"
+                    <NavLink href="https://www.discue.io/"
                         class="flex h-12 space-x-2 text-4xl text-gray-900"><svg viewBox="0 0 23 56" fill="none"
                             xmlns="http://www.w3.org/2000/svg" class="-mt-6 w-8">
                             <path
@@ -17,24 +17,21 @@
                             <span class="font-bold" id="title">discue</span>
                             <span class="text-gray-500 font-light">.io</span>
                         </div>
-                    </a>
+                    </NavLink>
                 </div>
             </div>
             <ul class="space-y-2">
                 <li class="font-bold text-lg text-gray-800">Company</li>
                 <li class="text-md text-gray-800">
-                    <a @click.prevent="navigateOrScroll" href="#features"
-                        class="animate font-bold hover:border-b-4 hover:cursor-pointer text-gray-500 hover:border-gray-500 text-md">Features</a>
+                    <NavLink :small="true" :secondary="true" href="#features">Features</NavLink>
                 </li>
                 <li class="text-md text-gray-800">
-                    <a @click.prevent="navigateOrScroll" href="https://www.discue.io/#how-it-works"
-                        class="animate font-bold hover:border-b-4 hover:cursor-pointer text-gray-500 hover:border-gray-500 text-md">How
-                        it works</a>
+                    <NavLink :small="true" :secondary="true" href="https://www.discue.io/#how-it-works">How it works
+                    </NavLink>
                 </li>
                 <li class="text-md text-gray-800">
-                    <a @click.prevent="navigateOrScroll" href="https://www.discue.io/registration/create-account"
-                        class="animate font-bold hover:border-b-4 hover:cursor-pointer text-gray-500 hover:border-gray-500 text-md">Create
-                        Account</a>
+                    <NavLink :small="true" :secondary="true" href="https://www.discue.io/registration/create-account">
+                        Create Account</NavLink>
                 </li>
                 <li class="text-md text-gray-800">Delete account</li>
                 <li class="text-md text-gray-800">Cancel subscription</li>
@@ -42,59 +39,51 @@
             <ul class="space-y-2">
                 <li class="font-bold text-lg text-gray-800">API Resources</li>
                 <li class="text-md text-gray-800">
-                    <a @click.prevent="navigateOrScroll" href="https://docs.discue.io/getting-started/"
-                        class="animate font-bold hover:border-b-4 hover:cursor-pointer text-gray-500 hover:border-gray-500 text-md">Getting
-                        started</a>
+                    <NavLink :small="true" :secondary="true" href="https://docs.discue.io/getting-started/">
+                        Getting started</NavLink>
                 </li>
                 <li class="text-md text-gray-800">
-                    <a @click.prevent="navigateOrScroll" href="https://docs.discue.io/api-overview/"
-                        class="animate font-bold hover:border-b-4 hover:cursor-pointer text-gray-500 hover:border-gray-500 text-md">API
-                        Overview</a>
+                    <NavLink :small="true" :secondary="true" href="https://docs.discue.io/api-overview/">
+                        API Overview</NavLink>
                 </li>
                 <li class="text-md text-gray-800">
-                    <a @click.prevent="navigateOrScroll" href="https://docs.discue.io/api-best-practices/"
-                        class="animate font-bold hover:border-b-4 hover:cursor-pointer text-gray-500 hover:border-gray-500 text-md">API
-                        Best Practices</a>
+                    <NavLink :small="true" :secondary="true" href="https://docs.discue.io/api-best-practices/">
+                        API Best Practices</NavLink>
                 </li>
                 <li class="text-md text-gray-800">
-                    <a @click.prevent="navigateOrScroll" href="https://docs.discue.io/api-reference"
-                        class="animate font-bold hover:border-b-4 hover:cursor-pointer text-gray-500 hover:border-gray-500 text-md">API
-                        Reference</a>
+                    <NavLink :small="true" :secondary="true"
+                        href="https://docs.discue.io/api-reference/api-keys/get-all-api-keys.html">
+                        API Reference</NavLink>
                 </li>
             </ul>
             <ul class="space-y-2">
                 <li class="font-bold text-lg text-gray-800">UI Components</li>
                 <li class="text-md text-gray-800">
-                    <a @click.prevent="navigateOrScroll" href="https://ui.discue.io/"
-                        class="animate font-bold hover:border-b-4 hover:cursor-pointer text-gray-500 hover:border-gray-500 text-md">Documentation</a>
+                    <NavLink :small="true" :secondary="true" href="https://ui.discue.io/">
+                        Documentation</NavLink>
                 </li>
                 <li class="text-md text-gray-800">
-                    <a @click.prevent="navigateOrScroll" href="https://github.com/discue/ui-components"
-                        class="animate font-bold hover:border-b-4 hover:cursor-pointer text-gray-500 hover:border-gray-500 text-md">GitHub
-                        Repository</a>
+                    <NavLink :small="true" :secondary="true" href="https://github.com/discue/ui-components">
+                        GitHub Repository</NavLink>
                 </li>
                 <li class="text-md text-gray-800">
-                    <a @click.prevent="navigateOrScroll" href="https://www.npmjs.com/package/@discue/ui-components"
-                        class="animate font-bold hover:border-b-4 hover:cursor-pointer text-gray-500 hover:border-gray-500 text-md">npm
-                        Package</a>
+                    <NavLink :small="true" :secondary="true" href="https://www.npmjs.com/package/@discue/ui-components">
+                        npm Package</NavLink>
                 </li>
             </ul>
             <ul class="space-y-2">
                 <li class="font-bold text-lg text-gray-800">Legal</li>
                 <li class="text-md text-gray-800">
-                    <a @click.prevent="navigateOrScroll" href="https://www.discue.io/privacy"
-                        class="animate font-bold hover:border-b-4 hover:cursor-pointer text-gray-500 hover:border-gray-500 text-md">Privacy
-                        Policy</a>
+                    <NavLink :small="true" :secondary="true" href="https://www.discue.io/privacy">Privacy Policy
+                    </NavLink>
                 </li>
                 <li class="text-md text-gray-800">
-                    <a @click.prevent="navigateOrScroll" href="https://www.discue.io/terms"
-                        class="animate font-bold hover:border-b-4 hover:cursor-pointer text-gray-500 hover:border-gray-500 text-md">Terms
-                        &amp; Conditions</a>
+                    <NavLink :small="true" :secondary="true" href="https://www.discue.io/terms">Terms &amp; Conditions
+                    </NavLink>
                 </li>
-                <li class="text-md text-gray-800">
-                    <a @click.prevent="navigateOrScroll" href="https://www.discue.io/imprint"
-                        class="animate font-bold hover:border-b-4 hover:cursor-pointer text-gray-500 hover:border-gray-500 text-md">Imprint
-                        &amp; Legal Notice</a>
+                <li>
+                    <NavLink :small="true" :secondary="true" href="https://www.discue.io/imprint">Imprint &amp; Legal
+                        Notice</NavLink>
                 </li>
             </ul>
         </div>
@@ -107,6 +96,7 @@
 
 <script setup>
 import { useRouter } from 'vue-router';
+import NavLink from '../components/nav-link.vue';
 
 const router = useRouter()
 
