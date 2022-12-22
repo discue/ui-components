@@ -104,8 +104,7 @@ const isExternalLink = computed(() => {
 })
 
 const isSamePageLink = computed(() => {
-    const companyDomain = windowHostname.value.split('.').slice(-2).join('.')
-    return isRelativeLink.value || props.href.includes(`/${companyDomain.value}/`)
+    return isRelativeLink.value || props.href.includes(`/${windowHostname.value}/`)
 })
 
 const hasAnchor = computed(() => {
