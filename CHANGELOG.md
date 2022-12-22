@@ -2,6 +2,32 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [0.25.0](https://github.com/discue/ui-components/compare/v0.24.0...v0.25.0) (2022-12-22)
+
+
+### Features
+
+* **footer:** link to use cases on landing page ([ee16780](https://github.com/discue/ui-components/commit/ee167809561ad9673ea75dbd8c2737c8e00eaa4f))
+* **nav-link:** scroll to anchors if on same page ([0099c9d](https://github.com/discue/ui-components/commit/0099c9d223728fb21e304275fc93c865f3c173d6))
+
+
+### Bug Fixes
+
+* **footer:** api reference link does not work ([8d36692](https://github.com/discue/ui-components/commit/8d366929d858b0432d3c2da4244e9e2ce50c2e75))
+* **footer:** copyright not centered ([a632d82](https://github.com/discue/ui-components/commit/a632d8207f1d6ec6ea35af10c0c6d84be5bbdffd))
+* **nav-link:** fix is non http link condition ([765a61a](https://github.com/discue/ui-components/commit/765a61a448358fef7dbdb124c41306d52b4f2293))
+
+
+### Chores
+
+* **deps:** update dependencies ([dc62612](https://github.com/discue/ui-components/commit/dc62612e0210066c811f1a85c1679bc2fd2683bb))
+
+
+### Refactorings
+
+* **footer:** remove unused method ([8747e9e](https://github.com/discue/ui-components/commit/8747e9e3c3c6554f758bd5d7ad1f5fc9f9205e0c))
+* **footer:** use nav link for all links ([45e34c2](https://github.com/discue/ui-components/commit/45e34c29a0b22594e71ea0f4e90b55ff6ff8abb5))
+
 ## [0.24.0](https://github.com/discue/ui-components/compare/v0.23.0...v0.24.0) (2022-12-01)
 
 
