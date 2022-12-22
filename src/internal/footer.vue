@@ -23,15 +23,13 @@
             <ul class="space-y-2">
                 <li class="font-bold text-lg text-gray-800">Company</li>
                 <li class="text-md text-gray-800">
-                    <NavLink :small="true" :secondary="true" href="https://www.discue.io/#how-it-works">How it works
-                    </NavLink>
+                    <NavLink :small="true" :secondary="true" href="https://www.discue.io/#how-it-works">How it works</NavLink>
                 </li>
                 <li class="text-md text-gray-800">
                     <NavLink :small="true" :secondary="true" href="https://www.discue.io/#use-cases">Use cases</NavLink>
                 </li>
                 <li class="text-md text-gray-800">
-                    <NavLink :small="true" :secondary="true" href="https://www.discue.io/registration/create-account">
-                        Create Account</NavLink>
+                    <NavLink :small="true" :secondary="true" href="https://www.discue.io/registration/create-account">Create Account</NavLink>
                 </li>
                 <li class="text-md text-gray-800">Delete account</li>
                 <li class="text-md text-gray-800">Cancel subscription</li>
@@ -39,50 +37,40 @@
             <ul class="space-y-2">
                 <li class="font-bold text-lg text-gray-800">API Resources</li>
                 <li class="text-md text-gray-800">
-                    <NavLink :small="true" :secondary="true" href="https://docs.discue.io/getting-started/">
-                        Getting started</NavLink>
+                    <NavLink :small="true" :secondary="true" href="https://docs.discue.io/getting-started/">Getting started</NavLink>
                 </li>
                 <li class="text-md text-gray-800">
-                    <NavLink :small="true" :secondary="true" href="https://docs.discue.io/api-overview/">
-                        API Overview</NavLink>
+                    <NavLink :small="true" :secondary="true" href="https://docs.discue.io/api-overview/">API Overview</NavLink>
                 </li>
                 <li class="text-md text-gray-800">
-                    <NavLink :small="true" :secondary="true" href="https://docs.discue.io/api-best-practices/">
-                        API Best Practices</NavLink>
+                    <NavLink :small="true" :secondary="true" href="https://docs.discue.io/api-best-practices/">API Best Practices</NavLink>
                 </li>
                 <li class="text-md text-gray-800">
-                    <NavLink :small="true" :secondary="true" href="https://docs.discue.io/api-reference/api-keys/get-all-api-keys.html">
-                        API Reference</NavLink>
+                    <NavLink :small="true" :secondary="true" href="https://docs.discue.io/api-reference/api-keys/get-all-api-keys.html">API Reference</NavLink>
                 </li>
             </ul>
             <ul class="space-y-2">
                 <li class="font-bold text-lg text-gray-800">UI Components</li>
                 <li class="text-md text-gray-800">
-                    <NavLink :small="true" :secondary="true" href="https://ui.discue.io/">
-                        Documentation</NavLink>
+                    <NavLink :small="true" :secondary="true" href="https://ui.discue.io/">Documentation</NavLink>
                 </li>
                 <li class="text-md text-gray-800">
-                    <NavLink :small="true" :secondary="true" href="https://github.com/discue/ui-components">
-                        GitHub Repository</NavLink>
+                    <NavLink :small="true" :secondary="true" href="https://github.com/discue/ui-components">GitHub Repository</NavLink>
                 </li>
                 <li class="text-md text-gray-800">
-                    <NavLink :small="true" :secondary="true" href="https://www.npmjs.com/package/@discue/ui-components">
-                        npm Package</NavLink>
+                    <NavLink :small="true" :secondary="true" href="https://www.npmjs.com/package/@discue/ui-components">npm Package</NavLink>
                 </li>
             </ul>
             <ul class="space-y-2">
                 <li class="font-bold text-lg text-gray-800">Legal</li>
                 <li class="text-md text-gray-800">
-                    <NavLink :small="true" :secondary="true" href="https://www.discue.io/privacy">Privacy Policy
-                    </NavLink>
+                    <NavLink :small="true" :secondary="true" href="https://www.discue.io/privacy">Privacy Policy</NavLink>
                 </li>
                 <li class="text-md text-gray-800">
-                    <NavLink :small="true" :secondary="true" href="https://www.discue.io/terms">Terms &amp; Conditions
-                    </NavLink>
+                    <NavLink :small="true" :secondary="true" href="https://www.discue.io/terms">Terms &amp; Conditions</NavLink>
                 </li>
                 <li>
-                    <NavLink :small="true" :secondary="true" href="https://www.discue.io/imprint">Imprint &amp; Legal
-                        Notice</NavLink>
+                    <NavLink :small="true" :secondary="true" href="https://www.discue.io/imprint">Imprint &amp; LegalNotice</NavLink>
                 </li>
             </ul>
         </div>
