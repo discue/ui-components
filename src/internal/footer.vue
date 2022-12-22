@@ -70,11 +70,13 @@
                 </li>
                 <li class="text-md text-gray-800">
                     <a @click.prevent="navigateOrScroll" href="https://github.com/discue/ui-components"
-                        class="animate font-bold hover:border-b-4 hover:cursor-pointer text-gray-500 hover:border-gray-500 text-md">GitHub Repository</a>
+                        class="animate font-bold hover:border-b-4 hover:cursor-pointer text-gray-500 hover:border-gray-500 text-md">GitHub
+                        Repository</a>
                 </li>
                 <li class="text-md text-gray-800">
                     <a @click.prevent="navigateOrScroll" href="https://www.npmjs.com/package/@discue/ui-components"
-                        class="animate font-bold hover:border-b-4 hover:cursor-pointer text-gray-500 hover:border-gray-500 text-md">npm Package</a>
+                        class="animate font-bold hover:border-b-4 hover:cursor-pointer text-gray-500 hover:border-gray-500 text-md">npm
+                        Package</a>
                 </li>
             </ul>
             <ul class="space-y-2">
@@ -95,7 +97,9 @@
                         &amp; Legal Notice</a>
                 </li>
             </ul>
-            <small class="mt-8 col-span-5 font-bold text-md justify-self-center text-gray-800">© Copyright
+        </div>
+        <div class="p-8 flex justify-center">
+            <small class="text-gray-800">© Copyright
                 2022, Stefan Pfaffel</small>
         </div>
     </footer>
