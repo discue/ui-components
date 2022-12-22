@@ -51,8 +51,7 @@
                         API Best Practices</NavLink>
                 </li>
                 <li class="text-md text-gray-800">
-                    <NavLink :small="true" :secondary="true"
-                        href="https://docs.discue.io/api-reference/api-keys/get-all-api-keys.html">
+                    <NavLink :small="true" :secondary="true" href="https://docs.discue.io/api-reference/api-keys/get-all-api-keys.html">
                         API Reference</NavLink>
                 </li>
             </ul>
