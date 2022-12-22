@@ -91,13 +91,23 @@ const isRelativeLink = computed(() => {
     return props.href[0] === '/' || props.href.indexOf('.') === -1
 })
 
-const isExternalLink = computed(() => {
+const windowHostname = computed(() => {
     const { hostname } = window.location
-    return !props.href.includes(hostname) && !isRelativeLink.value
+    return hostname
+})
+
+const isExternalLink = computed(() => {
+    const companyDomain = windowHostname.value.split('.').slice(-2).join('.')
+    return !props.href.includes(companyDomain.value) && !isRelativeLink.value
+})
+
+const isSamePageLink = computed(() => {
+    const companyDomain = windowHostname.value.split('.').slice(-2).join('.')
+    return isRelativeLink.value || props.href.includes(`/${companyDomain.value}/`)
 })
 
 const hasAnchor = computed(() => {
-    return !isExternalLink.value && props.href.includes('#')
+    return props.href.includes('#')
 })
 
 const isNonHttpLink = computed(() => {
@@ -128,16 +138,18 @@ const target = computed(() => {
 })
 
 function click(event) {
-    if (hasAnchor.value) {
+    // if its an absolute link for the same domain
+    // and the link has an anchor we scroll to the element
+    if (hasAnchor.value && isSamePageLink.value) {
         const anchor = props.href.substring(props.href.indexOf('#'))
         const targetElement = window.document.querySelector(anchor)
-        if (!targetElement) {
-            console.error(`Could not find an element with selector ${anchor}. Does it exist?`)
-        } else {
+        if (targetElement) {
             targetElement.scrollTo({ behavior: 'smooth' })
+            return
         }
-        
-    } else if (isNonHttpLink.value || isExternalLink.value) {
+    }
+
+    if (hasAnchor.value || isNonHttpLink.value || isExternalLink.value) {
         // let the browser do the work
     } else {
         event.preventDefault()
