@@ -23,11 +23,11 @@
             <ul class="space-y-2">
                 <li class="font-bold text-lg text-gray-800">Company</li>
                 <li class="text-md text-gray-800">
-                    <NavLink :small="true" :secondary="true" href="#features">Features</NavLink>
-                </li>
-                <li class="text-md text-gray-800">
                     <NavLink :small="true" :secondary="true" href="https://www.discue.io/#how-it-works">How it works
                     </NavLink>
+                </li>
+                <li class="text-md text-gray-800">
+                    <NavLink :small="true" :secondary="true" href="https://www.discue.io/#use-cases">Use cases</NavLink>
                 </li>
                 <li class="text-md text-gray-800">
                     <NavLink :small="true" :secondary="true" href="https://www.discue.io/registration/create-account">
