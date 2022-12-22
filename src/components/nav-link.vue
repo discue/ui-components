@@ -103,7 +103,7 @@ const hasAnchor = computed(() => {
 const isNonHttpLink = computed(() => {
     const containsProtocol = props.href.includes('://')
     if (containsProtocol) {
-        return props.href.startsWith('http')
+        return props.href.startsWith('http') === false
     } else {
         return false
     }
@@ -128,7 +128,16 @@ const target = computed(() => {
 })
 
 function click(event) {
-    if (isNonHttpLink.value || isExternalLink.value || hasAnchor.value) {
+    if (hasAnchor.value) {
+        const anchor = props.href.substring(props.href.indexOf('#'))
+        const targetElement = window.document.querySelector(anchor)
+        if (!targetElement) {
+            console.error(`Could not find an element with selector ${anchor}. Does it exist?`)
+        } else {
+            targetElement.scrollTo({ behavior: 'smooth' })
+        }
+        
+    } else if (isNonHttpLink.value || isExternalLink.value) {
         // let the browser do the work
     } else {
         event.preventDefault()
