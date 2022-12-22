@@ -2,6 +2,20 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [0.26.0](https://github.com/discue/ui-components/compare/v0.25.0...v0.26.0) (2022-12-22)
+
+
+### Features
+
+* **footer:** remove spaces after labels ([1f17226](https://github.com/discue/ui-components/commit/1f172267b63bd65db91eae8496c0b3dd6588bf83))
+* **nav-link:** add space between label and icon ([3fe378f](https://github.com/discue/ui-components/commit/3fe378f7a98531b559466b7fcfceee067228c19c))
+
+
+### Bug Fixes
+
+* **nav-link:** same page link calculation broken ([383a78d](https://github.com/discue/ui-components/commit/383a78dd5f6781c977754262f5207e57f8334331))
+* **nav-link:** subdomains are considered external ([4a079ce](https://github.com/discue/ui-components/commit/4a079ce3555a632be5ed8d1d0821d313206419b6))
+
 ## [0.25.0](https://github.com/discue/ui-components/compare/v0.24.0...v0.25.0) (2022-12-22)
 
 
