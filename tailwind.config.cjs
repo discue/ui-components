@@ -9,7 +9,7 @@ module.exports = {
     "./docs/**/*.{vue,js,ts,jsx,tsx,scss,md}",
     "./docs/.vuepress/examples/*.{vue,js,ts,jsx,tsx,scss,md}",
     "./docs/.vuepress/theme/components/*.{vue,js,ts,jsx,tsx,scss,md}",
-    "./src/**/*.vue"
+    "./src/**/*.{ts,js,vue}"
   ],
   theme: {
     extend: {
