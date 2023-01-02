@@ -6,6 +6,7 @@
 
 <script setup>
 import { computed } from 'vue';
+import { getThemeProperty } from '../theme.js';
 
 const props = defineProps({
     highlight: {
@@ -28,29 +29,29 @@ const props = defineProps({
 
 const fontWeight = computed(() => {
     if (props.highlight) {
-        return 'font-medium'
+        return getThemeProperty('text.weight.highlight').value
     } else {
-        return ''
+        return getThemeProperty('text.weight.default').value
     }
 })
 
 const fontColor = computed(() => {
     if (props.light) {
-        return 'text-gray-100'
+        return getThemeProperty('text.color.light').value
     } else if (props.highlight) {
-        return 'text-gray-900'
+        return getThemeProperty('text.color.highlight').value
     } else if (props.inheritColor) {
-        return 'text-inherit'
+        return getThemeProperty('text.color.inherit').value
     } else {
-        return 'text-gray-900'
+        return getThemeProperty('text.color.default').value
     }
 })
 
 const fontSize = computed(() => {
     if (props.small) {
-        return 'text-sm'
+        return getThemeProperty('text.size.small').value
     } else {
-        return 'text-md'
+        return getThemeProperty('text.size.default').value
     }
 })
 
