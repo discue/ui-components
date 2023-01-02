@@ -3,6 +3,15 @@
   "version": "0.26.0",
   "private": false,
   "license": "MIT",
+  "description": "The open source Vue.js UI components library of discue.io",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/discue/ui-components/.git"
+  },
+  "bugs": {
+    "url": "https://github.com/discue/ui-components/issues"
+  },
+  "homepage": "https://ui.discue.io",
   "type": "module",
   "scripts": {
     "serve": "vue-cli-service serve",
