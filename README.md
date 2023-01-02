@@ -20,7 +20,7 @@
 
 # ui-components
 
-A collection of vue.js **themeable** components used in discue.io.
+A collection of **themeable** vue.js components used in discue.io.
 
 ## Installation
 
