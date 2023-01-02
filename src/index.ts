@@ -1,4 +1,8 @@
-// make sure to also update /types/index.d.ts
+import * as uiComponentsTheme from './theme.js';
+
+// required to allow usage as vue plugin
+export const install = (...args) => uiComponentsTheme.install.apply(uiComponentsTheme, args);
+export const theme = uiComponentsTheme
 
 export { default as BackToTop } from './components/back-to-top.vue';
 export { default as Banner } from './components/banner.vue';
