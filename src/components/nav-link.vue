@@ -47,7 +47,9 @@ const props = defineProps({
         type: String,
     },
     // window injection for testing only
-    window: {}
+    window: {
+        __hideInPreview: true
+    }
 })
 
 const textSize = computed(() => {
