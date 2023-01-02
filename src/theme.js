@@ -82,9 +82,12 @@ export const update = function (key, stringValue) {
  * 
  * @protected
  * @param {import('vue').App} _app 
- * @param {theme} themeOverride a flat object containing property names and values 
+ * @param {theme} [themeOverride=undefined] a flat object containing property names and values 
  */
 export const install = function (_app, themeOverride) {
+    if (!themeOverride) {
+        return
+    }
     Object.entries(themeOverride).forEach(([key, value]) => {
         update(key, value)
     })
