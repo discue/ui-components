@@ -3,7 +3,7 @@
   "version": "0.28.0",
   "private": false,
   "license": "MIT",
-  "description": "The open source Vue.js UI components library of discue.io",
+  "description": "The themeable open source Vue.js UI component library of discue.io",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/discue/ui-components/.git"
@@ -32,6 +32,15 @@
   },
   "files": [
     "dist"
+  ],
+  "keywords": [
+    "vue",
+    "vuejs",
+    "components",
+    "ui-components",
+    "theme",
+    "themeable",
+    "discue"
   ],
   "main": "./dist/ui.umd.js",
   "exports": {
