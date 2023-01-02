@@ -1,4 +1,4 @@
-# NavLink <Badge type="tip" text="since v0.4.0" vertical="top" />
+# NavLink <Badge type="tip" text="since v0.4.0" vertical="top" /> <Badge type="themeable" text="themeable" vertical="top" />
 
 A link component. Will register a click handler and will - on click and based on the `href` property - either 
 - let the browser scroll to the target component on the same page,

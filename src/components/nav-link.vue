@@ -20,6 +20,7 @@
 <script setup>
 import { computed } from 'vue';
 import { useRouter } from 'vue-router';
+import { getThemeProperty } from '../theme.js';
 
 const router = useRouter()
 
@@ -54,39 +55,57 @@ const props = defineProps({
 
 const textSize = computed(() => {
     if (props.small) {
-        return 'text-md'
+        return getThemeProperty('link.size.small').value
     } else {
-        return 'text-xl'
+        return getThemeProperty('link.size.default').value
     }
 })
 
-const textAndBorderColor = computed(() => {
+const textColor = computed(() => {
     if (props.invert) {
-        return 'text-gray-100'
+        return getThemeProperty('link.color.light').value
     } if (props.secondary) {
-        return 'text-gray-500 hover:border-gray-500'
+        return getThemeProperty('link.color.secondary').value
     } else if (props.attention) {
-        return 'text-attention-900 hover:border-attention-500'
+        return getThemeProperty('link.color.attention').value
     } else {
-        return 'text-gray-900 hover:border-gray-900'
+        return getThemeProperty('link.color.default').value
+    }
+})
+
+const borderColor = computed(() => {
+    if (props.secondary) {
+        return getThemeProperty('link.border.secondary').value
+    } else if (props.attention) {
+        return getThemeProperty('link.border.attention').value
+    } else {
+        return getThemeProperty('link.border.default').value
     }
 })
 
 const bgColor = computed(() => {
-    if (props.secondary) {
-        return 'bg-gray-500'
-    } else if (props.attention) {
-        return 'bg-attention-900'
+    if (props.invert) {
+        if (props.secondary) {
+            return getThemeProperty('button.background.secondary').value
+        } else if (props.attention) {
+            return getThemeProperty('button.background.attention').value
+        } else {
+            return getThemeProperty('button.background.default').value
+        }
     } else {
-        return 'bg-gray-900'
+        return ''
     }
+})
+
+const fontWeight = computed(() => {
+    return getThemeProperty('link.weight.default').value
 })
 
 const clazz = computed(() => {
     if (props.invert) {
-        return `p-3 ${textAndBorderColor.value} ${textSize.value} ${bgColor.value} font-bold hover:shadow-md rounded-lg transform transition-transform hover:-translate-y-1`
+        return `p-3 ${textColor.value} ${borderColor.value} ${textSize.value} ${bgColor.value} ${fontWeight.value} hover:shadow-md rounded-lg transform transition-transform hover:-translate-y-1`
     } else {
-        return `${textSize.value} ${textAndBorderColor.value} animate font-bold hover:border-b-4 cursor-pointer`
+        return `${textSize.value} ${textColor.value} ${borderColor.value} animate ${fontWeight.value} hover:border-b-4 cursor-pointer`
 
     }
 })
