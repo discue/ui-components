@@ -20,7 +20,7 @@
 
 # ui-components
 
-A collection of vue.js components used in discue.io.
+A collection of vue.js **themeable** components used in discue.io.
 
 ## Installation
 
@@ -31,8 +31,22 @@ Install with npm
 ```
 
 ## Usage
+To change the default theme, register the module as a [Vue Plugin](https://vuejs.org/guide/reusability/plugins.html#introduction) and pass an object with theme properties. Valid theme property keys can be found in [theme.js](src/theme.js) and [theme-keys.js](src/theme-keys.js).
 
-Import any component from the main export and use it in your template. 
+```js
+import uiComponents from '@discue/ui-components'
+import { createApp } from 'vue'
+import App from './App.vue'
+
+createApp(App)
+    .use(uiComponents, {
+        'text.attention.default': 'text-red-800',
+        'text.weight.default': 'font-bold'
+    })
+    .mount('#app')
+```
+
+In your component files, import any ui component from the main export and use it in your template. 
 
 ```vue
 <template>
