@@ -1,0 +1,7 @@
+.badge {
+    @apply font-bold;
+}
+
+.badge.themeable {
+    @apply text-gray-900 bg-gradient-to-r from-lime-500 via-yellow-300 to-pink-400
+}

@@ -6,14 +6,11 @@
 @import './preview.scss';
 @import './site-name.scss';
 @import './theme.scss';
+@import './badge.scss';
 
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
-
-.badge {
-    @apply font-bold;
-}
 
 h2 {
     @apply mb-4 !important;
