@@ -139,6 +139,9 @@ const targetPropsForTable = computed(() => {
     }
 
     return Object.entries(componentProps).reduce((context, [key, value], index) => {
+        if (value.__hideInPreview) {
+            return context
+        }
         return Object.assign(context, reactive({
             [key]: {
                 name: key,
