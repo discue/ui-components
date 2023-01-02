@@ -2,6 +2,15 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [0.28.0](https://github.com/discue/ui-components/compare/v0.27.0...v0.28.0) (2023-01-02)
+
+
+### Chores
+
+* **theme:** update themeOverride type ([460770c](https://github.com/discue/ui-components/commit/460770c08799857ea1680711fe91a5220872eace))
+* update theme-keys file comment ([e865402](https://github.com/discue/ui-components/commit/e865402d386e84f6b607a152c937b823399c77f3))
+* use theme export for theming ([e8832c1](https://github.com/discue/ui-components/commit/e8832c13abe586e5a668afda94a56f50b9eb930d))
+
 ## [0.27.0](https://github.com/discue/ui-components/compare/v0.26.0...v0.27.0) (2023-01-02)
 
 
