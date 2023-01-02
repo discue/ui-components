@@ -142,8 +142,8 @@ const targetPropsForTable = computed(() => {
         return Object.assign(context, reactive({
             [key]: {
                 name: key,
-                type: value.type.prototype.constructor.name,
-                allowInput: value.type.prototype.constructor.name !== 'Function',
+                type: value.type?.prototype.constructor.name || 'unknown',
+                allowInput: value.type?.prototype.constructor.name !== 'Function' || false,
                 'default': value.default,
                 index
             }
