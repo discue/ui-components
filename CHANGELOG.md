@@ -2,6 +2,37 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [0.27.0](https://github.com/discue/ui-components/compare/v0.26.0...v0.27.0) (2023-01-02)
+
+
+### Features
+
+* **drop-down:** add animation for state transitions ([ec476b6](https://github.com/discue/ui-components/commit/ec476b620c3f24040e9c482927f4fa200767685d))
+* **dynamic-component:** allow props to be hidden ([d9c6933](https://github.com/discue/ui-components/commit/d9c6933e6292c365ae30dc789e489128223d9046))
+* **nav-link:** make component themeable ([4999028](https://github.com/discue/ui-components/commit/49990286a494b6d8a3a13a7e9e31963bd884abdf))
+* **text:** make component themeable ([851df30](https://github.com/discue/ui-components/commit/851df30f3d9070a7b63d339e11eeca32e748d45c))
+* **theme:** allow themeOverride to be falsy and exit early ([97c6c08](https://github.com/discue/ui-components/commit/97c6c0825d46be001f7417ff5fefd3b6d3963f34))
+
+
+### Chores
+
+* add and export theme object and theme-keys ([37d6e53](https://github.com/discue/ui-components/commit/37d6e537392a486d1a647ff521324d21efa5c2b8))
+* add missing package.json fields ([6ef3670](https://github.com/discue/ui-components/commit/6ef367063bc55f0f4d84ca68b357f08c679a6fa3))
+* add script to create theme keys automatically ([43c0662](https://github.com/discue/ui-components/commit/43c06620b0644333c20f1d7b3a7c5ec3ce1d77bf))
+* create theme keys during lib build ([1195643](https://github.com/discue/ui-components/commit/11956432f55e3178320bdda4990679572899bade))
+* **deps-dev:** bump @vuepress/plugin-register-components ([704c9f1](https://github.com/discue/ui-components/commit/704c9f1254949ec1f70fc6dcdad6b5cea917a5aa))
+* **deps-dev:** bump @vuepress/plugin-shiki ([c2040f8](https://github.com/discue/ui-components/commit/c2040f850a00ed706a15d7218a0caa093c0b244f))
+* **deps-dev:** bump core-js from 3.26.1 to 3.27.1 ([758363a](https://github.com/discue/ui-components/commit/758363a6d73bc076f2cfe2045b2693e91b4110a7))
+* **deps-dev:** bump vue-tsc from 1.0.14 to 1.0.19 ([8bcc996](https://github.com/discue/ui-components/commit/8bcc99647a91d4921da00fa959052181dac1547d))
+* **deps-dev:** bump vuepress from 2.0.0-beta.59 to 2.0.0-beta.60 ([955298d](https://github.com/discue/ui-components/commit/955298d3dc1c72c943e5d7d38a8b6dbd2f43cff4))
+* **deps:** bump actions/stale from 6 to 7 ([fa8ac24](https://github.com/discue/ui-components/commit/fa8ac245768d808ad318a90bb8335e23a7cc10f1))
+* do not purge styles found in ts and js files ([e642736](https://github.com/discue/ui-components/commit/e642736cc244f0beb8fc78b71e1cbfe0f59709a0))
+* **index:** ignore ts compile errors ([e17a73e](https://github.com/discue/ui-components/commit/e17a73efa2762ba4a477ee34975a0b43a550f415))
+* **nav-link:** hide window property in preview ([ddd664a](https://github.com/discue/ui-components/commit/ddd664a7b638403083d8978e704e69cd6690b899))
+* update nodejs badge in readme ([7e86318](https://github.com/discue/ui-components/commit/7e8631816cb89576529a8e88ae8c737b4082ec0f))
+* update readme ([073a76b](https://github.com/discue/ui-components/commit/073a76b3c99c90a143e0def564e24f5d45dcdd9c))
+* update tsconfig ([0ccf511](https://github.com/discue/ui-components/commit/0ccf511d4f9624a2e55e98359338d5cb43fc2732))
+
 ## [0.26.0](https://github.com/discue/ui-components/compare/v0.25.0...v0.26.0) (2022-12-22)
 
 
