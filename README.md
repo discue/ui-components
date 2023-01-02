@@ -34,14 +34,13 @@ Install with npm
 To change the default theme, register the module as a [Vue Plugin](https://vuejs.org/guide/reusability/plugins.html#introduction) and pass an object with theme properties. Valid theme property keys can be found in [theme.js](src/theme.js) and [theme-keys.js](src/theme-keys.js).
 
 ```js
-import uiComponents from '@discue/ui-components'
+import { theme } from '@discue/ui-components'
 import { createApp } from 'vue'
 import App from './App.vue'
 
 createApp(App)
-    .use(uiComponents, {
-        'text.attention.default': 'text-red-800',
-        'text.weight.default': 'font-bold'
+    .use(theme, {
+        [theme.TEXT_COLOR_DEFAULT]: 'text-gray-500'
     })
     .mount('#app')
 ```

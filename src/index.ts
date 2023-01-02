@@ -1,8 +1,8 @@
 import * as uiComponentsTheme from './theme.js';
 
-// required to allow usage as vue plugin
-// @ts-ignore
-export const install = (...args) => uiComponentsTheme.install.apply(uiComponentsTheme, args);
+/**
+ * @type {import('theme')}
+ */
 export const theme = uiComponentsTheme
 
 export { default as BackToTop } from './components/back-to-top.vue';
