@@ -127,6 +127,9 @@ function getRef(key) {
  */
 export const update = function (key, stringValue) {
     const ref = getRef(key)
+    if (!ref) {
+        throw new Error(`Could not find a theme property with key ${key}. Does property exist?`)
+    }
     ref.value = stringValue
 }
 
