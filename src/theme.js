@@ -2,6 +2,48 @@ import { ref } from 'vue'
 
 // add only computed properties here to allow for reactivity
 const theme = {
+    formElement: {
+        borderSize: {
+            'default': ref('border-2')
+        },
+        borderColor: {
+            'default': ref('border-gray-500'),
+            'active': ref('border-gray-800'),
+            'attention': ref('border-attention-800')
+        },
+        borderRingSize: {
+            'default': ref('hover:ring-2')
+        },
+        borderRingColor: {
+            'default': ref('hover:ring-primary-500')
+        }
+    },
+    formElementLabel: {
+        size: {
+            'default': ref('text-md')
+        },
+        color: {
+            'default': ref('text-gray-800'),
+            'attention': ref('text-attention-800')
+        },
+        background: {
+            'default': ref('bg-white')
+        },
+        weight: {
+            'default': ref('font-bold')
+        }
+    },
+    formElementHintAndPattern: {
+        size: {
+            'default': ref('text-xs')
+        },
+        color: {
+            'default': ref('text-gray-400')
+        },
+        weight: {
+            'default': ref('font-medium')
+        }
+    },
     text: {
         size: {
             'default': ref('text-md'),
