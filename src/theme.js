@@ -44,6 +44,17 @@ const theme = {
             'default': ref('font-medium')
         }
     },
+    formElementError: {
+        size: {
+            'default': ref('text-xs')
+        },
+        color: {
+            'default': ref('text-attention-800')
+        },
+        weight: {
+            'default': ref('font-medium')
+        }
+    },
     text: {
         size: {
             'default': ref('text-md'),
