@@ -21,8 +21,7 @@
                     duration-200
                     ease-in
                 " @mousedown="onFocusRequest">Allowed values: {{ pattern }}</span>
-            </Transition>
-            <span v-if="showFormat" class="
+                <span v-if="showFormat" class="
                     absolute
                     cursor-text
                     -top-2
@@ -37,6 +36,7 @@
                     duration-200
                     ease-in
                 " @mousedown="onFocusRequest">Allowed format: {{ format }}</span>
+            </Transition>
         </div>
         <div :class="[isInvalid ? '' : 'pb-1']">
             <slot />
