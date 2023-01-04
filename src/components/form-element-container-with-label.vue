@@ -109,7 +109,7 @@ const showFormat = computed(() => {
 })
 const parentClazz = computed(() => {
     const clazz = [getThemeProperty(FORMELEMENT_BORDERSIZE_DEFAULT).value]
-    if (props.focussed) {
+    if (hasFocus.value || props.focussed) {
         clazz.push(getThemeProperty(FORMELEMENT_BORDERCOLOR_ACTIVE).value)
         clazz.push(getThemeProperty(FORMELEMENT_BORDERRINGSIZE_DEFAULT).value, getThemeProperty(FORMELEMENT_BORDERRINGCOLOR_DEFAULT).value)
     } else if (isInvalid.value) {
