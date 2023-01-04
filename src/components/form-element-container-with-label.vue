@@ -127,10 +127,10 @@ const errorId = computed(() => {
     return `${props.id}ElementError`
 })
 const showPattern = computed(() => {
-    return props.pattern && props.showPatternHint && hasFocus
+    return props.pattern && props.showPatternHint && props.focussed
 })
 const showFormat = computed(() => {
-    return props.format && props.showFormatHint && hasFocus
+    return props.format && props.showFormatHint && props.focussed
 })
 const parentClazz = computed(() => {
     const clazz = ['border-2']
