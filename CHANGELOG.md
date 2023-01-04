@@ -2,6 +2,43 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [0.29.0](https://github.com/discue/ui-components/compare/v0.28.0...v0.29.0) (2023-01-04)
+
+
+### Features
+
+* **form-element-container:** make container themeable ([66672cb](https://github.com/discue/ui-components/commit/66672cb5b9f69c178a87f291bfc0b640734dd101))
+* **form-element-container:** show active state also when being hovered ([ae5e8fd](https://github.com/discue/ui-components/commit/ae5e8fdf4d0fb12030b8012b7a99299f42e606ef))
+* **form-element-container:** show format and hint only when input is focussed ([108ec22](https://github.com/discue/ui-components/commit/108ec22a4a6b219cbd775aacbac1bc3d55d375ed))
+* **form-element-container:** wrap format and hint in transition ([b7c273a](https://github.com/discue/ui-components/commit/b7c273a5ea78eba3a0f1837d8ee65519207f45a0))
+* **form-element-error:** make component themeable ([4ada311](https://github.com/discue/ui-components/commit/4ada31157fed58b5a9d1b1540ee2d427ba7f5087))
+
+
+### Bug Fixes
+
+* **form-input:** does not span full width ([1e720b9](https://github.com/discue/ui-components/commit/1e720b9fff800a3af09d6c2cbf7cf6a29b62c6c5))
+* **form-input:** unable to access allowed characters ([0d7a506](https://github.com/discue/ui-components/commit/0d7a506b9376ee226ca5873e9cd4274bd78d01dc))
+
+
+### Refactorings
+
+* separate all words in theme keys with underscores ([96bd737](https://github.com/discue/ui-components/commit/96bd7376ecf1b9816749fad58994666894acef25))
+
+
+### Chores
+
+* add keywords to package.json ([70c390d](https://github.com/discue/ui-components/commit/70c390df78d10db0e2a43f31d275915ab3e953bf))
+* add pack script ([0fd6f36](https://github.com/discue/ui-components/commit/0fd6f3618502a1753ac825f387431de44841dda4))
+* **deps:** update dependencies ([5595f61](https://github.com/discue/ui-components/commit/5595f61b300171d41697cc09aaf0092087a1886d))
+* **form-element-container:** do not animate color changes ([2fcbeaf](https://github.com/discue/ui-components/commit/2fcbeaf48f79d86e687b63ea0982c5a2b006f30d))
+* **form-inputs:** listen to focusin and focusout too ([5b69399](https://github.com/discue/ui-components/commit/5b69399d48bcbaa5b2011ab3d70996eed5b42a5b))
+* **index:** remove unnecessary typing hint ([d672ba5](https://github.com/discue/ui-components/commit/d672ba577e540767bec46bd926f5ff14b4191832))
+* pass boolean as boolean in drop down menu banner itm doc ([25d3995](https://github.com/discue/ui-components/commit/25d39951fa46812545061836b492be0eb4f6b661))
+* pass boolean property as boolean in drop down menu item doc ([9ded903](https://github.com/discue/ui-components/commit/9ded90313cd24f6d2ae0c0eb23bd33c2d73f9300))
+* pass offset as number in back to top doc ([0966d67](https://github.com/discue/ui-components/commit/0966d6747433a3d5513cc50da6f8c605de1033c4))
+* **theme:** throw error if no property found for key ([4e54a03](https://github.com/discue/ui-components/commit/4e54a03e04613e975fabfae4712ccb1ae3900215))
+* update description in readme ([6eba2a0](https://github.com/discue/ui-components/commit/6eba2a0a1490fa86aeb67b46a52802e5b7446ca2))
+
 ## [0.28.0](https://github.com/discue/ui-components/compare/v0.27.0...v0.28.0) (2023-01-02)
 
 
