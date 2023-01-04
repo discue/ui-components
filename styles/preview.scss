@@ -58,6 +58,10 @@
                 @apply bg-stone-300;
             }
 
+            input {
+                margin-top: 0;
+            }
+
             &> span {
                 position: absolute !important;
             }
