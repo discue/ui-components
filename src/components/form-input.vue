@@ -93,8 +93,8 @@ const invalidCharactersMessage = computed(() => {
     }
 })
 const invalidCharactersRegex = computed(() => {
-    if (this.allowedCharactersSupersetPattern) {
-        return `[^(${this.allowedCharactersSupersetPattern})]`
+    if (props.allowedCharactersSupersetPattern) {
+        return `[^(${props.allowedCharactersSupersetPattern})]`
     } else {
         return null
     }
