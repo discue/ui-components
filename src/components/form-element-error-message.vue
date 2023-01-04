@@ -4,7 +4,7 @@
 
 <script setup>
 import { computed } from 'vue';
-import { FORMELEMENTERROR_COLOR_DEFAULT, FORMELEMENTERROR_SIZE_DEFAULT, FORMELEMENTERROR_WEIGHT_DEFAULT, getThemeProperty } from '../theme.js';
+import { FORM_ELEMENT_ERROR_COLOR_DEFAULT, FORM_ELEMENT_ERROR_SIZE_DEFAULT, FORM_ELEMENT_ERROR_WEIGHT_DEFAULT, getThemeProperty } from '../theme.js';
 
 defineProps({
     id: {
@@ -22,9 +22,9 @@ defineProps({
 const clazz = computed(() => {
     const clazz = ['dsq-form-element-error-message']
 
-    clazz.push(getThemeProperty(FORMELEMENTERROR_COLOR_DEFAULT).value)
-    clazz.push(getThemeProperty(FORMELEMENTERROR_SIZE_DEFAULT).value)
-    clazz.push(getThemeProperty(FORMELEMENTERROR_WEIGHT_DEFAULT).value)
+    clazz.push(getThemeProperty(FORM_ELEMENT_ERROR_COLOR_DEFAULT).value)
+    clazz.push(getThemeProperty(FORM_ELEMENT_ERROR_SIZE_DEFAULT).value)
+    clazz.push(getThemeProperty(FORM_ELEMENT_ERROR_WEIGHT_DEFAULT).value)
 
     return clazz.join(' ')
 })

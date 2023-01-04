@@ -48,7 +48,7 @@
 
 <script setup>
 import { computed, ref, watchEffect } from 'vue';
-import { FORMELEMENTHINTANDPATTERN_COLOR_DEFAULT, FORMELEMENTHINTANDPATTERN_SIZE_DEFAULT, FORMELEMENTHINTANDPATTERN_WEIGHT_DEFAULT, FORMELEMENTLABEL_BACKGROUND_DEFAULT, FORMELEMENTLABEL_COLOR_ATTENTION, FORMELEMENTLABEL_COLOR_DEFAULT, FORMELEMENTLABEL_SIZE_DEFAULT, FORMELEMENTLABEL_WEIGHT_DEFAULT, FORMELEMENT_BORDERCOLOR_ACTIVE, FORMELEMENT_BORDERCOLOR_ATTENTION, FORMELEMENT_BORDERCOLOR_DEFAULT, FORMELEMENT_BORDERRINGCOLOR_DEFAULT, FORMELEMENT_BORDERRINGSIZE_DEFAULT, FORMELEMENT_BORDERSIZE_DEFAULT, getThemeProperty } from '../theme.js';
+import { FORM_ELEMENT_BORDER_COLOR_ACTIVE, FORM_ELEMENT_BORDER_COLOR_ATTENTION, FORM_ELEMENT_BORDER_COLOR_DEFAULT, FORM_ELEMENT_BORDER_RING_COLOR_DEFAULT, FORM_ELEMENT_BORDER_RING_SIZE_DEFAULT, FORM_ELEMENT_BORDER_SIZE_DEFAULT, FORM_ELEMENT_HINT_COLOR_DEFAULT, FORM_ELEMENT_HINT_SIZE_DEFAULT, FORM_ELEMENT_HINT_WEIGHT_DEFAULT, FORM_ELEMENT_LABEL_BACKGROUND_DEFAULT, FORM_ELEMENT_LABEL_COLOR_ATTENTION, FORM_ELEMENT_LABEL_COLOR_DEFAULT, FORM_ELEMENT_LABEL_SIZE_DEFAULT, FORM_ELEMENT_LABEL_WEIGHT_DEFAULT, getThemeProperty } from '../theme.js';
 import FormError from './form-element-error-message.vue';
 
 const props = defineProps({
@@ -108,29 +108,29 @@ const showFormat = computed(() => {
     return props.format && props.showFormatHint && props.focussed
 })
 const parentClazz = computed(() => {
-    const clazz = [getThemeProperty(FORMELEMENT_BORDERSIZE_DEFAULT).value]
+    const clazz = [getThemeProperty(FORM_ELEMENT_BORDER_SIZE_DEFAULT).value]
     if (hasFocus.value || props.focussed) {
-        clazz.push(getThemeProperty(FORMELEMENT_BORDERCOLOR_ACTIVE).value)
-        clazz.push(getThemeProperty(FORMELEMENT_BORDERRINGSIZE_DEFAULT).value, getThemeProperty(FORMELEMENT_BORDERRINGCOLOR_DEFAULT).value)
+        clazz.push(getThemeProperty(FORM_ELEMENT_BORDER_COLOR_ACTIVE).value)
+        clazz.push(getThemeProperty(FORM_ELEMENT_BORDER_RING_SIZE_DEFAULT).value, getThemeProperty(FORM_ELEMENT_BORDER_RING_COLOR_DEFAULT).value)
     } else if (isInvalid.value) {
-        clazz.push(getThemeProperty(FORMELEMENT_BORDERCOLOR_ATTENTION).value)
+        clazz.push(getThemeProperty(FORM_ELEMENT_BORDER_COLOR_ATTENTION).value)
     } else {
-        clazz.push(getThemeProperty(FORMELEMENT_BORDERCOLOR_DEFAULT).value)
+        clazz.push(getThemeProperty(FORM_ELEMENT_BORDER_COLOR_DEFAULT).value)
     }
     return clazz.join(' ')
 })
 const labelClazz = computed(() => {
     const clazz = [
         'cursor-text -left-3 -top-3.5 py-1 px-2 absolute leading-7',
-        getThemeProperty(FORMELEMENTLABEL_SIZE_DEFAULT).value,
-        getThemeProperty(FORMELEMENTLABEL_BACKGROUND_DEFAULT).value,
-        getThemeProperty(FORMELEMENTLABEL_WEIGHT_DEFAULT).value
+        getThemeProperty(FORM_ELEMENT_LABEL_SIZE_DEFAULT).value,
+        getThemeProperty(FORM_ELEMENT_LABEL_BACKGROUND_DEFAULT).value,
+        getThemeProperty(FORM_ELEMENT_LABEL_WEIGHT_DEFAULT).value
     ]
 
     if (isInvalid.value) {
-        clazz.push(getThemeProperty(FORMELEMENTLABEL_COLOR_ATTENTION).value)
+        clazz.push(getThemeProperty(FORM_ELEMENT_LABEL_COLOR_ATTENTION).value)
     } else {
-        clazz.push(getThemeProperty(FORMELEMENTLABEL_COLOR_DEFAULT).value)
+        clazz.push(getThemeProperty(FORM_ELEMENT_LABEL_COLOR_DEFAULT).value)
     }
 
     return clazz.join(' ')
@@ -138,9 +138,9 @@ const labelClazz = computed(() => {
 const hintClazz = computed(() => {
     const clazz = [
         'absolute cursor-text -top-2 p-1.5 right-0 leading-7 italic ml-auto transition-opacity duration-200 ease-in',
-        getThemeProperty(FORMELEMENTHINTANDPATTERN_COLOR_DEFAULT).value,
-        getThemeProperty(FORMELEMENTHINTANDPATTERN_SIZE_DEFAULT).value,
-        getThemeProperty(FORMELEMENTHINTANDPATTERN_WEIGHT_DEFAULT).value,
+        getThemeProperty(FORM_ELEMENT_HINT_COLOR_DEFAULT).value,
+        getThemeProperty(FORM_ELEMENT_HINT_SIZE_DEFAULT).value,
+        getThemeProperty(FORM_ELEMENT_HINT_WEIGHT_DEFAULT).value,
  
     ]
 

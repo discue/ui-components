@@ -22,9 +22,19 @@ const flat = flatten(themeData)
 const keys = Object.entries(flat) //
     .filter(([key]) => key.endsWith('._value')) //
     .map(([key]) => {
+        const externalKey = key.substring(0, key.indexOf('._value')).split('').reduce((context, next) => {
+            if (next === '.') {
+                context += '_'
+                return context
+            } else if (next.charCodeAt(0) < 97 && next.charCodeAt(0) >= 65) {
+                context += '_'
+            }
+            return context += next.toUpperCase()
+        }, '')
+        
         return {
             internalKey: key.substring(0, key.indexOf('._value')),
-            externalKey: key.substring(0, key.indexOf('._value')).toUpperCase().replace(/\./g, '_')
+            externalKey
         }
     })
 

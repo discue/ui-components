@@ -33,7 +33,7 @@ const theme = {
             'default': ref('font-bold')
         }
     },
-    formElementHintAndPattern: {
+    formElementHint: {
         size: {
             'default': ref('text-xs')
         },
