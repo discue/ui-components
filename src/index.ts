@@ -1,8 +1,5 @@
 import * as uiComponentsTheme from './theme.js';
 
-/**
- * @type {import('theme')}
- */
 export const theme = uiComponentsTheme
 
 export { default as BackToTop } from './components/back-to-top.vue';
