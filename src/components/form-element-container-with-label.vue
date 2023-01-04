@@ -1,6 +1,6 @@
 <template>
     <div :id="parentId" :class="parentClazz" @mouseover="onFocus" @mouseleave="onBlur"
-        class="dsq-form-element-container-with-label border-solid cursor-text flex flex-col rounded transition-colors ease-in-out duration-500">
+        class="dsq-form-element-container-with-label border-solid cursor-text flex flex-col rounded">
         <div class="relative">
             <label :for="id" :class="labelClazz" @mousedown="onFocusRequest">{{ label }}</label>
             <Transition name="form-element-hint">
