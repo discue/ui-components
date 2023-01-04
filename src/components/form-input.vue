@@ -6,7 +6,7 @@
         <input :id="id" ref="input" autocomplete="off" :type="type" :pattern="pattern" :required="required"
             :placeholder="placeholder" :name="name" :value="modelValue"
             class="w-full mt-4 text-lg outline-none text-gray-900 placeholder:text-gray-500 px-3 leading-8"
-            @input="onInput($event)" @focus="onFocus($event)" @blur="onBlur($event)">
+            @input="onInput($event)" @focus="onFocus($event)" @focusin="onFocus($event)" @focusout="onBlur($event)" @blur="onBlur($event)">
     </FormElementContainerWithLabel>
 </template>
   
