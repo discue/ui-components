@@ -65,7 +65,7 @@ const bgColor = computed(() => {
 
 const clazz = computed(() => {
     if (props.invert) {
-        return `cursor-pointer p-3 ${textAndBorderColor.value} ${textSize.value} ${bgColor.value} font-bold hover:shadow-md rounded-lg transform transition-transform hover:-translate-y-1`
+        return `flex cursor-pointer p-3 ${textAndBorderColor.value} ${textSize.value} ${bgColor.value} font-bold hover:shadow-md rounded-lg transform transition-transform hover:-translate-y-1`
     } else {
         return `${textSize.value} ${textAndBorderColor.value} animate font-bold hover:border-b-4 cursor-pointer`
 
