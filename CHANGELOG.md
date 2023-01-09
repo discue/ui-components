@@ -2,6 +2,23 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.29.1](https://github.com/discue/ui-components/compare/v0.29.0...v0.29.1) (2023-01-09)
+
+
+### Features
+
+* **nav-button:** use display flex for inverted buttons ([3eea619](https://github.com/discue/ui-components/commit/3eea6193c079b8da27ee7a36b094edeaedcdb20e))
+
+
+### Bug Fixes
+
+* **nav-link:** absolute links are passed to vue router ([221e320](https://github.com/discue/ui-components/commit/221e320b73b2a653da256ed1161931c23dcc4233))
+
+
+### Chores
+
+* **footer:** add missing blank ([982aa83](https://github.com/discue/ui-components/commit/982aa8308556de32eb8db8c44d1152c53798f75b))
+
 ## [0.29.0](https://github.com/discue/ui-components/compare/v0.28.0...v0.29.0) (2023-01-04)
 
 
