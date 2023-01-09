@@ -125,6 +125,7 @@ const isExternalLink = computed(() => {
 })
 
 const isSamePageLink = computed(() => {
+    // add slash before and after hostname to check whether full domain is include in href prop
     return isRelativeLink.value || props.href.includes(`/${windowHostname.value}/`)
 })
 
