@@ -70,7 +70,7 @@
                     <NavLink :small="true" :secondary="true" href="https://www.discue.io/terms">Terms &amp; Conditions</NavLink>
                 </li>
                 <li>
-                    <NavLink :small="true" :secondary="true" href="https://www.discue.io/imprint">Imprint &amp; LegalNotice</NavLink>
+                    <NavLink :small="true" :secondary="true" href="https://www.discue.io/imprint">Imprint &amp; Legal Notice</NavLink>
                 </li>
             </ul>
         </div>
