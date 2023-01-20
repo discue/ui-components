@@ -2,6 +2,18 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.29.2](https://github.com/discue/ui-components/compare/v0.29.1...v0.29.2) (2023-01-20)
+
+
+### Bug Fixes
+
+* **drop-down-menu-item:** not all clicks are captured ([e452d60](https://github.com/discue/ui-components/commit/e452d603153b9a8a16bcb322e2ab57d5d7d8f148))
+
+
+### Chores
+
+* **nav-link:** add comment to same page link prop ([429930a](https://github.com/discue/ui-components/commit/429930a43c10c6a044ff85f983c67b8a7633ed40))
+
 ### [0.29.1](https://github.com/discue/ui-components/compare/v0.29.0...v0.29.1) (2023-01-09)
 
 
