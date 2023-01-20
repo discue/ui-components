@@ -28,7 +28,6 @@ const props = defineProps({
 })
 
 function onClick() {
-    console.log('onclick')
     if (props.href) {
         router.push({ path: props.href })
     }
