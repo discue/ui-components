@@ -1,5 +1,5 @@
 <template>
-    <button :type="type" :class="clazz" class="dsq-nav-button" @click="click($event)">
+    <button :type="type" :class="clazz" class="dsq-nav-button" @click="onClick">
         <slot />
     </button>
 </template>
@@ -71,4 +71,10 @@ const clazz = computed(() => {
 
     }
 })
+
+function onClick(event) {
+    if (props.click) {
+        props.click(event)
+    }
+}
 </script>
