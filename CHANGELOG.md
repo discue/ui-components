@@ -2,6 +2,29 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [0.30.0](https://github.com/discue/ui-components/compare/v0.29.2...v0.30.0) (2023-03-04)
+
+
+### Features
+
+* **nav-button:** only call click prop if it is not undefined ([df7d217](https://github.com/discue/ui-components/commit/df7d217f1919313227f445aeaced334f4b9bf164))
+
+
+### Chores
+
+* **deps-dev:** bump @vue/test-utils from 2.2.7 to 2.2.8 ([8799d0a](https://github.com/discue/ui-components/commit/8799d0a797d1f97d112ab5314095d7df18ca1838))
+* **deps-dev:** bump @vue/test-utils from 2.2.8 to 2.3.0 ([33252e2](https://github.com/discue/ui-components/commit/33252e259743ec1d15df1b2be860460f5fad26ab))
+* **deps-dev:** bump @vuepress/plugin-register-components ([7497954](https://github.com/discue/ui-components/commit/749795477e7af2bff2a4f54d916662b55e07e82e))
+* **deps-dev:** bump core-js from 3.27.1 to 3.27.2 ([a1c7dc5](https://github.com/discue/ui-components/commit/a1c7dc58536d9aa3db57de5fe7991ee6a66bc780))
+* **deps-dev:** bump core-js from 3.27.2 to 3.29.0 ([ecd0d0b](https://github.com/discue/ui-components/commit/ecd0d0b32208ee769e062bf7719ef8c5c8b58b7a))
+* **deps-dev:** bump eslint-plugin-vue from 9.8.0 to 9.9.0 ([8a7d6ef](https://github.com/discue/ui-components/commit/8a7d6ef0daa155b99172f9af73a91f258cbf06e6))
+* **deps-dev:** bump firebase-tools from 11.19.0 to 11.22.0 ([754175b](https://github.com/discue/ui-components/commit/754175bd3b5f7f3c989982477f09497fb079918d))
+* **deps-dev:** bump vue-tsc from 1.0.20 to 1.0.24 ([ea25e1f](https://github.com/discue/ui-components/commit/ea25e1f6c4f847dc17a8f2b2b8ad5e0cfb3142cb))
+* **deps-dev:** bump vuepress from 2.0.0-beta.60 to 2.0.0-beta.61 ([9094dc8](https://github.com/discue/ui-components/commit/9094dc8e81325c33e71709b1f648bca8fbea8790))
+* **deps-dev:** bump vuepress-plugin-sitemap2 ([4fa27dc](https://github.com/discue/ui-components/commit/4fa27dc1b4f2c42af231928bf93cda950a22ab26))
+* **deps:** update dependencies ([1b5108f](https://github.com/discue/ui-components/commit/1b5108f26852a336c4f972a07f9705b96a6aca2f))
+* **drop-down-menu-item:** do not log to console ([6b583e6](https://github.com/discue/ui-components/commit/6b583e6b388e0793d29a30c0ca709b82fee1c6b8))
+
 ### [0.29.2](https://github.com/discue/ui-components/compare/v0.29.1...v0.29.2) (2023-01-20)
 
 
