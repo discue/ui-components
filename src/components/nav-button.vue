@@ -14,7 +14,7 @@ const props = defineProps({
     },
     invert: {
         type: Boolean,
-        default: true,
+        default: false,
     },
     small: {
         type: Boolean,
@@ -43,33 +43,35 @@ const textSize = computed(() => {
 
 const textAndBorderColor = computed(() => {
     if (props.invert) {
-        return 'text-gray-100'
-    } if (props.secondary) {
-        return 'text-gray-500 hover:border-gray-500'
-    } else if (props.attention) {
-        return 'text-attention-900 hover:border-attention-500'
+        if (props.secondary) {
+            return 'text-gray-500 hover:border-gray-500'
+        } else if (props.attention) {
+            return 'text-attention-900 hover:border-attention-900'
+        } else {
+            return 'text-gray-900 hover:border-gray-900'
+        }
     } else {
-        return 'text-gray-900 hover:border-gray-900'
+        return 'text-gray-100'
     }
 })
 
 const bgColor = computed(() => {
-    if (props.secondary) {
+    if (props.invert) {
+        return 'bg-inherit'
+    } else if (props.secondary) {
         return 'bg-gray-500'
     } else if (props.attention) {
         return 'bg-attention-900'
-    } else if (props.invert) {
-        return 'bg-gray-900'
     } else {
-        return 'bg-none'
+        return 'bg-gray-900'
     }
 })
 
 const clazz = computed(() => {
-    if (props.invert) {
+    if (!props.invert) {
         return `flex cursor-pointer p-3 ${textAndBorderColor.value} ${textSize.value} ${bgColor.value} font-bold hover:shadow-md rounded-lg transform transition-transform hover:-translate-y-1`
     } else {
-        return `${textSize.value} ${textAndBorderColor.value} animate font-bold hover:border-b-4 cursor-pointer`
+        return `${textSize.value} ${textAndBorderColor.value} ${bgColor.value} animate font-bold hover:border-b-4 cursor-pointer`
 
     }
 })
