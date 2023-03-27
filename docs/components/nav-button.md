@@ -1,4 +1,4 @@
-# NavButton <Badge type="tip" text="since v0.10.0" vertical="top" />
+# NavButton <Badge type="tip" text="since v0.10.0" vertical="top" /> <Badge type="themeable" text="themeable" vertical="top" />
 
 A Button component. Allows the parent to register click handlers and change the background color dynamically.
 

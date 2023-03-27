@@ -75,8 +75,30 @@ const theme = {
     button: {
         background: {
             'default': ref('bg-gray-900'),
-            'attention': ref('bg-attention-500'),
+            'attention': ref('bg-attention-800'),
             'secondary': ref('bg-gray-500'),
+            'inherit': ref('bg-inherit')
+        },
+        borderColor: {
+            'default': ref(),
+            'secondary': ref('hover:border-gray-500'),
+            'attention': ref('hover:border-attention-800'),
+            'inverted': ref('hover:border-gray-900')
+        },
+        color: {
+            'default': ref('text-gray-900'),
+            'attention': ref('text-attention-800'),
+            'secondary': ref('text-gray-500'),
+            'light': ref('text-gray-100'),
+            'highlight': ref('text-gray-900'),
+            'inherit': ref('text-inherit'),
+        },
+        size: {
+            'default': ref('text-xl'),
+            'small': ref('text-md')
+        },
+        weight: {
+            'default': ref('font-bold')
         }
     },
     link: {
@@ -87,7 +109,7 @@ const theme = {
         },
         color: {
             'default': ref('text-gray-900'),
-            'attention': ref('text-attention-900'),
+            'attention': ref('text-attention-800'),
             'secondary': ref('text-gray-500'),
             'light': ref('text-gray-100'),
             'highlight': ref('text-gray-900'),
