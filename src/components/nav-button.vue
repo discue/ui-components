@@ -58,8 +58,10 @@ const bgColor = computed(() => {
         return 'bg-gray-500'
     } else if (props.attention) {
         return 'bg-attention-900'
-    } else {
+    } else if (props.invert) {
         return 'bg-gray-900'
+    } else {
+        return 'bg-none'
     }
 })
 
