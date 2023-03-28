@@ -2,6 +2,24 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [0.31.0](https://github.com/discue/ui-components/compare/v0.30.0...v0.31.0) (2023-03-28)
+
+
+### Features
+
+* **nav-button:** make component themeable ([9c64076](https://github.com/discue/ui-components/commit/9c640763f14b6f514f679ed42ad2ea0b97cd94f1))
+* **nav-button:** make non-inverted default ([a77bb55](https://github.com/discue/ui-components/commit/a77bb55d9c9c47e2942aac21cd203d3ef8dba9a3))
+
+
+### Bug Fixes
+
+* **nav-button:** no bg color for invert mode defined ([055315e](https://github.com/discue/ui-components/commit/055315e9a674e86ea4f2f46455271518c023bab8))
+
+
+### Chores
+
+* **deps:** add missing dependencies ([bb831a3](https://github.com/discue/ui-components/commit/bb831a3a2aa9149a703dca14ef0f84e211cddeaf))
+
 ## [0.30.0](https://github.com/discue/ui-components/compare/v0.29.2...v0.30.0) (2023-03-04)
 
 
