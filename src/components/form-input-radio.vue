@@ -8,13 +8,13 @@
         <div :class="wrapperClazz">
             <div :class="optionClazz" v-for="option in options" :key="option.value">
 
-                <input :id="option.label + '_id'" autocomplete="off" type="radio"
+                <input :id="'radio_' + id + '_' + option.value + '_id'" autocomplete="off" type="radio"
                     :checked="option.default === true || modelValue == option.value" :required="required"
                     :name="name" :value="option.value"
                     class="hidden peer checked:bg-gray-900 rounded text-lg outline-none text-gray-100 placeholder:text-gray-300 py-2 px-3 leading-8"
                     @input="onInput($event)">
 
-                <label :for="option.label + '_id'" @focus="onFocus($event)" @focusin="onFocus($event)" @focusout="onBlur($event)" @blur="onBlur($event)"
+                <label :for="'radio_' + id + '_' + option.value + '_id'" @focus="onFocus($event)" @focusin="onFocus($event)" @focusout="onBlur($event)" @blur="onBlur($event)"
                     class="flex flex-row items-center w-full space-x-2 px-3 py-1 leading-7 text-xl text-gray-900 peer-checked:text-gray-900 cursor-pointer">
                     <svg v-if="modelValue == option.value" xmlns="http://www.w3.org/2000/svg"
                         class="stroke-current h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor"
