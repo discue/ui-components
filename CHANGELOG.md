@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.31.1](https://github.com/discue/ui-components/compare/v0.31.0...v0.31.1) (2023-04-01)
+
+
+### Bug Fixes
+
+* **input-radio:** cannot reuse label across multiple inputs ([c2a72f4](https://github.com/discue/ui-components/commit/c2a72f4d14aa0d8e7f68a5258d36a5096d37cf27))
+
 ## [0.31.0](https://github.com/discue/ui-components/compare/v0.30.0...v0.31.0) (2023-03-28)
 
 
