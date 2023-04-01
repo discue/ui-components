@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.32.1](https://github.com/discue/ui-components/compare/v0.32.0...v0.32.1) (2023-04-01)
+
+
+### Bug Fixes
+
+* **input-radio:** fix component is disabled by default ([9d7d9c7](https://github.com/discue/ui-components/commit/9d7d9c7cb1d82dd29f81bfc213b5df91313055cc))
+
 ## [0.32.0](https://github.com/discue/ui-components/compare/v0.31.1...v0.32.0) (2023-04-01)
 
 
