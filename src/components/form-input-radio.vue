@@ -1,32 +1,38 @@
 <template>
-    <FormElementContainerWithLabel 
-    :id="id" 
-    :input-invalid="invalid" 
-    :label="label" 
-    :description="error"
+    <FormElementContainerWithLabel :id="id" :input-invalid="invalid" :label="label" :description="error"
         :focussed="isFocussed">
         <div :class="wrapperClazz">
             <div :class="optionClazz" v-for="option in options" :key="option.value">
 
                 <input :id="'radio_' + id + '_' + option.value + '_id'" autocomplete="off" type="radio"
-                    :checked="option.default === true || modelValue == option.value" :required="required"
-                    :name="name" :value="option.value"
+                    :checked="option.default === true || modelValue == option.value" :required="required" :name="name"
+                    :value="option.value" :disabled="disabled"
                     class="hidden peer checked:bg-gray-900 rounded text-lg outline-none text-gray-100 placeholder:text-gray-300 py-2 px-3 leading-8"
                     @input="onInput($event)">
 
-                <label :for="'radio_' + id + '_' + option.value + '_id'" @focus="onFocus($event)" @focusin="onFocus($event)" @focusout="onBlur($event)" @blur="onBlur($event)"
-                    class="flex flex-row items-center w-full space-x-2 px-3 py-1 leading-7 text-xl text-gray-900 peer-checked:text-gray-900 cursor-pointer">
-                    <svg v-if="modelValue == option.value" xmlns="http://www.w3.org/2000/svg"
-                        class="stroke-current h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor"
-                        stroke-width="2">
-                        <path stroke-linecap="round" stroke-linejoin="round"
-                            d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
-                    </svg>
-                    <svg v-else xmlns="http://www.w3.org/2000/svg" class="stroke-2 stroke-current h-6 w-6" fill="none"
-                        viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
-                        <path stroke-linecap="round" stroke-linejoin="round"
-                            d="M8  01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
-                    </svg>
+                <label :for="'radio_' + id + '_' + option.value + '_id'" @focus="onFocus($event)" @focusin="onFocus($event)"
+                    @focusout="onBlur($event)" @blur="onBlur($event)"
+                    :class="[disabled ? 'text-gray-500 cursor-not-allowed' : 'text-gray-900 cursor-pointer']"
+                    class="flex flex-row items-center w-full space-x-2 px-3 py-1 leading-7 text-xl peer-checked:text-gray-900">
+                    <div v-if="modelValue == option.value">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="stroke-current h-6 w-6" fill="none"
+                            viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                            <path stroke-linecap="round" stroke-linejoin="round"
+                                d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+                        </svg>
+                    </div>
+                    <div v-else>
+                        <svg v-if="disabled" xmlns="http://www.w3.org/2000/svg" class="stroke-2 stroke-current h-6 w-6" fill="none"
+                            viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                            <path stroke-linecap="round" stroke-linejoin="round"
+                                d="M8  01M21 12a9 9 0 0 9 9 0 0118 0z" />
+                        </svg>
+                        <svg v-else xmlns="http://www.w3.org/2000/svg" class="stroke-2 stroke-current h-6 w-6" fill="none"
+                            viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                            <path stroke-linecap="round" stroke-linejoin="round"
+                                d="M8  01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+                        </svg>
+                    </div>
                     <Text :highlight="modelValue == option.value" :inherit-color="true">{{ option.label }}</Text>
                 </label>
 
@@ -62,6 +68,10 @@ const props = defineProps({
     required: {
         type: Boolean,
         default: true,
+    },
+    disabled: {
+        type: Boolean,
+        default: true
     },
     modelValue: {
         type: String,
@@ -104,6 +114,10 @@ const optionClazz = computed(() => {
 })
 
 function onInput(event) {
+    if (props.disabled) {
+        event.preventBubbling()
+        return 
+    }
     const value = event.target.value
     emits('update:modelValue', value)
     onFocus() // labels cannot be focused so we need to augment focussing and bluring for error message handling to work
