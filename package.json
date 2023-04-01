@@ -63,7 +63,7 @@
   },
   "types": "./dist/index.d.ts",
   "devDependencies": {
-    "@babel/core": "^7.20.5",
+    "@babel/core": "^7.21.4",
     "@babel/eslint-parser": "^7.18.9",
     "@babel/preset-env": "^7.20.2",
     "@vue/cli-plugin-babel": "~5.0.8",
