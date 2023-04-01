@@ -105,10 +105,13 @@ const wrapperClazz = computed(() => {
 
 const optionClazz = computed(() => {
     const clazz = ['dsq-form-input-radio-option text-gray-100 flex flex-row items-center']
-    if (props.vertical) {
-        clazz.push('w-1/2')
-    } else {
-        clazz.push('w-full')
+    // if radio is disabled ensure that no option has a fixed width
+    if (!props.disabled) {
+        if (props.vertical) {
+            clazz.push('w-1/2')
+        } else {
+            clazz.push('w-full')
+        }
     }
     return clazz.join(' ')
 })
