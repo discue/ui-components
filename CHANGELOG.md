@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [0.34.0](https://github.com/discue/ui-components/compare/v0.33.0...v0.34.0) (2023-04-01)
+
+
+### Features
+
+* **input-radio:** make sure hidden options have no fixed value ([9e06cc2](https://github.com/discue/ui-components/commit/9e06cc294c49ff97d4262e0e53516dd89c8fcc92))
+
 ## [0.33.0](https://github.com/discue/ui-components/compare/v0.32.1...v0.33.0) (2023-04-01)
 
 
