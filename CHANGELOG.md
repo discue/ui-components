@@ -2,6 +2,27 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [0.32.0](https://github.com/discue/ui-components/compare/v0.31.1...v0.32.0) (2023-04-01)
+
+
+### Features
+
+* **input-radio:** allow app to disable input ([b41c74f](https://github.com/discue/ui-components/commit/b41c74f7d7fa711739e7ab6aff79b95647050259))
+
+
+### Chores
+
+* **deps-dev:** bump @babel/core from 7.21.0 to 7.21.4 ([c734501](https://github.com/discue/ui-components/commit/c734501e741c983b600e00925780f2be930f3687))
+* **deps-dev:** bump @babel/eslint-parser from 7.19.1 to 7.21.3 ([ff886b9](https://github.com/discue/ui-components/commit/ff886b94e369ff553e04f403f0efe32121f67047))
+* **deps-dev:** bump @babel/preset-env from 7.20.2 to 7.21.4 ([2320666](https://github.com/discue/ui-components/commit/2320666319e8baa2aa7cbb1e2eda4f1b44916862))
+* **deps-dev:** bump core-js from 3.29.0 to 3.29.1 ([6691821](https://github.com/discue/ui-components/commit/66918213625de1144572000165905632a20bd273))
+* **deps-dev:** bump eslint-plugin-vue from 9.9.0 to 9.10.0 ([9eb6812](https://github.com/discue/ui-components/commit/9eb681239740670c9398d5c958bdf3777a918946))
+* **deps-dev:** bump firebase-tools from 11.24.0 to 11.25.2 ([55fd1e9](https://github.com/discue/ui-components/commit/55fd1e9e106ecc079829336211d139cd136a6a94))
+* **deps-dev:** bump nodemon from 2.0.21 to 2.0.22 ([c95fa4a](https://github.com/discue/ui-components/commit/c95fa4a28290e3910cf9a7751d3235a143bcb277))
+* **deps-dev:** bump tailwindcss from 3.2.7 to 3.3.1 ([8730582](https://github.com/discue/ui-components/commit/873058208cd6710a4a88079519adb6770f000f26))
+* **deps-dev:** bump vuepress-plugin-sitemap2 ([4962a58](https://github.com/discue/ui-components/commit/4962a58bf91a9880c3177c678ab6c88ad01acb53))
+* **deps:** bump actions/stale from 7 to 8 ([0c703bf](https://github.com/discue/ui-components/commit/0c703bf89f135055fbb4ccaecdb3c14c3ff7d74e))
+
 ### [0.31.1](https://github.com/discue/ui-components/compare/v0.31.0...v0.31.1) (2023-04-01)
 
 
