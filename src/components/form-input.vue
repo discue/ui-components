@@ -1,12 +1,12 @@
 <template>
-    <FormElementContainerWithLabel :id="id" :input-invalid="isInvalid"
+    <FormElementContainerWithLabel :id="id" :input-invalid="isInvalid" :disabled="disabled"
         :force-show-error-message="forceContainerShowError" :label="label" :focussed="inputFocussed"
         :focus-input-callback="focusInput" :value="modelValue" :pattern="pattern" :show-pattern-hint="showPatternHint"
         :format="format" :show-format-hint="showFormatHint" :description="error">
         <input :id="id" ref="input" autocomplete="off" :type="type" :pattern="pattern" :required="required"
-            :placeholder="placeholder" :name="name" :value="modelValue"
-            class="w-full mt-4 text-lg outline-none text-gray-900 placeholder:text-gray-500 px-3 leading-8"
-            @input="onInput($event)" @focus="onFocus($event)" @focusin="onFocus($event)" @focusout="onBlur($event)" @blur="onBlur($event)">
+            :placeholder="placeholder" :name="name" :value="modelValue" :disabled="disabled" :class="inputClazz"
+            @input="onInput($event)" @focus="onFocus($event)" @focusin="onFocus($event)" @focusout="onBlur($event)"
+            @blur="onBlur($event)">
     </FormElementContainerWithLabel>
 </template>
   
@@ -20,6 +20,10 @@ const props = defineProps({
     },
     name: {
         type: String,
+    },
+    disabled: {
+        type: Boolean,
+        default: false
     },
     type: {
         type: String,
@@ -99,7 +103,15 @@ const invalidCharactersRegex = computed(() => {
         return null
     }
 })
-
+const inputClazz = computed(() => {
+    const clazz = ['w-full mt-4 text-lg outline-none text-gray-900 placeholder:text-gray-500 px-3 leading-8']
+    if (props.disabled) {
+        clazz.push('cursor-not-allowed')
+    } else {
+        clazz.push('cursor-text')
+    }
+    return clazz.join(' ')
+})
 function focusInput() {
     input.value.focus()
 }
@@ -111,6 +123,9 @@ function onFocus() {
     inputFocussed.value = true
 }
 function onInput({ target }) {
+    if (props.disabled) {
+        return
+    }
     if (target.pattern) {
         const value = target.value
         const matches = new RegExp(target.pattern, 'u').test(value)
