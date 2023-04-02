@@ -1,10 +1,12 @@
 <template>
-    <FormElementContainerWithLabel :id="id" :input-invalid="isInvalid" :force-show-error-message="forceShowErrorMessage"
-        :label="label" :focussed="isFocussed" :focus-input-callback="focusSelect" :show-pattern-hint="false"
-        :show-format-hint="false" :description="description">
+    <FormElementContainerWithLabel :id="id" :input-invalid="isInvalid" :disabled="disabled"
+        :force-show-error-message="forceShowErrorMessage" :label="label" :focussed="isFocussed"
+        :focus-input-callback="focusSelect" :show-pattern-hint="false" :show-format-hint="false" :description="description">
 
-        <select class="dsq-form-input-select px-2 pb-1 pt-4 border-none w-full text-lg bg-inherit focus:outline-none" :value="inputValue"
-            @input="onInput" @focus="onFocus($event)" @focusin="onFocus($event)" @focusout="onBlur($event)" @blur="onBlur($event)" ref="select">
+        <select
+            class="dsq-form-input-select px-2 pb-1 pt-4 border-none w-full text-lg bg-inherit opacity-100 focus:outline-none cursor-not-allowed text-gray-900"
+            :value="inputValue" :disabled="disabled" @input="onInput" @focus="onFocus($event)" @focusin="onFocus($event)"
+            @focusout="onBlur($event)" @blur="onBlur($event)" ref="select">
             <option class="w-24 text-lg" v-for="(element, index) in elements" :key="element.id" :value="index">
                 {{ element.name }}
             </option>
@@ -23,6 +25,10 @@ const props = defineProps({
     },
     label: {
         type: String
+    },
+    disabled: {
+        type: Boolean,
+        default: false
     },
     description: {
         type: String
@@ -79,3 +85,9 @@ function onInput() {
 }
 
 </script>
+
+<style>
+select:disabled {
+    opacity: 1 !important;
+}
+</style>
