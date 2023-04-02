@@ -1,4 +1,4 @@
-# FormInput <Badge type="tip" text="since v0.22.0" vertical="top" />
+# FormInput <Badge type="tip" text="since v0.22.0" vertical="top" /> <Badge type="themeable" text="themeable" vertical="top" />
 
 An input element wrapped inside a labelled form element.
 

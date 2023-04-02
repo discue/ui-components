@@ -72,6 +72,17 @@ const theme = {
             'highlight': ref('font-medium'),
         }
     },
+    formElementInput: {
+        textSize: {
+            default: ref('text-lg')
+        },
+        textColor: {
+            default: ref('text-gray-900')
+        },
+        placeholderColor: {
+            default: ref('placeholder:text-gray-500')
+        }
+    },
     button: {
         background: {
             'default': ref('bg-gray-900'),
