@@ -3,11 +3,9 @@
         :force-show-error-message="forceShowErrorMessage" :label="label" :focussed="isFocussed"
         :focus-input-callback="focusSelect" :show-pattern-hint="false" :show-format-hint="false" :description="description">
 
-        <select
-            class="dsq-form-input-select px-2 pb-1 pt-4 border-none w-full text-lg bg-inherit opacity-100 focus:outline-none cursor-not-allowed text-gray-900"
-            :value="inputValue" :disabled="disabled" @input="onInput" @focus="onFocus($event)" @focusin="onFocus($event)"
-            @focusout="onBlur($event)" @blur="onBlur($event)" ref="select">
-            <option class="w-24 text-lg" v-for="(element, index) in elements" :key="element.id" :value="index">
+        <select :class="selectClazz" :value="inputValue" :disabled="disabled" @input="onInput" @focus="onFocus($event)"
+            @focusin="onFocus($event)" @focusout="onBlur($event)" @blur="onBlur($event)" ref="select">
+            <option :class="optionClazz" v-for="(element, index) in elements" :key="element.id" :value="index">
                 {{ element.name }}
             </option>
         </select>
@@ -17,6 +15,7 @@
 
 <script setup>
 import { computed, ref } from 'vue';
+import { FORM_ELEMENT_SELECT_TEXT_COLOR_DEFAULT, FORM_ELEMENT_SELECT_TEXT_SIZE_DEFAULT, getThemeProperty } from '../theme.js';
 import FormElementContainerWithLabel from './form-element-container-with-label.vue';
 
 const props = defineProps({
@@ -68,6 +67,25 @@ const inputValue = computed(() => {
         })
     }
     return null
+})
+
+const selectClazz = computed(() => {
+    const clazz = [
+        'dsq-form-input-select px-2 pb-1 pt-4 border-none w-full bg-inherit opacity-100 focus:outline-none cursor-not-allowed',
+        getThemeProperty(FORM_ELEMENT_SELECT_TEXT_COLOR_DEFAULT).value,
+        getThemeProperty(FORM_ELEMENT_SELECT_TEXT_SIZE_DEFAULT).value
+    ]
+
+    return clazz.join(' ')
+})
+
+const optionClazz = computed(() => {
+    const clazz = [
+        'w-24',
+        getThemeProperty(FORM_ELEMENT_SELECT_TEXT_SIZE_DEFAULT).value
+    ]
+
+    return clazz.join(' ')
 })
 
 function onFocus() {

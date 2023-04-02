@@ -83,6 +83,14 @@ const theme = {
             default: ref('placeholder:text-gray-500')
         }
     },
+    formElementSelect: {
+        textSize: {
+            default: ref('text-lg')
+        },
+        textColor: {
+            default: ref('text-gray-900')
+        },
+    },
     button: {
         background: {
             'default': ref('bg-gray-900'),
