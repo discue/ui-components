@@ -1,5 +1,5 @@
 <template>
-    <FormElementContainerWithLabel :id="id" :input-invalid="invalid" :label="label" :description="error"
+    <FormElementContainerWithLabel :id="id" :input-invalid="invalid" :disabled="disabled" :label="label" :description="error"
         :focussed="isFocussed">
         <div :class="wrapperClazz">
             <div :class="optionClazz" v-for="option in options" :key="option.value">
