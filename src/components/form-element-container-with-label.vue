@@ -1,6 +1,5 @@
 <template>
-    <div :id="parentId" :class="parentClazz" @mouseover="onFocus" @mouseleave="onBlur"
-        class="dsq-form-element-container-with-label border-solid cursor-text flex flex-col rounded">
+    <div :id="parentId" :class="parentClazz" @mouseover="onFocus" @mouseleave="onBlur">
         <div class="relative">
             <label :for="id" :class="labelClazz" @mousedown="onFocusRequest">{{ label }}</label>
             <Transition name="form-element-hint">
@@ -61,6 +60,10 @@ const props = defineProps({
     label: {
         type: String,
     },
+    disabled: {
+        type: Boolean,
+        default: false
+    },
     focussed: {
         type: Boolean,
     },
@@ -108,7 +111,14 @@ const showFormat = computed(() => {
     return props.format && props.showFormatHint && props.focussed
 })
 const parentClazz = computed(() => {
-    const clazz = [getThemeProperty(FORM_ELEMENT_BORDER_SIZE_DEFAULT).value]
+    const clazz = ['dsq-form-element-container-with-label border-solid flex flex-col rounded']
+    clazz.push([getThemeProperty(FORM_ELEMENT_BORDER_SIZE_DEFAULT).value])
+    if (props.disabled) {
+        clazz.push('cursor-not-allowed')
+    } else {
+        clazz.push('cursor-text')
+    }
+    
     if (hasFocus.value || props.focussed) {
         clazz.push(getThemeProperty(FORM_ELEMENT_BORDER_COLOR_ACTIVE).value)
         clazz.push(getThemeProperty(FORM_ELEMENT_BORDER_RING_SIZE_DEFAULT).value, getThemeProperty(FORM_ELEMENT_BORDER_RING_COLOR_DEFAULT).value)
@@ -121,12 +131,12 @@ const parentClazz = computed(() => {
 })
 const labelClazz = computed(() => {
     const clazz = [
-        'cursor-text -left-3 -top-3.5 py-1 px-2 absolute leading-7',
+        '-left-3 -top-3.5 py-1 px-2 absolute leading-7',
         getThemeProperty(FORM_ELEMENT_LABEL_SIZE_DEFAULT).value,
         getThemeProperty(FORM_ELEMENT_LABEL_BACKGROUND_DEFAULT).value,
         getThemeProperty(FORM_ELEMENT_LABEL_WEIGHT_DEFAULT).value
     ]
-
+    
     if (isInvalid.value) {
         clazz.push(getThemeProperty(FORM_ELEMENT_LABEL_COLOR_ATTENTION).value)
     } else {
@@ -137,11 +147,10 @@ const labelClazz = computed(() => {
 })
 const hintClazz = computed(() => {
     const clazz = [
-        'absolute cursor-text -top-2 p-1.5 right-0 leading-7 italic ml-auto transition-opacity duration-200 ease-in',
+        'absolute -top-2 p-1.5 right-0 leading-7 italic ml-auto transition-opacity duration-200 ease-in',
         getThemeProperty(FORM_ELEMENT_HINT_COLOR_DEFAULT).value,
         getThemeProperty(FORM_ELEMENT_HINT_SIZE_DEFAULT).value,
         getThemeProperty(FORM_ELEMENT_HINT_WEIGHT_DEFAULT).value,
- 
     ]
 
     return clazz.join(' ')
