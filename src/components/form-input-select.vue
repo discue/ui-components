@@ -3,7 +3,7 @@
         :force-show-error-message="forceShowErrorMessage" :label="label" :focussed="isFocussed"
         :focus-input-callback="focusSelect" :show-pattern-hint="false" :show-format-hint="false" :description="description">
 
-        <select :class="selectClazz" :value="inputValue" :disabled="disabled" @input="onInput" @focus="onFocus($event)"
+        <select :id="id" :class="selectClazz" :value="inputValue" :disabled="disabled" @input="onInput" @focus="onFocus($event)"
             @focusin="onFocus($event)" @focusout="onBlur($event)" @blur="onBlur($event)" ref="select">
             <option :class="optionClazz" v-for="(element, index) in elements" :key="element.id" :value="index">
                 {{ element.name }}
