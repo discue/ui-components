@@ -76,6 +76,9 @@ const theme = {
         textSize: {
             default: ref('text-lg')
         },
+        caretColor: {
+            default: ref('caret-gray-900')
+        },
         textColor: {
             default: ref('text-gray-900')
         },
