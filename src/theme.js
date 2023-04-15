@@ -92,6 +92,9 @@ const theme = {
         textSize: {
             default: ref('text-lg')
         },
+        fontWeight: {
+            'default': ref('font-medium'),
+        },
         textColor: {
             default: ref('text-gray-900')
         },

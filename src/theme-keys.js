@@ -30,6 +30,7 @@ export const FORM_ELEMENT_INPUT_TEXT_COLOR_DEFAULT = 'formElementInput.textColor
 export const FORM_ELEMENT_INPUT_BACKGROUND_COLOR_DEFAULT = 'formElementInput.backgroundColor.default'
 export const FORM_ELEMENT_INPUT_PLACEHOLDER_COLOR_DEFAULT = 'formElementInput.placeholderColor.default'
 export const FORM_ELEMENT_SELECT_TEXT_SIZE_DEFAULT = 'formElementSelect.textSize.default'
+export const FORM_ELEMENT_SELECT_FONT_WEIGHT_DEFAULT = 'formElementSelect.fontWeight.default'
 export const FORM_ELEMENT_SELECT_TEXT_COLOR_DEFAULT = 'formElementSelect.textColor.default'
 export const FORM_ELEMENT_RADIO_TEXT_COLOR_DEFAULT = 'formElementRadio.textColor.default'
 export const FORM_ELEMENT_RADIO_TEXT_COLOR_DISABLED = 'formElementRadio.textColor.disabled'
