@@ -64,8 +64,7 @@ const theme = {
         color: {
             'default': ref('text-gray-900'),
             'light': ref('text-gray-100'),
-            'highlight': ref('text-gray-900'),
-            'inherit': ref('text-inherit'),
+            'highlight': ref('text-gray-900')
         },
         weight: {
             'default': ref('font-base'),

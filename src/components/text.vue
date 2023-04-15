@@ -49,7 +49,7 @@ const fontColor = computed(() => {
     } else if (props.highlight) {
         return getThemeProperty('text.color.highlight').value
     } else if (props.inheritColor) {
-        return getThemeProperty('text.color.inherit').value
+        return ''
     } else {
         return getThemeProperty('text.color.default').value
     }

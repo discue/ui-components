@@ -99,6 +99,6 @@ describe('Text.vue', () => {
         inheritColor: true
       }
     })
-    expect(wrapper.classes()).to.include('text-inherit')
+    expect(wrapper.classes()).to.not.include('text-')
   })
 })
