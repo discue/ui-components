@@ -1,11 +1,11 @@
 <template>
-    <li v-if="show" class="dsq-drop-down-menu-item hover:bg-gray-300 p-4 font-medium group z-10 cursor-pointer" @click.prevent="onClick">
-        <div class="flex flex-row items-center">
-            <div class="flex items-center text-gray-500 group-hover:text-gray-900">
-                <slot />
-            </div>
-            <span>{{ label }}</span>
+    <li v-if="show"
+        class="dsq-drop-down-menu-item flex flex-row items-center hover:bg-gray-300 p-4 font-medium group z-10 cursor-pointer"
+        @click.prevent="onClick">
+        <div class="flex items-center text-gray-500 group-hover:text-gray-900">
+            <slot />
         </div>
+        <span>{{ label }}</span>
     </li>
 </template>
 
