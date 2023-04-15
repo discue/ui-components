@@ -2,6 +2,27 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [0.37.0](https://github.com/discue/ui-components/compare/v0.36.1...v0.37.0) (2023-04-15)
+
+
+### Features
+
+* **input-select:** make font-weight configurable ([6dad2aa](https://github.com/discue/ui-components/commit/6dad2aa6b8b3ef31fa83b3de74b5a4e8c24cc501))
+* **input-text:** add caret color theme property ([3ccaf39](https://github.com/discue/ui-components/commit/3ccaf39dbf8aed5605a9f7272d6edbf46d2f04e2))
+* **input-text:** make background color customizable ([97f892c](https://github.com/discue/ui-components/commit/97f892cae0ecb04288750f8546cc3af821e747c6))
+* **input-text:** make text color customizable ([030abcb](https://github.com/discue/ui-components/commit/030abcbbdb7a4535b21d9872956dd82b22289a32))
+* **text:** add inherit font size and large text props ([9818d3f](https://github.com/discue/ui-components/commit/9818d3f446c287b9f493f95da306371750545e0a))
+
+
+### Bug Fixes
+
+* **input-select:** fix cursor shows input is not allowed ([8706963](https://github.com/discue/ui-components/commit/8706963ce23c221f512c6bfc808d74e8f0716ab2))
+
+
+### Chores
+
+* **text:** do not set any class name if color should be inherited ([6e49cb7](https://github.com/discue/ui-components/commit/6e49cb7be6ed2b3dfe447fb5a52832aabbefdaf2))
+
 ### [0.36.1](https://github.com/discue/ui-components/compare/v0.36.0...v0.36.1) (2023-04-15)
 
 
