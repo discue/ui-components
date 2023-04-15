@@ -2,6 +2,18 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.36.1](https://github.com/discue/ui-components/compare/v0.36.0...v0.36.1) (2023-04-15)
+
+
+### Bug Fixes
+
+* **drop-down-menu:** fix strange click behavior in firefox and webkit ([c6b07b5](https://github.com/discue/ui-components/commit/c6b07b55c97fbe6270ce56bf2b63cbd449f6939e))
+
+
+### Refactorings
+
+* **drop-down-menu-item:** decrease tree size ([6c66572](https://github.com/discue/ui-components/commit/6c665723143cda4d02ac7ae282ad04936dbbd272))
+
 ## [0.36.0](https://github.com/discue/ui-components/compare/v0.35.0...v0.36.0) (2023-04-10)
 
 
