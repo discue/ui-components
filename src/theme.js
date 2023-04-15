@@ -79,6 +79,9 @@ const theme = {
         textColor: {
             default: ref('text-gray-900')
         },
+        backgroundColor: {
+            default: ref('bg-white')
+        },
         placeholderColor: {
             default: ref('placeholder:text-gray-500')
         }

@@ -12,7 +12,7 @@
   
 <script setup>
 import { computed, ref } from 'vue';
-import { FORM_ELEMENT_INPUT_PLACEHOLDER_COLOR_DEFAULT, FORM_ELEMENT_INPUT_TEXT_COLOR_DEFAULT, FORM_ELEMENT_INPUT_TEXT_SIZE_DEFAULT } from '../theme-keys.js';
+import { FORM_ELEMENT_INPUT_BACKGROUND_COLOR_DEFAULT, FORM_ELEMENT_INPUT_PLACEHOLDER_COLOR_DEFAULT, FORM_ELEMENT_INPUT_TEXT_COLOR_DEFAULT, FORM_ELEMENT_INPUT_TEXT_SIZE_DEFAULT } from '../theme-keys.js';
 import { getThemeProperty } from '../theme.js';
 import FormElementContainerWithLabel from './form-element-container-with-label.vue';
 
@@ -108,6 +108,7 @@ const invalidCharactersRegex = computed(() => {
 const inputClazz = computed(() => {
     const clazz = [
         'w-full mt-4 outline-none px-3 leading-8',
+        getThemeProperty(FORM_ELEMENT_INPUT_BACKGROUND_COLOR_DEFAULT).value,
         getThemeProperty(FORM_ELEMENT_INPUT_PLACEHOLDER_COLOR_DEFAULT).value,
         getThemeProperty(FORM_ELEMENT_INPUT_TEXT_SIZE_DEFAULT).value,
         getThemeProperty(FORM_ELEMENT_INPUT_TEXT_COLOR_DEFAULT).value
