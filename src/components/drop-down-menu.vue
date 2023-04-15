@@ -1,6 +1,6 @@
 <template>
     <Transition name="modal">
-        <div v-if="isVisible" @mouseenter="onFocus" @mouseleave="onBlur"
+        <div v-if="isVisible"
             class="dsq-drop-down-menu bg-gray-50 text-gray-900 fixed shadow-md font-normal rounded-md w-48 border-2 border-gray-200 duration-200 ease-in-out transition">
             <ul class="text-left text-lg">
                 <slot />
@@ -10,7 +10,7 @@
 </template>
 
 <script setup lang="ts">
-import { computed, ref } from 'vue';
+import { computed } from 'vue';
 
 const props = defineProps({
     show: {
@@ -19,16 +19,8 @@ const props = defineProps({
     }
 })
 
-const hasFocus = ref(false)
-const isVisible = computed(() => hasFocus.value || props.show)
+const isVisible = computed(() => props.show)
 
-function onFocus() {
-    hasFocus.value = true
-}
-
-function onBlur() {
-    hasFocus.value = false
-}
 </script>
 
 <style scoped>
