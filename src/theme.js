@@ -96,6 +96,12 @@ const theme = {
             default: ref('text-gray-900')
         },
     },
+    formElementRadio: {
+        textColor: {
+            default: ref('text-gray-900 peer-checked:text-gray-900'),
+            disabled: ref('text-gray-500')
+        }
+    },
     button: {
         background: {
             'default': ref('bg-gray-900'),

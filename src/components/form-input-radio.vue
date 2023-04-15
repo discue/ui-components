@@ -1,6 +1,6 @@
 <template>
-    <FormElementContainerWithLabel :id="id" :input-invalid="invalid" :disabled="disabled" :label="label" :description="error"
-        :focussed="isFocussed">
+    <FormElementContainerWithLabel :id="id" :input-invalid="invalid" :disabled="disabled" :label="label"
+        :description="error" :focussed="isFocussed">
         <div :class="wrapperClazz">
             <div :class="optionClazz" v-for="option in options" :key="option.value">
 
@@ -11,11 +11,9 @@
                     class="hidden peer checked:bg-gray-900 rounded text-lg outline-none text-gray-100 placeholder:text-gray-300 py-2 px-3 leading-8"
                     @input="onInput($event)">
 
-                <label v-if="(disabled && modelValue == option.value) || !disabled"
+                <label v-if="(disabled && modelValue == option.value) || !disabled" :class="labelClazz"
                     :for="'radio_' + id + '_' + option.value + '_id'" @focus="onFocus($event)" @focusin="onFocus($event)"
-                    @focusout="onBlur($event)" @blur="onBlur($event)"
-                    :class="[disabled ? 'text-gray-500 cursor-not-allowed' : 'text-gray-900 cursor-pointer']"
-                    class="flex flex-row items-center w-full space-x-2 px-3 py-1 leading-7 text-xl peer-checked:text-gray-900">
+                    @focusout="onBlur($event)" @blur="onBlur($event)">
                     <div v-if="modelValue == option.value">
                         <svg xmlns="http://www.w3.org/2000/svg" class="stroke-current h-6 w-6" fill="none"
                             viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
@@ -43,6 +41,7 @@
 
 <script setup>
 import { computed, ref } from 'vue';
+import { FORM_ELEMENT_RADIO_TEXT_COLOR_DEFAULT, FORM_ELEMENT_RADIO_TEXT_COLOR_DISABLED, getThemeProperty } from '../theme.js';
 import FormElementContainerWithLabel from './form-element-container-with-label.vue';
 import Text from './text.vue';
 
@@ -91,6 +90,16 @@ const isFocussed = ref(false)
 
 const error = computed(() => {
     return props.invalidMessage ? props.invalidMessage : props.description
+})
+
+const labelClazz = computed(() => {
+    const clazz = ['flex flex-row items-center w-full space-x-2 px-3 py-1 leading-7 text-xl']
+    if (props.disabled) {
+        clazz.push(`disabled ${getThemeProperty(FORM_ELEMENT_RADIO_TEXT_COLOR_DISABLED).value} cursor-not-allowed`)
+    } else {
+        clazz.push(`${getThemeProperty(FORM_ELEMENT_RADIO_TEXT_COLOR_DEFAULT).value} cursor-pointer`)
+    }
+    return clazz.join(' ')
 })
 
 const wrapperClazz = computed(() => {
