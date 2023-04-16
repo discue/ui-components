@@ -101,7 +101,7 @@ const theme = {
     },
     formElementRadio: {
         textColor: {
-            default: ref('text-gray-900 peer-checked:text-gray-900'),
+            default: ref('text-gray-900'),
             disabled: ref('text-gray-500')
         }
     },
