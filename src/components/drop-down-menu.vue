@@ -17,6 +17,10 @@ const props = defineProps({
     show: {
         type: Boolean,
         default: true
+    },
+    calculatePositionDynamically: {
+        type: Boolean,
+        default: true
     }
 })
 
@@ -46,7 +50,9 @@ function deactiveScrollListenerIfActive() {
 }
 
 function checkNeedToCalculatePosition() {
-    if (props.show && menu.value) {
+    if (!props.calculatePositionDynamically) {
+        return
+    } else if (props.show && menu.value) {
         calculateDropdownPosition()
         activateScrollListenerIfInactive()
     } else if (!props.show && isListeningToScrolls) {
