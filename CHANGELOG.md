@@ -2,6 +2,26 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [0.38.0](https://github.com/discue/ui-components/compare/v0.37.0...v0.38.0) (2023-04-19)
+
+
+### Features
+
+* **drop-down-menu:** calculate position dynamically ([b036407](https://github.com/discue/ui-components/commit/b036407b0c89c77a91b96340bb236e9358d8492b))
+* **drop-down-menu:** listen to scroll event to position menu correctly ([87705ad](https://github.com/discue/ui-components/commit/87705ada555d563f09a175814e1da9dfd7955d9a))
+* **throttle:** add throttle utility function ([558ed67](https://github.com/discue/ui-components/commit/558ed67a49040964c0fc727a23762d529004825e))
+
+
+### Bug Fixes
+
+* **dynamic-component:** fix setting of boolean props ([b4538ad](https://github.com/discue/ui-components/commit/b4538adde6792a60f1a76f05f5adfae59863c4b9))
+
+
+### Chores
+
+* **drop-down-menu:** allow to disable dynamic positioning ([1a39adb](https://github.com/discue/ui-components/commit/1a39adb8c62c42603fb220d7481d2e0a1e92772f))
+* **theme:** remove peer checked css class for form element radio ([ef4fbd2](https://github.com/discue/ui-components/commit/ef4fbd200d85dc6b6a24771567f1d31442c16085))
+
 ## [0.37.0](https://github.com/discue/ui-components/compare/v0.36.1...v0.37.0) (2023-04-15)
 
 
