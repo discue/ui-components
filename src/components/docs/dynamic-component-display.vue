@@ -120,7 +120,7 @@ const id = computed(() => {
 const componentProps = computed(() => {
     const instance = getCurrentInstance()
     const p = Object.entries(instance.appContext.components[props.type].props).reduce((context, [key, value]) => {
-        if (attrs[key]) {
+        if (attrs[key] != null) {
             context[key] = attrs[key]
         } else {
             context[key] = value.default
