@@ -1,5 +1,5 @@
 <template>
-  <DropDownMenu>
+  <DropDownMenu :show="show">
     <DropDownMenuBannerItem>
       <span class="text-sm font-medium">Signed in as</span>
       <span class="font-medium">Stefan</span>
@@ -29,5 +29,7 @@
 </template>
 
 <script setup>
-import { DropDownMenu, DropDownMenuBannerItem, DropDownMenuItem } from '@discue/ui-components'
+import { DropDownMenu, DropDownMenuBannerItem, DropDownMenuItem } from '@discue/ui-components';
+
+const show = ref(true)
 </script>
