@@ -10,7 +10,8 @@
 </template>
 
 <script setup allow-js>
-import { ref, watch } from 'vue';
+import { onUnmounted, ref, watch } from 'vue';
+import { createThrottleFn } from '../utils/throttle.js';
 
 const props = defineProps({
     show: {
@@ -19,13 +20,39 @@ const props = defineProps({
     }
 })
 
+const throttle = createThrottleFn()
+let isListeningToScrolls = false
+const scrollEvent = 'scroll'
 const menu = ref()
 
-watch([props, menu], ([{ show }, menuElement]) => {
-    if (show && menuElement) {
-        calculateDropdownPosition()
+watch([props, menu], checkNeedToCalculatePosition)
+
+onUnmounted(() => {
+    if (isListeningToScrolls) {
+        window.removeEventListener(scrollEvent, checkNeedToCalculatePosition)
     }
+    throttle.clear()
 })
+
+function activateScrollListenerIfInactive() {
+    if (!isListeningToScrolls) {
+        isListeningToScrolls = true
+        window.addEventListener(scrollEvent, throttle(checkNeedToCalculatePosition, 50), { passive: true })
+    }
+}
+
+function deactiveScrollListenerIfActive() {
+    isListeningToScrolls = false
+}
+
+function checkNeedToCalculatePosition() {
+    if (props.show && menu.value) {
+        calculateDropdownPosition()
+        activateScrollListenerIfInactive()
+    } else if (!props.show && isListeningToScrolls) {
+        deactiveScrollListenerIfActive()
+    }
+}
 
 function calculateDropdownPosition() {
     const parentElement = menu.value.parentElement
