@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.38.1](https://github.com/discue/ui-components/compare/v0.38.0...v0.38.1) (2023-04-20)
+
+
+### Bug Fixes
+
+* **drop-down-menu:** clear throttle called too late ([0c1c3a9](https://github.com/discue/ui-components/commit/0c1c3a9ac3225e31687d9890f6488ba02853857b))
+
 ## [0.38.0](https://github.com/discue/ui-components/compare/v0.37.0...v0.38.0) (2023-04-19)
 
 
