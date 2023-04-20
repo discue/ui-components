@@ -24,7 +24,8 @@ const props = defineProps({
     }
 })
 
-const throttle = createThrottleFn()
+const throttleFactory = createThrottleFn()
+const throttle = throttleFactory(checkNeedToCalculatePosition, 50)
 let isListeningToScrolls = false
 const scrollEvent = 'scroll'
 const menu = ref()
@@ -41,7 +42,7 @@ onBeforeUnmount(() => {
 function activateScrollListenerIfInactive() {
     if (!isListeningToScrolls) {
         isListeningToScrolls = true
-        window.addEventListener(scrollEvent, throttle(checkNeedToCalculatePosition, 50), { passive: true })
+        window.addEventListener(scrollEvent, throttle, { passive: true })
     }
 }
 
