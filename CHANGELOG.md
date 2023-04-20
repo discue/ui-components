@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.38.2](https://github.com/discue/ui-components/compare/v0.38.1...v0.38.2) (2023-04-20)
+
+
+### Bug Fixes
+
+* **drop-down-menu:** fix cannot clear throttle timeouts ([7ba21b7](https://github.com/discue/ui-components/commit/7ba21b780cf8bca5680c09b016f804e856e73827))
+
 ### [0.38.1](https://github.com/discue/ui-components/compare/v0.38.0...v0.38.1) (2023-04-20)
 
 
