@@ -10,7 +10,7 @@
 </template>
 
 <script setup allow-js>
-import { onUnmounted, ref, watch } from 'vue';
+import { onBeforeUnmount, ref, watch } from 'vue';
 import { createThrottleFn } from '../utils/throttle.js';
 
 const props = defineProps({
@@ -31,7 +31,7 @@ const menu = ref()
 
 watch([props, menu], checkNeedToCalculatePosition)
 
-onUnmounted(() => {
+onBeforeUnmount(() => {
     if (isListeningToScrolls) {
         window.removeEventListener(scrollEvent, checkNeedToCalculatePosition)
     }
