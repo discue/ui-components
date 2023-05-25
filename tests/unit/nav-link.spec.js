@@ -80,4 +80,41 @@ describe('NavLink.vue', () => {
     })
     expect(wrapper.vm.$refs.externalLink).to.not.be.undefined
   })
+  it('sets target _self by default', () => {
+    const msg = 'new message'
+    const wrapper = shallowMount(NavLink, {
+      slots: {
+        default: msg
+      },
+      props: {
+        href: '/relative'
+      }
+    })
+    expect(wrapper.attributes().target).to.equal('_self')
+  })
+  it('uses target set by parent', () => {
+    const msg = 'new message'
+    const wrapper = shallowMount(NavLink, {
+      slots: {
+        default: msg
+      },
+      props: {
+        href: '/relative',
+        target: 'xx'
+      }
+    })
+    expect(wrapper.attributes().target).to.equal('xx')
+  })
+  it('sets target _blank if contains external link', () => {
+    const msg = 'new message'
+    const wrapper = shallowMount(NavLink, {
+      slots: {
+        default: msg
+      },
+      props: {
+        href: 'https://www.google.com/relative'
+      }
+    })
+    expect(wrapper.attributes().target).to.equal('_blank')
+  })
 })

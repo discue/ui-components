@@ -1,5 +1,5 @@
 <template>
-    <a :href="href" :class="clazz" class="dsq-nav-link" :rel="rel" :target="target" @click="click($event)">
+    <a :href="href" :class="clazz" class="dsq-nav-link" :rel="rel" :target="linkTarget" @click="click($event)">
         <slot />
 
         <span class="ml-1" ref="externalLink" v-if="isExternalLink">
@@ -141,7 +141,7 @@ const rel = computed(() => {
     }
 })
 
-const target = computed(() => {
+const linkTarget = computed(() => {
     if (props.target) {
         return props.target
     } else if (isExternalLink.value) {
