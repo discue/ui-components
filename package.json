@@ -83,7 +83,7 @@
     "core-js": "^3.30.2",
     "eslint": "^8.41.0",
     "eslint-plugin-vue": "^9.14.1",
-    "firebase-tools": "^12.2.1",
+    "firebase-tools": "^12.4.2",
     "jest": "^27.5.1",
     "markdown-it-anchor": "^8.6.6",
     "markdown-it-attrs": "^4.1.6",
