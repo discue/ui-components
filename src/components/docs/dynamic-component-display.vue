@@ -111,6 +111,9 @@ const props = defineProps({
     }
 })
 
+// we don't care about losing reactivity here
+// we also don't report value updates to the parent component
+// eslint-disable-next-line vue/no-setup-props-destructure
 const modelValue = ref(props.initialValue)
 
 const id = computed(() => {
