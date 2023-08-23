@@ -2,6 +2,55 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [0.39.0](https://github.com/discue/ui-components/compare/v0.38.2...v0.39.0) (2023-08-23)
+
+
+### Features
+
+* **form-error:** allow form error to be shown as hint ([5d3297c](https://github.com/discue/ui-components/commit/5d3297cc75a70338c06e9af0f8e579be668e13b9))
+
+
+### Bug Fixes
+
+* **form-element-container:** show error message only if input is not focussed ([b0c0559](https://github.com/discue/ui-components/commit/b0c0559ccefcea3f84da7c070d0bd7502bf6cb84))
+
+
+### Chores
+
+* **ci:** build docs instead of lib ([6b800a7](https://github.com/discue/ui-components/commit/6b800a74980a2bbac923d43d472495b04a8802f5))
+* **ci:** use new service account for deployment ([5379861](https://github.com/discue/ui-components/commit/5379861847822fa85961e9144d35d080d9efa91f))
+* **deps-dev:** bump @babel/core from 7.21.4 to 7.22.1 ([69b8b99](https://github.com/discue/ui-components/commit/69b8b99ee7663c4dcbee5e243717f9388eb24032))
+* **deps-dev:** bump @babel/eslint-parser from 7.21.3 to 7.22.5 ([c5071e1](https://github.com/discue/ui-components/commit/c5071e1e2545dc7af8d71c35b59ed35f6c156118))
+* **deps-dev:** bump @babel/preset-env from 7.21.4 to 7.21.5 ([a8f777e](https://github.com/discue/ui-components/commit/a8f777eade30e04089264765888e899bec26c3d8))
+* **deps-dev:** bump @babel/preset-env from 7.21.5 to 7.22.4 ([a88b052](https://github.com/discue/ui-components/commit/a88b05288541df79ce1e11d85dff1e6d390f2e02))
+* **deps-dev:** bump @vue/test-utils from 2.3.0 to 2.3.2 ([3e4175c](https://github.com/discue/ui-components/commit/3e4175ce0ac96ff9e1c5e5ccbfc393d75f3d20cb))
+* **deps-dev:** bump core-js from 3.29.1 to 3.30.1 ([c205635](https://github.com/discue/ui-components/commit/c205635ac1c771ead3e8cfd31aa1171f63e0712c))
+* **deps-dev:** bump core-js from 3.30.2 to 3.31.0 ([b3c440c](https://github.com/discue/ui-components/commit/b3c440c6aab2a920b68d16012979f19c3bc63fe7))
+* **deps-dev:** bump eslint from 8.35.0 to 8.39.0 ([42f016d](https://github.com/discue/ui-components/commit/42f016d9846fc6a610c840dee6c82fefa0f3381c))
+* **deps-dev:** bump eslint from 8.41.0 to 8.44.0 ([b1914d5](https://github.com/discue/ui-components/commit/b1914d5d0d02d2a91ab5354f96e51c1904e5bb44))
+* **deps-dev:** bump eslint from 8.45.0 to 8.46.0 ([e191bc2](https://github.com/discue/ui-components/commit/e191bc2976dbef7bb991784f349820840e0e3ee1))
+* **deps-dev:** bump eslint-plugin-vue from 9.10.0 to 9.11.0 ([5499348](https://github.com/discue/ui-components/commit/549934856349793ed76e8c23511f9069b81ebbac))
+* **deps-dev:** bump eslint-plugin-vue from 9.14.0 to 9.14.1 ([f942c76](https://github.com/discue/ui-components/commit/f942c765f457a77b6fe0bee074c71bbb09a41077))
+* **deps-dev:** bump eslint-plugin-vue from 9.15.1 to 9.16.1 ([db172ff](https://github.com/discue/ui-components/commit/db172ff4e91b9148639e85e9dc4a29e2fb83bf3c))
+* **deps-dev:** bump firebase-tools from 11.25.2 to 11.29.1 ([93875dd](https://github.com/discue/ui-components/commit/93875ddb4f11960fd6d4e0aadaf8edec159045c6))
+* **deps-dev:** bump firebase-tools from 12.2.1 to 12.4.2 ([d32fa68](https://github.com/discue/ui-components/commit/d32fa68740d069157f3dce967f6ad4f0b34bbc54))
+* **deps-dev:** bump firebase-tools from 12.4.4 to 12.4.6 ([967cf69](https://github.com/discue/ui-components/commit/967cf694ddd4a9814e0f363ccc13389ce7dd1c9d))
+* **deps-dev:** bump postcss from 8.4.21 to 8.4.23 ([dcf0b30](https://github.com/discue/ui-components/commit/dcf0b307d97a95e7ffe0298a97933302264da9f8))
+* **deps-dev:** bump postcss from 8.4.23 to 8.4.24 ([cbfab88](https://github.com/discue/ui-components/commit/cbfab8851bfb21d25ef7bd48ca304878bd523def))
+* **deps-dev:** bump postcss from 8.4.26 to 8.4.27 ([b7a37bc](https://github.com/discue/ui-components/commit/b7a37bc4f011fa82a046a3758e31f469ef593776))
+* **deps-dev:** bump vue-tsc from 1.2.0 to 1.6.1 ([19b71d2](https://github.com/discue/ui-components/commit/19b71d236dae22ae1696ab63f1e00dce151cc942))
+* **deps-dev:** bump vue-tsc from 1.8.5 to 1.8.8 ([6452134](https://github.com/discue/ui-components/commit/64521349934d46028f277899b7424ef70729702f))
+* **deps-dev:** bump vuepress-plugin-sitemap2 ([a43a149](https://github.com/discue/ui-components/commit/a43a1499c270f7cc7599fc4826496e009323516b))
+* **deps:** update dependencies ([ee3c02e](https://github.com/discue/ui-components/commit/ee3c02e6f77f6e4182f6b695a1b2f8c3f3321648))
+* **deps:** update dependencies ([155e7af](https://github.com/discue/ui-components/commit/155e7afa194f2befb7cc897738be67a97987c061))
+* **deps:** update dependencies ([e62f929](https://github.com/discue/ui-components/commit/e62f92933c61a8f5f4d84a5c2450e3cf8eadf399))
+* fix lint error with comment ([8e6923f](https://github.com/discue/ui-components/commit/8e6923f75ee0a21ae4285fa7cda1b232877401f4))
+* **form-input:** dont trigger input validation on blur ([b7c6749](https://github.com/discue/ui-components/commit/b7c6749993dca2bf2217ff8da24f932c38089550))
+* **form-input:** update invalid chars message ([7f8268e](https://github.com/discue/ui-components/commit/7f8268e147ea36195851ced56f137752c25c7065))
+* **nav-link:** do not redeclare target property ([ba77c3d](https://github.com/discue/ui-components/commit/ba77c3d4c8d4f6aa0a4ad13d325d951ba0f39305))
+* **theme:** add theme key for form error hint ([26120e1](https://github.com/discue/ui-components/commit/26120e117507d58be6214dfa57b74a4b5f70c785))
+* use google auth for auth and deploy with firebase tools ([143e959](https://github.com/discue/ui-components/commit/143e959f619c3677059780cf64f5ed82c6b7ab48))
+
 ### [0.38.2](https://github.com/discue/ui-components/compare/v0.38.1...v0.38.2) (2023-04-20)
 
 
