@@ -4,17 +4,17 @@
             <label :for="id" :class="labelClazz" @mousedown="onFocusRequest">{{ label }}</label>
             <Transition name="form-element-hint">
                 <span v-if="showPattern" :class="hintClazz" @mousedown="onFocusRequest">Allowed values: {{ pattern
-}}</span>
+                }}</span>
             </Transition>
             <Transition name="form-element-hint">
                 <span v-if="showFormat" :class="hintClazz" @mousedown="onFocusRequest">Allowed format: {{ format
-}}</span>
+                }}</span>
             </Transition>
         </div>
         <div :class="[isInvalid ? '' : 'pb-1']">
             <slot />
         </div>
-        <FormError :id="errorId" class="px-3 pb-1" :description="description" :invalid="isInvalid" />
+        <FormError :id="errorId" class="px-3 pb-1" :description="description" :invalid="isInvalid && hasLostFocusAtLeastOnce"/>
     </div>
 </template>
 
@@ -46,7 +46,7 @@
 </style>
 
 <script setup>
-import { computed, ref, watchEffect } from 'vue';
+import { computed, ref, watch } from 'vue';
 import { FORM_ELEMENT_BORDER_COLOR_ACTIVE, FORM_ELEMENT_BORDER_COLOR_ATTENTION, FORM_ELEMENT_BORDER_COLOR_DEFAULT, FORM_ELEMENT_BORDER_RING_COLOR_DEFAULT, FORM_ELEMENT_BORDER_RING_SIZE_DEFAULT, FORM_ELEMENT_BORDER_SIZE_DEFAULT, FORM_ELEMENT_HINT_COLOR_DEFAULT, FORM_ELEMENT_HINT_SIZE_DEFAULT, FORM_ELEMENT_HINT_WEIGHT_DEFAULT, FORM_ELEMENT_LABEL_BACKGROUND_DEFAULT, FORM_ELEMENT_LABEL_COLOR_ATTENTION, FORM_ELEMENT_LABEL_COLOR_DEFAULT, FORM_ELEMENT_LABEL_SIZE_DEFAULT, FORM_ELEMENT_LABEL_WEIGHT_DEFAULT, getThemeProperty } from '../theme.js';
 import FormError from './form-element-error-message.vue';
 
@@ -94,6 +94,7 @@ const props = defineProps({
 
 const hasFocus = ref(false)
 const hasLostFocusAtLeastOnce = ref(false)
+const wasFocussedAtLeastOnce = ref(false)
 
 const isInvalid = computed(() => {
     return (props.forceShowErrorMessage && props.inputInvalid) || (hasLostFocusAtLeastOnce.value && props.inputInvalid)
@@ -110,6 +111,9 @@ const showPattern = computed(() => {
 const showFormat = computed(() => {
     return props.format && props.showFormatHint && props.focussed
 })
+const labelOrChildHaveFocus = computed(() => {
+    return hasFocus.value || props.focussed
+})
 const parentClazz = computed(() => {
     const clazz = ['dsq-form-element-container-with-label border-solid flex flex-col rounded']
     clazz.push([getThemeProperty(FORM_ELEMENT_BORDER_SIZE_DEFAULT).value])
@@ -118,15 +122,18 @@ const parentClazz = computed(() => {
     } else {
         clazz.push('cursor-text')
     }
-    
-    if (hasFocus.value || props.focussed) {
+
+    if (labelOrChildHaveFocus.value) {
         clazz.push(getThemeProperty(FORM_ELEMENT_BORDER_COLOR_ACTIVE).value)
         clazz.push(getThemeProperty(FORM_ELEMENT_BORDER_RING_SIZE_DEFAULT).value, getThemeProperty(FORM_ELEMENT_BORDER_RING_COLOR_DEFAULT).value)
-    } else if (isInvalid.value) {
-        clazz.push(getThemeProperty(FORM_ELEMENT_BORDER_COLOR_ATTENTION).value)
     } else {
-        clazz.push(getThemeProperty(FORM_ELEMENT_BORDER_COLOR_DEFAULT).value)
+        if (isInvalid.value) {
+            clazz.push(getThemeProperty(FORM_ELEMENT_BORDER_COLOR_ATTENTION).value)
+        } else {
+            clazz.push(getThemeProperty(FORM_ELEMENT_BORDER_COLOR_DEFAULT).value)
+        }
     }
+
     return clazz.join(' ')
 })
 const labelClazz = computed(() => {
@@ -136,8 +143,8 @@ const labelClazz = computed(() => {
         getThemeProperty(FORM_ELEMENT_LABEL_BACKGROUND_DEFAULT).value,
         getThemeProperty(FORM_ELEMENT_LABEL_WEIGHT_DEFAULT).value
     ]
-    
-    if (isInvalid.value) {
+
+    if (isInvalid.value && !labelOrChildHaveFocus.value) {
         clazz.push(getThemeProperty(FORM_ELEMENT_LABEL_COLOR_ATTENTION).value)
     } else {
         clazz.push(getThemeProperty(FORM_ELEMENT_LABEL_COLOR_DEFAULT).value)
@@ -155,9 +162,12 @@ const hintClazz = computed(() => {
 
     return clazz.join(' ')
 })
-watchEffect(() => {
-    if (hasFocus.value === false && props.focussed === true) {
+const stopFocusListener = watch(() => {
+    if (hasFocus.value) {
+        wasFocussedAtLeastOnce.value = true
+    } else if (wasFocussedAtLeastOnce.value && props.focussed === false) {
         hasLostFocusAtLeastOnce.value = true
+        stopFocusListener()
     }
 })
 function onFocus() {
