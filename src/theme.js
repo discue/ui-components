@@ -49,7 +49,8 @@ const theme = {
             'default': ref('text-xs')
         },
         color: {
-            'default': ref('text-attention-800')
+            'default': ref('text-attention-800'),
+            'hint': ref('text-gray-800')
         },
         weight: {
             'default': ref('font-medium')
