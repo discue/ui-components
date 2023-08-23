@@ -124,8 +124,7 @@ const inputClazz = computed(() => {
 function focusInput() {
     input.value.focus()
 }
-function onBlur(event) {
-    onInput(event)
+function onBlur() {
     inputFocussed.value = false
 }
 function onFocus() {
