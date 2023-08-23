@@ -95,7 +95,7 @@ const invalidCharactersMessage = computed(() => {
     if (!invalidCharacters.value) {
         return ''
     } else {
-        return `At this moment we do not allow the following characters: ${invalidCharacters.value}`
+        return `Sorry, the following characters are not allowed here: ${invalidCharacters.value}`
     }
 })
 const invalidCharactersRegex = computed(() => {
