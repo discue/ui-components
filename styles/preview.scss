@@ -31,6 +31,16 @@
         }
     }
 
+    #FormImmutableInputApiKey {
+        position: initial !important;
+    }
+
+    #FormImmutableInputApiKeyElementContainer {
+        button {
+            position: absolute !important;
+        }
+    }
+
     ul {
         @apply list-none my-0;
         padding-left: inherit;
@@ -54,7 +64,9 @@
 
     .dsq-form-element-container-with-label {
         div {
-            label, select {
+
+            label,
+            select {
                 @apply bg-stone-300;
             }
 
@@ -62,7 +74,7 @@
                 margin-top: 0;
             }
 
-            &> span {
+            &>span {
                 position: absolute !important;
             }
         }
