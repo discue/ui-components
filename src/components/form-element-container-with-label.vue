@@ -144,6 +144,12 @@ const labelClazz = computed(() => {
         getThemeProperty(FORM_ELEMENT_LABEL_WEIGHT_DEFAULT).value
     ]
 
+    if (props.disabled) {
+        clazz.push('cursor-not-allowed')
+    } else {
+        clazz.push('cursor-text')
+    }
+
     if (isInvalid.value && !labelOrChildHaveFocus.value) {
         clazz.push(getThemeProperty(FORM_ELEMENT_LABEL_COLOR_ATTENTION).value)
     } else {
