@@ -1,6 +1,6 @@
 <template>
     <div :id="id"
-        class="component-preview bg-stone-300 shadow-inner rounded-lg my-4 py-4 flex flex-col justify-center items-center w-full">
+        class="component-preview bg-stone-300 dark:bg-gray-800 shadow-inner rounded-lg my-4 py-4 flex flex-col justify-center items-center w-full">
         <Component :is="type" v-bind="componentProps" v-model="modelValue">
             <template v-for="(index, name) in $slots" v-slot:[name]>
                 <slot :name="name" />
