@@ -5,8 +5,7 @@
 
         <div class="relative px-3 my-2 flex flex-row items-center">
             <div class="mr-8">
-                <span :id="id" class="text-gray-900 rounded text-lg outline-none placeholder:text-gray-400 leading-8">{{
-                    text }}</span>
+                <Text :id="id">{{ text }}</Text>
             </div>
 
             <button v-if="showClipboardButton"
@@ -32,6 +31,7 @@
 import { ClipboardDocumentCheckIcon, ClipboardIcon } from '@heroicons/vue/24/outline';
 import { computed, ref } from 'vue';
 import FormElementContainerWithLabel from './form-element-container-with-label.vue';
+import Text from './text.vue';
 
 
 const props = defineProps({
