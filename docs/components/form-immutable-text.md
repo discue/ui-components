@@ -5,7 +5,9 @@ A `span` element wrapped inside a labelled form element. Does not allow any user
 By default, the component will render a copy-to-clipboard button to allow for easier copy and pasting the component's value.
 
 ## Preview
+<ClientOnly>
 <DynamicComponentDisplay type="FormImmutableText" :attach-v-model="true" label="Your Api Key" text="CaJ_9ajombMlDtlSFI1W_xdfdyyRZofOMgUZlhX" id="FormImmutableInputApiKey" ></DynamicComponentDisplay>
+</ClientOnly>
 
 ## Example
 @[code](@examples/FormImmutableText.vue)
