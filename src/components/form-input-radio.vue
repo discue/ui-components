@@ -14,25 +14,20 @@
                 <label v-if="(disabled && modelValue == option.value) || !disabled" :class="labelClazz"
                     :for="'radio_' + id + '_' + option.value + '_id'" @focus="onFocus($event)" @focusin="onFocus($event)"
                     @focusout="onBlur($event)" @blur="onBlur($event)">
-                    <div v-if="modelValue == option.value">
-                        <svg xmlns="http://www.w3.org/2000/svg" class="stroke-current h-6 w-6" fill="none"
-                            viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
-                            <path stroke-linecap="round" stroke-linejoin="round"
-                                d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
-                        </svg>
-                    </div>
-                    <div v-else>
-                        <svg v-if="disabled" xmlns="http://www.w3.org/2000/svg" class="stroke-2 stroke-current h-6 w-6"
-                            fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
-                            <path stroke-linecap="round" stroke-linejoin="round" d="M8  01M21 12a9 9 0 0 9 9 0 0118 0z" />
-                        </svg>
-                        <svg v-else xmlns="http://www.w3.org/2000/svg" class="stroke-2 stroke-current h-6 w-6" fill="none"
-                            viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
-                            <path stroke-linecap="round" stroke-linejoin="round"
-                                d="M8  01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
-                        </svg>
-                    </div>
-                    <Text :highlight="modelValue == option.value" :inherit-color="true">{{ option.label }}</Text>
+                    <svg v-if="modelValue == option.value" xmlns="http://www.w3.org/2000/svg" class="stroke-current h-6 w-6" fill="none" viewBox="0 0 24 24"
+                        stroke="currentColor" stroke-width="2">
+                        <path stroke-linecap="round" stroke-linejoin="round"
+                            d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+                    </svg>
+                    <svg v-else-if="disabled" xmlns="http://www.w3.org/2000/svg" class="stroke-2 stroke-current h-6 w-6"
+                        fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M8  01M21 12a9 9 0 0 9 9 0 0118 0z" />
+                    </svg>
+                    <svg v-else xmlns="http://www.w3.org/2000/svg" class="stroke-2 stroke-current h-6 w-6" fill="none"
+                        viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M8  01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+                    </svg>
+                    <Text class="pb-0.5" :highlight="modelValue == option.value" :inherit-color="true">{{ option.label }}</Text>
                 </label>
             </div>
         </div>
