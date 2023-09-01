@@ -1,4 +1,4 @@
-# Headlines <Badge type="tip" text="since v0.6.0" vertical="top" />
+# Headlines <Badge type="tip" text="since v0.6.0" vertical="top"  /> <Badge type="themeable" text="themeable" vertical="top" />
 
 A simple wrapper around a head- and subline to allow for a common look-and-feel and consistent styling. The actual html tags for the headline and subline can be configured via the properties `headlineTag` and `sublineTag`.
 
