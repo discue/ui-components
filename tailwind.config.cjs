@@ -5,6 +5,7 @@ colors.secondary = colors.pink
 colors.tertiary = colors.indigo
 
 module.exports = {
+  darkMode: 'class',
   content: [
     "./docs/**/*.{vue,js,ts,jsx,tsx,scss,md}",
     "./docs/.vuepress/examples/*.{vue,js,ts,jsx,tsx,scss,md}",
