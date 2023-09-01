@@ -17,8 +17,9 @@
 }
 
 .navbar-item {
+
     a, .navbar-dropdown-title {
-        @apply text-gray-900 text-xl font-bold transition-transform transform;
+        @apply text-gray-900 dark:text-gray-400 text-xl font-bold transition-transform transform;
     }
 
     .navbar-dropdown {
@@ -27,9 +28,15 @@
         .navbar-dropdown-item {
             @apply p-1.5;
         }
+    }
+}
 
-        .navbar-dropdown-item:hover {
-            @apply bg-gray-200;
+.navbar-dropdown-wrapper:not(.mobile) {
+    .navbar-item {
+        .navbar-dropdown {
+            .navbar-dropdown-item:hover {
+                @apply bg-gray-200 dark:bg-gray-800;
+            }
         }
     }
 }

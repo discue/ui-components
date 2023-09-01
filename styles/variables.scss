@@ -76,7 +76,7 @@ html.dark {
     --c-brand-light: #AFE81A;
 
 
-    --c-bg: #22272e;
+    --c-bg: theme('colors.gray.900');
     --c-bg-light: #2b313a;
     --c-bg-lighter: #262c34;
 
@@ -102,6 +102,8 @@ html.dark {
     --c-danger-text: #3a0000;
     --c-details-bg: #323843;
 
-
-    --code-hl-bg-color: #363b46;
+    --code-bg-color: theme('colors.gray.800');
+    --code-hl-bg-color: rgba(0, 0, 0, 0.66);
+    --code-ln-color: #9e9e9e;
+    --code-ln-wrapper-width: 3.5rem;
 }
