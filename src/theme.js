@@ -4,7 +4,7 @@ import { ref } from 'vue'
 const theme = {
     backToTop: {
         color: {
-            'default': ref('text-primary-500')
+            'default': ref('text-gray-900 dark:text-primary-500')
         }
     },
     formElement: {
