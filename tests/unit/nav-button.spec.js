@@ -79,7 +79,7 @@ describe('NavLink.vue', () => {
             const wrapper = shallowMount(NavButton, {
                 props: {}
             })
-            expect(wrapper.classes()).to.contain(getThemeProperty(BUTTON_BACKGROUND_DEFAULT).value)
+            expect(wrapper.classes().join(' ')).to.contain(getThemeProperty(BUTTON_BACKGROUND_DEFAULT).value)
         })
         it('has default bg color', () => {
             const wrapper = shallowMount(NavButton, {
