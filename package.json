@@ -71,7 +71,7 @@
     "@vue/cli-plugin-typescript": "~5.0.8",
     "@vue/cli-plugin-unit-mocha": "^5.0.8",
     "@vue/cli-service": "~5.0.8",
-    "@vue/test-utils": "^2.4.0",
+    "@vue/test-utils": "^2.4.1",
     "@vuepress/plugin-prismjs": "2.0.0-beta.66",
     "@vuepress/plugin-register-components": "2.0.0-beta.66",
     "@vuepress/plugin-search": "2.0.0-beta.66",
