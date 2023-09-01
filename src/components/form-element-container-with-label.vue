@@ -1,6 +1,6 @@
 <template>
     <div :id="parentId" :class="parentClazz" @mouseover="onFocus" @mouseleave="onBlur">
-        <div class="relative">
+        <div class="relative bg-inherit">
             <label :for="id" :class="labelClazz" @mousedown="onFocusRequest">{{ label }}</label>
             <Transition name="form-element-hint">
                 <span v-if="showPattern" :class="hintClazz" @mousedown="onFocusRequest">Allowed values: {{ pattern
@@ -115,7 +115,7 @@ const labelOrChildHaveFocus = computed(() => {
     return hasFocus.value || props.focussed
 })
 const parentClazz = computed(() => {
-    const clazz = ['dsq-form-element-container-with-label border-solid flex flex-col rounded']
+    const clazz = ['dsq-form-element-container-with-label border-solid bg-inherit flex flex-col rounded']
     clazz.push([getThemeProperty(FORM_ELEMENT_BORDER_SIZE_DEFAULT).value])
     if (props.disabled) {
         clazz.push('cursor-not-allowed')
