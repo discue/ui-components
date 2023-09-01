@@ -1,3 +1,32 @@
-.back-to-top:hover {
+.dsq-back-to-top:hover {
     @apply transform transition-transform -translate-y-1 shadow-md;
+}
+
+.dsq-back-to-top {
+    cursor: pointer;
+    position: fixed;
+    bottom: 2rem;
+    right: 2rem;
+    color: #111827;
+    z-index: 10;
+
+    svg {
+        stroke: 2
+    }
+}
+
+@media (max-width: 959px) {
+    .dsq-back-to-top {
+        display: none;
+    }
+}
+
+.dsq-back-to-top-enter-active,
+.dsq-back-to-top-leave-active {
+    transition: opacity 0.3s;
+}
+
+.dsq-back-to-top-enter-from,
+.dsq-back-to-top-leave-to {
+    opacity: 0;
 }

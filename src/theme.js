@@ -2,13 +2,18 @@ import { ref } from 'vue'
 
 // add only computed properties here to allow for reactivity
 const theme = {
+    backToTop: {
+        color: {
+            'default': ref('text-primary-500')
+        }
+    },
     formElement: {
         borderSize: {
             'default': ref('border-2')
         },
         borderColor: {
             'default': ref('border-gray-500'),
-            'active': ref('border-gray-800'),
+            'active': ref('border-gray-800 dark:border-gray-500'),
             'attention': ref('border-attention-800')
         },
         borderRingSize: {
@@ -23,11 +28,11 @@ const theme = {
             'default': ref('text-md')
         },
         color: {
-            'default': ref('text-gray-800'),
+            'default': ref('text-gray-800 dark:text-gray-400'),
             'attention': ref('text-attention-800')
         },
         background: {
-            'default': ref('bg-white')
+            'default': ref('bg-inherit dark:bg-gray-800')
         },
         weight: {
             'default': ref('font-bold')
@@ -63,9 +68,9 @@ const theme = {
             'large': ref('text-lg'),
         },
         color: {
-            'default': ref('text-gray-900'),
-            'light': ref('text-gray-100'),
-            'highlight': ref('text-gray-900')
+            'default': ref('text-gray-900 dark:text-gray-500'),
+            'light': ref('text-gray-100 dark:text-gray-900'),
+            'highlight': ref('text-gray-900 dark:text-gray-500')
         },
         weight: {
             'default': ref('font-base'),
@@ -77,16 +82,16 @@ const theme = {
             default: ref('text-lg')
         },
         caretColor: {
-            default: ref('caret-gray-900')
+            default: ref('caret-gray-900 dark:text-gray-400')
         },
         textColor: {
-            default: ref('text-gray-900')
+            default: ref('text-gray-900 dark:text-gray-500')
         },
         backgroundColor: {
-            default: ref('bg-white')
+            default: ref('bg-inherit')
         },
         placeholderColor: {
-            default: ref('placeholder:text-gray-500')
+            default: ref('placeholder:text-gray-500 placeholder:text-gray-700')
         }
     },
     formElementSelect: {
@@ -97,18 +102,18 @@ const theme = {
             'default': ref('font-medium'),
         },
         textColor: {
-            default: ref('text-gray-900')
+            default: ref('text-gray-900 dark:text-gray-400')
         },
     },
     formElementRadio: {
         textColor: {
-            default: ref('text-gray-900'),
-            disabled: ref('text-gray-500')
+            default: ref('text-gray-900 dark:text-gray-500'),
+            disabled: ref('text-gray-500 dark:text-gray-800')
         }
     },
     button: {
         background: {
-            'default': ref('bg-gray-900'),
+            'default': ref('bg-gray-900 dark:bg-gray-800'),
             'attention': ref('bg-attention-800'),
             'secondary': ref('bg-gray-500'),
             'inherit': ref('bg-inherit')
@@ -142,15 +147,15 @@ const theme = {
             'large': ref('text-2xl'),
         },
         color: {
-            'default': ref('text-gray-900'),
+            'default': ref('text-gray-900 dark:text-gray-300'),
             'attention': ref('text-attention-800'),
             'secondary': ref('text-gray-500'),
-            'light': ref('text-gray-100'),
+            'light': ref('text-gray-100 dark:text-gray-200'),
             'highlight': ref('text-gray-900'),
             'inherit': ref('text-inherit'),
         },
         border: {
-            'default': ref('hover:border-gray-900'),
+            'default': ref('hover:border-gray-900 dark:border-gray-400'),
             'attention': ref('hover:border-attention-500'),
             'secondary': ref('hover:border-gray-500'),
         },

@@ -1,7 +1,7 @@
 <template>
-    <Transition name="back-to-top">
-        <button v-if="show" @click="scrollToTop" class="dsq-back-to-top back-to-top">
-            <ChevronUpIcon/>
+    <Transition name="dsq-back-to-top">
+        <button v-if="show" @click="scrollToTop" :class="buttonClazz">
+            <ChevronUpIcon class="w-12 h-12"/>
         </button>
     </Transition>
 </template>
@@ -10,12 +10,17 @@
 import { ChevronUpIcon } from "@heroicons/vue/24/outline";
 import { debounce } from "ts-debounce";
 import { computed, onMounted, ref } from "vue";
+import { BACK_TO_TOP_COLOR_DEFAULT, getThemeProperty } from "../theme.js";
 
 const props = defineProps({
     offset: {
         type: Number,
         default: 300
     }
+})
+
+const buttonClazz = computed(() => {
+    return `dsq-back-to-top bg-inherit -m-2 ${getThemeProperty(BACK_TO_TOP_COLOR_DEFAULT).value}`
 })
 
 const scrollTop = ref(0)
@@ -45,32 +50,3 @@ onMounted(() => {
     window.addEventListener("scroll", () => onScroll())
 })
 </script>
-
-<style>
-.back-to-top {
-    cursor: pointer;
-    position: fixed;
-    bottom: 2rem;
-    right: 2.5rem;
-    width: 2rem;
-    height: 1.2rem;
-    color: #111827;
-    z-index: 10;
-}
-
-@media (max-width: 959px) {
-    .back-to-top {
-        display: none;
-    }
-}
-
-.back-to-top-enter-active,
-.back-to-top-leave-active {
-    transition: opacity 0.3s;
-}
-
-.back-to-top-enter-from,
-.back-to-top-leave-to {
-    opacity: 0;
-}
-</style>
