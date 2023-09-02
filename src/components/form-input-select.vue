@@ -72,7 +72,7 @@ const inputValue = computed(() => {
 
 const selectClazz = computed(() => {
     const clazz = [
-        'dsq-form-input-select px-2 pb-1 pt-4 border-none w-full bg-inherit opacity-100 focus:outline-none cursor-pointer',
+        'dsq-form-input-select px-2 pb-1 pt-2.5 border-none w-full bg-inherit opacity-100 focus:outline-none cursor-pointer',
         getThemeProperty(FORM_ELEMENT_SELECT_TEXT_COLOR_DEFAULT).value,
         getThemeProperty(FORM_ELEMENT_SELECT_TEXT_SIZE_DEFAULT).value,
         getThemeProperty(FORM_ELEMENT_SELECT_FONT_WEIGHT_DEFAULT).value
