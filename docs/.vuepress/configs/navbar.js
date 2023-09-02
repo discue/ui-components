@@ -9,6 +9,7 @@ const components = fs.readdirSync(path.resolve(__dirname, '../../components')) /
 export default [{
     text: 'Components',
     link: `/components/${components[0]}`,
+    activeMatch: '^/components'
 },
 {
     text: `v${version}`,
