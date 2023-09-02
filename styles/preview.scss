@@ -69,7 +69,7 @@
                 margin-top: 0;
             }
 
-            &>span {
+            &>span:not(.dsq-text) {
                 position: absolute !important;
             }
         }
