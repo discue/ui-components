@@ -91,7 +91,7 @@ const theme = {
             default: ref('bg-inherit')
         },
         placeholderColor: {
-            default: ref('placeholder:text-gray-500 placeholder:text-gray-700')
+            default: ref('placeholder:text-gray-500 dark:placeholder:text-gray-700')
         }
     },
     formElementSelect: {
