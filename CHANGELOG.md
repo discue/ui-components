@@ -2,6 +2,20 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [0.41.0](https://github.com/discue/ui-components/compare/v0.40.0...v0.41.0) (2023-09-02)
+
+
+### Features
+
+* **navbar:** add active match property ([7d993ea](https://github.com/discue/ui-components/commit/7d993ea177b1f2d162899882a1efbfe4eb50d63f))
+
+
+### Bug Fixes
+
+* **form-input:** add missing dark selector for placeholder text ([6d572e9](https://github.com/discue/ui-components/commit/6d572e9e6f5db3c78a5b0414f1ecbab8ad7e9f7c))
+* **form-input:** decrease top padding ([11f4726](https://github.com/discue/ui-components/commit/11f4726e90a26aef5f2c40c1d04a10ac37c3932b))
+* **navbar:** selector for nav-bar item bg on hover ([87d1ed7](https://github.com/discue/ui-components/commit/87d1ed788e8b967f51bbe426780a9374038af1bc))
+
 ## [0.40.0](https://github.com/discue/ui-components/compare/v0.39.0...v0.40.0) (2023-09-02)
 
 

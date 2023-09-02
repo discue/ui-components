@@ -1,6 +1,6 @@
 {
   "name": "@discue/ui-components",
-  "version": "0.40.0",
+  "version": "0.41.0",
   "private": false,
   "license": "MIT",
   "description": "The themeable open source Vue.js UI component library of discue.io",
