@@ -2,6 +2,43 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [0.40.0](https://github.com/discue/ui-components/compare/v0.39.0...v0.40.0) (2023-09-02)
+
+
+### Features
+
+* **back-to-top:** make component themeable ([73b1b6d](https://github.com/discue/ui-components/commit/73b1b6d8269a224f1c2930c87a5fde396b3c98c0))
+* **form-element-container:** inherit bg color from parent ([ea505cd](https://github.com/discue/ui-components/commit/ea505cda50b00e5aa08e541c0b2025c94da91d61))
+* **form-element-container:** show disabled cursor also when hovering label ([4e55aa8](https://github.com/discue/ui-components/commit/4e55aa8621c9526e587a4e36d98f3576777554af))
+* **headlines:** make component themeable ([7f26481](https://github.com/discue/ui-components/commit/7f264819ad30ffd4b5f24a759565733ad7cdaa75))
+* **immutable-text:** add immutable text element ([dd79f48](https://github.com/discue/ui-components/commit/dd79f48fc3e1a87d75557138bc988f34273bbd04))
+
+
+### Refactorings
+
+* **back-to-top:** use chevron up icon ([87a315b](https://github.com/discue/ui-components/commit/87a315b82840c81b429a8a5e22680580e34dd40c))
+* **immutable-text:** use text element to display text ([ea8e06b](https://github.com/discue/ui-components/commit/ea8e06b778a59ba67389a20a6ef9d75f77e1af4e))
+
+
+### Chores
+
+* allow dark mode only if dark class is set ([59dc51e](https://github.com/discue/ui-components/commit/59dc51ef5e8a4af956134b16b0857dc8cd493ed0))
+* **back-to-top:** use dark text on light background ([cbc3632](https://github.com/discue/ui-components/commit/cbc3632a1de26a99832ba69364ead4733cf65553))
+* **badge:** use green color with black text by default ([08dbb3e](https://github.com/discue/ui-components/commit/08dbb3ed58509ed32cb4eee73ad7274c05a4dd60))
+* **deps-dev:** bump @babel/core from 7.22.9 to 7.22.11 ([41b714c](https://github.com/discue/ui-components/commit/41b714cddf251c5a5e20a8b12c24e03be71e8bd6))
+* **deps-dev:** bump @vue/test-utils from 2.4.0 to 2.4.1 ([ebc213f](https://github.com/discue/ui-components/commit/ebc213fbe25785bec98e632b752dd551b400264c))
+* **deps-dev:** bump chai from 4.3.7 to 4.3.8 ([064ed46](https://github.com/discue/ui-components/commit/064ed4648e01d12bba77ebb898aa3e692dc6a875))
+* **deps-dev:** bump eslint-plugin-vue from 9.16.1 to 9.17.0 ([352041e](https://github.com/discue/ui-components/commit/352041ef798e176f8c2b3a4ddf11e6bac72ce35d))
+* **deps:** add heroicons dependency ([f080ce3](https://github.com/discue/ui-components/commit/f080ce31f4c89c0a10be2d6eaebbdecd92a93951))
+* **deps:** update vuepress ([4486b40](https://github.com/discue/ui-components/commit/4486b40ae205d642cff81c9e60c19986ba9e91a3))
+* **docs:** update form-input doc ([c22c1d2](https://github.com/discue/ui-components/commit/c22c1d2d1a433e1dea568b60be6de876015c0d3e))
+* **docs:** wrap component in client only tag ([2fba95d](https://github.com/discue/ui-components/commit/2fba95dee1c1206696ffcc704134783e536b1ea5))
+* **dynamic-component:** add dark mode bg ([d2b69f2](https://github.com/discue/ui-components/commit/d2b69f20a88a2c18d259e154b5b5496414953497))
+* **form-element-container:** get rid of warning ([6c287ca](https://github.com/discue/ui-components/commit/6c287cac82d8add9553c0cfca892bd6948b656b5))
+* **form-input:** align label with svg ([c23998b](https://github.com/discue/ui-components/commit/c23998b54fa1416d05426af0be21b87b380ee911))
+* **input-radio:** use less stroke if not selected ([e506034](https://github.com/discue/ui-components/commit/e506034b5df83a5049f45e1bb30cd3c7df48aef1))
+* prepare dark mode support ([a3cb57b](https://github.com/discue/ui-components/commit/a3cb57bedd5381039f266899bc261bd7f36343ef))
+
 ## [0.39.0](https://github.com/discue/ui-components/compare/v0.38.2...v0.39.0) (2023-08-23)
 
 
