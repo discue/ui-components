@@ -1,5 +1,8 @@
 import { ref } from 'vue'
 
+const FORM_ELEMENT_INPUT_TEXT_SIZE = ref('text-lg')
+const FORM_ELEMENT_INPUT_FONT_WEIGHT = ref('font-medium')
+
 // add only computed properties here to allow for reactivity
 const theme = {
     backToTop: {
@@ -78,8 +81,11 @@ const theme = {
         }
     },
     formElementInput: {
+        fontWeight: {
+            'default': FORM_ELEMENT_INPUT_FONT_WEIGHT
+        },
         textSize: {
-            default: ref('text-lg')
+            default: FORM_ELEMENT_INPUT_TEXT_SIZE
         },
         caretColor: {
             default: ref('caret-gray-900 dark:text-gray-400')
@@ -95,17 +101,23 @@ const theme = {
         }
     },
     formElementSelect: {
-        textSize: {
-            default: ref('text-lg')
-        },
         fontWeight: {
-            'default': ref('font-medium'),
+            'default': FORM_ELEMENT_INPUT_FONT_WEIGHT
+        },
+        textSize: {
+            default: FORM_ELEMENT_INPUT_TEXT_SIZE
         },
         textColor: {
             default: ref('text-gray-900 dark:text-gray-400')
         },
     },
     formElementRadio: {
+        fontWeight: {
+            'default': FORM_ELEMENT_INPUT_FONT_WEIGHT
+        },
+        textSize: {
+            default: FORM_ELEMENT_INPUT_TEXT_SIZE
+        },
         textColor: {
             default: ref('text-gray-900 dark:text-gray-500'),
             disabled: ref('text-gray-500 dark:text-gray-800')

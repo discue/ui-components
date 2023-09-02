@@ -8,7 +8,7 @@
                     :id="'radio_' + id + '_' + option.value + '_id'" autocomplete="off" type="radio"
                     :checked="option.default === true || modelValue == option.value" :required="required" :name="name"
                     :value="option.value" :disabled="disabled"
-                    class="hidden peer checked:bg-gray-900 rounded text-lg outline-none text-gray-100 placeholder:text-gray-300 py-2 px-3 leading-8"
+                    class="hidden peer checked:bg-gray-900 rounded outline-none text-gray-100 placeholder:text-gray-300 py-2 px-3 leading-8"
                     @input="onInput($event)">
 
                 <label v-if="(disabled && modelValue == option.value) || !disabled" :class="labelClazz"
@@ -27,7 +27,7 @@
                         viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
                         <path stroke-linecap="round" stroke-linejoin="round" d="M8  01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
                     </svg>
-                    <Text class="pb-0.5" :highlight="modelValue == option.value" :inherit-color="true">{{ option.label }}</Text>
+                    <Text class="pb-0.5" :highlight="modelValue == option.value" :inherit-font-size="true" :inherit-color="true">{{ option.label }}</Text>
                 </label>
             </div>
         </div>
@@ -36,7 +36,7 @@
 
 <script setup>
 import { computed, ref } from 'vue';
-import { FORM_ELEMENT_RADIO_TEXT_COLOR_DEFAULT, FORM_ELEMENT_RADIO_TEXT_COLOR_DISABLED, getThemeProperty } from '../theme.js';
+import { FORM_ELEMENT_RADIO_TEXT_COLOR_DEFAULT, FORM_ELEMENT_RADIO_TEXT_COLOR_DISABLED, FORM_ELEMENT_RADIO_TEXT_SIZE_DEFAULT, getThemeProperty } from '../theme.js';
 import FormElementContainerWithLabel from './form-element-container-with-label.vue';
 import Text from './text.vue';
 
@@ -88,7 +88,7 @@ const error = computed(() => {
 })
 
 const labelClazz = computed(() => {
-    const clazz = ['flex flex-row items-center w-full space-x-2 px-3 py-1 leading-7 text-xl']
+    const clazz = ['flex flex-row items-center w-full space-x-2 px-3 py-1 leading-7', getThemeProperty(FORM_ELEMENT_RADIO_TEXT_SIZE_DEFAULT).value]
     if (props.disabled) {
         clazz.push(`disabled ${getThemeProperty(FORM_ELEMENT_RADIO_TEXT_COLOR_DISABLED).value} cursor-not-allowed`)
     } else {

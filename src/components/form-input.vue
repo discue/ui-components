@@ -12,7 +12,7 @@
   
 <script setup>
 import { computed, ref } from 'vue';
-import { FORM_ELEMENT_INPUT_BACKGROUND_COLOR_DEFAULT, FORM_ELEMENT_INPUT_CARET_COLOR_DEFAULT, FORM_ELEMENT_INPUT_PLACEHOLDER_COLOR_DEFAULT, FORM_ELEMENT_INPUT_TEXT_COLOR_DEFAULT, FORM_ELEMENT_INPUT_TEXT_SIZE_DEFAULT } from '../theme-keys.js';
+import { FORM_ELEMENT_INPUT_BACKGROUND_COLOR_DEFAULT, FORM_ELEMENT_INPUT_CARET_COLOR_DEFAULT, FORM_ELEMENT_INPUT_FONT_WEIGHT_DEFAULT, FORM_ELEMENT_INPUT_PLACEHOLDER_COLOR_DEFAULT, FORM_ELEMENT_INPUT_TEXT_COLOR_DEFAULT, FORM_ELEMENT_INPUT_TEXT_SIZE_DEFAULT } from '../theme-keys.js';
 import { getThemeProperty } from '../theme.js';
 import FormElementContainerWithLabel from './form-element-container-with-label.vue';
 
@@ -112,7 +112,8 @@ const inputClazz = computed(() => {
         getThemeProperty(FORM_ELEMENT_INPUT_BACKGROUND_COLOR_DEFAULT).value,
         getThemeProperty(FORM_ELEMENT_INPUT_PLACEHOLDER_COLOR_DEFAULT).value,
         getThemeProperty(FORM_ELEMENT_INPUT_TEXT_SIZE_DEFAULT).value,
-        getThemeProperty(FORM_ELEMENT_INPUT_TEXT_COLOR_DEFAULT).value
+        getThemeProperty(FORM_ELEMENT_INPUT_TEXT_COLOR_DEFAULT).value,
+        getThemeProperty(FORM_ELEMENT_INPUT_FONT_WEIGHT_DEFAULT).value,
     ]
     if (props.disabled) {
         clazz.push('cursor-not-allowed')
