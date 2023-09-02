@@ -1,5 +1,5 @@
 <template>
-    <FormElementContainerWithLabel :id="id" :input-invalid="invalid" :disabled="disabled" :label="label"
+    <FormElementContainerWithLabel :id="id" :input-invalid="invalid" :disabled="inputDisabled" :label="label"
         :description="error" :focussed="isFocussed">
         <div :class="wrapperClazz">
             <div :class="optionClazz" v-for="option in options" :key="option.value">
@@ -14,20 +14,25 @@
                 <label v-if="(disabled && modelValue == option.value) || !disabled" :class="labelClazz"
                     :for="'radio_' + id + '_' + option.value + '_id'" @focus="onFocus($event)" @focusin="onFocus($event)"
                     @focusout="onBlur($event)" @blur="onBlur($event)">
-                    <svg v-if="modelValue == option.value" xmlns="http://www.w3.org/2000/svg" class="stroke-current h-6 w-6" fill="none" viewBox="0 0 24 24"
-                        stroke="currentColor" stroke-width="2">
-                        <path stroke-linecap="round" stroke-linejoin="round"
-                            d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
-                    </svg>
-                    <svg v-else-if="disabled" xmlns="http://www.w3.org/2000/svg" class="stroke-1 stroke-current h-6 w-6"
-                        fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
-                        <path stroke-linecap="round" stroke-linejoin="round" d="M8  01M21 12a9 9 0 0 9 9 0 0118 0z" />
-                    </svg>
-                    <svg v-else xmlns="http://www.w3.org/2000/svg" class="stroke-1 stroke-current h-6 w-6" fill="none"
-                        viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
-                        <path stroke-linecap="round" stroke-linejoin="round" d="M8  01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
-                    </svg>
-                    <Text class="pb-0.5" :highlight="modelValue == option.value" :inherit-font-size="true" :inherit-color="true">{{ option.label }}</Text>
+                    <div v-if="!isOnlySingleEntry">
+                        <svg v-if="modelValue == option.value" xmlns="http://www.w3.org/2000/svg"
+                            class="stroke-current h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor"
+                            stroke-width="2">
+                            <path stroke-linecap="round" stroke-linejoin="round"
+                                d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+                        </svg>
+                        <svg v-else-if="disabled" xmlns="http://www.w3.org/2000/svg" class="stroke-1 stroke-current h-6 w-6"
+                            fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M8  01M21 12a9 9 0 0 9 9 0 0118 0z" />
+                        </svg>
+                        <svg v-else xmlns="http://www.w3.org/2000/svg" class="stroke-1 stroke-current h-6 w-6" fill="none"
+                            viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                            <path stroke-linecap="round" stroke-linejoin="round"
+                                d="M8  01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+                        </svg>
+                    </div>
+                    <Text class="pb-0.5" :highlight="modelValue == option.value" :inherit-font-size="true"
+                        :inherit-color="true">{{ option.label }}</Text>
                 </label>
             </div>
         </div>
@@ -87,10 +92,23 @@ const error = computed(() => {
     return props.invalidMessage ? props.invalidMessage : props.description
 })
 
+const isOnlySingleEntry = computed(() => {
+    return props.options.length === 1
+})
+
+const inputDisabled = computed(() => {
+    return inputDisabled.value || isOnlySingleEntry.value
+})
+
 const labelClazz = computed(() => {
     const clazz = ['flex flex-row items-center w-full space-x-2 px-3 py-1 leading-7', getThemeProperty(FORM_ELEMENT_RADIO_TEXT_SIZE_DEFAULT).value]
-    if (props.disabled) {
-        clazz.push(`disabled ${getThemeProperty(FORM_ELEMENT_RADIO_TEXT_COLOR_DISABLED).value} cursor-not-allowed`)
+    if (inputDisabled.value) {
+        clazz.push(`disabled cursor-not-allowed`)
+        if (isOnlySingleEntry.value) {
+            clazz.push(`${getThemeProperty(FORM_ELEMENT_RADIO_TEXT_COLOR_DEFAULT).value}`)
+        } else {
+            clazz.push(`${getThemeProperty(FORM_ELEMENT_RADIO_TEXT_COLOR_DISABLED).value}`)
+        }
     } else {
         clazz.push(`${getThemeProperty(FORM_ELEMENT_RADIO_TEXT_COLOR_DEFAULT).value} cursor-pointer`)
     }
@@ -110,7 +128,7 @@ const wrapperClazz = computed(() => {
 const optionClazz = computed(() => {
     const clazz = ['dsq-form-input-radio-option text-gray-100 flex flex-row items-center']
     // if radio is disabled ensure that no option has a fixed width
-    if (!props.disabled) {
+    if (!inputDisabled.value) {
         if (props.vertical) {
             clazz.push('w-1/2')
         } else {
@@ -121,7 +139,7 @@ const optionClazz = computed(() => {
 })
 
 function onInput(event) {
-    if (props.disabled) {
+    if (inputDisabled.value) {
         event.preventBubbling()
         return
     }
