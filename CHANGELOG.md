@@ -2,6 +2,27 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [0.42.0](https://github.com/discue/ui-components/compare/v0.41.0...v0.42.0) (2023-09-03)
+
+
+### Features
+
+* align all input elements font size and weight ([0316200](https://github.com/discue/ui-components/commit/0316200cd8d2ca9a568f33b4d60d719c89879885))
+* **form-input:** make placeolder italic ([a93f452](https://github.com/discue/ui-components/commit/a93f452589434407fceacb67188816b5fda7c69d))
+* **input-radio:** hide checkbox if option array has only length 1 ([adda7e7](https://github.com/discue/ui-components/commit/adda7e7b65ccda025f78efbd142d2ef5e0405529))
+
+
+### Bug Fixes
+
+* **element-container:** mouse over animations not working ([12384cb](https://github.com/discue/ui-components/commit/12384cb1eefbeb6678b288e134359fd005227fc3))
+* **element-container:** only click events trigger input invalidity ([8a70d0f](https://github.com/discue/ui-components/commit/8a70d0ff7abf52de176d55a2e27a17bb1c6e104e))
+* **input-select:** update padding to fit in form container ([a1f1237](https://github.com/discue/ui-components/commit/a1f123710796770c18ad7bbe01f0a187979305d1))
+
+
+### Chores
+
+* **input-radio:** default options to empty array ([c425fba](https://github.com/discue/ui-components/commit/c425fba46f91fec565b9573168e720e0946d8ffc))
+
 ## [0.41.0](https://github.com/discue/ui-components/compare/v0.40.0...v0.41.0) (2023-09-02)
 
 
