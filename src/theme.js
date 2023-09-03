@@ -167,7 +167,7 @@ const theme = {
             'inherit': ref('text-inherit'),
         },
         border: {
-            'default': ref('hover:border-gray-900 dark:border-gray-400'),
+            'default': ref('hover:border-gray-900 dark:hover:border-gray-400'),
             'attention': ref('hover:border-attention-500'),
             'secondary': ref('hover:border-gray-500'),
         },
