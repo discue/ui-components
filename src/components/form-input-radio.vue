@@ -77,6 +77,7 @@ const props = defineProps({
     },
     options: {
         type: Array,
+        default: () => []
     },
     vertical: {
         type: Boolean,
