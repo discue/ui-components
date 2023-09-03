@@ -1,5 +1,5 @@
 <template>
-    <div :id="parentId" :class="parentClazz" @focusin="onFocus" @focusout="onBlur">
+    <div :id="parentId" :class="parentClazz" @mouseover="onFocus" @focusin="onFocus" @mouseleave="onBlur" @focusout="onBlur">
         <div class="relative bg-inherit">
             <label :for="id" :class="labelClazz" @mousedown="onFocusRequest">{{ label }}</label>
             <Transition name="form-element-hint">
