@@ -1,19 +1,24 @@
 <template>
     <div :id="id"
-        class="component-preview bg-stone-300 dark:bg-gray-800 shadow-inner rounded-lg my-4 py-4 flex flex-col justify-center items-center w-full">
-        <Component :is="type" v-bind="componentProps" v-model="modelValue">
-            <template v-for="(index, name) in $slots" v-slot:[name]>
+         class="component-preview bg-stone-300 dark:bg-gray-800 shadow-inner rounded-lg my-4 py-4 flex flex-col justify-center items-center w-full">
+        <Component :is="type"
+                   v-bind="componentProps"
+                   v-model="modelValue">
+            <template v-for="(index, name) in $slots"
+                      v-slot:[name]>
                 <slot :name="name" />
             </template>
         </Component>
 
     </div>
 
-    <div v-if="attachVModel" class="component-properties-model-value">
+    <div v-if="attachVModel"
+         class="component-properties-model-value">
         <Text>Component Value: <Text :highlight="true">{{ modelValue }}</Text></Text>
     </div>
 
-    <div class="component-properties-preview" v-if="showProperties">
+    <div class="component-properties-preview"
+         v-if="showProperties">
         <h3 class="text-xl font-medium inline-block">
             Properties
         </h3>
@@ -21,62 +26,83 @@
         <div class="">
             <div class="grid grid-cols-4 pb-4 pl-4 rounded-t-lg border-b-2 border-stone-300">
                 <div>
-                    <Text :highlight="true" :small="true" class="uppercase">Name</Text>
+                    <Text :highlight="true"
+                          :small="true"
+                          class="uppercase">Name</Text>
                 </div>
                 <div>
-                    <Text :highlight="true" :small="true" class="uppercase">Type</Text>
+                    <Text :highlight="true"
+                          :small="true"
+                          class="uppercase">Type</Text>
                 </div>
                 <div>
-                    <Text :highlight="true" :small="true" class="uppercase">Default</Text>
+                    <Text :highlight="true"
+                          :small="true"
+                          class="uppercase">Default</Text>
                 </div>
                 <div>
-                    <Text :highlight="true" :small="true" class="uppercase">Value</Text>
+                    <Text :highlight="true"
+                          :small="true"
+                          class="uppercase">Value</Text>
                 </div>
             </div>
 
             <div class="grid grid-cols-4 border-b-2 border-stone-300 border-solid py-4 pl-4"
-                v-for="(prop) in targetPropsForTable" :key="prop.name">
+                 v-for="(prop) in targetPropsForTable"
+                 :key="prop.name">
                 <div>
-                    <Text :small="false" class="">{{ prop.name }}</Text>
+                    <Text :small="false"
+                          class="">{{ prop.name }}</Text>
                 </div>
                 <div>
-                    <Text :small="false" class="">{{ prop.type }}</Text>
+                    <Text :small="false"
+                          class="">{{ prop.type }}</Text>
                 </div>
                 <div>
-                    <Text :small="false" class="">{{ prop.default }}</Text>
+                    <Text :small="false"
+                          class="">{{ prop.default }}</Text>
                 </div>
                 <div>
-                    <select v-if="prop.allowInput && prop.type === 'Boolean'" :value="componentProps[prop.name]"
-                        @input="castAndSet(prop, $event)" class="w-24 text-lg">
+                    <select v-if="prop.allowInput && prop.type === 'Boolean'"
+                            :value="componentProps[prop.name]"
+                            @input="castAndSet(prop, $event)"
+                            class="w-24 text-lg">
                         <option class="w-24 text-lg">true</option>
                         <option class="w-24 text-lg">false</option>
                     </select>
                     <input v-else-if="prop.allowInput && prop.type === 'Array'"
-                        :value="JSON.stringify(componentProps[prop.name])" @input="castAndSet(prop, $event)"
-                        class="text-base border-b-2 border-b-solid border-gray-900 w-20">
-                    <input v-else-if="prop.allowInput" :value="componentProps[prop.name]"
-                        @input="castAndSet(prop, $event)"
-                        class="text-base border-b-2 border-b-solid border-gray-900 w-20">
+                           :value="JSON.stringify(componentProps[prop.name])"
+                           @input="castAndSet(prop, $event)"
+                           class="text-base border-b-2 border-b-solid border-gray-900 w-20">
+                    <input v-else-if="prop.allowInput"
+                           :value="componentProps[prop.name]"
+                           @input="castAndSet(prop, $event)"
+                           class="text-base border-b-2 border-b-solid border-gray-900 w-20">
                 </div>
             </div>
         </div>
     </div>
 
-    <div v-if="emitsEvents && showEvents" class="component-emits-preview">
+    <div v-if="emitsEvents && showEvents"
+         class="component-emits-preview">
         <h3 class="text-xl font-medium inline-block">
             Emits
         </h3>
         <div class="">
             <div class="grid grid-cols-4 pb-4 pl-4 rounded-t-lg border-b-2 border-stone-300">
                 <div>
-                    <Text :highlight="true" :small="true" class="uppercase">Event</Text>
+                    <Text :highlight="true"
+                          :small="true"
+                          class="uppercase">Event</Text>
                 </div>
             </div>
 
             <div class="grid grid-cols-4 border-b-2 border-stone-300 border-solid py-4 pl-4"
-                v-for="(prop) in targetEmitsForTable" :key="prop">
+                 v-for="(prop) in targetEmitsForTable"
+                 :key="prop">
                 <div>
-                    <Text :small="false" class="">{{ prop }}</Text>
+                    <Text :small="false"
+                          class="">{{ prop }}</Text>
                 </div>
             </div>
         </div>

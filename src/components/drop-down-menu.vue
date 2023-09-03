@@ -1,7 +1,8 @@
 <template>
     <Transition name="modal">
-        <div ref="menu" v-if="show"
-            class="dsq-drop-down-menu bg-gray-50 text-gray-900 fixed shadow-md font-normal rounded-md w-48 border-2 border-gray-200 duration-200 ease-in-out transition">
+        <div ref="menu"
+             v-if="show"
+             class="dsq-drop-down-menu bg-gray-50 text-gray-900 fixed shadow-md font-normal rounded-md w-48 border-2 border-gray-200 duration-200 ease-in-out transition">
             <ul class="text-left text-lg">
                 <slot />
             </ul>

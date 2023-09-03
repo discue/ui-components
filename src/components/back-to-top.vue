@@ -1,7 +1,9 @@
 <template>
     <Transition name="dsq-back-to-top">
-        <button v-if="show" @click="scrollToTop" :class="buttonClazz">
-            <ChevronUpIcon class="w-12 h-12"/>
+        <button v-if="show"
+                @click="scrollToTop"
+                :class="buttonClazz">
+            <ChevronUpIcon class="w-12 h-12" />
         </button>
     </Transition>
 </template>

@@ -1,12 +1,33 @@
 <template>
-    <FormElementContainerWithLabel :id="id" :input-invalid="isInvalid" :disabled="disabled"
-        :force-show-error-message="forceContainerShowError" :label="label" :focussed="inputFocussed"
-        :focus-input-callback="focusInput" :value="modelValue" :pattern="pattern" :show-pattern-hint="showPatternHint"
-        :format="format" :show-format-hint="showFormatHint" :description="error">
-        <input :id="id" ref="input" autocomplete="off" :type="type" :pattern="pattern" :required="required"
-            :placeholder="placeholder" :name="name" :value="modelValue" :disabled="disabled" :class="inputClazz"
-            @input="onInput($event)" @focus="onFocus($event)" @focusin="onFocus($event)" @focusout="onBlur($event)"
-            @blur="onBlur($event)">
+    <FormElementContainerWithLabel :id="id"
+                                   :input-invalid="isInvalid"
+                                   :disabled="disabled"
+                                   :force-show-error-message="forceContainerShowError"
+                                   :label="label"
+                                   :focussed="inputFocussed"
+                                   :focus-input-callback="focusInput"
+                                   :value="modelValue"
+                                   :pattern="pattern"
+                                   :show-pattern-hint="showPatternHint"
+                                   :format="format"
+                                   :show-format-hint="showFormatHint"
+                                   :description="error">
+        <input :id="id"
+               ref="input"
+               autocomplete="off"
+               :type="type"
+               :pattern="pattern"
+               :required="required"
+               :placeholder="placeholder"
+               :name="name"
+               :value="modelValue"
+               :disabled="disabled"
+               :class="inputClazz"
+               @input="onInput($event)"
+               @focus="onFocus($event)"
+               @focusin="onFocus($event)"
+               @focusout="onBlur($event)"
+               @blur="onBlur($event)">
     </FormElementContainerWithLabel>
 </template>
   

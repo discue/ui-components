@@ -1,28 +1,45 @@
 <template>
-    <FormElementContainerWithLabel :description="copyToClipboardErrorMsg" :disabled="true" :focussed="false"
-        :focus-input-callback="focusInput" :force-show-error-message="true" :id="id" :input-invalid="copyToClipboardFailure"
-        :label="label" :show-pattern-hint="false" :show-format-hint="false" :value="modelValue">
+    <FormElementContainerWithLabel :description="copyToClipboardErrorMsg"
+                                   :disabled="true"
+                                   :focussed="false"
+                                   :focus-input-callback="focusInput"
+                                   :force-show-error-message="true"
+                                   :id="id"
+                                   :input-invalid="copyToClipboardFailure"
+                                   :label="label"
+                                   :show-pattern-hint="false"
+                                   :show-format-hint="false"
+                                   :value="modelValue">
 
         <div class="relative px-3 mt-4 mb-1 flex flex-row items-center">
-            <div class="mr-8" :class="textClazz">
-                <Text :id="id" :inherit-font-size="true">{{ text }}</Text>
+            <div class="mr-8"
+                 :class="textClazz">
+                <Text :id="id"
+                      :inherit-font-size="true">{{ text }}</Text>
             </div>
 
             <button v-if="showClipboardButton"
-                class="absolute bg-transparent right-0 p-2 text-gray-700 cursor-pointer transform transition-transform hover:-translate-y-1 outline-none"
-                @click.prevent="copyKeyToClipboard">
+                    class="absolute bg-transparent right-0 p-2 text-gray-700 cursor-pointer transform transition-transform hover:-translate-y-1 outline-none"
+                    @click.prevent="copyKeyToClipboard">
                 <ClipboardIcon class="h-6 w-6 stroke-2" />
             </button>
-            <button click.prevent v-if="copyToClipboardSuccess"
-                class="absolute bg-transparent right-0 p-2 text-green-700 outline-none">
+            <button click.prevent
+                    v-if="copyToClipboardSuccess"
+                    class="absolute bg-transparent right-0 p-2 text-green-700 outline-none">
                 <ClipboardDocumentCheckIcon class="h-6 w-6" />
             </button>
-            <button click.prevent v-if="copyToClipboardFailure"
-                class="absolute bg-transparent right-0 p-2 text-attention outline-none">
-                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24"
-                    stroke="currentColor" stroke-width="2">
-                    <path stroke-linecap="round" stroke-linejoin="round"
-                        d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2m-5 10.5l2-2m0 0l2-2m-2 2l-2-2m2 2l2 2m7-2a9 9 0" />
+            <button click.prevent
+                    v-if="copyToClipboardFailure"
+                    class="absolute bg-transparent right-0 p-2 text-attention outline-none">
+                <svg xmlns="http://www.w3.org/2000/svg"
+                     class="h-6 w-6"
+                     fill="none"
+                     viewBox="0 0 24 24"
+                     stroke="currentColor"
+                     stroke-width="2">
+                    <path stroke-linecap="round"
+                          stroke-linejoin="round"
+                          d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2m-5 10.5l2-2m0 0l2-2m-2 2l-2-2m2 2l2 2m7-2a9 9 0" />
                 </svg>
             </button>
         </div>

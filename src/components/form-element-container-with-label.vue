@@ -1,20 +1,34 @@
 <template>
-    <div :id="parentId" :class="parentClazz" @mouseover="onFocus" @focusin="onFocus" @mouseleave="onBlur" @focusout="onBlur">
+    <div :id="parentId"
+         :class="parentClazz"
+         @mouseover="onFocus"
+         @focusin="onFocus"
+         @mouseleave="onBlur"
+         @focusout="onBlur">
         <div class="relative bg-inherit">
-            <label :for="id" :class="labelClazz" @mousedown="onFocusRequest">{{ label }}</label>
+            <label :for="id"
+                   :class="labelClazz"
+                   @mousedown="onFocusRequest">{{ label }}</label>
             <Transition name="form-element-hint">
-                <span v-if="showPattern" :class="hintClazz" @mousedown="onFocusRequest">Allowed values: {{ pattern
-                }}</span>
+                <span v-if="showPattern"
+                      :class="hintClazz"
+                      @mousedown="onFocusRequest">Allowed values: {{ pattern
+                      }}</span>
             </Transition>
             <Transition name="form-element-hint">
-                <span v-if="showFormat" :class="hintClazz" @mousedown="onFocusRequest">Allowed format: {{ format
-                }}</span>
+                <span v-if="showFormat"
+                      :class="hintClazz"
+                      @mousedown="onFocusRequest">Allowed format: {{ format
+                      }}</span>
             </Transition>
         </div>
         <div :class="[isInvalid ? '' : 'pb-1']">
             <slot />
         </div>
-        <FormError :id="errorId" class="px-3 pb-1" :description="description" :invalid="isInvalid && hasLostFocusAtLeastOnce"/>
+        <FormError :id="errorId"
+                   class="px-3 pb-1"
+                   :description="description"
+                   :invalid="isInvalid && hasLostFocusAtLeastOnce" />
     </div>
 </template>
 

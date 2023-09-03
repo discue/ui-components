@@ -1,5 +1,8 @@
 <template>
-    <button :type="type" :class="clazz" class="dsq-nav-button" @click="onClick">
+    <button :type="type"
+            :class="clazz"
+            class="dsq-nav-button"
+            @click="onClick">
         <slot />
     </button>
 </template>

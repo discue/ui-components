@@ -1,38 +1,74 @@
 <template>
-    <FormElementContainerWithLabel :id="id" :input-invalid="invalid" :disabled="inputDisabled" :label="label"
-        :description="error" :focussed="isFocussed">
+    <FormElementContainerWithLabel :id="id"
+                                   :input-invalid="invalid"
+                                   :disabled="inputDisabled"
+                                   :label="label"
+                                   :description="error"
+                                   :focussed="isFocussed">
         <div :class="wrapperClazz">
-            <div :class="optionClazz" v-for="option in options" :key="option.value">
+            <div :class="optionClazz"
+                 v-for="option in options"
+                 :key="option.value">
 
                 <input v-if="(disabled && modelValue == option.value) || !disabled"
-                    :id="'radio_' + id + '_' + option.value + '_id'" autocomplete="off" type="radio"
-                    :checked="option.default === true || modelValue == option.value" :required="required" :name="name"
-                    :value="option.value" :disabled="disabled"
-                    class="hidden peer checked:bg-gray-900 rounded outline-none text-gray-100 placeholder:text-gray-300 py-2 px-3 leading-8"
-                    @input="onInput($event)">
+                       :id="'radio_' + id + '_' + option.value + '_id'"
+                       autocomplete="off"
+                       type="radio"
+                       :checked="option.default === true || modelValue == option.value"
+                       :required="required"
+                       :name="name"
+                       :value="option.value"
+                       :disabled="disabled"
+                       class="hidden peer checked:bg-gray-900 rounded outline-none text-gray-100 placeholder:text-gray-300 py-2 px-3 leading-8"
+                       @input="onInput($event)">
 
-                <label v-if="(disabled && modelValue == option.value) || !disabled" :class="labelClazz"
-                    :for="'radio_' + id + '_' + option.value + '_id'" @focus="onFocus($event)" @focusin="onFocus($event)"
-                    @focusout="onBlur($event)" @blur="onBlur($event)">
+                <label v-if="(disabled && modelValue == option.value) || !disabled"
+                       :class="labelClazz"
+                       :for="'radio_' + id + '_' + option.value + '_id'"
+                       @focus="onFocus($event)"
+                       @focusin="onFocus($event)"
+                       @focusout="onBlur($event)"
+                       @blur="onBlur($event)">
+                       
                     <div v-if="!isOnlySingleEntry">
-                        <svg v-if="modelValue == option.value" xmlns="http://www.w3.org/2000/svg"
-                            class="stroke-current h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor"
-                            stroke-width="2">
-                            <path stroke-linecap="round" stroke-linejoin="round"
-                                d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+                        <svg v-if="modelValue == option.value"
+                             xmlns="http://www.w3.org/2000/svg"
+                             class="stroke-current h-6 w-6"
+                             fill="none"
+                             viewBox="0 0 24 24"
+                             stroke="currentColor"
+                             stroke-width="2">
+                            <path stroke-linecap="round"
+                                  stroke-linejoin="round"
+                                  d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
                         </svg>
-                        <svg v-else-if="disabled" xmlns="http://www.w3.org/2000/svg" class="stroke-1 stroke-current h-6 w-6"
-                            fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
-                            <path stroke-linecap="round" stroke-linejoin="round" d="M8  01M21 12a9 9 0 0 9 9 0 0118 0z" />
+                        <svg v-else-if="disabled"
+                             xmlns="http://www.w3.org/2000/svg"
+                             class="stroke-1 stroke-current h-6 w-6"
+                             fill="none"
+                             viewBox="0 0 24 24"
+                             stroke="currentColor"
+                             stroke-width="2">
+                            <path stroke-linecap="round"
+                                  stroke-linejoin="round"
+                                  d="M8  01M21 12a9 9 0 0 9 9 0 0118 0z" />
                         </svg>
-                        <svg v-else xmlns="http://www.w3.org/2000/svg" class="stroke-1 stroke-current h-6 w-6" fill="none"
-                            viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
-                            <path stroke-linecap="round" stroke-linejoin="round"
-                                d="M8  01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+                        <svg v-else
+                             xmlns="http://www.w3.org/2000/svg"
+                             class="stroke-1 stroke-current h-6 w-6"
+                             fill="none"
+                             viewBox="0 0 24 24"
+                             stroke="currentColor"
+                             stroke-width="2">
+                            <path stroke-linecap="round"
+                                  stroke-linejoin="round"
+                                  d="M8  01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
                         </svg>
                     </div>
-                    <Text class="pb-0.5" :highlight="modelValue == option.value" :inherit-font-size="true"
-                        :inherit-color="true">{{ option.label }}</Text>
+                    <Text class="pb-0.5"
+                          :highlight="modelValue == option.value"
+                          :inherit-font-size="true"
+                          :inherit-color="true">{{ option.label }}</Text>
                 </label>
             </div>
         </div>

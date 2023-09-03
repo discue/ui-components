@@ -1,14 +1,23 @@
 <template>
-    <Teleport :disabled="!parent" :to="parent" class="w-full relative">
-        <div v-if="showBanner" :class="clazz" class="dsq-banner">
+    <Teleport :disabled="!parent"
+              :to="parent"
+              class="w-full relative">
+        <div v-if="showBanner"
+             :class="clazz"
+             class="dsq-banner">
             <slot />
 
             <div class="absolute right-4">
                 <button type="button"
-                    class="p-1 rounded-full hover:shadow cursor-pointer flex items-center justify-center text-gray-900 hover:text-lime-300 bg-inherit hover:bg-gray-900"
-                    @click="closeBanner">
-                    <svg class="w-6 h-6" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                        viewBox="0 0 24 24" stroke="currentColor">
+                        class="p-1 rounded-full hover:shadow cursor-pointer flex items-center justify-center text-gray-900 hover:text-lime-300 bg-inherit hover:bg-gray-900"
+                        @click="closeBanner">
+                    <svg class="w-6 h-6"
+                         fill="none"
+                         stroke-linecap="round"
+                         stroke-linejoin="round"
+                         stroke-width="2"
+                         viewBox="0 0 24 24"
+                         stroke="currentColor">
                         <title>{{ closeButtonTitle }}</title>
                         <path d="M6 18L18 6M6 6l12 12" />
                     </svg>
