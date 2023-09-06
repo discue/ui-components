@@ -1,7 +1,7 @@
 import { ref } from 'vue'
 
 const FORM_ELEMENT_INPUT_TEXT_SIZE = ref('text-lg')
-const FORM_ELEMENT_INPUT_FONT_WEIGHT = ref('font-medium')
+const FORM_ELEMENT_INPUT_FONT_WEIGHT = ref('font-medium placeholder:font-normal')
 
 // add only computed properties here to allow for reactivity
 const theme = {
