@@ -63,7 +63,7 @@
   },
   "types": "./dist/index.d.ts",
   "devDependencies": {
-    "@babel/core": "^7.22.11",
+    "@babel/core": "^7.23.0",
     "@babel/eslint-parser": "^7.22.9",
     "@babel/preset-env": "^7.22.20",
     "@heroicons/vue": "^2.0.18",
