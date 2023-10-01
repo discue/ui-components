@@ -82,7 +82,7 @@
     "babel-jest": "^27.5.1",
     "chai": "^4.3.8",
     "core-js": "^3.31.1",
-    "eslint": "^8.46.0",
+    "eslint": "^8.50.0",
     "eslint-plugin-vue": "^9.17.0",
     "firebase-tools": "^12.4.6",
     "jest": "^27.5.1",
