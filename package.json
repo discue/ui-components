@@ -101,7 +101,7 @@
     "vue-tsc": "^1.8.15",
     "vue3-jest": "^27.0.0-alpha.1",
     "vuepress": "2.0.0-beta.67",
-    "vuepress-plugin-sitemap2": "^2.0.0-beta.237"
+    "vuepress-plugin-sitemap2": "^2.0.0-beta.243"
   },
   "babel": {
     "presets": [
