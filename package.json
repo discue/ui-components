@@ -74,7 +74,7 @@
     "@vue/cli-service": "~5.0.8",
     "@vue/test-utils": "^2.4.1",
     "@vuepress/plugin-prismjs": "^2.0.0-rc.0",
-    "@vuepress/plugin-register-components": "^2.0.0-rc.0",
+    "@vuepress/plugin-register-components": "^2.0.0-rc.3",
     "@vuepress/plugin-search": "^2.0.0-rc.0",
     "@vuepress/plugin-shiki": "^2.0.0-rc.0",
     "@vuepress/theme-default": "^2.0.0-rc.0",
