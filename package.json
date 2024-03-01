@@ -100,7 +100,7 @@
     "vue-router": "^4.2.4",
     "vue-tsc": "^1.8.15",
     "vue3-jest": "^27.0.0-alpha.1",
-    "vuepress": "^2.0.0-rc.7",
+    "vuepress": "^2.0.0-rc.8",
     "vuepress-plugin-sitemap2": "^2.0.0-rc.16"
   },
   "babel": {
