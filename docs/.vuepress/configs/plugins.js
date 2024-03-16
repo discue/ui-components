@@ -1,7 +1,7 @@
 import { registerComponentsPlugin } from '@vuepress/plugin-register-components';
 import { shikiPlugin } from '@vuepress/plugin-shiki';
+import { sitemapPlugin } from '@vuepress/plugin-sitemap';
 import { path } from '@vuepress/utils';
-import { sitemapPlugin } from 'vuepress-plugin-sitemap2';
 
 export default [
     registerComponentsPlugin({
