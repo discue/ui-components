@@ -10,7 +10,8 @@ updates:
     groups:
       vuepress:
         patterns:
-          - "vuepress*" 
+          - "vuepress*"
+          - "@vuepress*"
 
   - package-ecosystem: github-actions
     assignees:
