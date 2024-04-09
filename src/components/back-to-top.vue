@@ -1,18 +1,18 @@
 <template>
     <Transition name="dsq-back-to-top">
         <button v-if="show"
-                @click="scrollToTop"
-                :class="buttonClazz">
+                :class="buttonClazz"
+                @click="scrollToTop">
             <ChevronUpIcon class="w-12 h-12" />
         </button>
     </Transition>
 </template>
 
 <script setup>
-import { ChevronUpIcon } from "@heroicons/vue/24/outline";
-import { debounce } from "ts-debounce";
-import { computed, onMounted, ref } from "vue";
-import { BACK_TO_TOP_COLOR_DEFAULT, getThemeProperty } from "../theme.js";
+import { ChevronUpIcon } from '@heroicons/vue/24/outline';
+import { debounce } from 'ts-debounce';
+import { computed, onMounted, ref } from 'vue';
+import { BACK_TO_TOP_COLOR_DEFAULT, getThemeProperty } from '../theme.js';
 
 const props = defineProps({
     offset: {
@@ -44,11 +44,11 @@ const getScrollTop = () => {
 }
 
 const scrollToTop = () => {
-    window.scrollTo({ top: 0, behavior: "smooth" })
+    window.scrollTo({ top: 0, behavior: 'smooth' })
 }
 
 onMounted(() => {
     scrollTop.value = getScrollTop()
-    window.addEventListener("scroll", () => onScroll())
+    window.addEventListener('scroll', () => onScroll())
 })
 </script>

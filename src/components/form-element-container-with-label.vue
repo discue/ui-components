@@ -13,13 +13,13 @@
                 <span v-if="showPattern"
                       :class="hintClazz"
                       @mousedown="onFocusRequest">Allowed values: {{ pattern
-                      }}</span>
+                    }}</span>
             </Transition>
             <Transition name="form-element-hint">
                 <span v-if="showFormat"
                       :class="hintClazz"
                       @mousedown="onFocusRequest">Allowed format: {{ format
-                      }}</span>
+                    }}</span>
             </Transition>
         </div>
         <div :class="[isInvalid ? '' : 'pb-1']">
@@ -31,33 +31,6 @@
                    :invalid="isInvalid && hasLostFocusAtLeastOnce" />
     </div>
 </template>
-
-<style>
-/*
- * The following styles are auto-applied to elements with
- * transition="modal" when their visibility is toggled
- * by Vue.js.
- *
- * You can easily play with the modal transition by editing
- * these styles.
- *
- * https://vuejs.org/examples/#modal
- */
-
-.form-element-hint-enter-from {
-    opacity: 0;
-}
-
-.form-element-hint-leave-to {
-    opacity: 0;
-}
-
-.form-element-hint-enter-from .form-element-hint-container,
-.form-element-hint-leave-to .form-element-hint-container {
-    -webkit-transform: scale(1.1);
-    transform: scale(1.1);
-}
-</style>
 
 <script setup>
 import { computed, ref, watch } from 'vue';
@@ -204,3 +177,30 @@ function onFocusRequest(e) {
     }
 }
 </script>
+
+<style>
+/*
+ * The following styles are auto-applied to elements with
+ * transition="modal" when their visibility is toggled
+ * by Vue.js.
+ *
+ * You can easily play with the modal transition by editing
+ * these styles.
+ *
+ * https://vuejs.org/examples/#modal
+ */
+
+.form-element-hint-enter-from {
+    opacity: 0;
+}
+
+.form-element-hint-leave-to {
+    opacity: 0;
+}
+
+.form-element-hint-enter-from .form-element-hint-container,
+.form-element-hint-leave-to .form-element-hint-container {
+    -webkit-transform: scale(1.1);
+    transform: scale(1.1);
+}
+</style>

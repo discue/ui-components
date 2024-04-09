@@ -6,10 +6,9 @@
                                    :description="error"
                                    :focussed="isFocussed">
         <div :class="wrapperClazz">
-            <div :class="optionClazz"
-                 v-for="option in options"
-                 :key="option.value">
-
+            <div v-for="option in options"
+                 :key="option.value"
+                 :class="optionClazz">
                 <input v-if="(disabled && modelValue == option.value) || !disabled"
                        :id="'radio_' + id + '_' + option.value + '_id'"
                        autocomplete="off"
@@ -29,7 +28,7 @@
                        @focusin="onFocus($event)"
                        @focusout="onBlur($event)"
                        @blur="onBlur($event)">
-                       
+
                     <div v-if="!isOnlySingleEntry">
                         <svg v-if="modelValue == option.value"
                              xmlns="http://www.w3.org/2000/svg"

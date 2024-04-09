@@ -9,8 +9,8 @@
                                    :show-pattern-hint="false"
                                    :show-format-hint="false"
                                    :description="description">
-
         <select :id="id"
+                ref="select"
                 :class="selectClazz"
                 :value="inputValue"
                 :disabled="disabled"
@@ -18,17 +18,14 @@
                 @focus="onFocus($event)"
                 @focusin="onFocus($event)"
                 @focusout="onBlur($event)"
-                @blur="onBlur($event)"
-                ref="select">
-                
-            <option :class="optionClazz"
-                    v-for="(element, index) in elements"
+                @blur="onBlur($event)">
+            <option v-for="(element, index) in elements"
                     :key="element.id"
+                    :class="optionClazz"
                     :value="index">
                 {{ element.name }}
             </option>
         </select>
-
     </FormElementContainerWithLabel>
 </template>
 
@@ -124,6 +121,8 @@ function onInput() {
 
 </script>
 
-<style>select:disabled {
+<style>
+select:disabled {
     opacity: 1 !important;
-}</style>
+}
+</style>

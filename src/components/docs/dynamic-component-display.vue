@@ -5,20 +5,23 @@
                    v-bind="componentProps"
                    v-model="modelValue">
             <template v-for="(index, name) in $slots"
-                      v-slot:[name]>
+                      #[name]>
                 <slot :name="name" />
             </template>
         </Component>
-
     </div>
 
     <div v-if="attachVModel"
          class="component-properties-model-value">
-        <Text>Component Value: <Text :highlight="true">{{ modelValue }}</Text></Text>
+        <Text>
+            Component Value: <Text :highlight="true">
+                {{ modelValue }}
+            </Text>
+        </Text>
     </div>
 
-    <div class="component-properties-preview"
-         v-if="showProperties">
+    <div v-if="showProperties"
+         class="component-properties-preview">
         <h3 class="text-xl font-medium inline-block">
             Properties
         </h3>
@@ -28,56 +31,74 @@
                 <div>
                     <Text :highlight="true"
                           :small="true"
-                          class="uppercase">Name</Text>
+                          class="uppercase">
+                        Name
+                    </Text>
                 </div>
                 <div>
                     <Text :highlight="true"
                           :small="true"
-                          class="uppercase">Type</Text>
+                          class="uppercase">
+                        Type
+                    </Text>
                 </div>
                 <div>
                     <Text :highlight="true"
                           :small="true"
-                          class="uppercase">Default</Text>
+                          class="uppercase">
+                        Default
+                    </Text>
                 </div>
                 <div>
                     <Text :highlight="true"
                           :small="true"
-                          class="uppercase">Value</Text>
+                          class="uppercase">
+                        Value
+                    </Text>
                 </div>
             </div>
 
-            <div class="grid grid-cols-4 border-b-2 border-stone-300 border-solid py-4 pl-4"
-                 v-for="(prop) in targetPropsForTable"
-                 :key="prop.name">
+            <div v-for="(prop) in targetPropsForTable"
+                 :key="prop.name"
+                 class="grid grid-cols-4 border-b-2 border-stone-300 border-solid py-4 pl-4">
                 <div>
                     <Text :small="false"
-                          class="">{{ prop.name }}</Text>
+                          class="">
+                        {{ prop.name }}
+                    </Text>
                 </div>
                 <div>
                     <Text :small="false"
-                          class="">{{ prop.type }}</Text>
+                          class="">
+                        {{ prop.type }}
+                    </Text>
                 </div>
                 <div>
                     <Text :small="false"
-                          class="">{{ prop.default }}</Text>
+                          class="">
+                        {{ prop.default }}
+                    </Text>
                 </div>
                 <div>
                     <select v-if="prop.allowInput && prop.type === 'Boolean'"
                             :value="componentProps[prop.name]"
-                            @input="castAndSet(prop, $event)"
-                            class="w-24 text-lg">
-                        <option class="w-24 text-lg">true</option>
-                        <option class="w-24 text-lg">false</option>
+                            class="w-24 text-lg"
+                            @input="castAndSet(prop, $event)">
+                        <option class="w-24 text-lg">
+                            true
+                        </option>
+                        <option class="w-24 text-lg">
+                            false
+                        </option>
                     </select>
                     <input v-else-if="prop.allowInput && prop.type === 'Array'"
                            :value="JSON.stringify(componentProps[prop.name])"
-                           @input="castAndSet(prop, $event)"
-                           class="text-base border-b-2 border-b-solid border-gray-900 w-20">
+                           class="text-base border-b-2 border-b-solid border-gray-900 w-20"
+                           @input="castAndSet(prop, $event)">
                     <input v-else-if="prop.allowInput"
                            :value="componentProps[prop.name]"
-                           @input="castAndSet(prop, $event)"
-                           class="text-base border-b-2 border-b-solid border-gray-900 w-20">
+                           class="text-base border-b-2 border-b-solid border-gray-900 w-20"
+                           @input="castAndSet(prop, $event)">
                 </div>
             </div>
         </div>
@@ -93,16 +114,20 @@
                 <div>
                     <Text :highlight="true"
                           :small="true"
-                          class="uppercase">Event</Text>
+                          class="uppercase">
+                        Event
+                    </Text>
                 </div>
             </div>
 
-            <div class="grid grid-cols-4 border-b-2 border-stone-300 border-solid py-4 pl-4"
-                 v-for="(prop) in targetEmitsForTable"
-                 :key="prop">
+            <div v-for="(prop) in targetEmitsForTable"
+                 :key="prop"
+                 class="grid grid-cols-4 border-b-2 border-stone-300 border-solid py-4 pl-4">
                 <div>
                     <Text :small="false"
-                          class="">{{ prop }}</Text>
+                          class="">
+                        {{ prop }}
+                    </Text>
                 </div>
             </div>
         </div>
@@ -139,7 +164,7 @@ const props = defineProps({
 
 // we don't care about losing reactivity here
 // we also don't report value updates to the parent component
-// eslint-disable-next-line vue/no-setup-props-destructure
+
 const modelValue = ref(props.initialValue)
 
 const id = computed(() => {

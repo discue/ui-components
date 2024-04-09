@@ -1,21 +1,22 @@
 <template>
-    <FormElementContainerWithLabel :description="copyToClipboardErrorMsg"
+    <FormElementContainerWithLabel :id="id"
+                                   :description="copyToClipboardErrorMsg"
                                    :disabled="true"
                                    :focussed="false"
                                    :focus-input-callback="focusInput"
                                    :force-show-error-message="true"
-                                   :id="id"
                                    :input-invalid="copyToClipboardFailure"
                                    :label="label"
                                    :show-pattern-hint="false"
                                    :show-format-hint="false"
                                    :value="modelValue">
-
         <div class="relative px-3 mt-4 mb-1 flex flex-row items-center">
             <div class="mr-8"
                  :class="textClazz">
                 <Text :id="id"
-                      :inherit-font-size="true">{{ text }}</Text>
+                      :inherit-font-size="true">
+                    {{ text }}
+                </Text>
             </div>
 
             <button v-if="showClipboardButton"
@@ -23,13 +24,13 @@
                     @click.prevent="copyKeyToClipboard">
                 <ClipboardIcon class="h-6 w-6 stroke-2" />
             </button>
-            <button click.prevent
-                    v-if="copyToClipboardSuccess"
+            <button v-if="copyToClipboardSuccess"
+                    click.prevent
                     class="absolute bg-transparent right-0 p-2 text-green-700 outline-none">
                 <ClipboardDocumentCheckIcon class="h-6 w-6" />
             </button>
-            <button click.prevent
-                    v-if="copyToClipboardFailure"
+            <button v-if="copyToClipboardFailure"
+                    click.prevent
                     class="absolute bg-transparent right-0 p-2 text-attention outline-none">
                 <svg xmlns="http://www.w3.org/2000/svg"
                      class="h-6 w-6"
@@ -45,13 +46,13 @@
         </div>
     </FormElementContainerWithLabel>
 </template>
-  
+
 <script setup>
-import { ClipboardDocumentCheckIcon, ClipboardIcon } from '@heroicons/vue/24/outline';
-import { computed, ref } from 'vue';
-import { FORM_ELEMENT_INPUT_FONT_WEIGHT_DEFAULT, FORM_ELEMENT_INPUT_TEXT_SIZE_DEFAULT, getThemeProperty } from '../theme.js';
-import FormElementContainerWithLabel from './form-element-container-with-label.vue';
-import Text from './text.vue';
+import { ClipboardDocumentCheckIcon, ClipboardIcon } from '@heroicons/vue/24/outline'
+import { computed, ref } from 'vue'
+import { FORM_ELEMENT_INPUT_FONT_WEIGHT_DEFAULT, FORM_ELEMENT_INPUT_TEXT_SIZE_DEFAULT, getThemeProperty } from '../theme.js'
+import FormElementContainerWithLabel from './form-element-container-with-label.vue'
+import Text from './text.vue'
 
 const props = defineProps({
     enableCopyToClipboard: {
@@ -91,7 +92,7 @@ async function copyKeyToClipboard() {
         await navigator.clipboard.writeText(props.text)
         copyToClipboardSuccess.value = true
         copyToClipboardFailure.value = false
-    } catch (e) {
+    } catch (_e) {
         copyToClipboardSuccess.value = false
         copyToClipboardFailure.value = true
         copyToClipboardErrorMsg.value = 'Sorry, we were not able to copy to the clipboard at this time. Please copy the text manually.'
