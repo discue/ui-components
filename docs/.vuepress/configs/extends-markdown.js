@@ -1,5 +1,5 @@
-import anchorPlugin from 'markdown-it-anchor';
-import attrsPlugin from 'markdown-it-attrs';
+import anchorPlugin from 'markdown-it-anchor'
+import markdownItArrs from 'markdown-it-attrs'
 
 // eslint-disable-next-line no-control-regex
 const rControl = /[\u0000-\u001f]/g
@@ -26,7 +26,7 @@ const slugify = (str) => {
 }
 
 export default (md) => {
-    md.use(attrsPlugin, {
+    md.use(markdownItArrs, {
         allowedAttributes: ['id'],
         leftDelimiter: '[',
         rightDelimiter: ']',
@@ -39,6 +39,6 @@ export default (md) => {
             symbol: '#',
             space: true,
             placement: 'before',
-        })
+        }),
     })
 }
