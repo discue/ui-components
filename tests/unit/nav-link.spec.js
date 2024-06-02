@@ -66,7 +66,7 @@ describe('NavLink.vue', () => {
         href: 'google.com/relative'
       }
     })
-    expect(wrapper.vm.$refs.externalLink).to.not.be.undefined
+    expect(wrapper.classes('external-link-icon')).to.equal(true)
   })
   it('renders the external icon for external links with protocol', () => {
     const msg = 'new message'
@@ -78,7 +78,7 @@ describe('NavLink.vue', () => {
         href: 'https://www.google.com/relative'
       }
     })
-    expect(wrapper.vm.$refs.externalLink).to.not.be.undefined
+    expect(wrapper.classes('external-link-icon')).to.equal(true)
   })
   it('sets target _self by default', () => {
     const msg = 'new message'
