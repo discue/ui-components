@@ -2,6 +2,79 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [0.43.0](https://github.com/discue/ui-components/compare/v0.42.0...v0.43.0) (2024-06-02)
+
+
+### Features
+
+* **theme:** decrease font-weight of input placeholder ([0b9fe0f](https://github.com/discue/ui-components/commit/0b9fe0fe10c9ddeb09e7da89f621fa8e7094189d))
+* use consistent external link icon ([c1fc5d5](https://github.com/discue/ui-components/commit/c1fc5d563445c6af4808cfc3dbd1312696a3f00c))
+
+
+### Bug Fixes
+
+* **theme:** default border color of link element ([ef03118](https://github.com/discue/ui-components/commit/ef03118f52ed403e79034f46417d3820291c95d9))
+
+
+### Chores
+
+* **ci:** update patterns for vuepress dependencies ([d014306](https://github.com/discue/ui-components/commit/d014306abb0427822d9d00032724784f78a53240))
+* **ci:** update vuepress dependencies together ([e0cf1c7](https://github.com/discue/ui-components/commit/e0cf1c7061a7b2f3906f109277dba6a5a77ed0e2))
+* **deps-dev:** bump @babel/core from 7.22.11 to 7.23.0 ([4913a68](https://github.com/discue/ui-components/commit/4913a68bedd7da8ff30387245a1873c0a8e829a1))
+* **deps-dev:** bump @babel/core from 7.23.5 to 7.23.7 ([12bc095](https://github.com/discue/ui-components/commit/12bc095730024fee4279890712a984f7257fd45c))
+* **deps-dev:** bump @babel/eslint-parser from 7.22.11 to 7.23.3 ([d1cef6a](https://github.com/discue/ui-components/commit/d1cef6a24ee78cbea36761cf3c1b6fee93a22f04))
+* **deps-dev:** bump @babel/preset-env from 7.22.14 to 7.22.20 ([8f58e04](https://github.com/discue/ui-components/commit/8f58e044d5ca6a64541ab6c35a0cc74c6ad6b390))
+* **deps-dev:** bump @babel/preset-env from 7.22.20 to 7.23.2 ([fa3a10e](https://github.com/discue/ui-components/commit/fa3a10e0c77a01e5d9c06bf2a90d6ce0e3825391))
+* **deps-dev:** bump @babel/preset-env from 7.24.4 to 7.24.5 ([ba43825](https://github.com/discue/ui-components/commit/ba43825f7be0c6fd35bd4c0c03af5c41bce6f452))
+* **deps-dev:** bump @heroicons/vue from 2.0.18 to 2.1.1 ([2565494](https://github.com/discue/ui-components/commit/256549420b248abb375aa23722e400e493768411))
+* **deps-dev:** bump @heroicons/vue from 2.1.1 to 2.1.3 ([56ad755](https://github.com/discue/ui-components/commit/56ad7558ab8a9d20d5faa0da6bdeb6b85a0ddba7))
+* **deps-dev:** bump @vue/test-utils from 2.4.5 to 2.4.6 ([f218795](https://github.com/discue/ui-components/commit/f218795bbd5d22aed328079ec4b055c0b250a60a))
+* **deps-dev:** bump chai from 4.3.8 to 4.3.10 ([8d0f26d](https://github.com/discue/ui-components/commit/8d0f26d4512172bbba743c2f14e675a12c980a64))
+* **deps-dev:** bump core-js from 3.34.0 to 3.35.0 ([1f201ab](https://github.com/discue/ui-components/commit/1f201abcd662360398a55f70482cbcdf398864bf))
+* **deps-dev:** bump core-js from 3.36.0 to 3.36.1 ([89da7c1](https://github.com/discue/ui-components/commit/89da7c13cc1474fc440d62b5966bedecad32bb1f))
+* **deps-dev:** bump eslint from 8.48.0 to 8.50.0 ([c6dd7a8](https://github.com/discue/ui-components/commit/c6dd7a8950c479a746f407f28a6fa7e05c016d00))
+* **deps-dev:** bump eslint from 8.50.0 to 8.52.0 ([183f69c](https://github.com/discue/ui-components/commit/183f69c9601311c48d9956db3be93e928f1056de))
+* **deps-dev:** bump eslint from 8.55.0 to 8.56.0 ([1b5fa96](https://github.com/discue/ui-components/commit/1b5fa96f243ddabca10f0a1c8c482c461b3f2809))
+* **deps-dev:** bump eslint from 9.0.0 to 9.1.1 ([eee9fef](https://github.com/discue/ui-components/commit/eee9fef298f0f66a55655ebfaab344fcb5674d8c))
+* **deps-dev:** bump eslint from 9.1.1 to 9.4.0 ([c3f97a6](https://github.com/discue/ui-components/commit/c3f97a636f8e8e2ecae3c9da49ffc50335e547de))
+* **deps-dev:** bump eslint-plugin-vue from 9.19.2 to 9.21.1 ([50b4b4e](https://github.com/discue/ui-components/commit/50b4b4e7f963a9e1edba560814cdd18c781b74ec))
+* **deps-dev:** bump eslint-plugin-vue from 9.23.0 to 9.24.0 ([208fa71](https://github.com/discue/ui-components/commit/208fa710fa5a26195b6542b7f00a70cd1b2c72cf))
+* **deps-dev:** bump eslint-plugin-vue from 9.24.1 to 9.25.0 ([7bb1593](https://github.com/discue/ui-components/commit/7bb1593c8241303c4e88b083b6184938ee179ae2))
+* **deps-dev:** bump firebase-tools from 12.5.2 to 12.8.0 ([4e8b5f6](https://github.com/discue/ui-components/commit/4e8b5f624dabeaa93c6921f86edffbcc6fefcea8))
+* **deps-dev:** bump firebase-tools from 12.9.1 to 13.0.2 ([3e93280](https://github.com/discue/ui-components/commit/3e93280c817af86829033008992b4aa5044275b3))
+* **deps-dev:** bump nodemon from 3.1.0 to 3.1.2 ([4652036](https://github.com/discue/ui-components/commit/4652036b8d2691516e62183f6aee770ce4e7e02b))
+* **deps-dev:** bump postcss from 8.4.32 to 8.4.33 ([9e39dbe](https://github.com/discue/ui-components/commit/9e39dbe17e8db753d6fb868e311a37e31741ac62))
+* **deps-dev:** bump postcss-cli from 10.1.0 to 11.0.0 ([590de83](https://github.com/discue/ui-components/commit/590de8397af0f7f655f1070dcc8b1672ae74e5fb))
+* **deps-dev:** bump postcss-import from 16.0.1 to 16.1.0 ([5193300](https://github.com/discue/ui-components/commit/519330026cb4d5f4334ada58b9b6077cfcfbb319))
+* **deps-dev:** bump tailwindcss from 3.3.3 to 3.3.5 ([9254d75](https://github.com/discue/ui-components/commit/9254d7506ce0826f6334559d34b6f6dca583c50c))
+* **deps-dev:** bump the vuepress group with 1 update ([0692c9b](https://github.com/discue/ui-components/commit/0692c9b3c03a7f9cbc35e6ca9eb7a86b69100455))
+* **deps-dev:** bump the vuepress group with 1 update ([cdfca75](https://github.com/discue/ui-components/commit/cdfca75f5406c7558b1261c9dc9afd03f6d94565))
+* **deps-dev:** bump the vuepress group with 1 update ([83f4a08](https://github.com/discue/ui-components/commit/83f4a08bff568c3ba43ef961f1a03620566a2922))
+* **deps-dev:** bump the vuepress group with 4 updates ([be97445](https://github.com/discue/ui-components/commit/be9744532db9315ea2e557c0212b64b5d72612a0))
+* **deps-dev:** bump the vuepress group with 7 updates ([1352813](https://github.com/discue/ui-components/commit/1352813e80e1b4ebadfb1876268a917b2f803517))
+* **deps-dev:** bump vite from 5.2.10 to 5.2.12 ([717b307](https://github.com/discue/ui-components/commit/717b30742d1b46515406f4e38b008c23ecafd2f0))
+* **deps-dev:** bump vite from 5.2.8 to 5.2.10 ([88f3d89](https://github.com/discue/ui-components/commit/88f3d89d6c55a0162052d711f384f58f9ad00a9d))
+* **deps-dev:** bump vue-router from 4.3.0 to 4.3.2 ([9ee5a8e](https://github.com/discue/ui-components/commit/9ee5a8e39c52511987cfda1ddb9dee632becc21e))
+* **deps-dev:** bump vue-tsc from 1.8.8 to 1.8.15 ([d5f62e1](https://github.com/discue/ui-components/commit/d5f62e1366714df02dbbf1452050ace23eccb0be))
+* **deps-dev:** bump vue-tsc from 2.0.11 to 2.0.16 ([7287723](https://github.com/discue/ui-components/commit/7287723b5d0c4a3781ca9d394650dd4049657f11))
+* **deps:** bump actions/checkout from 3 to 4 ([187d6c4](https://github.com/discue/ui-components/commit/187d6c43c8fa96f59976b13c8f9eb44070f4e0b3))
+* **deps:** bump actions/setup-node from 3 to 4 ([8814db2](https://github.com/discue/ui-components/commit/8814db2e46592621e15a1e278f2c36f22082e47a))
+* **deps:** bump actions/stale from 8 to 9 ([2ad1cdc](https://github.com/discue/ui-components/commit/2ad1cdc8b3f0b09fd9e53e53f027fda4c1aeedfd))
+* **deps:** bump google-github-actions/auth from 1 to 2 ([e1fc038](https://github.com/discue/ui-components/commit/e1fc038ad8208b32f0f6e3c551416bf81e649d59))
+* **deps:** revert chai to fix test issues ([9ce702e](https://github.com/discue/ui-components/commit/9ce702e83ab15111f9d0834550cc74e7af50cbd8))
+* **deps:** simply dependency tree ([68db4e2](https://github.com/discue/ui-components/commit/68db4e2ef13ec65be11b84b8e974686400f6d4d9))
+* **deps:** update dependencies ([32c0586](https://github.com/discue/ui-components/commit/32c058679b5cf9196470f95a0f09737f7b6a1cc5))
+* **deps:** update dependencies ([7403931](https://github.com/discue/ui-components/commit/74039316eb9ebf31277abd106bc40d49ed304772))
+* **deps:** update dependencies ([36e1608](https://github.com/discue/ui-components/commit/36e1608d4ef030911b345b75e48b583693446735))
+* **deps:** update dependencies ([72a694c](https://github.com/discue/ui-components/commit/72a694cdc6c57f62b9cbe9b3132103de62dc61c6))
+* fix breaking changes of new vuepress beta ([500dda1](https://github.com/discue/ui-components/commit/500dda17bbc26a1e44641410891cdcc1ff3f3877))
+* move external link styles to dedicated file ([d8992f1](https://github.com/discue/ui-components/commit/d8992f1b65746d317c735e631f73fb1250d23087))
+* override page meta to not include footer tag ([7bc8585](https://github.com/discue/ui-components/commit/7bc8585ef1be48de465777f6b78f7ee9473b5bcd))
+* remove unused PageMeta component override ([f06b116](https://github.com/discue/ui-components/commit/f06b116fec8579baba4778e454958fcb56093b6c))
+* update dependencies ([e865edd](https://github.com/discue/ui-components/commit/e865edd15ab94a168c691beedd3136c5bc435343))
+* use markdown config from api docs ([e0202ff](https://github.com/discue/ui-components/commit/e0202ff8f5df51eb24542b6e64ee4890bd1c1d49))
+* use new eslint version and config ([9b24a24](https://github.com/discue/ui-components/commit/9b24a243d8fefd2028a28a575a7fc614def74493))
+
 ## [0.42.0](https://github.com/discue/ui-components/compare/v0.41.0...v0.42.0) (2023-09-03)
 
 
