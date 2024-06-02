@@ -3,6 +3,7 @@
 @import './doc-search.scss';
 @import './footer.scss';
 @import './navbar.scss';
+@import './page-meta-nav.scss';
 @import './preview.scss';
 @import './site-name.scss';
 @import './theme.scss';
@@ -75,6 +76,19 @@ a.header-anchor {
 
 .external-link-icon {
     --external-link-icon-color: var(--c-text-quote);
+}
+
+.external-link::after,
+.external-link-icon::after {
+    content: "";
+    display: inline-block;
+    padding: 1px;
+    width: 11px;
+    height: 11px;
+    background: var(--external-link-icon-color);
+    flex-shrink: 0;
+    -webkit-mask-image: var(--external-link-icon);
+    mask-image: var(--external-link-icon);
 }
 
 .medium-zoom-overlay {
