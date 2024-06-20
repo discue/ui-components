@@ -16,7 +16,7 @@
   "scripts": {
     "serve": "vue-cli-service serve",
     "build": "bash ./build.sh",
-    "build-types": "vue-tsc --declaration --emitDeclarationOnly",
+    "build-types": "tsc dist/ui.es.js --declaration --emitDeclarationOnly --allowJs",
     "build-lib-public-no-ssr": "vue-cli-service build --target lib --name ui src/index.ts",
     "build-lib-public-for-ssr": "vue-cli-service build --target lib --name ui --dest dist/ssr src/index.ts",
     "build-lib-internal-no-ssr": "vue-cli-service build --target lib --name internal --dest dist/internal src/internal/index.ts",
@@ -61,7 +61,7 @@
       "require": "./dist/ssr/internal/internal.umd.js"
     }
   },
-  "types": "./dist/index.d.ts",
+  "types": "./dist/ui.es.d.ts",
   "devDependencies": {
     "@babel/core": "^7.23.7",
     "@babel/preset-env": "^7.24.5",
