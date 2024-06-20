@@ -2,6 +2,7 @@
 
 set -exu
 
+rm -rf dist
 
 # replace duplicate footer tag
 sed -i 's/<footer/<div/g' ./node_modules/@vuepress/theme-default/lib/client/components/PageMeta.vue
