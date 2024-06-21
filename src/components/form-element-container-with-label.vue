@@ -5,10 +5,15 @@
          @focusin="onFocus"
          @mouseleave="onBlur"
          @focusout="onBlur">
-        <div class="relative bg-inherit">
-            <label :for="id"
-                   :class="labelClazz"
-                   @mousedown="onFocusRequest">{{ label }}</label>
+        <div class="relative flex bg-inherit">
+            <div :class="labelWrapperClazz">
+                <NoSymbolIcon v-if="disabled"
+                              :class="labelDisabledIconClazz">
+                </NoSymbolIcon>
+                <label :for="id"
+                       :class="labelClazz"
+                       @mousedown="onFocusRequest">{{ label }}</label>
+            </div>
             <Transition name="form-element-hint">
                 <span v-if="showPattern"
                       :class="hintClazz"
@@ -33,6 +38,7 @@
 </template>
 
 <script setup>
+import { NoSymbolIcon } from '@heroicons/vue/16/solid';
 import { computed, ref, watchEffect } from 'vue';
 import { FORM_ELEMENT_BORDER_COLOR_ACTIVE, FORM_ELEMENT_BORDER_COLOR_ATTENTION, FORM_ELEMENT_BORDER_COLOR_DEFAULT, FORM_ELEMENT_BORDER_RING_COLOR_DEFAULT, FORM_ELEMENT_BORDER_RING_SIZE_DEFAULT, FORM_ELEMENT_BORDER_SIZE_DEFAULT, FORM_ELEMENT_HINT_COLOR_DEFAULT, FORM_ELEMENT_HINT_SIZE_DEFAULT, FORM_ELEMENT_HINT_WEIGHT_DEFAULT, FORM_ELEMENT_LABEL_BACKGROUND_DEFAULT, FORM_ELEMENT_LABEL_COLOR_ATTENTION, FORM_ELEMENT_LABEL_COLOR_DEFAULT, FORM_ELEMENT_LABEL_SIZE_DEFAULT, FORM_ELEMENT_LABEL_WEIGHT_DEFAULT, getThemeProperty } from '../theme.js';
 import FormError from './form-element-error-message.vue';
@@ -123,18 +129,37 @@ const parentClazz = computed(() => {
 
     return clazz.join(' ')
 })
-const labelClazz = computed(() => {
+const labelDisabledIconClazz = computed(() => {
     const clazz = [
-        '-left-3 -top-3.5 py-1 px-2 absolute leading-7',
+        'w-5',
+    ]
+
+    // if (props.disabled) {
+    //     clazz.push('cursor-not-allowed')
+    // } else {
+    //     clazz.push('cursor-text')
+    // }
+
+    // if (isInvalid.value && !labelOrChildHaveFocus.value) {
+    //     clazz.push(getThemeProperty(FORM_ELEMENT_LABEL_COLOR_ATTENTION).value)
+    // } else {
+    //     clazz.push(getThemeProperty(FORM_ELEMENT_LABEL_COLOR_DEFAULT).value)
+    // }
+
+    return clazz.join(' ')
+})
+const labelWrapperClazz = computed(() => {
+    const clazz = [
+        'flex justify-center items-center space-x-1 h-8 px-2 absolute',
         getThemeProperty(FORM_ELEMENT_LABEL_SIZE_DEFAULT).value,
         getThemeProperty(FORM_ELEMENT_LABEL_BACKGROUND_DEFAULT).value,
         getThemeProperty(FORM_ELEMENT_LABEL_WEIGHT_DEFAULT).value
     ]
 
     if (props.disabled) {
-        clazz.push('cursor-not-allowed')
+        clazz.push('cursor-not-allowed', '-top-[1.1rem]', '-left-[1.1rem]')
     } else {
-        clazz.push('cursor-text')
+        clazz.push('cursor-text', '-top-3.5', 'px-2 ', '-left-2')
     }
 
     if (isInvalid.value && !labelOrChildHaveFocus.value) {
@@ -144,6 +169,9 @@ const labelClazz = computed(() => {
     }
 
     return clazz.join(' ')
+})
+const labelClazz = computed(() => {
+    return ''
 })
 const hintClazz = computed(() => {
     const clazz = [
