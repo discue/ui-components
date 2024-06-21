@@ -2,6 +2,38 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [0.44.0](https://github.com/discue/ui-components/compare/v0.43.0...v0.44.0) (2024-06-21)
+
+
+### Features
+
+* **element-container:** add stop icon if element is disabled ([1edc4c0](https://github.com/discue/ui-components/commit/1edc4c074ac80469ec8809cd3224d4871b9e3bcc))
+* **element-container:** align label of non disabled elements with border ([ec60c13](https://github.com/discue/ui-components/commit/ec60c133ef19f3cc14ba5068eb2fa08e5994ce16))
+* **input-select:** also support kv pairs with {id,alias} ([b636a85](https://github.com/discue/ui-components/commit/b636a85aaac2bfc337f878266c266a3b77968130))
+
+
+### Bug Fixes
+
+* **package:** no types created during build ([7cc2e39](https://github.com/discue/ui-components/commit/7cc2e3980d7f702b5451077183f9b84bfb758ee9))
+
+
+### Refactorings
+
+* **element-container:** remove unused computed class var ([8ca0069](https://github.com/discue/ui-components/commit/8ca0069c76102bbfb2feb1e9944a44d0c815a14b))
+
+
+### Chores
+
+* **build:** dont fail if tsc reports error and type file was created ([6f15eb8](https://github.com/discue/ui-components/commit/6f15eb82fa717c45dff48a12caf6e4508a3b9063))
+* **build:** print output and fail on undefined variables ([564989b](https://github.com/discue/ui-components/commit/564989b8a2a1634693c3d3a37905e76cbe52d95d))
+* **build:** remove dist before building ([ada32c7](https://github.com/discue/ui-components/commit/ada32c7961dfc526b5c330cfcdc7e4a356ba4e33))
+* **deps:** add bundler vite again ([e54dd1b](https://github.com/discue/ui-components/commit/e54dd1bb410be4b0c53fa0935b501a73dd3e9422))
+* **deps:** update dependencies ([4aceb2c](https://github.com/discue/ui-components/commit/4aceb2c24cb38590e0f8e86de5e4875cebb92993))
+* **development:** make script fail if commands fail ([cfa1371](https://github.com/discue/ui-components/commit/cfa1371d44d264a3f9a115175eb9f48ee48a4026))
+* **docs:** update selectors to match new class names ([e412be1](https://github.com/discue/ui-components/commit/e412be1bf044ba85805b877007c3f64be84aef59))
+* **element-container:** align stop icon with label ([58d9fe6](https://github.com/discue/ui-components/commit/58d9fe638cbdc0f25f228661e6274c98f9f88055))
+* **element-container:** use watchEffect to prevent deprecation warnings ([c43fbc4](https://github.com/discue/ui-components/commit/c43fbc4417d4ab6ef241dfd7099e5944eac9b0ef))
+
 ## [0.43.0](https://github.com/discue/ui-components/compare/v0.42.0...v0.43.0) (2024-06-02)
 
 
