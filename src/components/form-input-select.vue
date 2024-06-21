@@ -23,7 +23,7 @@
                     :key="element.id"
                     :class="optionClazz"
                     :value="index">
-                {{ element.name }}
+                {{ element.name || element.alias }}
             </option>
         </select>
     </FormElementContainerWithLabel>
