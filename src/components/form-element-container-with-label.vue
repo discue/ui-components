@@ -150,16 +150,16 @@ const labelDisabledIconClazz = computed(() => {
 })
 const labelWrapperClazz = computed(() => {
     const clazz = [
-        'flex justify-center items-center space-x-1 h-8 px-2 absolute',
+        'flex justify-center items-center space-x-1 h-8 px-2 absolute -top-[1.1rem]',
         getThemeProperty(FORM_ELEMENT_LABEL_SIZE_DEFAULT).value,
         getThemeProperty(FORM_ELEMENT_LABEL_BACKGROUND_DEFAULT).value,
         getThemeProperty(FORM_ELEMENT_LABEL_WEIGHT_DEFAULT).value
     ]
 
     if (props.disabled) {
-        clazz.push('cursor-not-allowed', '-top-[1.1rem]', '-left-[1.1rem]')
+        clazz.push('cursor-not-allowed', '-left-[1.1rem]')
     } else {
-        clazz.push('cursor-text', '-top-3.5', 'px-2 ', '-left-2')
+        clazz.push('cursor-text', '-left-[0.65rem]')
     }
 
     if (isInvalid.value && !labelOrChildHaveFocus.value) {
