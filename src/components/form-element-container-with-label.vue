@@ -11,7 +11,6 @@
                               :class="labelDisabledIconClazz">
                 </NoSymbolIcon>
                 <label :for="id"
-                       :class="labelClazz"
                        @mousedown="onFocusRequest">{{ label }}</label>
             </div>
             <Transition name="form-element-hint">
@@ -157,9 +156,6 @@ const labelWrapperClazz = computed(() => {
     }
 
     return clazz.join(' ')
-})
-const labelClazz = computed(() => {
-    return ''
 })
 const hintClazz = computed(() => {
     const clazz = [
