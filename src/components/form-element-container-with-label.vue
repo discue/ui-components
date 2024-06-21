@@ -33,7 +33,7 @@
 </template>
 
 <script setup>
-import { computed, ref, watch } from 'vue';
+import { computed, ref, watchEffect } from 'vue';
 import { FORM_ELEMENT_BORDER_COLOR_ACTIVE, FORM_ELEMENT_BORDER_COLOR_ATTENTION, FORM_ELEMENT_BORDER_COLOR_DEFAULT, FORM_ELEMENT_BORDER_RING_COLOR_DEFAULT, FORM_ELEMENT_BORDER_RING_SIZE_DEFAULT, FORM_ELEMENT_BORDER_SIZE_DEFAULT, FORM_ELEMENT_HINT_COLOR_DEFAULT, FORM_ELEMENT_HINT_SIZE_DEFAULT, FORM_ELEMENT_HINT_WEIGHT_DEFAULT, FORM_ELEMENT_LABEL_BACKGROUND_DEFAULT, FORM_ELEMENT_LABEL_COLOR_ATTENTION, FORM_ELEMENT_LABEL_COLOR_DEFAULT, FORM_ELEMENT_LABEL_SIZE_DEFAULT, FORM_ELEMENT_LABEL_WEIGHT_DEFAULT, getThemeProperty } from '../theme.js';
 import FormError from './form-element-error-message.vue';
 
@@ -155,7 +155,7 @@ const hintClazz = computed(() => {
 
     return clazz.join(' ')
 })
-const stopFocusListener = watch(() => {
+const stopFocusListener = watchEffect(() => {
     if (hasFocus.value) {
         wasFocussedAtLeastOnce.value = true
     } else if (wasFocussedAtLeastOnce.value && props.focussed === false) {
