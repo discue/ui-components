@@ -192,20 +192,21 @@ const targetPropsForTable = computed(() => {
         componentProps = {}
     }
 
-    return Object.entries(componentProps).reduce((context, [key, value], index) => {
-        if (value.__hideInPreview) {
-            return context
-        }
-        return Object.assign(context, reactive({
-            [key]: {
-                name: key,
-                type: value.type?.prototype.constructor.name || 'unknown',
-                allowInput: value.type?.prototype.constructor.name !== 'Function' || false,
-                'default': value.default,
-                index
+    return Object.entries(componentProps).sort(([a], [b]) => a.localeCompare(b))
+        .reduce((context, [key, value], index) => {
+            if (value.__hideInPreview) {
+                return context
             }
-        }))
-    }, {})
+            return Object.assign(context, reactive({
+                [key]: {
+                    name: key,
+                    type: value.type?.prototype.constructor.name || 'unknown',
+                    allowInput: value.type?.prototype.constructor.name !== 'Function' || false,
+                    'default': value.default,
+                    index
+                }
+            }))
+        }, {})
 })
 
 const targetEmitsForTable = computed(() => {
