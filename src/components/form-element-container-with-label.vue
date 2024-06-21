@@ -131,20 +131,8 @@ const parentClazz = computed(() => {
 })
 const labelDisabledIconClazz = computed(() => {
     const clazz = [
-        'w-5',
+        'w-5', 'top-[0.1rem]'
     ]
-
-    // if (props.disabled) {
-    //     clazz.push('cursor-not-allowed')
-    // } else {
-    //     clazz.push('cursor-text')
-    // }
-
-    // if (isInvalid.value && !labelOrChildHaveFocus.value) {
-    //     clazz.push(getThemeProperty(FORM_ELEMENT_LABEL_COLOR_ATTENTION).value)
-    // } else {
-    //     clazz.push(getThemeProperty(FORM_ELEMENT_LABEL_COLOR_DEFAULT).value)
-    // }
 
     return clazz.join(' ')
 })
