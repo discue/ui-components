@@ -9,6 +9,7 @@ export { default as DropDownMenuBannerItem } from './components/drop-down-menu-b
 export { default as DropDownMenuItem } from './components/drop-down-menu-item.vue';
 export { default as DropDownMenu } from './components/drop-down-menu.vue';
 export { default as FormElementErrorMessage } from './components/form-element-error-message.vue';
+export { default as FormElementsContainer } from './components/form-elements-container.vue';
 export { default as FormImmutableText } from './components/form-immutable-text.vue';
 export { default as FormInputRadio } from './components/form-input-radio.vue';
 export { default as FormInputSelect } from './components/form-input-select.vue';
