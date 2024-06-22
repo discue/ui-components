@@ -4,9 +4,7 @@ set -exu
 
 rm -rf dist
 
-# replace duplicate footer tag
-sed -i 's/<footer/<div/g' ./node_modules/@vuepress/theme-default/lib/client/components/VPPageMeta.vue
-sed -i 's/<\/footer>/<\/div>/g' ./node_modules/@vuepress/theme-default/lib/client/components/VPPageMeta.vue
+./prepare-docs-build.sh
 
 npx vite build --config vite.config.ts
 npx vite build --config vite.config.internal.ts
