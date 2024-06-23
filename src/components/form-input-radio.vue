@@ -133,7 +133,7 @@ const isOnlySingleEntry = computed(() => {
 })
 
 const inputDisabled = computed(() => {
-    return inputDisabled.value || isOnlySingleEntry.value
+    return props.disabled || isOnlySingleEntry.value
 })
 
 const labelClazz = computed(() => {
