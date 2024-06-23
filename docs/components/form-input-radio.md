@@ -5,7 +5,7 @@ A radio button element wrapped inside a labelled form element. The label and inp
 The element supports the Vue.js [v-model directive](https://vuejs.org/api/built-in-directives.html#v-model). On input the directive will be updated with the index of selected option.
 
 ## Preview
-<DynamicComponentDisplay type="FormInputRadio" :attach-v-model="true" initial-value="2" id="demoRadio" name="radio" description="Showcases the radio element" label="Label" :options="[{value: '1', label:'First Element'}, {value: '2', label: 'Second Element'}]"></DynamicComponentDisplay>
+<DynamicComponentDisplay type="FormInputRadio" :attach-v-model="true" initial-value="2" id="demoRadio2" name="demoRadio" description="Showcases the radio element" label="Label" :options="[{value: '1', label:'First Element'}, {value: '2', label: 'Second Element'}]"></DynamicComponentDisplay>
 
 ## Example
 @[code](@examples/FormInputRadio.vue)
