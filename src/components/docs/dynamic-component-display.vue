@@ -171,9 +171,13 @@ const id = computed(() => {
     return props.type.toLocaleLowerCase() + '-preview'
 })
 
-const componentProps = computed(() => {
+const definedComponentProps = computed(() => {
     const instance = getCurrentInstance()
-    const p = Object.entries(instance.appContext.components[props.type].props).reduce((context, [key, value]) => {
+    return instance.appContext.components[props.type].props
+})
+
+const componentProps = computed(() => {
+    const p = Object.entries(definedComponentProps.value).reduce((context, [key, value]) => {
         if (attrs[key] != null) {
             context[key] = attrs[key]
         } else {
@@ -185,9 +189,7 @@ const componentProps = computed(() => {
 })
 
 const targetPropsForTable = computed(() => {
-    const instance = getCurrentInstance()
-
-    let componentProps = instance.appContext.components[props.type].props
+    let componentProps = definedComponentProps.value
     if (!componentProps) {
         componentProps = {}
     }
