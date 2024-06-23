@@ -176,15 +176,22 @@ const definedComponentProps = computed(() => {
     return instance.appContext.components[props.type].props
 })
 
+function getValue(key, attrs, defaultValue) {
+    if (attrs[key] != null) {
+        return attrs[key]
+    } else {
+        return defaultValue
+    }
+}
+
 const componentProps = computed(() => {
     const p = Object.entries(definedComponentProps.value).reduce((context, [key, value]) => {
-        if (attrs[key] != null) {
-            context[key] = attrs[key]
-        } else {
-            context[key] = value.default
-        }
+        context[key] = getValue(key, attrs, value.default)
         return context
     }, {})
+    if (definedComponentProps.value.name) {
+        p.name = getValue('name', props, definedComponentProps.value.name.default, true)
+    }
     return reactive(p)
 })
 
