@@ -54,6 +54,7 @@ const fontColor = computed(() => {
             return getThemeProperty('text.color.default').value
         }
     }
+    return ''
 })
 
 const fontSize = computed(() => {

@@ -41,6 +41,7 @@ const props = defineProps({
     },
     // window injection for testing only
     window: {
+        type: Object,
         __hideInPreview: true
     }
 })

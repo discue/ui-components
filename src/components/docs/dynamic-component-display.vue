@@ -4,9 +4,9 @@
         <Component :is="type"
                    v-bind="componentProps"
                    v-model="modelValue">
-            <template v-for="(index, name) in $slots"
-                      #[name]>
-                <slot :name="name" />
+            <template v-for="(index, slotName) in $slots"
+                      #[slotName]>
+                <slot :name="slotName" />
             </template>
         </Component>
     </div>
@@ -155,7 +155,9 @@ const props = defineProps({
         type: Boolean,
         default: true
     },
-    initialValue: {},
+    initialValue: {
+        type: String
+    },
     attachVModel: {
         type: Boolean,
         default: false

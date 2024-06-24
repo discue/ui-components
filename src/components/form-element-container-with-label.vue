@@ -8,8 +8,7 @@
         <div class="relative flex bg-inherit">
             <div :class="labelWrapperClazz">
                 <NoSymbolIcon v-if="disabled"
-                              :class="labelDisabledIconClazz">
-                </NoSymbolIcon>
+                              :class="labelDisabledIconClazz" />
                 <label :for="id"
                        @mousedown="onFocusRequest">{{ label }}</label>
             </div>
