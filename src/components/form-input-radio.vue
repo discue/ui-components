@@ -28,38 +28,28 @@
                        @blur="onBlur($event)">
 
                     <div class="flex items-center">
-                        <svg v-if="modelValue == option.value"
-                             xmlns="http://www.w3.org/2000/svg"
+                        <svg xmlns="http://www.w3.org/2000/svg"
                              class="stroke-current h-6 w-6"
                              fill="none"
                              viewBox="0 0 24 24"
                              stroke="currentColor"
                              stroke-width="2">
-                            <path stroke-linecap="round"
+
+                            <path v-if="modelValue == option.value"
+                                  stroke-linecap="round"
                                   stroke-linejoin="round"
                                   d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
-                        </svg>
-                        <svg v-else-if="inputDisabled"
-                             xmlns="http://www.w3.org/2000/svg"
-                             class="stroke-1 stroke-current h-6 w-6"
-                             fill="none"
-                             viewBox="0 0 24 24"
-                             stroke="currentColor"
-                             stroke-width="2">
-                            <path stroke-linecap="round"
+
+                            <path v-else-if="inputDisabled"
+                                  stroke-linecap="round"
                                   stroke-linejoin="round"
                                   d="M8  01M21 12a9 9 0 0 9 9 0 0118 0z" />
-                        </svg>
-                        <svg v-else
-                             xmlns="http://www.w3.org/2000/svg"
-                             class="stroke-1 stroke-current h-6 w-6"
-                             fill="none"
-                             viewBox="0 0 24 24"
-                             stroke="currentColor"
-                             stroke-width="2">
-                            <path stroke-linecap="round"
+
+                            <path v-else
+                                  stroke-linecap="round"
                                   stroke-linejoin="round"
                                   d="M8  01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+
                         </svg>
                     </div>
                     <Text class="pb-0.5"
