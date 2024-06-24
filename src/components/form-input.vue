@@ -14,8 +14,8 @@
                                    :description="error">
         <input :id="id"
                ref="input"
-               autocomplete="off"
                v-model="inputValue"
+               autocomplete="off"
                :type="type"
                :pattern="pattern"
                :required="required"

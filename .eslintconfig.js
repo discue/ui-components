@@ -12,6 +12,8 @@ export default [
             parser: eslintParser
         },
         rules: {
+            'vue/first-attribute-linebreak': 'off',
+            'vue/html-closing-bracket-newline': 'off',
             'vue/require-default-prop': 'off',
             'vue/multi-word-component-names': 'off',
             'vue/html-indent': 'off',
