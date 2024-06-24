@@ -44,12 +44,14 @@ import FormError from './form-element-error-message.vue';
 const props = defineProps({
     id: {
         type: String,
+        required: true
     },
     description: {
         type: String,
     },
     label: {
         type: String,
+        required: true
     },
     disabled: {
         type: Boolean,
@@ -57,12 +59,15 @@ const props = defineProps({
     },
     focussed: {
         type: Boolean,
+        default: false
     },
     focusInputCallback: {
         type: Function,
+        default: () => { }
     },
     forceShowErrorMessage: {
         type: Boolean,
+        default: false
     },
     pattern: {
         type: String,
@@ -80,6 +85,7 @@ const props = defineProps({
     },
     inputInvalid: {
         type: Boolean,
+        default: false
     },
 })
 
@@ -181,11 +187,9 @@ function onBlur() {
     hasFocus.value = false
 }
 function onFocusRequest(e) {
-    if (props.focusInputCallback) {
-        setTimeout(() => {
-            props.focusInputCallback(e)
-        })
-    }
+    setTimeout(() => {
+        props.focusInputCallback(e)
+    })
 }
 </script>
 
