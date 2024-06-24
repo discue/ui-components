@@ -10,7 +10,8 @@ import { FORM_ELEMENT_ERROR_COLOR_DEFAULT, FORM_ELEMENT_ERROR_COLOR_HINT, FORM_E
 
 const props = defineProps({
     id: {
-        type: String
+        type: String,
+        required: true
     },
     invalid: {
         type: Boolean,
