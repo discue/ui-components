@@ -81,18 +81,22 @@ import Text from './text.vue';
 const props = defineProps({
     id: {
         type: String,
+        required: true,
     },
     name: {
         type: String,
+        required: true,
     },
     label: {
         type: String,
+        required: true,
     },
     invalidMessage: {
         type: String,
     },
     invalid: {
         type: Boolean,
+        default: false
     },
     description: {
         type: String,
@@ -107,6 +111,7 @@ const props = defineProps({
     },
     modelValue: {
         type: String,
+        required: true
     },
     options: {
         type: Array,
