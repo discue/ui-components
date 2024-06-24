@@ -157,7 +157,7 @@ const invalidCharactersRegEx = computed(() => {
 })
 const inputClazz = computed(() => {
     const clazz = [
-        'w-full mt-4 outline-none px-3 leading-8 placeholder:italic',
+        'dsq-form-input w-full mt-4 outline-none px-3 leading-8 placeholder:italic',
         getThemeProperty(FORM_ELEMENT_INPUT_CARET_COLOR_DEFAULT).value,
         getThemeProperty(FORM_ELEMENT_INPUT_BACKGROUND_COLOR_DEFAULT).value,
         getThemeProperty(FORM_ELEMENT_INPUT_PLACEHOLDER_COLOR_DEFAULT).value,
