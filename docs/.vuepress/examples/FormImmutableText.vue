@@ -1,9 +1,8 @@
 <template>
-  <FormImmutableText
-    label="ZipCode" 
-    description="Please enter a valid zip code" 
-    pattern="[0-9]{5}" 
-    format="85080" />
+  <FormImmutableText id="FormImmutableInputApiKey"
+                     label="Your Api Key"
+                     description="Please enter a valid zip code"
+                     :text="apiKey" />
 </template>
 
 <script setup>
