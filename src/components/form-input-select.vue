@@ -36,10 +36,12 @@ import FormElementContainerWithLabel from './form-element-container-with-label.v
 
 const props = defineProps({
     id: {
-        type: String
+        type: String,
+        required: true
     },
     label: {
-        type: String
+        type: String,
+        required: true
     },
     disabled: {
         type: Boolean,
@@ -56,7 +58,8 @@ const props = defineProps({
         type: Number,
     },
     elements: {
-        type: Array
+        type: Array,
+        default: () => { return [] }
     },
     trackBy: {
         type: String,
