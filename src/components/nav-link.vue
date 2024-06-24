@@ -19,6 +19,7 @@ const router = useRouter()
 const props = defineProps({
     href: {
         type: String,
+        required: true
     },
     invert: {
         type: Boolean,
@@ -37,7 +38,7 @@ const props = defineProps({
         default: false
     },
     target: {
-        type: String,
+        type: String
     },
     // window injection for testing only
     window: {
