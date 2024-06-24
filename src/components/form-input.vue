@@ -134,7 +134,9 @@ watch(inputValue, (newValue) => {
             forceContainerShowErrorNow.value = false
         }
     }
-    emits('update:modelValue', newValue)
+    if (inputInvalid.value === false) {
+        emits('update:modelValue', newValue)
+    }
 })
 
 const error = computed(() => {
