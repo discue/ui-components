@@ -19,7 +19,7 @@ const props = defineProps({
 })
 
 const clazz = computed(() => {
-    return `flex flex-col space-y-4 ${props.class}`
+    return `flex flex-col space-y-5 ${props.class}`
 })
 
 </script>
