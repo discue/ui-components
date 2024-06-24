@@ -1,10 +1,10 @@
 <template>
     <div :id="parentId"
          :class="parentClazz"
-         @mouseover="onFocus"
          @focusin="onFocus"
+         @focusout="onBlur"
          @mouseleave="onBlur"
-         @focusout="onBlur">
+         @mouseover="onFocus">
         <div class="relative flex bg-inherit">
             <div :class="labelWrapperClazz">
                 <NoSymbolIcon v-if="disabled"

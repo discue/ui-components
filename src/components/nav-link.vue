@@ -1,7 +1,7 @@
 <template>
-    <a :href="href"
+    <a class="dsq-nav-link"
        :class="clazz"
-       class="dsq-nav-link"
+       :href="href"
        :rel="rel"
        :target="linkTarget"
        @click="click($event)">

@@ -1,56 +1,56 @@
 <template>
     <FormElementContainerWithLabel :id="id"
-                                   :input-invalid="invalid"
-                                   :disabled="inputDisabled"
-                                   :label="label"
                                    :description="error"
-                                   :focussed="isFocussed">
+                                   :disabled="inputDisabled"
+                                   :focussed="isFocussed"
+                                   :input-invalid="invalid"
+                                   :label="label">
         <div :class="wrapperClazz">
             <div v-for="option in options"
                  :key="option.value"
                  :class="optionClazz">
                 <input :id="'radio_' + id + '_' + option.value + '_id'"
                        autocomplete="off"
-                       type="radio"
                        :checked="option.default === true || modelValue == option.value"
-                       :required="required"
-                       :name="name"
-                       :value="option.value"
-                       :disabled="inputDisabled"
                        class="hidden peer checked:bg-gray-900 rounded outline-none text-gray-100 placeholder:text-gray-300 py-2 px-3 leading-8"
+                       :disabled="inputDisabled"
+                       :name="name"
+                       :required="required"
+                       type="radio"
+                       :value="option.value"
                        @input="onInput($event)">
 
                 <label :class="labelClazz"
                        :for="'radio_' + id + '_' + option.value + '_id'"
+                       @blur="onBlur($event)"
                        @focus="onFocus($event)"
                        @focusin="onFocus($event)"
-                       @focusout="onBlur($event)"
-                       @blur="onBlur($event)">
+                       @focusout="onBlur($event)">
 
                     <div class="flex items-center">
-                        <svg xmlns="http://www.w3.org/2000/svg"
-                             class="stroke-current h-6 w-6"
+                        <svg class="stroke-current h-6 w-6"
                              fill="none"
-                             viewBox="0 0 24 24"
                              stroke="currentColor"
-                             stroke-width="2">
+                             stroke-width="2"
+                             viewBox="0 0 24 24"
+                             xmlns="http://www.w3.org/2000/svg">
 
                             <path v-if="modelValue == option.value"
+                                  d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"
                                   stroke-linecap="round"
-                                  stroke-linejoin="round"
-                                  d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+                                  stroke-linejoin="round" />
 
                             <path v-else
+                                  d="M8  01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"
                                   stroke-linecap="round"
-                                  stroke-linejoin="round"
-                                  d="M8  01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+                                  stroke-linejoin="round" />
 
                         </svg>
                     </div>
                     <Text class="pb-0.5"
                           :highlight="modelValue == option.value"
-                          :inherit-font-size="true"
-                          :inherit-color="true">{{ option.label }}</Text>
+                          :inherit-color="true"
+                          :inherit-font-size="true">{{ option.label }}</Text>
                 </label>
             </div>
         </div>

@@ -1,7 +1,7 @@
 <template>
     <span :id="id"
-          v-if:="invalid"
-          :class="clazz">{{ description }}</span>
+          :class="clazz"
+          v-if:="invalid">{{ description }}</span>
 </template>
 
 <script setup>

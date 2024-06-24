@@ -1,7 +1,7 @@
 <template>
-    <button :type="type"
+    <button class="dsq-nav-button"
             :class="clazz"
-            class="dsq-nav-button"
+            :type="type"
             @click="onClick">
         <slot />
     </button>

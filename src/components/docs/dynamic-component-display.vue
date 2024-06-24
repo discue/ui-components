@@ -29,30 +29,30 @@
         <div class="">
             <div class="grid grid-cols-4 pb-4 pl-4 rounded-t-lg border-b-2 border-stone-300">
                 <div>
-                    <Text :highlight="true"
-                          :small="true"
-                          class="uppercase">
+                    <Text class="uppercase"
+                          :highlight="true"
+                          :small="true">
                         Name
                     </Text>
                 </div>
                 <div>
-                    <Text :highlight="true"
-                          :small="true"
-                          class="uppercase">
+                    <Text class="uppercase"
+                          :highlight="true"
+                          :small="true">
                         Type
                     </Text>
                 </div>
                 <div>
-                    <Text :highlight="true"
-                          :small="true"
-                          class="uppercase">
+                    <Text class="uppercase"
+                          :highlight="true"
+                          :small="true">
                         Default
                     </Text>
                 </div>
                 <div>
-                    <Text :highlight="true"
-                          :small="true"
-                          class="uppercase">
+                    <Text class="uppercase"
+                          :highlight="true"
+                          :small="true">
                         Value
                     </Text>
                 </div>
@@ -62,27 +62,27 @@
                  :key="prop.name"
                  class="grid grid-cols-4 border-b-2 border-stone-300 border-solid py-4 pl-4">
                 <div>
-                    <Text :small="false"
-                          class="">
+                    <Text class=""
+                          :small="false">
                         {{ prop.name }}
                     </Text>
                 </div>
                 <div>
-                    <Text :small="false"
-                          class="">
+                    <Text class=""
+                          :small="false">
                         {{ prop.type }}
                     </Text>
                 </div>
                 <div>
-                    <Text :small="false"
-                          class="">
+                    <Text class=""
+                          :small="false">
                         {{ prop.default }}
                     </Text>
                 </div>
                 <div>
                     <select v-if="prop.allowInput && prop.type === 'Boolean'"
-                            :value="componentProps[prop.name]"
                             class="w-24 text-lg"
+                            :value="componentProps[prop.name]"
                             @input="castAndSet(prop, $event)">
                         <option class="w-24 text-lg">
                             true
@@ -92,12 +92,12 @@
                         </option>
                     </select>
                     <input v-else-if="prop.allowInput && prop.type === 'Array'"
-                           :value="JSON.stringify(componentProps[prop.name])"
                            class="text-base border-b-2 border-b-solid border-gray-900 w-20"
+                           :value="JSON.stringify(componentProps[prop.name])"
                            @input="castAndSet(prop, $event)">
                     <input v-else-if="prop.allowInput"
-                           :value="componentProps[prop.name]"
                            class="text-base border-b-2 border-b-solid border-gray-900 w-20"
+                           :value="componentProps[prop.name]"
                            @input="castAndSet(prop, $event)">
                 </div>
             </div>
@@ -112,9 +112,9 @@
         <div class="">
             <div class="grid grid-cols-4 pb-4 pl-4 rounded-t-lg border-b-2 border-stone-300">
                 <div>
-                    <Text :highlight="true"
-                          :small="true"
-                          class="uppercase">
+                    <Text class="uppercase"
+                          :highlight="true"
+                          :small="true">
                         Event
                     </Text>
                 </div>
@@ -124,8 +124,8 @@
                  :key="prop"
                  class="grid grid-cols-4 border-b-2 border-stone-300 border-solid py-4 pl-4">
                 <div>
-                    <Text :small="false"
-                          class="">
+                    <Text class=""
+                          :small="false">
                         {{ prop }}
                     </Text>
                 </div>

@@ -7,14 +7,14 @@ v-if="showLogo"
                      class="flex flex-row"
 >
                     <NavLink
-href="https://www.discue.io/"
-                             class="flex h-12 space-x-2 text-4xl text-gray-900"
+class="flex h-12 space-x-2 text-4xl text-gray-900"
+                             href="https://www.discue.io/"
 >
 <svg
-viewBox="0 0 23 56"
+class="-mt-6 w-8"
                              fill="none"
+                             viewBox="0 0 23 56"
                              xmlns="http://www.w3.org/2000/svg"
-                             class="-mt-6 w-8"
 >
                             <path
 d="M14.9267 54.0632C14.6011 53.96 14.3008 53.7773 14.0481 53.5287C13.7953 53.28 13.5966 52.9718 13.4667 52.627C13.1465 51.7898 13.2705 50.8238 13.2227 49.9308C13.2385 48.084 13.3798 46.2394 13.4836 44.3965C13.6959 41.5814 14.28 38.8244 14.6379 36.0311C15.033 32.8621 15.9359 24.3281 15.9683 18.8386C16.129 15.163 16.3569 11.4909 16.4216 7.8109C16.5248 5.49556 16.604 3.18009 16.3032 0.877426C16.9158 2.82726 17.3434 4.84183 17.5793 6.88885C17.9909 9.49 18.3876 12.0936 18.678 14.7152C18.7342 15.2149 18.792 15.7085 18.85 16.1996C19.005 12.3401 19.0261 8.47542 19.2628 4.61869C19.4627 5.54879 19.6362 6.4861 19.798 7.42531C20.2573 10.3001 20.9056 13.1373 21.2611 16.0321C21.7675 20.6488 22.2104 25.285 22.4269 29.9302C22.6458 34.7865 22.4817 39.6546 21.9364 44.4796C21.6063 46.7905 21.68 49.3176 20.5271 51.3648C19.7776 52.7032 18.3452 53.0668 17.0863 53.5834C16.9969 53.6285 16.9057 53.6693 16.8191 53.7206C16.5412 53.9163 16.2302 54.0477 15.9048 54.1066C15.5795 54.1655 15.2467 54.1507 14.9267 54.0632V54.0632Z"
@@ -41,27 +41,27 @@ Company
 </li>
                 <li class="text-md text-gray-800">
                     <NavLink
-:small="true"
+href="https://www.discue.io/#how-it-works"
                              :secondary="true"
-                             href="https://www.discue.io/#how-it-works"
+                             :small="true"
 >
 How it works
 </NavLink>
                 </li>
                 <li class="text-md text-gray-800">
                     <NavLink
-:small="true"
+href="https://www.discue.io/#use-cases"
                              :secondary="true"
-                             href="https://www.discue.io/#use-cases"
+                             :small="true"
 >
 Use cases
 </NavLink>
                 </li>
                 <li class="text-md text-gray-800">
                     <NavLink
-:small="true"
+href="https://www.discue.io/registration/create-account"
                              :secondary="true"
-                             href="https://www.discue.io/registration/create-account"
+                             :small="true"
 >
 Create Account
 </NavLink>
@@ -79,36 +79,36 @@ API Resources
 </li>
                 <li class="text-md text-gray-800">
                     <NavLink
-:small="true"
+href="https://docs.discue.io/getting-started/"
                              :secondary="true"
-                             href="https://docs.discue.io/getting-started/"
+                             :small="true"
 >
 Getting started
 </NavLink>
                 </li>
                 <li class="text-md text-gray-800">
                     <NavLink
-:small="true"
+href="https://docs.discue.io/api-overview/"
                              :secondary="true"
-                             href="https://docs.discue.io/api-overview/"
+                             :small="true"
 >
 API Overview
 </NavLink>
                 </li>
                 <li class="text-md text-gray-800">
                     <NavLink
-:small="true"
+href="https://docs.discue.io/api-best-practices/"
                              :secondary="true"
-                             href="https://docs.discue.io/api-best-practices/"
+                             :small="true"
 >
 API Best Practices
 </NavLink>
                 </li>
                 <li class="text-md text-gray-800">
                     <NavLink
-:small="true"
+href="https://docs.discue.io/api-reference/api-keys/get-all-api-keys.html"
                              :secondary="true"
-                             href="https://docs.discue.io/api-reference/api-keys/get-all-api-keys.html"
+                             :small="true"
 >
 API Reference
                     </NavLink>
@@ -120,27 +120,27 @@ UI Components
 </li>
                 <li class="text-md text-gray-800">
                     <NavLink
-:small="true"
+href="https://ui.discue.io/"
                              :secondary="true"
-                             href="https://ui.discue.io/"
+                             :small="true"
 >
 Documentation
 </NavLink>
                 </li>
                 <li class="text-md text-gray-800">
                     <NavLink
-:small="true"
+href="https://github.com/discue/ui-components"
                              :secondary="true"
-                             href="https://github.com/discue/ui-components"
+                             :small="true"
 >
 GitHub Repository
 </NavLink>
                 </li>
                 <li class="text-md text-gray-800">
                     <NavLink
-:small="true"
+href="https://www.npmjs.com/package/@discue/ui-components"
                              :secondary="true"
-                             href="https://www.npmjs.com/package/@discue/ui-components"
+                             :small="true"
 >
 npm Package
 </NavLink>
@@ -152,27 +152,27 @@ Legal
 </li>
                 <li class="text-md text-gray-800">
                     <NavLink
-:small="true"
+href="https://www.discue.io/privacy"
                              :secondary="true"
-                             href="https://www.discue.io/privacy"
+                             :small="true"
 >
 Privacy Policy
 </NavLink>
                 </li>
                 <li class="text-md text-gray-800">
                 <NavLink
-:small="true"
+href="https://www.discue.io/terms"
                          :secondary="true"
-                         href="https://www.discue.io/terms"
+                         :small="true"
 >
 Terms &amp; Conditions
 </NavLink>
             </li>
             <li>
                 <NavLink
-:small="true"
+href="https://www.discue.io/imprint"
                          :secondary="true"
-                         href="https://www.discue.io/imprint"
+                         :small="true"
 >
 Imprint &amp; Legal Notice
 </NavLink>
