@@ -40,11 +40,6 @@
                                   stroke-linejoin="round"
                                   d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
 
-                            <path v-else-if="inputDisabled"
-                                  stroke-linecap="round"
-                                  stroke-linejoin="round"
-                                  d="M8  01M21 12a9 9 0 0 9 9 0 0118 0z" />
-
                             <path v-else
                                   stroke-linecap="round"
                                   stroke-linejoin="round"
