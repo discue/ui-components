@@ -27,7 +27,7 @@
                        @focusout="onBlur($event)"
                        @blur="onBlur($event)">
 
-                    <div>
+                    <div class="flex items-center">
                         <svg v-if="modelValue == option.value"
                              xmlns="http://www.w3.org/2000/svg"
                              class="stroke-current h-6 w-6"
