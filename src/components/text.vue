@@ -45,14 +45,14 @@ const fontWeight = computed(() => {
 })
 
 const fontColor = computed(() => {
-    if (props.light) {
-        return getThemeProperty('text.color.light').value
-    } else if (props.highlight) {
-        return getThemeProperty('text.color.highlight').value
-    } else if (props.inheritColor) {
-        return ''
-    } else {
-        return getThemeProperty('text.color.default').value
+    if (!props.inheritColor) {
+        if (props.light) {
+            return getThemeProperty('text.color.light').value
+        } else if (props.highlight) {
+            return getThemeProperty('text.color.highlight').value
+        } else {
+            return getThemeProperty('text.color.default').value
+        }
     }
 })
 
