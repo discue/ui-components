@@ -5,7 +5,8 @@
                                    :focussed="isFocussed"
                                    :input-invalid="invalid"
                                    :label="label">
-        <div :class="wrapperClazz">
+        <fieldset :class="wrapperClazz">
+            <legend class="h-0 w-0 invisible absolute">{{ label }}</legend>
             <div v-for="option in options"
                  :key="option.value"
                  :class="optionClazz">
@@ -53,7 +54,7 @@
                           :inherit-font-size="true">{{ option.label }}</Text>
                 </label>
             </div>
-        </div>
+        </fieldset>
     </FormElementContainerWithLabel>
 </template>
 
@@ -179,5 +180,22 @@ function onFocus() {
 function onBlur() {
     isFocussed.value = false
 }
-
 </script>
+
+<style>
+legend {
+    display: unset;
+    padding: 0;
+}
+
+fieldset {
+    border: 0;
+    padding: 0.01em 0 0 0;
+    margin: 0;
+    min-width: 0;
+}
+
+body:not(:-moz-handler-blocked) fieldset {
+    display: table-cell;
+}
+</style>
