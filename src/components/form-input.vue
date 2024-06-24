@@ -39,9 +39,11 @@ import FormElementContainerWithLabel from './form-element-container-with-label.v
 const props = defineProps({
     id: {
         type: String,
+        required: true
     },
     name: {
         type: String,
+        required: true
     },
     disabled: {
         type: Boolean,
@@ -49,12 +51,14 @@ const props = defineProps({
     },
     type: {
         type: String,
+        default: 'text'
     },
     modelValue: {
         type: String,
     },
     label: {
         type: String,
+        required: true
     },
     invalidMessage: {
         type: String,
