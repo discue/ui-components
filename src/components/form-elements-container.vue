@@ -12,9 +12,11 @@ import { computed } from 'vue';
 const props = defineProps({
     id: {
         type: String,
+        required: true
     },
     class: {
-        type: String
+        type: String,
+        required: true
     }
 })
 
