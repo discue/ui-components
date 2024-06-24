@@ -37,7 +37,8 @@ const props = defineProps({
         default: false
     },
     parent: {
-        type: String
+        type: String,
+        required: true
     },
     bottom: {
         type: Boolean,
