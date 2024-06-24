@@ -15,15 +15,14 @@
         <input :id="id"
                ref="input"
                autocomplete="off"
+               v-model="inputValue"
                :type="type"
                :pattern="pattern"
                :required="required"
                :placeholder="placeholder"
                :name="name"
-               :value="modelValue"
                :disabled="disabled"
                :class="inputClazz"
-               @input="onInput($event)"
                @focus="onFocus($event)"
                @focusin="onFocus($event)"
                @focusout="onBlur($event)"
@@ -32,7 +31,7 @@
 </template>
 
 <script setup>
-import { computed, ref } from 'vue';
+import { computed, ref, watch } from 'vue';
 import { FORM_ELEMENT_INPUT_BACKGROUND_COLOR_DEFAULT, FORM_ELEMENT_INPUT_CARET_COLOR_DEFAULT, FORM_ELEMENT_INPUT_FONT_WEIGHT_DEFAULT, FORM_ELEMENT_INPUT_PLACEHOLDER_COLOR_DEFAULT, FORM_ELEMENT_INPUT_TEXT_COLOR_DEFAULT, FORM_ELEMENT_INPUT_TEXT_SIZE_DEFAULT } from '../theme-keys.js';
 import { getThemeProperty } from '../theme.js';
 import FormElementContainerWithLabel from './form-element-container-with-label.vue';
@@ -75,6 +74,7 @@ const props = defineProps({
     },
     pattern: {
         type: String,
+        default: '.*'
     },
     patternUnicode: {
         type: Boolean,
@@ -102,6 +102,35 @@ const inputFocussed = ref(false)
 const inputInvalid = ref(false)
 const forceContainerShowErrorNow = ref(false)
 const invalidCharacters = ref('')
+const inputValue = ref()
+
+const inputRegEx = computed(() => {
+    return new RegExp(props.pattern, 'u')
+})
+
+watch(inputValue, (newValue) => {
+    if (props.disabled) {
+        return
+    }
+    if (props.pattern) {
+        const matches = inputRegEx.value.test(newValue)
+        if (!matches) {
+            inputInvalid.value = true
+            if (invalidCharactersRegEx.value) {
+                const invalidChars = newValue.match(new RegExp(invalidCharactersRegEx.value, 'gu'))
+                const uniqueInvalidChars = [...new Set(invalidChars)]
+                if (uniqueInvalidChars.length) {
+                    forceContainerShowErrorNow.value = true
+                }
+                invalidCharacters.value = uniqueInvalidChars.join(', ')
+            }
+        } else {
+            invalidCharacters.value = ''
+            inputInvalid.value = false
+            forceContainerShowErrorNow.value = false
+        }
+    }
+})
 
 const error = computed(() => {
     return props.invalidMessage || invalidCharactersMessage.value || props.description
@@ -119,9 +148,9 @@ const invalidCharactersMessage = computed(() => {
         return `Sorry, the following characters are not allowed here: ${invalidCharacters.value}`
     }
 })
-const invalidCharactersRegex = computed(() => {
+const invalidCharactersRegEx = computed(() => {
     if (props.allowedCharactersSupersetPattern) {
-        return `[^(${props.allowedCharactersSupersetPattern})]`
+        return new RegExp(`[^(${props.allowedCharactersSupersetPattern})]`, 'gu')
     } else {
         return null
     }
@@ -151,30 +180,5 @@ function onBlur() {
 }
 function onFocus() {
     inputFocussed.value = true
-}
-function onInput({ target }) {
-    if (props.disabled) {
-        return
-    }
-    if (target.pattern) {
-        const value = target.value
-        const matches = new RegExp(target.pattern, 'u').test(value)
-        if (!matches) {
-            inputInvalid.value = true
-            if (invalidCharactersRegex.value) {
-                const invalidChars = value.match(new RegExp(invalidCharactersRegex.value, 'gu'))
-                const uniqueInvalidChars = [...new Set(invalidChars)]
-                if (uniqueInvalidChars.length) {
-                    forceContainerShowErrorNow.value = true
-                }
-                invalidCharacters.value = uniqueInvalidChars.join(', ')
-            }
-        } else {
-            invalidCharacters.value = ''
-            inputInvalid.value = false
-            forceContainerShowErrorNow.value = false
-        }
-    }
-    emits('update:modelValue', target.value)
 }
 </script>
