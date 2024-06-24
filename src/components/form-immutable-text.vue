@@ -60,13 +60,16 @@ const props = defineProps({
         default: true
     },
     id: {
-        type: String
+        type: String,
+        required: true
     },
     label: {
         type: String,
+        required: true
     },
     text: {
-        type: String
+        type: String,
+        required: true
     }
 })
 
