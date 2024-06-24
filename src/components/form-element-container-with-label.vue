@@ -103,7 +103,7 @@ const errorId = computed(() => {
     return `${props.id}ElementError`
 })
 const showPattern = computed(() => {
-    return props.pattern && props.showPatternHint && props.focussed
+    return props.pattern && props.showPatternHint && props.focussed && !showFormat.value
 })
 const showFormat = computed(() => {
     return props.format && props.showFormatHint && props.focussed
