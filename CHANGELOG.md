@@ -2,6 +2,60 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [0.45.0](https://github.com/discue/ui-components/compare/v0.44.0...v0.45.0) (2024-06-24)
+
+
+### Features
+
+* **elements-container:** add form elements container element ([1ee0ce0](https://github.com/discue/ui-components/commit/1ee0ce0f7d0fe8b088df37c599ee585ece554f4a))
+* **form-input:** update model only if value is valid ([3fe9bdb](https://github.com/discue/ui-components/commit/3fe9bdb6461d8b67471b809b7ba38f47f55b5b42))
+* **input-radio:** wrap inputs in fieldset tag ([eb6585c](https://github.com/discue/ui-components/commit/eb6585cb72dfaf3083e50b308d346932a78f7761))
+* **item-radio:** align svg with label text ([a92f002](https://github.com/discue/ui-components/commit/a92f002154b041d259b4a170f6b2aa9bde69bb62))
+
+
+### Bug Fixes
+
+* **docs:** deployed with duplicate footer tag ([3608257](https://github.com/discue/ui-components/commit/36082577710bad5922b7d408eaa6c3aefceb8939))
+* **immutable-text:** ensure same padding between left and right borders and content ([453a659](https://github.com/discue/ui-components/commit/453a659fbc39806c33b16857e614eed52fe75a63))
+* **input-radio:** radio not disabled if only one option element was provided ([a0f0522](https://github.com/discue/ui-components/commit/a0f052211a1b688c5a59595bbc0117fc0cfc7929))
+* **input-radio:** recursive trigger of property computation causes maxCallStack exceeded ([f2e1d63](https://github.com/discue/ui-components/commit/f2e1d63f782debfcb6fef4048b6a068e2a8b5ebe))
+* **text:** ensure inheritColor has precedence over other coloring properties ([559a040](https://github.com/discue/ui-components/commit/559a0406c55cbca198c6cae8ea56b02475572519))
+
+
+### Refactorings
+
+* **dynamic-component:** add computed property for component props ([d0c3c29](https://github.com/discue/ui-components/commit/d0c3c290a6fcc31353cfa8e70ccac6b5c023f8db))
+* **form-input:** cache invalid chars regex ([0d78538](https://github.com/discue/ui-components/commit/0d78538c862d8557eadcc259bed17ba69d661c72))
+* **form-input:** do not bind directly to parent v-model ([03e083c](https://github.com/discue/ui-components/commit/03e083cdd23be43a9a7120804cac6544d9bb389a))
+* **form-input:** do not bind directly to props.modelValue ([1503b55](https://github.com/discue/ui-components/commit/1503b55b89d37ded72caf65e2382ea42478e2fc0))
+* **input-radio:** define only one svg element and change path according to state ([4b5d41e](https://github.com/discue/ui-components/commit/4b5d41ec75e4907a745dff70e213be1862fa27c8))
+
+
+### Chores
+
+* **banner:** mark required properties as required ([7634c57](https://github.com/discue/ui-components/commit/7634c57a9f5c180d59a836124bed9865d10391ef))
+* **docs:** pass name to form input radio ([41380b5](https://github.com/discue/ui-components/commit/41380b5474759df59097260f43f98e13c482d588))
+* **docs:** update example for immutable text ([f2f8b57](https://github.com/discue/ui-components/commit/f2f8b574b1be6eaa42c843eeaba8bff76e503ad2))
+* **docs:** update selector of badge element ([54e5b39](https://github.com/discue/ui-components/commit/54e5b398e1d90d72c4e07b426451c9b8432cb34e))
+* **drop-down-item:** mark required properties as required ([2770468](https://github.com/discue/ui-components/commit/2770468d48b418c505553b0a4e468a623c8f1419))
+* **dynamic-component:** mark dynamic components as required ([fc2ba50](https://github.com/discue/ui-components/commit/fc2ba500dcf8c0dd8c4ee40fc6e50c1ba8bfe228))
+* **dynamic-component:** pass also name attribute if defined as prop ([d83788e](https://github.com/discue/ui-components/commit/d83788e1a6f5afa784c2c9c5cb3610ec00aa6eb4))
+* **dynamic-display:** sort components props alphabetically ([963c8aa](https://github.com/discue/ui-components/commit/963c8aa3e2152a68dcf47a0df590664ce776d3aa))
+* **element-container:** mark required properties as required and provide default for others ([6081250](https://github.com/discue/ui-components/commit/60812507dadac9afb3e270c62597cad54256ac05))
+* **elements-container:** give format hint higher precedence than pattern hint ([97d5abf](https://github.com/discue/ui-components/commit/97d5abf9c40bdee93533136e77f24b6854d44722))
+* **elements-container:** increase space between elements ([49fa2a2](https://github.com/discue/ui-components/commit/49fa2a200cba061340b197f20e59cef822fa1047))
+* **elements-container:** mark required properties as required ([e5db760](https://github.com/discue/ui-components/commit/e5db760c9943c5bec29e2167264df0785aa34eff))
+* **error-message:** mark required properties as required ([bf785a2](https://github.com/discue/ui-components/commit/bf785a24a33614d9cf37bffe9cd621a86650acf7))
+* **form-input:** add type class ([3e9a519](https://github.com/discue/ui-components/commit/3e9a51973ca9bc1db30091e4f319c83c00e116a4))
+* **form-input:** mark required properties as required and provide default for others ([71067d1](https://github.com/discue/ui-components/commit/71067d1d6ff9e1eaefe3ccb507051916aa0a8c56))
+* **immutable-text:** mark required properties as required ([695ca0c](https://github.com/discue/ui-components/commit/695ca0cea8b10667af8b44d8c8d0a526898ea88f))
+* **input-radio:** mark required props as required ([9bd7ad4](https://github.com/discue/ui-components/commit/9bd7ad4478d97ab7162c68e0fdaa3a5ba1560016))
+* **input-radio:** use circle svg also if radio is disabled ([85f198e](https://github.com/discue/ui-components/commit/85f198ec3babdbcd5bc36736a7a50db9ab4d28a8))
+* **input-select:** mark required properties as required and provide defaults for others ([0a28ed1](https://github.com/discue/ui-components/commit/0a28ed1670f2d9658f02ae7c8022a44e6af3044c))
+* **lint:** ignore styling-related rules ([f5348c0](https://github.com/discue/ui-components/commit/f5348c0e0d5e6ddc61b32d2cdd275b8473994693))
+* **nav-button:** mark required properties as required ([67b2b1b](https://github.com/discue/ui-components/commit/67b2b1b78edf23044f3d01c78a2ae0fbc18b518e))
+* **nav-link:** mark required properties as required ([9baf883](https://github.com/discue/ui-components/commit/9baf8830687f80154636447d6594cb6c08248ccb))
+
 ## [0.44.0](https://github.com/discue/ui-components/compare/v0.43.0...v0.44.0) (2024-06-21)
 
 
