@@ -20,10 +20,12 @@ const props = defineProps({
         default: true
     },
     label: {
-        type: String
+        type: String,
+        required: true
     },
     href: {
-        type: String
+        type: String,
+        required: true
     },
 })
 
