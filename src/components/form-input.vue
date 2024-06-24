@@ -31,7 +31,7 @@
 </template>
 
 <script setup>
-import { computed, ref, watch } from 'vue';
+import { computed, ref, watch, watchEffect } from 'vue';
 import { FORM_ELEMENT_INPUT_BACKGROUND_COLOR_DEFAULT, FORM_ELEMENT_INPUT_CARET_COLOR_DEFAULT, FORM_ELEMENT_INPUT_FONT_WEIGHT_DEFAULT, FORM_ELEMENT_INPUT_PLACEHOLDER_COLOR_DEFAULT, FORM_ELEMENT_INPUT_TEXT_COLOR_DEFAULT, FORM_ELEMENT_INPUT_TEXT_SIZE_DEFAULT } from '../theme-keys.js';
 import { getThemeProperty } from '../theme.js';
 import FormElementContainerWithLabel from './form-element-container-with-label.vue';
@@ -108,6 +108,10 @@ const inputRegEx = computed(() => {
     return new RegExp(props.pattern, 'u')
 })
 
+watchEffect(() => {
+    inputValue.value = props.modelValue
+})
+
 watch(inputValue, (newValue) => {
     if (props.disabled) {
         return
@@ -130,6 +134,7 @@ watch(inputValue, (newValue) => {
             forceContainerShowErrorNow.value = false
         }
     }
+    emits('update:modelValue', newValue)
 })
 
 const error = computed(() => {
