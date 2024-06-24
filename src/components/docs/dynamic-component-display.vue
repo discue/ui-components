@@ -142,10 +142,12 @@ const attrs = useAttrs()
 
 const props = defineProps({
     type: {
-        type: String
+        type: String,
+        required: true
     },
     name: {
-        type: String
+        type: String,
+        required: true
     },
     showProperties: {
         type: Boolean,
