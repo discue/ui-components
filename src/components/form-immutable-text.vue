@@ -10,7 +10,7 @@
                                    :show-pattern-hint="false"
                                    :show-format-hint="false"
                                    :value="modelValue">
-        <div class="relative px-3 mt-4 mb-1 flex flex-row items-center">
+        <div class="relative pl-3 mt-4 mb-1 flex flex-row items-center">
             <div class="mr-8"
                  :class="textClazz">
                 <Text :id="id"
@@ -20,7 +20,7 @@
             </div>
 
             <button v-if="showClipboardButton"
-                    class="absolute bg-transparent right-0 p-2 text-gray-700 cursor-pointer transform transition-transform hover:-translate-y-1 outline-none"
+                    class="absolute bg-transparent right-0 pl-2 py-2 pr-3 text-gray-700 cursor-pointer transform transition-transform hover:-translate-y-1 outline-none"
                     @click.prevent="copyKeyToClipboard">
                 <ClipboardIcon class="h-6 w-6 stroke-2" />
             </button>
