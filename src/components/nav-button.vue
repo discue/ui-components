@@ -33,7 +33,8 @@ const props = defineProps({
         default: false
     },
     click: {
-        type: Function
+        type: Function,
+        required: true
     }
 })
 
