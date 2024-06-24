@@ -118,10 +118,11 @@ watch(inputValue, (newValue) => {
     }
     if (props.pattern) {
         const matches = inputRegEx.value.test(newValue)
+
         if (!matches) {
             inputInvalid.value = true
-            if (invalidCharactersRegEx.value) {
-                const invalidChars = newValue.match(new RegExp(invalidCharactersRegEx.value, 'gu'))
+            if (findInvalidCharactersRegEx.value) {
+                const invalidChars = newValue.match(findInvalidCharactersRegEx.value, 'gu')
                 const uniqueInvalidChars = [...new Set(invalidChars)]
                 if (uniqueInvalidChars.length) {
                     forceContainerShowErrorNow.value = true
@@ -155,7 +156,7 @@ const invalidCharactersMessage = computed(() => {
         return `Sorry, the following characters are not allowed here: ${invalidCharacters.value}`
     }
 })
-const invalidCharactersRegEx = computed(() => {
+const findInvalidCharactersRegEx = computed(() => {
     if (props.allowedCharactersSupersetPattern) {
         return new RegExp(`[^(${props.allowedCharactersSupersetPattern})]`, 'gu')
     } else {
