@@ -2,6 +2,18 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [0.46.0](https://github.com/discue/ui-components/compare/v0.45.0...v0.46.0) (2024-06-25)
+
+
+### Features
+
+* **headlines:** update styling ([be80b07](https://github.com/discue/ui-components/commit/be80b073c5ab2b66be5f1d1af3437d673b7f8663))
+
+
+### Chores
+
+* **headlines:** do not render tags if respective slot is empy ([3a608be](https://github.com/discue/ui-components/commit/3a608be3a34ce19e2ba962cefa3a7d5fae78d4c6))
+
 ## [0.45.0](https://github.com/discue/ui-components/compare/v0.44.0...v0.45.0) (2024-06-24)
 
 
