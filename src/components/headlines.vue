@@ -37,10 +37,10 @@ defineProps({
 })
 
 const headlineClazz = computed(() => {
-    return `text-3xl font-medium inline-block ${getThemeProperty(TEXT_COLOR_DEFAULT).value}`
+    return `text-3xl tracking-tight font-bold inline-block ${getThemeProperty(TEXT_COLOR_DEFAULT).value}`
 })
 
 const sublineClazz = computed(() => {
-    return getThemeProperty(TEXT_COLOR_DEFAULT).value
+    return `mt-2 text-lg ${getThemeProperty(TEXT_COLOR_DEFAULT).value}`
 })
 </script>
