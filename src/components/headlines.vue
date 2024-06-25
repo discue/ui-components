@@ -1,12 +1,12 @@
 <template>
     <div class="dsq-headlines flex flex-col space-y-4 md:space-y-0 justify-between">
         <Component :is="headlineTag"
-                   v-if="showHeadline"
+                   v-if="showHeadline && $slots.headline"
                    :class="headlineClazz">
             <slot name="headline" />
         </component>
         <Component :is="sublineTag"
-                   v-if="showSubline"
+                   v-if="showSubline && $slots.subline"
                    :class="sublineClazz">
             <slot name="subline" />
         </Component>
