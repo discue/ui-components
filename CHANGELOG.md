@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.47.1](https://github.com/discue/ui-components/compare/v0.47.0...v0.47.1) (2024-06-28)
+
+
+### Bug Fixes
+
+* **headlines:** subsubline text not rendered due to wrong name of template slot ([24df978](https://github.com/discue/ui-components/commit/24df978ab8df4a55af01ddb7427cf197b77ba33a))
+
 ## [0.47.0](https://github.com/discue/ui-components/compare/v0.46.0...v0.47.0) (2024-06-28)
 
 
