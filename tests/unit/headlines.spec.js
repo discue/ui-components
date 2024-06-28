@@ -87,5 +87,17 @@ describe('Headlines.vue', () => {
                 expect(subline.text()).to.equal('Subline Text')
             })
         })
+        describe('.subsubline', () => {
+            it('renders the subsubline tag', () => {
+                const wrapper = mount(Headlines, {
+                    props: {},
+                    slots: {
+                        subsubline: 'SubSubline Text'
+                    }
+                })
+                const subsubline = wrapper.find('h3')
+                expect(subsubline.text()).to.equal('SubSubline Text')
+            })
+        })
     })
 })

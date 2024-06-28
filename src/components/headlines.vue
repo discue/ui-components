@@ -10,7 +10,7 @@
         </Headline>
         <Headline v-if="showSubSubline && $slots.subsubline"
                   :level="3">
-            <slot name="subline" />
+            <slot name="subsubline" />
         </Headline>
     </div>
 </template>
