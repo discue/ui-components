@@ -2,6 +2,14 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [0.48.0](https://github.com/discue/ui-components/compare/v0.47.1...v0.48.0) (2024-06-28)
+
+
+### Features
+
+* **headlines:** allow additional text to be added to headlines component ([6d060dd](https://github.com/discue/ui-components/commit/6d060ddabcc72cacabc7f2a23e7169aa7c59eb3f))
+* **text:** add xlarge property for text ([b879c34](https://github.com/discue/ui-components/commit/b879c34454a0df37e6c6e27bc78ace3afe7a644d))
+
 ### [0.47.1](https://github.com/discue/ui-components/compare/v0.47.0...v0.47.1) (2024-06-28)
 
 
