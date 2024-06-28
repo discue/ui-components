@@ -1,21 +1,22 @@
 <template>
     <div class="dsq-headlines flex flex-col space-y-4 md:space-y-0 justify-between">
-        <Component :is="headlineTag"
-                   v-if="showHeadline && $slots.headline"
-                   :class="headlineClazz">
+        <Headline v-if="showHeadline && $slots.headline"
+                  :level="1">
             <slot name="headline" />
-        </component>
-        <Component :is="sublineTag"
-                   v-if="showSubline && $slots.subline"
-                   :class="sublineClazz">
+        </Headline>
+        <Headline v-if="showSubline && $slots.subline"
+                  :level="2">
             <slot name="subline" />
-        </Component>
+        </Headline>
+        <Headline v-if="showSubSubline && $slots.subsubline"
+                  :level="3">
+            <slot name="subline" />
+        </Headline>
     </div>
 </template>
 
 <script setup lang="ts">
-import { computed } from 'vue';
-import { TEXT_COLOR_DEFAULT, getThemeProperty } from '../theme.js';
+import Headline from './headline.vue';
 
 defineProps({
     showHeadline: {
@@ -26,21 +27,9 @@ defineProps({
         type: Boolean,
         default: true,
     },
-    headlineTag: {
-        type: String,
-        default: 'h1'
+    showSubSubline: {
+        type: Boolean,
+        default: true,
     },
-    sublineTag: {
-        type: String,
-        default: 'h2',
-    }
-})
-
-const headlineClazz = computed(() => {
-    return `text-3xl tracking-tight font-bold inline-block ${getThemeProperty(TEXT_COLOR_DEFAULT).value}`
-})
-
-const sublineClazz = computed(() => {
-    return `mt-2 text-lg ${getThemeProperty(TEXT_COLOR_DEFAULT).value}`
 })
 </script>
