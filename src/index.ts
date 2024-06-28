@@ -14,6 +14,7 @@ export { default as FormImmutableText } from './components/form-immutable-text.v
 export { default as FormInputRadio } from './components/form-input-radio.vue';
 export { default as FormInputSelect } from './components/form-input-select.vue';
 export { default as FormInput } from './components/form-input.vue';
+export { default as Headline } from './components/headline.vue';
 export { default as Headlines } from './components/headlines.vue';
 export { default as NavButton } from './components/nav-button.vue';
 export { default as NavLink } from './components/nav-link.vue';
