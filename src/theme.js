@@ -69,6 +69,7 @@ const theme = {
             'default': ref('text-md'),
             'small': ref('text-sm'),
             'large': ref('text-lg'),
+            'xlarge': ref('text-xl'),
         },
         color: {
             'default': ref('text-gray-900 dark:text-gray-500'),

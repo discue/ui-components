@@ -21,6 +21,7 @@ export const FORM_ELEMENT_ERROR_WEIGHT_DEFAULT = 'formElementError.weight.defaul
 export const TEXT_SIZE_DEFAULT = 'text.size.default'
 export const TEXT_SIZE_SMALL = 'text.size.small'
 export const TEXT_SIZE_LARGE = 'text.size.large'
+export const TEXT_SIZE_XLARGE = 'text.size.xlarge'
 export const TEXT_COLOR_DEFAULT = 'text.color.default'
 export const TEXT_COLOR_LIGHT = 'text.color.light'
 export const TEXT_COLOR_HIGHLIGHT = 'text.color.highlight'

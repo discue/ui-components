@@ -26,6 +26,10 @@ const props = defineProps({
         type: Boolean,
         default: false
     },
+    extraLarge: {
+        type: Boolean,
+        default: false
+    },
     inheritColor: {
         type: Boolean,
         default: false
@@ -64,6 +68,8 @@ const fontSize = computed(() => {
         return getThemeProperty('text.size.small').value
     } else if (props.large) {
         return getThemeProperty('text.size.large').value
+    } else if (props.extraLarge) {
+        return getThemeProperty('text.size.xlarge').value
     } else {
         return getThemeProperty('text.size.default').value
     }
