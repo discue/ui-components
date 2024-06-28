@@ -2,6 +2,18 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [0.47.0](https://github.com/discue/ui-components/compare/v0.46.0...v0.47.0) (2024-06-28)
+
+
+### Features
+
+* **headline:** add standalone headline component ([cde3c34](https://github.com/discue/ui-components/commit/cde3c34b54be4a5bebed3068f8be9a3dd46dbb3f))
+
+
+### Refactorings
+
+* **headlines:** use headline component ([e12e53a](https://github.com/discue/ui-components/commit/e12e53a0d0fa0e175ede958a35c271b85c2caed5))
+
 ## [0.46.0](https://github.com/discue/ui-components/compare/v0.45.0...v0.46.0) (2024-06-25)
 
 
