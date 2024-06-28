@@ -12,6 +12,7 @@
                   :level="3">
             <slot name="subsubline" />
         </Headline>
+        <slot name="text" />
     </div>
 </template>
 
