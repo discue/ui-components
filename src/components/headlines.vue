@@ -1,5 +1,5 @@
 <template>
-    <div class="dsq-headlines flex flex-col space-y-4 md:space-y-0 justify-between">
+    <div class="dsq-headlines flex flex-col justify-between">
         <Headline v-if="showHeadline && $slots.headline"
                   :level="1">
             <slot name="headline" />
