@@ -194,3 +194,13 @@ function onFocus() {
     inputFocussed.value = true
 }
 </script>
+
+<style scoped>
+input[type='number']::-webkit-outer-spin-button,
+input[type='number']::-webkit-inner-spin-button,
+input[type='number'] {
+    -webkit-appearance: none;
+    -moz-appearance: textfield !important;
+    margin: 0;
+}
+</style>
