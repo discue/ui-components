@@ -2,6 +2,32 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [0.49.0](https://github.com/discue/ui-components/compare/v0.48.0...v0.49.0) (2024-08-03)
+
+
+### Features
+
+* **form-input:** hide webkit arrows for type number ([4bd3a0a](https://github.com/discue/ui-components/commit/4bd3a0a88f68f6f09d47947c9cb16b3290fcf8cc))
+* **form-input:** make sure component does not overlap form container ([d9bd869](https://github.com/discue/ui-components/commit/d9bd8698b925b800fac8aed54c4363e1fa6339d5))
+
+
+### Bug Fixes
+
+* **headlines:** remove space between components, fix layout on sm screens ([ca1e039](https://github.com/discue/ui-components/commit/ca1e039ac90709051fb2e9c6837cf87e888d4c61))
+
+
+### Chores
+
+* **deps-dev:** bump @babel/preset-env from 7.24.7 to 7.25.3 ([2acc60c](https://github.com/discue/ui-components/commit/2acc60c083d9cfc4ac5634d80c4165544d9687ca))
+* **deps-dev:** bump @heroicons/vue from 2.1.4 to 2.1.5 ([0069b58](https://github.com/discue/ui-components/commit/0069b585821252ff1a417a2bbf30dcdee2fac95e))
+* **deps-dev:** bump @vitejs/plugin-vue from 5.0.5 to 5.1.1 ([a3850f8](https://github.com/discue/ui-components/commit/a3850f80f22a1555cc313ab3893ad4cf1f193930))
+* **deps-dev:** bump eslint from 9.5.0 to 9.6.0 ([61d8ddd](https://github.com/discue/ui-components/commit/61d8ddd93de760ac7c2452e08f180388248bdb45))
+* **deps-dev:** bump firebase-tools from 13.11.2 to 13.12.0 ([e86f49a](https://github.com/discue/ui-components/commit/e86f49aaa2d6c08dd1e83080293955e98da67bec))
+* **deps-dev:** bump the vuepress group with 4 updates ([c42f418](https://github.com/discue/ui-components/commit/c42f418f6cfa949c986ae57d87ac5fdb3d8c81e2))
+* **deps-dev:** bump the vuepress group with 6 updates ([225b1b8](https://github.com/discue/ui-components/commit/225b1b87f017b020127873ee2bf0303559295b7d))
+* **deps-dev:** bump vue-router from 4.3.3 to 4.4.0 ([c0dcfca](https://github.com/discue/ui-components/commit/c0dcfcacecdc47287874fd6848a229fc0cb12531))
+* **deps-dev:** bump vue-router from 4.4.0 to 4.4.2 ([2826610](https://github.com/discue/ui-components/commit/2826610103911a45680151ca215f411d7284355c))
+
 ## [0.48.0](https://github.com/discue/ui-components/compare/v0.47.1...v0.48.0) (2024-06-28)
 
 
