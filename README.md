@@ -1,5 +1,5 @@
 
-<p align="center"><a href="https://www.discue.io/" target="_blank" rel="noopener noreferrer"><img width="128" src="https://www.discue.io/icons-fire-no-badge-square/web/icon-192.png" alt="Vue logo"></a></p>
+<p align="center"><a href="https://www.discue.io/" target="_blank" rel="noopener noreferrer"><img width="256" src="https://www.discue.io/icons-fire-no-badge-square/web/icon-192.png" alt="Vue logo"></a></p>
 
 <br/>
 <div align="center">
@@ -22,29 +22,15 @@
 
 A collection of **themeable** vue.js components used in discue.io.
 
-## Installation
+## 📦 Installation
 
-Install with npm
+Install the package via npm:
 
 ```bash
   npm install @discue/ui-components
 ```
 
-## Usage
-To change the default theme, register the module as a [Vue Plugin](https://vuejs.org/guide/reusability/plugins.html#introduction) and pass an object with theme properties. Valid theme property keys can be found in [theme.js](src/theme.js) and [theme-keys.js](src/theme-keys.js).
-
-```js
-import { theme } from '@discue/ui-components'
-import { createApp } from 'vue'
-import App from './App.vue'
-
-createApp(App)
-    .use(theme, {
-        [theme.TEXT_COLOR_DEFAULT]: 'text-gray-500'
-    })
-    .mount('#app')
-```
-
+## 🚀 Usage
 In your component files, import any ui component from the main export and use it in your template. 
 
 ```vue
@@ -59,7 +45,22 @@ import { NavLink } from '@discue/ui-components'
 
 The list of currently available components can be found at [ui.discue.io](https://ui.discue.io/components/back-to-top.html).
 
-## Run Tests
+## ✨ Theming
+To change the default theme, register the module as a [Vue Plugin](https://vuejs.org/guide/reusability/plugins.html#introduction) and pass an object with theme properties. Valid theme property keys can be found in [theme.js](src/theme.js) and [theme-keys.js](src/theme-keys.js).
+
+```js
+import { theme } from '@discue/ui-components'
+import { createApp } from 'vue'
+import App from './App.vue'
+
+createApp(App)
+    .use(theme, {
+        [theme.TEXT_COLOR_DEFAULT]: 'text-gray-500'
+    })
+    .mount('#app')
+```
+
+## 🧪 Running Tests
 
 To run tests, run the following command
 
@@ -67,7 +68,7 @@ To run tests, run the following command
   npm run test:unit
 ```
 
-## License
+## 📄 License
 
 [MIT](https://choosealicense.com/licenses/mit/)
 
