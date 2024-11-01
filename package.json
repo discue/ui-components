@@ -63,7 +63,7 @@
   },
   "types": "./dist/ui.es.d.ts",
   "devDependencies": {
-    "@babel/core": "^7.25.2",
+    "@babel/core": "^7.26.0",
     "@babel/preset-env": "^7.25.3",
     "@heroicons/vue": "^2.1.5",
     "@vitejs/plugin-vue": "^5.1.1",
