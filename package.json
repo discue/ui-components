@@ -81,7 +81,7 @@
     "@vuepress/plugin-sitemap": "^2.0.0-rc.40",
     "@vuepress/theme-default": "^2.0.0-rc.58",
     "babel-core": "^7.0.0-bridge.0",
-    "babel-jest": "^27.5.1",
+    "babel-jest": "^29.7.0",
     "chai": "4",
     "core-js": "^3.38.1",
     "eslint": "^9.13.0",
