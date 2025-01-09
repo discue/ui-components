@@ -2,7 +2,7 @@ import { path } from '@vuepress/utils'
 
 export default {
     extractHeaders: { level: [2, 3, 4, 5, 6] },
-    anchor: false,
+    anchor: true,
     importCode: {
         handleImportPath: (str) =>
             str
