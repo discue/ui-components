@@ -16,6 +16,7 @@ export default defineUserConfig({
     theme: defaultTheme({
         colorMode: 'light',
         colorModeSwitch: false,
+        hostname: 'https://ui.discue.io',
         logo: '/logo.svg',
         logoDark: '/icons-fire-all-gray/web/icon-96.png',
         editLinkText: 'Improve this page',
@@ -25,7 +26,10 @@ export default defineUserConfig({
         repoLabel: 'GitHub',
         sidebarDepth: 3,
         navbar,
-        sidebar
+        sidebar,
+        themePlugins: {
+            prismjs: false,
+        },
     }),
     plugins,
     markdown,
