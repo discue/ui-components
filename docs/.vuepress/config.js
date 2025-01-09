@@ -12,7 +12,7 @@ export default defineUserConfig({
     bundler: viteBundler(),
     lang: 'en-US',
     title: 'discue',
-    description: 'Vue.js UI components for the secure and reliable messaging and queueing service.',
+    description: 'A collection of reusable UI components for Vue 3 built for discue.io',
     theme: defaultTheme({
         colorMode: 'light',
         colorModeSwitch: false,
