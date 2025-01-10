@@ -84,8 +84,8 @@ import { Text } from '@discue/ui-components'
 </script>
 ```
 
-See the [theming guide](/theming.html) for more details.
-
 ## Contributing
+We welcome contributions! Please see our [contribution guidelines](https://github.com/discue/.github/blob/main/CONTRIBUTING.md) for more information.
 
-We welcome contributions! Please see our [contribution guidelines](/CONTRIBUTING.md) for more information.
+## License
+@[code](../LICENSE)
