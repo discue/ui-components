@@ -16,3 +16,5 @@ if [[ ! -e dist/ui.es.d.ts ]]; then
 fi
 
 node create_theme_keys.js
+
+npm run docs:build
