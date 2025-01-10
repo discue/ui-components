@@ -30,7 +30,7 @@ jobs:
       env:
         NODE_ENV: production
 
-    - name: Build docs
-      run: npm run docs:build
+    - name: build
+      run: ./build.sh
       env:
         NODE_ENV: production
