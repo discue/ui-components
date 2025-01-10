@@ -26,11 +26,8 @@ jobs:
     - name: Install dependencies
       run: npm ci
 
-    - name: Prepare docs build
-      run: ./prepare-docs-build.sh
-
     - name: Build docs
-      run: npm run docs:build
+      run: ./build.sh
       env:
         NODE_ENV: production
         
