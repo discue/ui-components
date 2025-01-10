@@ -1,5 +1,6 @@
 import { viteBundler } from '@vuepress/bundler-vite';
 import { defineUserConfig } from '@vuepress/cli';
+import { path } from '@vuepress/utils';
 import extendsMarkdown from './configs/extends-markdown.js';
 import head from './configs/head.js';
 import markdown from './configs/markdown.js';
@@ -14,6 +15,10 @@ export default defineUserConfig({
     title: 'discue',
     description: 'A collection of reusable UI components for Vue 3 built for discue.io',
     theme: defaultTheme({
+        alias: {
+            '@discue/ui-components': path.resolve(__dirname, '../../src/index'),
+            '@theme/HomeFooter.vue': path.resolve(__dirname, './components/HomeFooter.vue')
+        },
         colorMode: 'light',
         colorModeSwitch: false,
         hostname: 'https://ui.discue.io',
