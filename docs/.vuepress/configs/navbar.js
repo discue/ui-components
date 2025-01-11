@@ -8,8 +8,26 @@ const components = fs.readdirSync(path.resolve(__dirname, '../../components')) /
 
 export default [{
     text: 'Components',
-    link: `/components/${components[0]}`,
+    link: `/components/`,
     activeMatch: '^/components'
+},
+{
+    text: `Community`,
+    children: [
+        {
+            text: 'Code Contributions',
+            link: `/contributions/`,
+            activeMatch: '^/contributions'
+        },
+        {
+            text: 'Code of Conduct',
+            link: 'https://github.com/discue/.github/blob/main/CODE_OF_CONDUCT.md',
+        },
+        {
+            text: 'Security Policy',
+            link: `https://github.com/discue/.github/blob/main/SECURITY.md`,
+        },
+    ],
 },
 {
     text: `v${version}`,
