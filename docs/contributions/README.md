@@ -5,6 +5,10 @@
 * **`script`:** Contains the component's JavaScript logic, including data (bindings), methods, computed properties, and lifecycle hooks.
 * **`style`:**  (Optional) Contains the component's CSS styles, scoped to the component using the `scoped` attribute.  This library uses Tailwind CSS for styling.
 
+:::tip
+If you are unfamiliar with the Vue.js Composition API, please refer to the [Vue.js Composition API](https://vuejs.org/guide/extras/composition-api-faq.html).
+:::
+
 **Each component provides a usage example** in `docs/.vuepress/examples`. This example should be clear and concise. Users must be able to copy the example to their application without any changes.
   @[code](../.vuepress/examples/BannerExample.vue)
 
