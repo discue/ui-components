@@ -4,7 +4,7 @@ title: Vue.js component library of discue.io
 heroImage: /icons-fire-light/web/icon-512.png
 actions:
   - text: Get Started
-    link: /components/back-to-top.html
+    link: /components/
     type: primary
 features:
   - title: Accessible
@@ -35,7 +35,7 @@ This is a collection of Vue.js components used in [discue.io](https://www.discue
 
 ### Available Components
 
-A full list of available components and their usage can be found in the [component documentation](/components/back-to-top.html).
+A full list of available components and their usage can be found in the [component documentation](/components/).
 
 ### Installation
 
