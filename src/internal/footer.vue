@@ -28,9 +28,9 @@
                 <li class="font-bold text-lg text-gray-800">
                     About
                 </li>
-                <li class="text-md text-gray-800"
-                    v-for="link in companyLinks"
-                    v-key="link.title">
+                <li v-for="link in companyLinks"
+                    :key="link.title"
+                    class="text-md text-gray-800">
                     <NavLink :href="link.href"
                              :secondary="true"
                              :small="true">
@@ -43,9 +43,9 @@
                 <li class="font-bold text-lg text-gray-800">
                     API Resources
                 </li>
-                <li class="text-md text-gray-800"
-                    v-for="link in apiResourcesLinks"
-                    v-key="link.title">
+                <li v-for="link in apiResourcesLinks"
+                    :key="link.title"
+                    class="text-md text-gray-800">
                     <NavLink :href="link.href"
                              :secondary="true"
                              :small="true">
@@ -58,9 +58,9 @@
                 <li class="font-bold text-lg text-gray-800">
                     UI Components
                 </li>
-                <li class="text-md text-gray-800"
-                    v-for="link in uiComponentsLinks"
-                    v-key="link.title">
+                <li v-for="link in uiComponentsLinks"
+                    :key="link.title"
+                    class="text-md text-gray-800">
                     <NavLink :href="link.href"
                              :secondary="true"
                              :small="true">
@@ -73,9 +73,9 @@
                 <li class="font-bold text-lg text-gray-800">
                     Legal
                 </li>
-                <li class="text-md text-gray-800"
-                    v-for="link in legalLinks"
-                    v-key="link.title">
+                <li v-for="link in legalLinks"
+                    :key="link.title"
+                    class="text-md text-gray-800">
                     <NavLink :href="link.href"
                              :secondary="true"
                              :small="true">
