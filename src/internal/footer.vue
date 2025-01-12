@@ -23,124 +23,68 @@
                     </NavLink>
                 </div>
             </div>
+
             <ul class="space-y-2">
                 <li class="font-bold text-lg text-gray-800">
-                    Company
+                    About
                 </li>
-                <li class="text-md text-gray-800">
-                    <NavLink href="https://www.discue.io/#how-it-works"
+                <li class="text-md text-gray-800"
+                    v-for="link in companyLinks"
+                    v-key="link.title">
+                    <NavLink :href="link.href"
                              :secondary="true"
                              :small="true">
-                        How it works
+                        {{ link.title }}
                     </NavLink>
-                </li>
-                <li class="text-md text-gray-800">
-                    <NavLink href="https://www.discue.io/#use-cases"
-                             :secondary="true"
-                             :small="true">
-                        Use cases
-                    </NavLink>
-                </li>
-                <li class="text-md text-gray-800">
-                    <NavLink href="https://www.discue.io/registration/create-account"
-                             :secondary="true"
-                             :small="true">
-                        Create Account
-                    </NavLink>
-                </li>
-                <li class="text-md text-gray-800">
-                    Delete account
-                </li>
-                <li class="text-md text-gray-800">
-                    Cancel subscription
                 </li>
             </ul>
+
             <ul class="space-y-2">
                 <li class="font-bold text-lg text-gray-800">
                     API Resources
                 </li>
-                <li class="text-md text-gray-800">
-                    <NavLink href="https://docs.discue.io/getting-started/"
+                <li class="text-md text-gray-800"
+                    v-for="link in apiResourcesLinks"
+                    v-key="link.title">
+                    <NavLink :href="link.href"
                              :secondary="true"
                              :small="true">
-                        Getting started
-                    </NavLink>
-                </li>
-                <li class="text-md text-gray-800">
-                    <NavLink href="https://docs.discue.io/api-overview/"
-                             :secondary="true"
-                             :small="true">
-                        API Overview
-                    </NavLink>
-                </li>
-                <li class="text-md text-gray-800">
-                    <NavLink href="https://docs.discue.io/api-best-practices/"
-                             :secondary="true"
-                             :small="true">
-                        API Best Practices
-                    </NavLink>
-                </li>
-                <li class="text-md text-gray-800">
-                    <NavLink href="https://docs.discue.io/api-reference/api-keys/get-all-api-keys.html"
-                             :secondary="true"
-                             :small="true">
-                        API Reference
+                        {{ link.title }}
                     </NavLink>
                 </li>
             </ul>
+
             <ul class="space-y-2">
                 <li class="font-bold text-lg text-gray-800">
                     UI Components
                 </li>
-                <li class="text-md text-gray-800">
-                    <NavLink href="https://ui.discue.io/"
+                <li class="text-md text-gray-800"
+                    v-for="link in uiComponentsLinks"
+                    v-key="link.title">
+                    <NavLink :href="link.href"
                              :secondary="true"
                              :small="true">
-                        Documentation
-                    </NavLink>
-                </li>
-                <li class="text-md text-gray-800">
-                    <NavLink href="https://github.com/discue/ui-components"
-                             :secondary="true"
-                             :small="true">
-                        GitHub Repository
-                    </NavLink>
-                </li>
-                <li class="text-md text-gray-800">
-                    <NavLink href="https://www.npmjs.com/package/@discue/ui-components"
-                             :secondary="true"
-                             :small="true">
-                        npm Package
+                        {{ link.title }}
                     </NavLink>
                 </li>
             </ul>
+
             <ul class="space-y-2">
                 <li class="font-bold text-lg text-gray-800">
                     Legal
                 </li>
-                <li class="text-md text-gray-800">
-                    <NavLink href="https://www.discue.io/privacy"
+                <li class="text-md text-gray-800"
+                    v-for="link in legalLinks"
+                    v-key="link.title">
+                    <NavLink :href="link.href"
                              :secondary="true"
                              :small="true">
-                        Privacy Policy
-                    </NavLink>
-                </li>
-                <li class="text-md text-gray-800">
-                    <NavLink href="https://www.discue.io/terms"
-                             :secondary="true"
-                             :small="true">
-                        Terms &amp; Conditions
-                    </NavLink>
-                </li>
-                <li>
-                    <NavLink href="https://www.discue.io/imprint"
-                             :secondary="true"
-                             :small="true">
-                        Imprint &amp; Legal Notice
+                        {{ link.title }}
                     </NavLink>
                 </li>
             </ul>
         </div>
+
         <div class="p-8 flex justify-center">
             <small class="text-gray-800">© Copyright
                 2022, Stefan Pfaffel</small>
@@ -157,4 +101,73 @@ defineProps({
         default: true
     }
 })
+
+const companyLinks = [
+    {
+        title: 'How it works',
+        href: 'https://www.discue.io/#how-it-works'
+    },
+    {
+        title: 'Use cases',
+        href: 'https://www.discue.io/#use-cases'
+    },
+    {
+        title: 'Delete Account',
+        href: 'https://www.discue.io/'
+    },
+    {
+        title: 'Cancel Subscription',
+        href: 'https://www.discue.io/'
+    }
+]
+
+const apiResourcesLinks = [
+    {
+        title: 'Getting started',
+        href: 'https://docs.discue.io/getting-started/'
+    },
+    {
+        title: 'API Overview',
+        href: 'https://docs.discue.io/api-overview/'
+    },
+    {
+        title: 'API Best Practices',
+        href: 'https://docs.discue.io/api-best-practices/'
+    },
+    {
+        title: 'API Reference',
+        href: 'https://docs.discue.io/api-reference/api-keys/get-all-api-keys.html'
+    }
+]
+
+const uiComponentsLinks = [
+    {
+        title: 'Documentation',
+        href: 'https://ui.discue.io/'
+    },
+    {
+        title: 'GitHub Repository',
+        href: 'https://github.com/discue/ui-components'
+    },
+    {
+        title: 'npm Package',
+        href: 'https://www.npmjs.com/package/@discue/ui-components'
+    }
+]
+
+const legalLinks = [
+    {
+        title: 'Privacy Policy',
+        href: 'https://www.discue.io/privacy'
+    },
+    {
+        title: 'Terms & Conditions',
+        href: 'https://www.discue.io/terms'
+    },
+    {
+        title: 'Imprint & Legal Notice',
+        href: 'https://www.discue.io/imprint'
+    }
+
+]
 </script>
