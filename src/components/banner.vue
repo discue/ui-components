@@ -8,7 +8,7 @@
             <slot />
 
             <div class="absolute right-4">
-                <button class="p-1 rounded-full hover:shadow cursor-pointer flex items-center justify-center text-gray-900 hover:text-lime-300 bg-inherit hover:bg-gray-900"
+                <button class="p-1 rounded-full hover:shadow-sm cursor-pointer flex items-center justify-center text-gray-900 hover:text-lime-300 bg-inherit hover:bg-gray-900"
                         type="button"
                         @click="closeBanner">
                     <svg class="w-6 h-6"
@@ -61,7 +61,7 @@ const showBanner = computed(() => {
 })
 
 const clazz = computed(() => {
-    let clazz = 'pl-3 py-3 pr-12 w-full bg-lime-300 flex items-center justify-center font-medium shadow' + ' '
+    let clazz = 'pl-3 py-3 pr-12 w-full bg-lime-300 flex items-center justify-center font-medium shadow-sm' + ' '
     if (props.bottom) {
         clazz += 'bottom-0 '
     } else {

@@ -20,17 +20,17 @@
             </div>
 
             <button v-if="showClipboardButton"
-                    class="absolute bg-transparent right-0 pl-2 py-2 pr-3 text-gray-700 cursor-pointer transform transition-transform hover:-translate-y-1 outline-none"
+                    class="absolute bg-transparent right-0 pl-2 py-2 pr-3 text-gray-700 cursor-pointer transform transition-transform hover:-translate-y-1 outline-hidden"
                     @click.prevent="copyKeyToClipboard">
                 <ClipboardIcon class="h-6 w-6 stroke-2" />
             </button>
             <button v-if="copyToClipboardSuccess"
-                    class="absolute bg-transparent right-0 p-2 text-green-700 outline-none"
+                    class="absolute bg-transparent right-0 p-2 text-green-700 outline-hidden"
                     click.prevent>
                 <ClipboardDocumentCheckIcon class="h-6 w-6" />
             </button>
             <button v-if="copyToClipboardFailure"
-                    class="absolute bg-transparent right-0 p-2 text-attention outline-none"
+                    class="absolute bg-transparent right-0 p-2 text-attention outline-hidden"
                     click.prevent>
                 <svg class="h-6 w-6"
                      fill="none"

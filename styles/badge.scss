@@ -6,7 +6,7 @@
 
     &.themeable {
         @apply font-bold text-gray-900;
-        @apply bg-gradient-to-r from-lime-500 via-yellow-300 to-pink-400;
+        @apply bg-linear-to-r from-lime-500 via-yellow-300 to-pink-400;
     }
 
     @apply text-sm
