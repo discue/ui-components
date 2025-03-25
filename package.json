@@ -65,7 +65,7 @@
   "devDependencies": {
     "@babel/core": "^7.26.10",
     "@babel/preset-env": "^7.26.9",
-    "@discue/vuepress-plugin-outline": "^0.5.0",
+    "@discue/vuepress-plugin-outline": "^0.6.0",
     "@heroicons/vue": "^2.2.0",
     "@vitejs/plugin-vue": "^5.2.3",
     "@vue/cli-plugin-babel": "~5.0.8",
