@@ -112,7 +112,7 @@ const labelOrChildHaveFocus = computed(() => {
     return hasFocus.value || props.focussed
 })
 const parentClazz = computed(() => {
-    const clazz = ['dsq-form-element-container-with-label border-solid bg-inherit flex flex-col rounded']
+    const clazz = ['dsq-form-element-container-with-label border-solid bg-inherit flex flex-col rounded-sm']
     clazz.push([getThemeProperty(FORM_ELEMENT_BORDER_SIZE_DEFAULT).value])
     if (props.disabled) {
         clazz.push('cursor-not-allowed')

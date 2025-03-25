@@ -13,7 +13,7 @@
                 <input :id="'radio_' + id + '_' + option.value + '_id'"
                        autocomplete="off"
                        :checked="option.default === true || modelValue == option.value"
-                       class="hidden peer checked:bg-gray-900 rounded outline-none text-gray-100 placeholder:text-gray-300 py-2 px-3 leading-8"
+                       class="hidden peer checked:bg-gray-900 rounded-sm outline-hidden text-gray-100 placeholder:text-gray-300 py-2 px-3 leading-8"
                        :disabled="inputDisabled"
                        :name="name"
                        :required="required"
