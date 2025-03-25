@@ -2,6 +2,78 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [1.0.0](https://github.com/discue/ui-components/compare/v0.49.0...v1.0.0) (2025-03-25)
+
+
+### Features
+
+* enable doc page outline ([039641e](https://github.com/discue/ui-components/commit/039641efca30c09f3732376e0c198b0be7767e82))
+* **footer:** enable footer to hide other elements ([1243290](https://github.com/discue/ui-components/commit/12432904eb2518764d6eb50b8c80a164621b38de))
+* migrate to tailwind v4 ([9de3872](https://github.com/discue/ui-components/commit/9de387282c8696d4c61389a274534b924d678637))
+
+
+### Bug Fixes
+
+* **docs:** fix badge font size ([28c03d9](https://github.com/discue/ui-components/commit/28c03d9c260c1e1c9a5dd35812714b0f37d76994))
+
+
+### Refactorings
+
+* **footer:** use loops to create list entries ([dc13ec5](https://github.com/discue/ui-components/commit/dc13ec5b5fbba0be80074a6303b4be5adbd166f9))
+
+
+### Chores
+
+* **build:** make sure build also builds the docs ([17b49b6](https://github.com/discue/ui-components/commit/17b49b661c59ad20feb081c6346f1b6da8562bf8))
+* **ci:** do not add version.json ([940b33f](https://github.com/discue/ui-components/commit/940b33fa0061802639d86c2abb7b34543ee1c590))
+* **ci:** run build script to build docs ([b907fc3](https://github.com/discue/ui-components/commit/b907fc372db9923103693c511a9494b4ac8f6f87))
+* **ci:** use build script also during deploy ([413fe80](https://github.com/discue/ui-components/commit/413fe8012eec9858f2f48b4560fbcf13358c5fb3))
+* **deps-dev:** bump @babel/core from 7.24.7 to 7.25.2 ([b2d2b6c](https://github.com/discue/ui-components/commit/b2d2b6c9e1f969745991062bd23fa8cf2e225e53))
+* **deps-dev:** bump @babel/core from 7.25.2 to 7.26.0 ([640191e](https://github.com/discue/ui-components/commit/640191ebf06ab88af0f28b36a3650634fbbf7be0))
+* **deps-dev:** bump @babel/core from 7.26.0 to 7.26.9 ([3142ccc](https://github.com/discue/ui-components/commit/3142ccc1c7d8ed425295eb5512911d05c25c690f))
+* **deps-dev:** bump @babel/preset-env from 7.26.0 to 7.26.7 ([5ab6f3b](https://github.com/discue/ui-components/commit/5ab6f3b1d05f9696b994060c0303f08da362dd67))
+* **deps-dev:** bump @babel/preset-env from 7.26.7 to 7.26.9 ([3ccdd85](https://github.com/discue/ui-components/commit/3ccdd855d3eda007eb274fbc9640f6956868dda8))
+* **deps-dev:** bump @heroicons/vue from 2.1.5 to 2.2.0 ([7d970d0](https://github.com/discue/ui-components/commit/7d970d0ae803a6c49136fb9d244631402ffd7b22))
+* **deps-dev:** bump chai from 4.4.1 to 4.5.0 ([3f7bb60](https://github.com/discue/ui-components/commit/3f7bb6018790a02d09665f5052201725359e47b0))
+* **deps-dev:** bump core-js from 3.37.1 to 3.38.1 ([5a6ca5e](https://github.com/discue/ui-components/commit/5a6ca5e39cfa2916b7ac85c1a84c9bec8e97fef9))
+* **deps-dev:** bump core-js from 3.39.0 to 3.40.0 ([60dcbc8](https://github.com/discue/ui-components/commit/60dcbc87a90dba4065a49f164ac0007b1ebd820a))
+* **deps-dev:** bump eslint from 9.6.0 to 9.9.1 ([9209a73](https://github.com/discue/ui-components/commit/9209a73157af1fb7c4c2c9dcdbff1e9d3f2fc924))
+* **deps-dev:** bump eslint from 9.9.1 to 9.13.0 ([cf440ab](https://github.com/discue/ui-components/commit/cf440abaebefa62344283feca38804b6e139c700))
+* **deps-dev:** bump eslint-plugin-vue from 9.26.0 to 9.28.0 ([109bbbf](https://github.com/discue/ui-components/commit/109bbbf76a366e770a17a70721be3b80fc35c99e))
+* **deps-dev:** bump firebase-tools from 13.29.1 to 13.29.3 ([c3d4aeb](https://github.com/discue/ui-components/commit/c3d4aeb59fde0da3e106150ff36ebad630cd9707))
+* **deps-dev:** bump markdown-it-attrs from 4.1.6 to 4.2.0 ([c75d194](https://github.com/discue/ui-components/commit/c75d194f2c8cf06f976a8e39e7a4e98a72769fa9))
+* **deps-dev:** bump sass-embedded from 1.83.1 to 1.85.1 ([435a453](https://github.com/discue/ui-components/commit/435a453bc2ce0aa03b53cdc00fac022590b499d5))
+* **deps-dev:** bump tailwindcss from 3.4.4 to 3.4.13 ([57ee717](https://github.com/discue/ui-components/commit/57ee717a7288784c6ec2f37796a859ed032d8c04))
+* **deps-dev:** bump the vuepress group with 4 updates ([edfe709](https://github.com/discue/ui-components/commit/edfe709db50b5237d8710d9e8aec33e6d6f3a2a3))
+* **deps-dev:** bump the vuepress group with 4 updates ([fc476dd](https://github.com/discue/ui-components/commit/fc476ddeeb69a4800dac4ba7197cfb2947030c98))
+* **deps-dev:** bump the vuepress group with 7 updates ([a5e415e](https://github.com/discue/ui-components/commit/a5e415e5698ba5e4e12310c2769d41fc018ff0c7))
+* **deps-dev:** bump the vuepress group with 7 updates ([9c3fd8f](https://github.com/discue/ui-components/commit/9c3fd8fc9ba56f556e1bcbc685a05f2e040a0359))
+* **deps-dev:** bump the vuepress group with 7 updates ([d4eebc5](https://github.com/discue/ui-components/commit/d4eebc528ade8bacd8cb744f922b5728185be869))
+* **deps-dev:** bump the vuepress group with 7 updates ([7c9c1c1](https://github.com/discue/ui-components/commit/7c9c1c108473224c38bc6daaf749276d904e81fd))
+* **deps-dev:** bump vue-router from 4.4.2 to 4.4.3 ([2804cef](https://github.com/discue/ui-components/commit/2804cef1fb89cbee6d08cf0051443eb031b31f78))
+* **deps-dev:** bump vue-router from 4.4.3 to 4.4.5 ([d039453](https://github.com/discue/ui-components/commit/d0394531efb0e22d04f2f84a5761ba0d1bc50112))
+* **deps-dev:** bump vue-router from 4.4.5 to 4.5.0 ([f7c39fd](https://github.com/discue/ui-components/commit/f7c39fde13fc1274b13734711b2e3f3c43913471))
+* **deps:** update dependencies ([861fb84](https://github.com/discue/ui-components/commit/861fb84431097fa8471af4eb1f2f763565f9a9d9))
+* **deps:** update dependencies ([870f977](https://github.com/discue/ui-components/commit/870f97743ed5434a2bce2b658a06acc0633668f6))
+* **deps:** update dependencies ([35479df](https://github.com/discue/ui-components/commit/35479dff0b61829fc978d506168718943bf99342))
+* **deps:** update outline plugin ([a935174](https://github.com/discue/ui-components/commit/a935174456d0e36fc0d26dc01282549516c43ef6))
+* **deps:** update outline plugin ([3b9ee1b](https://github.com/discue/ui-components/commit/3b9ee1b25e9fa4858bb27153424f8fc4f5eb5bd8))
+* do only update deploy branch, not main ([cff97dc](https://github.com/discue/ui-components/commit/cff97dc08c7e2ad3e9bada6f39fd788b7248686e))
+* **docs:** add components index page ([2b15132](https://github.com/discue/ui-components/commit/2b15132011a32b1439a0704886137d0c0a0a223e))
+* **docs:** add contributions section to sidebar ([04327d3](https://github.com/discue/ui-components/commit/04327d3d1327cf9bd885a4a787ffc5264f122c04))
+* **docs:** fix more styling regressions ([3496c00](https://github.com/discue/ui-components/commit/3496c00a7f70f321f414b65892e11961f013d68a))
+* **docs:** fix styling regressions ([240ac27](https://github.com/discue/ui-components/commit/240ac277193c72e9aa227556605c6587f0826d96))
+* **docs:** link to components index page from landing page ([6fa8932](https://github.com/discue/ui-components/commit/6fa89320847ae3b48df3de7ed8a80c9df1e90c69))
+* **docs:** resolve warnings about plugin usage ([77c7a1b](https://github.com/discue/ui-components/commit/77c7a1b38be889b20af950c31ab839dd6ca53eca))
+* **docs:** update contributions index page ([f6279c2](https://github.com/discue/ui-components/commit/f6279c2f2df819dda6e752056a668d2a75dc1198))
+* **docs:** update front matter ([812976d](https://github.com/discue/ui-components/commit/812976d0287f4dd24d5e679d3c685e5730623fb3))
+* **docs:** update frontmatter ([664d2c3](https://github.com/discue/ui-components/commit/664d2c3a1e1140d2fa2e29fa8ad8672f670ce10e))
+* **docs:** update navbar content and styling ([c777de1](https://github.com/discue/ui-components/commit/c777de13bc4ee8846442e7a1e470164ac527fec4))
+* **repo:** add code of conduct ([694b1ad](https://github.com/discue/ui-components/commit/694b1ad68329505ad012db80a17c0d5632b3ad8e))
+* **repo:** use org-wide community health files ([50f3db9](https://github.com/discue/ui-components/commit/50f3db9ef533f6e5047bb2c951493ba1511e318f))
+* **style:** use correct name for v-bind:key directive ([8df0d08](https://github.com/discue/ui-components/commit/8df0d085c55ab2739b8dbb23c5de9593ef72f0f9))
+* update navbar button style ([bc2b24c](https://github.com/discue/ui-components/commit/bc2b24cb60c6c7a9ccf5feb99e4100e249abfbda))
+
 ## [0.49.0](https://github.com/discue/ui-components/compare/v0.48.0...v0.49.0) (2024-08-03)
 
 
