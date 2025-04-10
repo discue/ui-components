@@ -37,11 +37,11 @@ const clazz = computed(() => {
 })
 
 const h1 = () => {
-    return `text-3xl tracking-tight leading-snug font-bold ${getThemeProperty(TEXT_COLOR_DEFAULT).value}`
+    return `text-3xl tracking-tight leading-snug font-extrabold ${getThemeProperty(TEXT_COLOR_DEFAULT).value}`
 }
 
 const h2 = () => {
-    return `text-2xl leading-relaxed font-medium ${getThemeProperty(TEXT_COLOR_DEFAULT).value}`
+    return `text-2xl leading-relaxed font-bold ${getThemeProperty(TEXT_COLOR_DEFAULT).value}`
 }
 
 const h3 = () => {
