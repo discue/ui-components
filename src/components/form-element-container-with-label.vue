@@ -164,7 +164,7 @@ const labelWrapperClazz = computed(() => {
 })
 const hintClazz = computed(() => {
     const clazz = [
-        'absolute -top-2 p-1.5 right-0 leading-7 italic ml-auto transition-opacity duration-200 ease-in',
+        'dsq-form-element-hint absolute -top-[.2rem] p-1.5 right-0 leading-7 italic ml-auto transition-opacity duration-200 ease-in',
         getThemeProperty(FORM_ELEMENT_HINT_COLOR_DEFAULT).value,
         getThemeProperty(FORM_ELEMENT_HINT_SIZE_DEFAULT).value,
         getThemeProperty(FORM_ELEMENT_HINT_WEIGHT_DEFAULT).value,

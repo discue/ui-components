@@ -88,6 +88,10 @@
             height: 1rem;
         }
     }
+
+    .dsq-form-element-hint {
+        @apply -top-2!
+    }
 }
 
 #banner-preview div {
