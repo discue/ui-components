@@ -2,6 +2,20 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [1.4.0](https://github.com/discue/ui-components/compare/v1.3.0...v1.4.0) (2025-04-13)
+
+
+### Bug Fixes
+
+* **breadcrumbs:** ensure now really the last crumb is bold ([c95d349](https://github.com/discue/ui-components/commit/c95d34946aa655fb7f29aeb96078718f61d891ce))
+* **breadcrumbs:** ensure only last crumb is bold ([e28fc43](https://github.com/discue/ui-components/commit/e28fc433168fb74937365503246bba50acde553a))
+
+
+### Chores
+
+* **breadcrumbs:** pass string as boolean ([cbbd81d](https://github.com/discue/ui-components/commit/cbbd81dce72f16c427f762db764ec3cdf386b8d4))
+* **ci:** add copilot instructions ([d4ec3d7](https://github.com/discue/ui-components/commit/d4ec3d755e27d98726c3887dd3cde256390ead19))
+
 ## [1.3.0](https://github.com/discue/ui-components/compare/v1.2.0...v1.3.0) (2025-04-13)
 
 
