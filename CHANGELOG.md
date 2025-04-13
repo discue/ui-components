@@ -2,6 +2,18 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [1.3.0](https://github.com/discue/ui-components/compare/v1.2.0...v1.3.0) (2025-04-13)
+
+
+### Bug Fixes
+
+* **breadcrumb:** convert to composition api component ([31f811b](https://github.com/discue/ui-components/commit/31f811bde9077f592ddcced4297721c0153ffd7a))
+
+
+### Chores
+
+* **breadcrumbs:** remove comments ([cd0e696](https://github.com/discue/ui-components/commit/cd0e696d5904257a1d4423fddc55d31a35847b6b))
+
 ## [1.2.0](https://github.com/discue/ui-components/compare/v1.1.0...v1.2.0) (2025-04-13)
 
 
