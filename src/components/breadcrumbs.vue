@@ -8,14 +8,14 @@
                 class="inline-flex items-center">
                 <div class="flex items-center">
                     <template v-if="index === 0">
-                        <HomeIcon class="w-5 h-5 mr-1 text-gray-400 dark:text-gray-700 mr-2" />
+                        <HomeIcon class="w-5 h-5 mr-1 text-gray-500 dark:text-gray-700 mr-2" />
                     </template>
                     <template v-else>
-                        <ChevronRightIcon class="w-6 h-6 mr-1 text-gray-400 dark:text-gray-700" />
+                        <ChevronRightIcon class="w-6 h-6 mr-1 text-gray-500 dark:text-gray-700" />
                     </template>
 
                     <template v-if="crumb.path">
-                        <NavLink class="ms-1 md:ms-2 text-gray-400 dark:text-gray-700"
+                        <NavLink class="ms-1 md:ms-2 text-gray-500 dark:text-gray-700 font-medium"
                                  :href="crumb.path"
                                  :inherit-color="true"
                                  :light="isNotLastCrumb(index)"
@@ -27,7 +27,7 @@
                         </NavLink>
                     </template>
                     <template v-else>
-                        <span class="ms-1 text-sm font-medium text-gray-400 dark:text-gray-700 md:ms-2">
+                        <span class="ms-1 md:ms-2 font-medium text-gray-500 dark:text-gray-700">
                             <Text :inherit-color="true"
                                   :light="isNotLastCrumb(index)"
                                   :small="true">
