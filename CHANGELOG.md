@@ -2,6 +2,15 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [1.5.0](https://github.com/discue/ui-components/compare/v1.4.0...v1.5.0) (2025-04-13)
+
+
+### Features
+
+* **breadcrumbs:** advise nav link to use color defined by parent ([15d8004](https://github.com/discue/ui-components/commit/15d8004233d4e80a8969a92c1e5d70a0ae2ca708))
+* **nav-link:** enable inhereting color ([e1e7414](https://github.com/discue/ui-components/commit/e1e741426305022493c1553c47c670600df465d1))
+* **nav-link:** if light link requested, dont set any font-weight related class ([260d1af](https://github.com/discue/ui-components/commit/260d1af0f21c86090f2493202e36d93330426de8))
+
 ## [1.4.0](https://github.com/discue/ui-components/compare/v1.3.0...v1.4.0) (2025-04-13)
 
 
