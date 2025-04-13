@@ -21,7 +21,7 @@
                                  :light="isNotLastCrumb(index)"
                                  class="ms-1 md:ms-2 text-gray-400 dark:text-gray-700">
                             <Text :inherit-color="true"
-                                  small="true">
+                                  :small="true">
                                 {{ crumb.name }}
                             </Text>
                         </NavLink>
