@@ -25,6 +25,10 @@ const props = defineProps({
         type: Boolean,
         default: false,
     },
+    inheritColor: {
+        type: Boolean,
+        default: false,
+    },
     small: {
         type: Boolean,
         default: false,
@@ -60,15 +64,18 @@ const textSize = computed(() => {
 })
 
 const textColor = computed(() => {
-    if (props.invert) {
-        return getThemeProperty('link.color.light').value
-    } if (props.secondary) {
-        return getThemeProperty('link.color.secondary').value
-    } else if (props.attention) {
-        return getThemeProperty('link.color.attention').value
-    } else {
-        return getThemeProperty('link.color.default').value
+    if (!props.inheritColor) {
+        if (props.invert) {
+            return getThemeProperty('link.color.light').value
+        } if (props.secondary) {
+            return getThemeProperty('link.color.secondary').value
+        } else if (props.attention) {
+            return getThemeProperty('link.color.attention').value
+        } else {
+            return getThemeProperty('link.color.default').value
+        }
     }
+    return ''
 })
 
 const borderColor = computed(() => {
