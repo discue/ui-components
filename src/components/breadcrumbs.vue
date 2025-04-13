@@ -18,7 +18,7 @@
                     <template v-if="crumb.path">
                         <NavLink :small="true"
                                  :href="crumb.path"
-                                 :light="isLastCrumb(index)"
+                                 :light="isNotLastCrumb(index)"
                                  class="ms-1 md:ms-2 text-gray-400 dark:text-gray-700">
                             <Text :inherit-color="true"
                                   small="true">
@@ -60,5 +60,5 @@ const props = defineProps({
     },
 });
 
-const isLastCrumb = (index) => index === props.crumbs.length - 1;
+const isNotLastCrumb = (index) => index !== props.crumbs.length - 1;
 </script>
