@@ -46,8 +46,19 @@
         padding-left: inherit;
     }
 
-    li {
+    li.dsq-drop-down-menu-item {
         @apply list-none bg-gray-50 shadow-sm;
+    }
+
+    li.dsq-breadcrumbs-item  {
+        @apply list-none;
+    }
+
+    li.dsq-breadcrumbs .a {
+        @apply no-underline;
+    }
+    li.dsq-breadcrumbs .dsq-nav-link  {
+        @apply no-underline text-gray-400 dark:text-gray-700;
     }
 
     input {

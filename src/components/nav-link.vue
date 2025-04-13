@@ -40,6 +40,10 @@ const props = defineProps({
     target: {
         type: String
     },
+    light: {
+        type: Boolean,
+        default: false
+    },
     // window injection for testing only
     window: {
         type: Object,
@@ -92,18 +96,30 @@ const bgColor = computed(() => {
 })
 
 const fontWeight = computed(() => {
-    return getThemeProperty('link.weight.default').value
+    if (props.light) {
+        return "font-base"
+    } else {
+        return getThemeProperty('link.weight.default').value
+    }
+})
+
+const borderWith = computed(() => {
+    if (props.small) {
+        return 'hover:border-b-2'
+    } else {
+        return 'hover:border-b-4'
+    }
 })
 
 const clazz = computed(() => {
-    const clazz = []
+    const clazz = ['no-underline!']
     if (isExternalLink.value) {
         clazz.push('external-link-icon')
     }
     if (props.invert) {
         clazz.push(`p-3 ${textColor.value} ${borderColor.value} ${textSize.value} ${bgColor.value} ${fontWeight.value} hover:shadow-md rounded-lg transform transition-transform hover:-translate-y-1`)
     } else {
-        clazz.push(`${textSize.value} ${textColor.value} ${borderColor.value} animate ${fontWeight.value} hover:border-b-4 cursor-pointer`)
+        clazz.push(`${textSize.value} ${textColor.value} ${borderColor.value} animate ${fontWeight.value} ${borderWith.value} cursor-pointer`)
     }
     return clazz.join(' ')
 })
