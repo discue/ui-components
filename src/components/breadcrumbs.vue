@@ -30,7 +30,7 @@
                         <span class="ms-1 text-sm font-medium text-gray-400 dark:text-gray-700 md:ms-2">
                             <Text :inherit-color="true"
                                   :small="true"
-                                  :light="true">
+                                  :light="isNotLastCrumb(index)">
                                 {{ crumb.name }}
                             </Text>
                         </span>
@@ -60,5 +60,7 @@ const props = defineProps({
     },
 });
 
-const isNotLastCrumb = (index) => index !== props.crumbs.length - 1;
+function isNotLastCrumb(index) {
+    return index < props.crumbs.length - 1
+}
 </script>
