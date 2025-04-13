@@ -6,7 +6,9 @@
                                    :input-invalid="invalid"
                                    :label="label">
         <fieldset :class="wrapperClazz">
-            <legend class="h-0 w-0 invisible absolute">{{ label }}</legend>
+            <legend class="h-0 w-0 invisible absolute">
+{{ label }}
+</legend>
             <div v-for="option in options"
                  :key="option.value"
                  :class="optionClazz">

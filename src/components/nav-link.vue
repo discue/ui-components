@@ -97,7 +97,7 @@ const bgColor = computed(() => {
 
 const fontWeight = computed(() => {
     if (props.light) {
-        return "font-base"
+        return 'font-base'
     } else {
         return getThemeProperty('link.weight.default').value
     }
