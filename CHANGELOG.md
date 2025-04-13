@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [1.2.0](https://github.com/discue/ui-components/compare/v1.1.0...v1.2.0) (2025-04-13)
+
+
+### Features
+
+* **breadcrumbs:** add breadcrumbs component ([f627aaa](https://github.com/discue/ui-components/commit/f627aaa2de1abd7a0d11282201757c8d802e6c65))
+
 ## [1.1.0](https://github.com/discue/ui-components/compare/v1.0.0...v1.1.0) (2025-04-13)
 
 
