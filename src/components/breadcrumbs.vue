@@ -16,8 +16,6 @@
                     </template>
 
                     <template v-if="crumb.path">
-                        <!-- <a :href="crumb.path" -->
-                        <!-- class="ms-1 text-sm font-medium text-gray-700 hover:font-bold md:ms-2"> -->
                         <NavLink :small="true"
                                  :href="crumb.path"
                                  :light="isLastCrumb(index)"
@@ -27,7 +25,6 @@
                                 {{ crumb.name }}
                             </Text>
                         </NavLink>
-                        <!-- </a> -->
                     </template>
                     <template v-else>
                         <span class="ms-1 text-sm font-medium text-gray-400 dark:text-gray-700 md:ms-2">
