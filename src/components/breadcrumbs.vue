@@ -20,7 +20,7 @@
                         <!-- class="ms-1 text-sm font-medium text-gray-700 hover:font-bold md:ms-2"> -->
                         <NavLink :small="true"
                                  :href="crumb.path"
-                                 :light="index != crumbs.length - 1"
+                                 :light="isLastCrumb(index)"
                                  class="ms-1 md:ms-2 text-gray-400 dark:text-gray-700">
                             <Text :inherit-color="true"
                                   small="true">
@@ -44,30 +44,24 @@
     </nav>
 </template>
 
-<script>
+<script setup>
 import { ChevronRightIcon, HomeIcon } from '@heroicons/vue/16/solid';
-import { defineComponent } from "vue";
 import NavLink from './nav-link.vue';
 import Text from './text.vue';
 
-export default defineComponent({
-    name: "Breadcrumbs",
-    components: {
-        HomeIcon,
-        ChevronRightIcon,
-    },
-    props: {
-        crumbs: {
-            type: Array,
-            required: true,
-            validator(value) {
-                return value.every(
-                    (crumb) =>
-                        typeof crumb.name === "string" &&
-                        (crumb.path === undefined || crumb.path.startsWith("/"))
-                );
-            },
+const props = defineProps({
+    crumbs: {
+        type: Array,
+        required: true,
+        validator(value) {
+            return value.every(
+                (crumb) =>
+                    typeof crumb.name === "string" &&
+                    (crumb.path === undefined || crumb.path.startsWith("/"))
+            );
         },
     },
 });
+
+const isLastCrumb = (index) => index === props.crumbs.length - 1;
 </script>
