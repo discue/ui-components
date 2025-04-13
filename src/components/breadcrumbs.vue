@@ -7,7 +7,7 @@
                 :key="index"
                 class="inline-flex items-center">
                 <div class="flex items-center">
-<template v-if="index === 0">
+                    <template v-if="index === 0">
                         <HomeIcon class="w-5 h-5 mr-1 text-gray-400 dark:text-gray-700 mr-2" />
                     </template>
                     <template v-else>
@@ -17,6 +17,7 @@
                     <template v-if="crumb.path">
                         <NavLink class="ms-1 md:ms-2 text-gray-400 dark:text-gray-700"
                                  :href="crumb.path"
+                                 :inherit-color="true"
                                  :light="isNotLastCrumb(index)"
                                  :small="true">
                             <Text :inherit-color="true"
