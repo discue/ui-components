@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [1.6.0](https://github.com/discue/ui-components/compare/v1.5.0...v1.6.0) (2025-04-13)
+
+
+### Features
+
+* **breadcrumbs:** update styling ([55e782c](https://github.com/discue/ui-components/commit/55e782cbb1baa92dd8cfeace7c18706d91a9c8bf))
+
 ## [1.5.0](https://github.com/discue/ui-components/compare/v1.4.0...v1.5.0) (2025-04-13)
 
 
