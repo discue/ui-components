@@ -2,6 +2,24 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [1.1.0](https://github.com/discue/ui-components/compare/v1.0.0...v1.1.0) (2025-04-13)
+
+
+### Features
+
+* **form-element:** adjust hint to match new type face ([7e992c8](https://github.com/discue/ui-components/commit/7e992c84882532ed281cef142dc229e39e57fca6))
+* **form-input:** always take up full container size ([9c5bc98](https://github.com/discue/ui-components/commit/9c5bc98a5edd30bf1241648b6ff9126e4f66d527))
+* **headline:** increase-boldness for h1 and h2 ([02ec3fd](https://github.com/discue/ui-components/commit/02ec3fdb65c4f7232a3f7846b87501b799d4ce40))
+
+
+### Chores
+
+* **deps-dev:** bump sass-embedded from 1.86.0 to 1.86.1 ([68a5a0b](https://github.com/discue/ui-components/commit/68a5a0ba5201e61f8a6017e8e92fe54fdbb72e11))
+* **deps-dev:** bump the vuepress group with 4 updates ([95db78b](https://github.com/discue/ui-components/commit/95db78be9e3f5919bd80e990d9a8d6488ef3ad73))
+* **deps-dev:** bump ts-jest from 29.3.0 to 29.3.1 ([c0630a0](https://github.com/discue/ui-components/commit/c0630a010c29bfed401996319d60eabc4710a5df))
+* **deps:** bump @tailwindcss/postcss from 4.0.16 to 4.0.17 ([a3b44c7](https://github.com/discue/ui-components/commit/a3b44c77263e99051817abe72d9042b69b39fb73))
+* **deps:** bump @tailwindcss/vite from 4.0.16 to 4.0.17 ([9b3e4be](https://github.com/discue/ui-components/commit/9b3e4be92b27cf203383d42608bd9a15fdb6e31e))
+
 ## [1.0.0](https://github.com/discue/ui-components/compare/v0.49.0...v1.0.0) (2025-03-25)
 
 
