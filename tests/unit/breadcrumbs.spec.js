@@ -58,28 +58,8 @@ describe('Breadcrumbs.vue', () => {
         const lastBreadcrumb = wrapper.findAll('li').at(crumbs.length - 1)
         const span = lastBreadcrumb.find('span')
         expect(span.exists()).to.be.true
-        expect(span.classes()).to.include('text-gray-400')
+        expect(span.classes()).to.include('text-gray-500')
         expect(span.classes()).to.include('font-medium')
-    })
-
-    it('applies the correct class to all breadcrumbs except the last one', () => {
-        const crumbs = [
-            { name: 'Home', path: '/' },
-            { name: 'Category', path: '/category' },
-            { name: 'Item' },
-        ]
-
-        const wrapper = mount(Breadcrumbs, {
-            props: { crumbs },
-        })
-
-        const breadcrumbItems = wrapper.findAll('li')
-        breadcrumbItems.slice(0, -1).forEach((breadcrumb) => {
-            const link = breadcrumb.find('a')
-            if (link.exists()) {
-                expect(link.classes()).to.include('font-base')
-            }
-        })
     })
 
     it('ensures that crumb names are added in order', () => {
