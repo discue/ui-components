@@ -25,7 +25,8 @@
                     }}</span>
             </Transition>
         </div>
-        <div :class="[isInvalid ? '' : 'pb-1']">
+        <div class="flex"
+             :class="[isInvalid ? '' : 'pb-1']">
             <slot />
         </div>
         <FormError :id="errorId"
