@@ -2,6 +2,19 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [1.7.0](https://github.com/discue/ui-components/compare/v1.6.0...v1.7.0) (2025-04-21)
+
+
+### Features
+
+* **form-element-container:** always use flex layout for the input elements ([a469f95](https://github.com/discue/ui-components/commit/a469f959da625c8f988359ea910a17fed125d5c9))
+* **form-input-textarea:** add text area element ([30db146](https://github.com/discue/ui-components/commit/30db146bb5d44448c44c8ed1b0669629188a775a))
+
+
+### Chores
+
+* **deps:** update dependencies ([71e833d](https://github.com/discue/ui-components/commit/71e833dc6b6001d681d3faf1bee344721fbc5211))
+
 ## [1.6.0](https://github.com/discue/ui-components/compare/v1.5.0...v1.6.0) (2025-04-13)
 
 
