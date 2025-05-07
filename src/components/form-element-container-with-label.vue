@@ -32,7 +32,7 @@
         <FormError :id="errorId"
                    class="px-3 pb-1"
                    :description="description"
-                   :invalid="isInvalid && hasLostFocusAtLeastOnce" />
+                   :invalid="isInvalid" />
     </div>
 </template>
 
