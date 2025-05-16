@@ -23,7 +23,7 @@
                   @blur="onBlur($event)"
                   @focus="onFocus($event)"
                   @focusin="onFocus($event)"
-                  @focusout="onBlur($event)"></textarea>
+                  @focusout="onBlur($event)" />
     </FormElementContainerWithLabel>
 </template>
 
@@ -74,7 +74,6 @@ const props = defineProps({
         default: true,
     },
 })
-const emits = defineEmits(['update:modelValue'])
 
 const textarea = ref(null)
 
@@ -115,7 +114,7 @@ const inputClazz = computed(() => {
     return clazz.join(' ')
 })
 function focusInput() {
-    input.value.focus()
+    textarea.value.focus()
 }
 function onBlur() {
     inputFocussed.value = false
