@@ -121,9 +121,11 @@ describe('FormInputTextArea.vue', () => {
             const textarea = wrapper.find('textarea')
 
             await textarea.trigger('focus')
+            await wrapper.vm.$nextTick(); // Wait for DOM updates
             expect(wrapper.vm.inputFocussed).toBe(true)
 
             await textarea.trigger('blur')
+            await wrapper.vm.$nextTick(); // Wait for DOM updates
             expect(wrapper.vm.inputFocussed).toBe(false)
         })
     })
