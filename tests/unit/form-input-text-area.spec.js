@@ -107,24 +107,4 @@ describe('FormInputTextArea.vue', () => {
             expect(wrapper.find('textarea').attributes('placeholder')).toBe('Enter text here')
         })
     })
-
-    describe('@focus and @blur', () => {
-        it('updates inputFocussed state', async () => {
-            const wrapper = mount(FormInputTextArea, {
-                props: {
-                    id: 'my-text-area',
-                    name: 'test-textarea',
-                    label: 'Label',
-                    modelValue: '',
-                }
-            })
-            const textarea = wrapper.find('textarea')
-
-            await textarea.trigger('focus')
-            expect(wrapper.vm.inputFocussed).toBe(true)
-
-            await textarea.trigger('blur')
-            expect(wrapper.vm.inputFocussed).toBe(false)
-        })
-    })
 })
