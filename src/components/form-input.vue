@@ -15,6 +15,8 @@
         <input :id="id"
                ref="input"
                v-model="inputValue"
+               :aria-describedby="isInvalid ? `${id}ElementError` : null"
+               :aria-invalid="isInvalid"
                autocomplete="off"
                :class="inputClazz"
                :disabled="disabled"
@@ -23,10 +25,10 @@
                :placeholder="placeholder"
                :required="required"
                :type="type"
-               @blur="onBlur($event)"
-               @focus="onFocus($event)"
-               @focusin="onFocus($event)"
-               @focusout="onBlur($event)">
+               @blur="onBlur"
+               @focus="onFocus"
+               @focusin="onFocus"
+               @focusout="onBlur">
     </FormElementContainerWithLabel>
 </template>
 
