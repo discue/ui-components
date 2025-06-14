@@ -3,7 +3,7 @@
         <div v-if="show"
              ref="menu"
              class="dsq-drop-down-menu bg-gray-50 text-gray-900 fixed shadow-md font-normal rounded-md w-48 border-2 border-gray-200 duration-200 ease-in-out transition">
-            <ul class="text-left text-lg">
+            <ul class="dsq-drop-down-menu text-left text-lg list-none">
                 <slot />
             </ul>
         </div>
@@ -115,5 +115,9 @@ function isInViewport(rect) {
 .modal-leave-to .modal-container {
     -webkit-transform: scale(1.1);
     transform: scale(1.1);
+}
+
+ul.dsq-drop-down-menu {
+    list-style-type: none;
 }
 </style>
