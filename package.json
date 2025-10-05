@@ -77,7 +77,7 @@
     "@vue/cli-service": "~5.0.9",
     "@vue/test-utils": "^2.4.6",
     "@vue/vue3-jest": "^29.2.6",
-    "@vuepress/bundler-vite": "^2.0.0-rc.23",
+    "@vuepress/bundler-vite": "^2.0.0-rc.25",
     "@vuepress/markdown": "^2.0.0-rc.25",
     "@vuepress/plugin-register-components": "^2.0.0-rc.112",
     "@vuepress/plugin-search": "^2.0.0-rc.112",
