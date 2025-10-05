@@ -12,7 +12,7 @@ describe('throttle', () => {
         expect(throttledCallbacks).to.equal(1)
     })
 
-    it('executes the final callback after the elimit', async () => {
+    it('executes the final callback after the limit', async () => {
         const throttle = createThrottleFn(100)
         let throttledCallbacks = 0
         throttle(() => {
@@ -34,17 +34,16 @@ describe('throttle', () => {
         expect(throttledCallbacks).to.equal(1)
     })
 
-    it('throttles callbacks according to given limit', async () => {
-        const throttle = createThrottleFn()
+    it('executes only the first and last callback when called rapidly', async () => {
+        const throttle = createThrottleFn(100)
+        let throttledCallbacks = 0
         const fn = throttle(() => {
             throttledCallbacks++
-        }, 500)
-        let throttledCallbacks = 0
-        for (let i = 0, n = 10; i < n; i++) {
+        }, 100)
+        for (let i = 0; i < 10; i++) {
             fn()
-            await new Promise((resolve) => setTimeout(resolve, 30))
         }
-        await new Promise((resolve) => setTimeout(resolve, 750))
+        await new Promise((resolve) => setTimeout(resolve, 250))
         expect(throttledCallbacks).to.equal(2)
     })
 })

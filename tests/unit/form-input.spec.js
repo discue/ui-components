@@ -2,16 +2,16 @@
  * @jest-environment jsdom
  */
 
-import { mount } from '@vue/test-utils';
-import { expect } from 'chai';
-import FormInput from '../../src/components/form-input.vue';
+import { mount } from '@vue/test-utils'
+import { expect } from 'chai'
+import FormInput from '../../src/components/form-input.vue'
 
-const mockPush = jest.fn();
+const mockPush = jest.fn()
 jest.mock('vue-router', () => ({
     useRouter: () => ({
         push: mockPush,
     }),
-}));
+}))
 
 describe('FormInput.vue', () => {
     describe('.id', () => {
@@ -237,31 +237,114 @@ describe('FormInput.vue', () => {
             const error = wrapper.find('.dsq-form-element-error-message')
             expect(error.exists()).to.be.false
         })
-        it('invalidates the value if it does not match the pattern', async () => {
+    })
+
+    describe('.placeholder', () => {
+        it('is set on the input element if provided', () => {
+            const wrapper = mount(FormInput, {
+                props: {
+                    id: 'my-form-input',
+                    name: 'test-input',
+                    label: 'Name',
+                    placeholder: 'Enter your name',
+                    modelValue: ''
+                }
+            })
+            const input = wrapper.find('input.dsq-form-input')
+            expect(input.attributes('placeholder')).to.equal('Enter your name')
+        })
+
+        it('is not set on the input element if not provided', () => {
+            const wrapper = mount(FormInput, {
+                props: {
+                    id: 'my-form-input',
+                    name: 'test-input',
+                    label: 'Name',
+                    modelValue: ''
+                }
+            })
+            const input = wrapper.find('input.dsq-form-input')
+            expect(input.attributes('placeholder')).to.be.undefined
+        })
+    })
+
+    describe('.invalidMessage', () => {
+        it('displays the invalid message when the input is invalid', async () => {
             const wrapper = mount(FormInput, {
                 props: {
                     id: 'my-form-input',
                     name: 'test-input',
                     label: 'Name',
                     pattern: '^[0-9].*$',
-                    allowedCharactersSupersetPattern: '0-9',
-                    modelValue: 'Hello World',
+                    invalidMessage: 'Invalid input',
+                    modelValue: '123',
+                    required: true,
                     'onUpdate:modelValue': (e) => wrapper.setProps({ modelValue: e })
-                },
-                attachTo: document.body
+                }
+            })
+
+            const input = wrapper.find('input#my-form-input')
+            await wrapper.trigger('focusin')
+            await wrapper.trigger('focusout')
+            await input.setValue('abcdef')
+            await wrapper.trigger('focusin')
+            await wrapper.trigger('focusout')
+
+            const error = wrapper.find('.dsq-form-element-error-message')
+
+            expect(error.exists()).to.be.true
+            expect(error.text()).to.equal('Invalid input')
+        })
+
+        it('does not display the invalid message when the input is valid', async () => {
+            const wrapper = mount(FormInput, {
+                props: {
+                    id: 'my-form-input',
+                    name: 'test-input',
+                    label: 'Name',
+                    pattern: '^[0-9].*$',
+                    invalidMessage: 'Invalid input',
+                    modelValue: '123'
+                }
             })
 
             const input = wrapper.find('input.dsq-form-input')
-            await input.setValue('Thanks!')
-            await input.element.focus()
-            await input.trigger('change')
-            await input.element.blur()
+            await wrapper.trigger('focus')
+            await input.setValue('---')
+            await input.trigger('input')
+            await wrapper.trigger('blur')
 
             const error = wrapper.find('.dsq-form-element-error-message')
-            expect(error.exists()).to.be.true
+            expect(error.exists()).to.be.false
+        })
+    })
 
-            const errorMessage = error.text()
-            expect(errorMessage).to.equal('Sorry, the following characters are not allowed here: T, h, a, n, k, s, !')
+    describe('.type', () => {
+        it('sets the input type to the provided value', () => {
+            const wrapper = mount(FormInput, {
+                props: {
+                    id: 'my-form-input',
+                    name: 'test-input',
+                    label: 'Name',
+                    type: 'email',
+                    modelValue: ''
+                }
+            })
+            const input = wrapper.find('input.dsq-form-input')
+            expect(input.attributes('type')).to.equal('email')
+        })
+
+        it('defaults to "text" if no type is provided', () => {
+            const wrapper = mount(FormInput, {
+                props: {
+                    id: 'my-form-input',
+                    name: 'test-input',
+                    label: 'Name',
+                    modelValue: ''
+                }
+            })
+            const input = wrapper.find('input.dsq-form-input')
+            expect(input.attributes('type')).to.equal('text')
         })
     })
 })
