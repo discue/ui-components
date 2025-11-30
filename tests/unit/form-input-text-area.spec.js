@@ -107,4 +107,90 @@ describe('FormInputTextArea.vue', () => {
             expect(wrapper.find('textarea').attributes('placeholder')).toBe('Enter text here')
         })
     })
+
+    describe('focus, classes and computed values', () => {
+        it('includes cursor-text by default and cursor-not-allowed when disabled', () => {
+            const wrapper = mount(FormInputTextArea, {
+                props: {
+                    id: 'ta1',
+                    name: 'n',
+                    label: 'L',
+                    modelValue: ''
+                }
+            })
+            const cls = wrapper.find('textarea').classes()
+            expect(cls).toContain('cursor-text')
+
+            const wrapperDisabled = mount(FormInputTextArea, {
+                props: {
+                    id: 'ta2',
+                    name: 'n',
+                    label: 'L',
+                    modelValue: '',
+                    disabled: true
+                }
+            })
+            expect(wrapperDisabled.find('textarea').classes()).toContain('cursor-not-allowed')
+        })
+
+        it('focusInput calls focus on the textarea element', () => {
+            const wrapper = mount(FormInputTextArea, {
+                props: {
+                    id: 'ta3',
+                    name: 'n',
+                    label: 'L',
+                    modelValue: ''
+                }
+            })
+
+            const ta = wrapper.vm.$refs.textarea
+            const spy = jest.spyOn(ta, 'focus')
+            wrapper.vm.focusInput()
+            expect(spy).toHaveBeenCalled()
+            spy.mockRestore()
+        })
+
+        it('toggles inputFocussed on focusin/focusout', async () => {
+            const wrapper = mount(FormInputTextArea, {
+                props: {
+                    id: 'ta4',
+                    name: 'n',
+                    label: 'L',
+                    modelValue: ''
+                }
+            })
+            const ta = wrapper.find('textarea')
+            await ta.trigger('focusin')
+            expect(wrapper.vm.inputFocussed).toBe(true)
+            await ta.trigger('focusout')
+            expect(wrapper.vm.inputFocussed).toBe(false)
+        })
+
+        it('computes error from invalidMessage or description and forceContainerShowError from invalid', () => {
+            const wrapper = mount(FormInputTextArea, {
+                props: {
+                    id: 'ta5',
+                    name: 'n',
+                    label: 'L',
+                    modelValue: '',
+                    description: 'desc'
+                }
+            })
+            expect(wrapper.vm.error).toBe('desc')
+            expect(wrapper.vm.forceContainerShowError).toBe(false)
+
+            const wrapper2 = mount(FormInputTextArea, {
+                props: {
+                    id: 'ta6',
+                    name: 'n',
+                    label: 'L',
+                    modelValue: '',
+                    invalidMessage: 'bad',
+                    invalid: true
+                }
+            })
+            expect(wrapper2.vm.error).toBe('bad')
+            expect(wrapper2.vm.forceContainerShowError).toBe(true)
+        })
+    })
 })

@@ -15,19 +15,22 @@ jest.mock('vue-router', () => ({
     }),
 }));
 
+// provide a default click prop for all mounts to satisfy the required prop
+const defaultProps = {
+    click: jest.fn()
+};
+
 describe('NavLink.vue', () => {
     describe('.textSize', () => {
         it('contains default size', () => {
             const wrapper = shallowMount(NavButton, {
-                props: {}
+                props: { ...defaultProps }
             })
             expect(wrapper.classes()).to.contain(getThemeProperty(BUTTON_SIZE_DEFAULT).value)
         })
         it('contains size small if requested', () => {
             const wrapper = shallowMount(NavButton, {
-                props: {
-                    small: true
-                }
+                props: { ...defaultProps, small: true }
             })
             expect(wrapper.classes()).to.contain(getThemeProperty(BUTTON_SIZE_SMALL).value)
         })
@@ -35,7 +38,7 @@ describe('NavLink.vue', () => {
     describe('.fontWeight', () => {
         it('has bont font weight', () => {
             const wrapper = shallowMount(NavButton, {
-                props: {}
+                props: { ...defaultProps }
             })
             expect(wrapper.classes()).to.contain(getThemeProperty(BUTTON_WEIGHT_DEFAULT).value)
         })
@@ -43,33 +46,25 @@ describe('NavLink.vue', () => {
     describe('.textAndBorderColor', () => {
         it('has light text color', () => {
             const wrapper = shallowMount(NavButton, {
-                props: {}
+                props: { ...defaultProps }
             })
             expect(wrapper.classes()).to.contain(getThemeProperty(BUTTON_COLOR_LIGHT).value)
         })
         it('contains dark color if inverted', () => {
             const wrapper = shallowMount(NavButton, {
-                props: {
-                    invert: true
-                }
+                props: { ...defaultProps, invert: true }
             })
             expect(wrapper.classes()).to.contain(getThemeProperty(BUTTON_COLOR_DEFAULT).value)
         })
         it('contains attention color if inverted and attention is requested', () => {
             const wrapper = shallowMount(NavButton, {
-                props: {
-                    invert: true,
-                    attention: true
-                }
+                props: { ...defaultProps, invert: true, attention: true }
             })
             expect(wrapper.classes()).to.contain(getThemeProperty(BUTTON_COLOR_ATTENTION).value)
         })
         it('contains secondary color if inverted and secondary is requested', () => {
             const wrapper = shallowMount(NavButton, {
-                props: {
-                    invert: true,
-                    secondary: true
-                }
+                props: { ...defaultProps, invert: true, secondary: true }
             })
             expect(wrapper.classes()).to.contain(getThemeProperty(BUTTON_COLOR_SECONDARY).value)
         })
@@ -77,33 +72,56 @@ describe('NavLink.vue', () => {
     describe('.bgColor', () => {
         it('has default bg color', () => {
             const wrapper = shallowMount(NavButton, {
-                props: {}
+                props: { ...defaultProps }
             })
             expect(wrapper.classes().join(' ')).to.contain(getThemeProperty(BUTTON_BACKGROUND_DEFAULT).value)
         })
         it('has default bg color', () => {
             const wrapper = shallowMount(NavButton, {
-                props: {
-                    invert: true
-                }
+                props: { ...defaultProps, invert: true }
             })
             expect(wrapper.classes()).to.contain(getThemeProperty(BUTTON_BACKGROUND_INHERIT).value)
         })
         it('has secondary color', () => {
             const wrapper = shallowMount(NavButton, {
-                props: {
-                    secondary: true
-                }
+                props: { ...defaultProps, secondary: true }
             })
             expect(wrapper.classes()).to.contain(getThemeProperty(BUTTON_BACKGROUND_SECONDARY).value)
         })
         it('has attention color', () => {
             const wrapper = shallowMount(NavButton, {
-                props: {
-                    attention: true
-                }
+                props: { ...defaultProps, attention: true }
             })
             expect(wrapper.classes()).to.contain(getThemeProperty(BUTTON_BACKGROUND_ATTENTION).value)
+        })
+        it('calls click handler when clicked', async () => {
+            const clickMock = jest.fn()
+            const wrapper = shallowMount(NavButton, {
+                props: { click: clickMock }
+            })
+
+            await wrapper.trigger('click')
+            expect(clickMock).to.have.property('mock')
+            expect(clickMock.mock.calls.length).to.equal(1)
+        })
+
+        it('passes event object to click handler', async () => {
+            const clickMock = jest.fn()
+            const wrapper = shallowMount(NavButton, {
+                props: { click: clickMock }
+            })
+
+            await wrapper.trigger('click')
+            const firstArg = clickMock.mock.calls[0][0]
+            expect(firstArg).to.exist
+            expect(typeof firstArg).to.equal('object')
+        })
+
+        it('allows overriding the button type prop', () => {
+            const wrapper = shallowMount(NavButton, {
+                props: { ...defaultProps, type: 'button' }
+            })
+            expect(wrapper.attributes('type')).to.equal('button')
         })
     })
 })
