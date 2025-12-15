@@ -106,20 +106,43 @@ describe('FormInputSelect.vue', () => {
         it('emits update:modelValue as integer on input', async () => {
             const wrapper = mount(FormInputSelect, {
                 props: {
-                    id: 'sel3',
-                    label: 'Sel',
-                    elements: [{ id: 'a' }, { id: 'b' }]
+                    id: 'my-form-input-select',
+                    modelValue: 0,
+                    label: 'My Form Input Select',
+                    elements: [
+                        {
+                            id: '1',
+                            name: 'abc'
+                        },
+                        {
+                            id: '2',
+                            name: 'abc'
+                        }
+                    ]
                 }
             })
 
-            const select = wrapper.find('select')
-            // simulate user selecting the second option (use setValue for reliability)
-            await select.setValue('1')
+            const option = wrapper.findAll('option')
+            expect(option).to.have.length(2)
+            expect(option[0].element.value).to.equal('0')
+            expect(option[0].element.selected).to.equal(true)
+            expect(option[1].element.value).to.equal('1')
+            expect(option[1].element.selected).to.equal(false)
 
+            const select = wrapper.find('select')
+            await select.setValue(1)
             await nextTick()
-            const ev = wrapper.emitted()['update:modelValue']
-            expect(ev).to.exist
-            expect(ev[0][0]).to.equal(1)
+
+            expect(option[0].element.value).to.equal('0')
+            expect(option[0].element.selected).to.equal(false)
+            expect(option[1].element.value).to.equal('1')
+            expect(option[1].element.selected).to.equal(true)
+
+            const events = wrapper.emitted()
+            const updateEvents = events['update:modelValue']
+            expect(updateEvents).to.exist
+            expect(updateEvents).to.have.length(1)
+            expect(updateEvents[0][0]).to.equal(1)
         })
 
         it('toggles isFocussed on focus/blur events', async () => {

@@ -210,6 +210,11 @@ const targetPropsForTable = computed(() => {
             if (value.__hideInPreview) {
                 return context
             }
+
+            if (key === 'modelValue' || key === 'modelModifiers') {
+                return context
+            }
+
             return Object.assign(context, reactive({
                 [key]: {
                     name: key,

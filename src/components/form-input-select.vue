@@ -54,9 +54,6 @@ const props = defineProps({
         type: Boolean,
         default: false
     },
-    modelValue: {
-        type: Number,
-    },
     elements: {
         type: Array,
         default: () => { return [] }
@@ -67,22 +64,25 @@ const props = defineProps({
     }
 })
 
-const emits = defineEmits(['update:modelValue'])
+const modelValue = defineModel({
+    type: [Number, String],
+    default: null
+})
 
 const select = ref(null)
 const isInvalid = ref(false)
 const isFocussed = ref(false)
 
 const inputValue = computed(() => {
-    if (props.modelValue === undefined || props.modelValue === null) {
+    if (modelValue.value === undefined || modelValue.value === null) {
         return null
     }
 
-    if (Number.isInteger(props.modelValue)) {
-        return props.modelValue
-    } else if (typeof props.modelValue === 'string') {
+    if (Number.isInteger(modelValue.value)) {
+        return modelValue.value
+    } else if (typeof modelValue.value === 'string') {
         return props.elements.findIndex(element => {
-            return props.modelValue === element[props.trackBy]
+            return modelValue.value === element[props.trackBy]
         })
     }
     return null
@@ -119,7 +119,7 @@ function focusSelect(e) {
 }
 function onInput() {
     const value = select.value.value
-    emits('update:modelValue', parseInt(value))
+    modelValue.value = parseInt(value)
 }
 
 </script>
