@@ -8,8 +8,7 @@
                                    :input-invalid="copyToClipboardFailure"
                                    :label="label"
                                    :show-format-hint="false"
-                                   :show-pattern-hint="false"
-                                   :value="modelValue">
+                                   :show-pattern-hint="false">
         <div class="relative pl-3 mt-4 mb-1 flex flex-row items-center">
             <div class="mr-8"
                  :class="textClazz">
@@ -100,6 +99,11 @@ async function copyKeyToClipboard() {
         copyToClipboardFailure.value = true
         copyToClipboardErrorMsg.value = 'Sorry, we were not able to copy to the clipboard at this time. Please copy the text manually.'
     }
+}
+
+// provide a noop focusInput and modelValue to satisfy template bindings
+function focusInput() {
+    // intentionally empty — container expects a callback
 }
 
 </script>

@@ -4,6 +4,7 @@
 
 import { mount } from '@vue/test-utils';
 import { expect } from 'chai';
+import { nextTick } from 'vue';
 import FormInputRadio from '../../src/components/form-input-radio.vue';
 
 const mockPush = jest.fn();
@@ -282,6 +283,7 @@ describe('FormInputRadio.vue', () => {
             expect(radios.at(1).attributes().checked).to.equal('')
 
             await labels.at(0).trigger('click')
+            await nextTick()
             expect(wrapper.props().modelValue).to.equal('0')
             expect(radios.at(0).attributes().checked).to.equal('')
             expect(radios.at(1).attributes().checked).to.be.undefined
