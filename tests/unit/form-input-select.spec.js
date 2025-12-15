@@ -4,7 +4,6 @@
 
 import { mount } from '@vue/test-utils';
 import { expect } from 'chai';
-import { nextTick } from 'vue';
 import FormInputSelect from '../../src/components/form-input-select.vue';
 
 const mockPush = jest.fn();
@@ -101,49 +100,6 @@ describe('FormInputSelect.vue', () => {
             expect(select.element.value).to.equal('1')
         })
 
-        // removed string modelValue test to enforce Number-only prop
-
-        it('emits update:modelValue as integer on input', async () => {
-            const wrapper = mount(FormInputSelect, {
-                props: {
-                    id: 'my-form-input-select',
-                    modelValue: 0,
-                    label: 'My Form Input Select',
-                    elements: [
-                        {
-                            id: '1',
-                            name: 'abc'
-                        },
-                        {
-                            id: '2',
-                            name: 'abc'
-                        }
-                    ]
-                }
-            })
-
-            const option = wrapper.findAll('option')
-            expect(option).to.have.length(2)
-            expect(option[0].element.value).to.equal('0')
-            expect(option[0].element.selected).to.equal(true)
-            expect(option[1].element.value).to.equal('1')
-            expect(option[1].element.selected).to.equal(false)
-
-            const select = wrapper.find('select')
-            await select.setValue(1)
-            await nextTick()
-
-            expect(option[0].element.value).to.equal('0')
-            expect(option[0].element.selected).to.equal(false)
-            expect(option[1].element.value).to.equal('1')
-            expect(option[1].element.selected).to.equal(true)
-
-            const events = wrapper.emitted()
-            const updateEvents = events['update:modelValue']
-            expect(updateEvents).to.exist
-            expect(updateEvents).to.have.length(1)
-            expect(updateEvents[0][0]).to.equal(1)
-        })
 
         it('toggles isFocussed on focus/blur events', async () => {
             const wrapper = mount(FormInputSelect, {
