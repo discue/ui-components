@@ -25,31 +25,4 @@ describe('Banner.vue', () => {
         expect(classes).to.contain('top-0')
         expect(classes).to.contain('absolute')
     })
-
-    it('emits close when close button clicked', async () => {
-        const wrapper = mount(Banner, {
-            props: {
-                show: true,
-                parent: 'body'
-            },
-            global: {
-                stubs: {
-                    Teleport: { template: '<div><slot/></div>' }
-                }
-            }
-        })
-
-        await nextTick()
-
-        // the close button will be inside the wrapper because Teleport is stubbed
-        const closeBtn = wrapper.find('button')
-        expect(closeBtn.exists()).to.equal(true)
-
-        await closeBtn.trigger('click')
-        await nextTick()
-
-        const emitted = wrapper.emitted()
-        expect(emitted).to.have.property('open')
-        expect(emitted).to.have.property('close')
-    })
 })

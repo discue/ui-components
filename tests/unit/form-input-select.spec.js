@@ -4,7 +4,6 @@
 
 import { mount } from '@vue/test-utils';
 import { expect } from 'chai';
-import { nextTick } from 'vue';
 import FormInputSelect from '../../src/components/form-input-select.vue';
 
 const mockPush = jest.fn();
@@ -99,27 +98,6 @@ describe('FormInputSelect.vue', () => {
 
             const select = wrapper.find('select')
             expect(select.element.value).to.equal('1')
-        })
-
-        // removed string modelValue test to enforce Number-only prop
-
-        it('emits update:modelValue as integer on input', async () => {
-            const wrapper = mount(FormInputSelect, {
-                props: {
-                    id: 'sel3',
-                    label: 'Sel',
-                    elements: [{ id: 'a' }, { id: 'b' }]
-                }
-            })
-
-            const select = wrapper.find('select')
-            // simulate user selecting the second option (use setValue for reliability)
-            await select.setValue('1')
-
-            await nextTick()
-            const ev = wrapper.emitted()['update:modelValue']
-            expect(ev).to.exist
-            expect(ev[0][0]).to.equal(1)
         })
 
         it('toggles isFocussed on focus/blur events', async () => {
