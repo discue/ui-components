@@ -50,8 +50,8 @@ describe('Dynamic Component Display', () => {
         // find the boolean select and change to false
         const select = wrapper.find('select')
         if (select.exists()) {
-            select.element.value = 'false'
-            await select.trigger('input')
+            // use setValue to reliably simulate user selection
+            await select.setValue('false')
             await nextTick()
             // ensure dummy shows updated prop (flag default false -> may reflect as 'false')
             expect(wrapper.find('.dummy').text()).to.contain('false')

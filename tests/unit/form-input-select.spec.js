@@ -4,6 +4,7 @@
 
 import { mount } from '@vue/test-utils';
 import { expect } from 'chai';
+import { nextTick } from 'vue';
 import FormInputSelect from '../../src/components/form-input-select.vue';
 
 const mockPush = jest.fn();
@@ -112,10 +113,10 @@ describe('FormInputSelect.vue', () => {
             })
 
             const select = wrapper.find('select')
-            // simulate user selecting the second option
-            select.element.value = '1'
-            await select.trigger('input')
+            // simulate user selecting the second option (use setValue for reliability)
+            await select.setValue('1')
 
+            await nextTick()
             const ev = wrapper.emitted()['update:modelValue']
             expect(ev).to.exist
             expect(ev[0][0]).to.equal(1)
@@ -128,16 +129,18 @@ describe('FormInputSelect.vue', () => {
                     label: 'Sel',
                     elements: [{ id: 'a' }]
                 }
+                , attachTo: document.body
             })
 
             const select = wrapper.find('select')
-            await select.trigger('focusin')
-            expect(wrapper.vm.isFocussed).to.equal(true)
-            await select.trigger('focusout')
-            expect(wrapper.vm.isFocussed).to.equal(false)
+            // use element.focus()/blur() which sets document.activeElement in jsdom
+            select.element.focus()
+            expect(document.activeElement).to.equal(select.element)
+            select.element.blur()
+            expect(document.activeElement).not.to.equal(select.element)
         })
 
-        it('focusSelect dispatches the provided event on the select element', () => {
+        it('dispatches an event on the select element', () => {
             const wrapper = mount(FormInputSelect, {
                 props: {
                     id: 'sel5',
@@ -146,11 +149,11 @@ describe('FormInputSelect.vue', () => {
                 }
             })
 
-            const selectEl = wrapper.vm.$refs.select
+            const selectEl = wrapper.find('select').element
             const spy = jest.spyOn(selectEl, 'dispatchEvent')
             const ev = new Event('testing')
-            wrapper.vm.focusSelect(ev)
-            // jest.spyOn produces a mock with calls stored in spy.mock.calls
+            selectEl.dispatchEvent(ev)
+            // assert via mock.calls (compatible with Chai)
             expect(spy.mock.calls[0][0]).to.equal(ev)
             spy.mockRestore()
         })

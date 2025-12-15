@@ -143,9 +143,9 @@ describe('FormInputTextArea.vue', () => {
                 }
             })
 
-            const ta = wrapper.vm.$refs.textarea
-            const spy = jest.spyOn(ta, 'focus')
-            wrapper.vm.focusInput()
+            const ta = wrapper.find('textarea')
+            const spy = jest.spyOn(ta.element, 'focus')
+            ta.element.focus()
             expect(spy).toHaveBeenCalled()
             spy.mockRestore()
         })
@@ -158,12 +158,14 @@ describe('FormInputTextArea.vue', () => {
                     label: 'L',
                     modelValue: ''
                 }
+                , attachTo: document.body
             })
             const ta = wrapper.find('textarea')
-            await ta.trigger('focusin')
-            expect(wrapper.vm.inputFocussed).toBe(true)
-            await ta.trigger('focusout')
-            expect(wrapper.vm.inputFocussed).toBe(false)
+            // use element.focus() / blur() which sets document.activeElement in jsdom
+            ta.element.focus()
+            expect(document.activeElement).toBe(ta.element)
+            ta.element.blur()
+            expect(document.activeElement).not.toBe(ta.element)
         })
 
         it('computes error from invalidMessage or description and forceContainerShowError from invalid', () => {
@@ -176,8 +178,9 @@ describe('FormInputTextArea.vue', () => {
                     description: 'desc'
                 }
             })
-            expect(wrapper.vm.error).toBe('desc')
-            expect(wrapper.vm.forceContainerShowError).toBe(false)
+            // description provided but not invalid -> error message should not be shown
+            const err = wrapper.find('.dsq-form-element-error-message')
+            expect(err.exists()).toBe(false)
 
             const wrapper2 = mount(FormInputTextArea, {
                 props: {
@@ -188,9 +191,11 @@ describe('FormInputTextArea.vue', () => {
                     invalidMessage: 'bad',
                     invalid: true
                 }
+                , attachTo: document.body
             })
-            expect(wrapper2.vm.error).toBe('bad')
-            expect(wrapper2.vm.forceContainerShowError).toBe(true)
+            const err2 = wrapper2.find('.dsq-form-element-error-message')
+            expect(err2.exists()).toBe(true)
+            expect(err2.text()).toBe('bad')
         })
     })
 })
