@@ -101,7 +101,7 @@
     "standard-version": "^9.5.0",
     "tailwindcss": "^4.1.18",
     "ts-debounce": "^4.0.0",
-    "ts-jest": "^29.4.0",
+    "ts-jest": "^29.4.6",
     "vue-router": "^4.6.4",
     "vue-tsc": "^3.2.1"
   },
