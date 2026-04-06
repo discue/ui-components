@@ -16,6 +16,11 @@ updates:
         patterns: 
           - "tailwindcss*"
           - "@tailwindcss*"
+      jest:
+        patterns: 
+          - "jest*"
+          - "*jest*" 
+          - "@jest*"
 
   - package-ecosystem: github-actions
     assignees:
