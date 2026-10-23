@@ -1,6 +1,7 @@
 import js from "@eslint/js"
 import pluginVue from 'eslint-plugin-vue'
 import eslintParser from 'vue-eslint-parser'
+import globals from 'globals'
 
 export default [
     js.configs.recommended,
@@ -9,7 +10,10 @@ export default [
         languageOptions: {
             ecmaVersion: 2022,
             sourceType: 'module',
-            parser: eslintParser
+            parser: eslintParser,
+            globals: {
+                ...globals.browser
+            }
         },
         rules: {
             'vue/first-attribute-linebreak': 'off',
